@@ -588,8 +588,6 @@ export function SesiPsikotes(props: Props) {
               </div>
             </div>
           ) : null}
-
-          {tombolTutup}
         </section>
 
         <aside className="hidden min-w-0 lg:sticky lg:top-24 lg:block">
@@ -600,6 +598,9 @@ export function SesiPsikotes(props: Props) {
             onPilih={setAktif}
           />
         </aside>
+
+        {/* Tombol submit di bawah panel navigasi (kolom kanan) */}
+        <div className="lg:col-start-2">{tombolTutup}</div>
       </div>
     </div>,
   );

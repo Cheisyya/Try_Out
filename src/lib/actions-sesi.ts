@@ -4,9 +4,8 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 import { wajibSesi } from "@/lib/get-session";
-import { periksaPembatas, resetPembatas } from "@/lib/keamanan/pembatas";
-import { getPaket, getSesi, isSesiId, type SesiId } from "@/lib/paket-tryout";
-import { periksaSandi } from "@/lib/konfigurasi/sandi";
+import { getPaket, isSesiId, type SesiId } from "@/lib/paket-tryout";
+
 import {
   mulaiPercobaan,
   percobaanAktif,
@@ -30,12 +29,12 @@ async function pesertaSaatIni(): Promise<Peserta> {
 
 export type MulaiSesiState = { error?: string };
 
-/** Memulai sesi setelah password sesi diverifikasi di server. */
+/** Memulai sesi tanpa password — langsung masuk ruang ujian. */
 export async function mulaiSesi(
   paketIdMentah: string,
   sesiIdMentah: string,
   _prevState: MulaiSesiState,
-  formData: FormData,
+  _formData: FormData,
 ): Promise<MulaiSesiState> {
   const peserta = await pesertaSaatIni();
 
@@ -43,34 +42,13 @@ export async function mulaiSesi(
   if (!paket || !isSesiId(sesiIdMentah)) redirect("/siswa/tryout");
   const sesiId = sesiIdMentah as SesiId;
 
-  const password = String(formData.get("password") ?? "").trim().slice(0, 200);
-  if (!password) return { error: "Password sesi wajib diisi." };
-
-  // Menahan penebakan password sesi beruntun oleh satu peserta.
-  const kunciPembatas = `sesi:${peserta.id}:${paket.id}:${sesiId}`;
-  const batas = periksaPembatas(kunciPembatas, { maks: 10, jendelaDetik: 300 });
-  if (!batas.boleh) {
-    return {
-      error: `Terlalu banyak percobaan password. Coba lagi dalam ${batas.sisaDetik} detik.`,
-    };
-  }
-
-  // Password sesi tersimpan sebagai turunan scrypt, bukan teks biasa.
-  const sesi = await getSesi(paket.id, sesiId);
-  if (!periksaSandi(password, sesi?.sandi)) {
-    return {
-      error: "Password sesi salah. Mintalah password yang benar kepada pengajar.",
-    };
-  }
-
-  resetPembatas(kunciPembatas);
-
   const hasil = await mulaiPercobaan(peserta, paket, sesiId);
   if (!hasil.ok) return { error: hasil.alasan };
 
   revalidatePath("/siswa", "layout");
   redirect(`/ujian/${paket.id}/${sesiId}`);
 }
+
 
 /**
  * Menyimpan satu jawaban. Server menentukan sendiri paket, sesi, dan mata uji

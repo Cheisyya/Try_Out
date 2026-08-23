@@ -11,7 +11,6 @@ import {
   LayoutGrid,
   Lightbulb,
   LoaderCircle,
-  RotateCcw,
   Send,
   XCircle,
 } from "lucide-react";
@@ -21,7 +20,6 @@ import { Button, ButtonLink } from "@/components/ui/button";
 import {
   simpanJawabanIqAksi,
   tutupLatihanIqAksi,
-  ulangiLatihanIqAksi,
 } from "@/lib/actions-tes-iq";
 import type {
   HasilLatihanIq,
@@ -198,25 +196,7 @@ export function LatihanIq({
     return () => clearInterval(jam);
   }, [hasil, kumpulkan, mulai]);
 
-  const ulangi = useCallback(() => {
-    setGalat(null);
-    mulaiTransisi(async () => {
-      const balasan = await ulangiLatihanIqAksi(paketId);
-      if (!balasan.ok) {
-        setGalat(balasan.masalah);
-        return;
-      }
-      antrean.current = Promise.resolve();
-      batasWaktu.current = Date.now() + durasiMenit * 60_000;
-      sudahDitutup.current = false;
-      setMulai(false);
-      setSisaDetik(durasiMenit * 60);
-      setJawaban({});
-      setAktif(0);
-      setHasil(null);
-      puncak.current?.scrollIntoView({ block: "start" });
-    });
-  }, [durasiMenit, paketId]);
+
 
   /* Pintasan papan ketik; hanya aktif selama masih mengerjakan. */
   useEffect(() => {
@@ -251,8 +231,6 @@ export function LatihanIq({
         <RingkasanHasil
           paketNama={paketNama}
           hasil={hasil}
-          onUlangi={ulangi}
-          proses={proses}
         />
 
         {galat ? (
@@ -276,20 +254,10 @@ export function LatihanIq({
           })}
         </ol>
 
-        <div className="flex flex-col gap-3 sm:flex-row sm:justify-between">
-          <ButtonLink href="/siswa/tes-iq" variant="outline">
-            <ArrowLeft className="size-4" />
-            Kembali ke daftar paket
-          </ButtonLink>
-          <Button type="button" onClick={ulangi} disabled={proses}>
-            {proses ? (
-              <LoaderCircle className="size-4 animate-spin" />
-            ) : (
-              <RotateCcw className="size-4" />
-            )}
-            Ulangi latihan ini
-          </Button>
-        </div>
+        <ButtonLink href="/siswa/tes-iq" variant="outline">
+          <ArrowLeft className="size-4" />
+          Kembali ke daftar paket
+        </ButtonLink>
       </div>
     );
   }
@@ -449,8 +417,21 @@ export function LatihanIq({
             </div>
           </div>
         ) : null}
+      </section>
 
-        <div className="rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-soft)] sm:p-6">
+      {/* Panel navigasi versi layar lebar */}
+      <aside className="hidden min-w-0 lg:sticky lg:top-24 lg:block">
+        <PanelNavigasi
+          soal={soal}
+          jawaban={jawaban}
+          aktif={aktif}
+          onPilih={setAktif}
+          judulPaket={`${paketNama} · ${tingkat}`}
+        />
+      </aside>
+
+      {/* Tombol submit di bawah panel navigasi (kolom kanan) */}
+      <div className="lg:col-start-2 rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-soft)] sm:p-6">
           <p className="text-sm text-muted">
             {belum === 0
               ? "Semua soal sudah dijawab. Tekan tombol di bawah untuk melihat koreksi dan pembahasannya."
@@ -470,18 +451,6 @@ export function LatihanIq({
             Selesai &amp; lihat pembahasan
           </Button>
         </div>
-      </section>
-
-      {/* Panel navigasi versi layar lebar */}
-      <aside className="hidden min-w-0 lg:sticky lg:top-24 lg:block">
-        <PanelNavigasi
-          soal={soal}
-          jawaban={jawaban}
-          aktif={aktif}
-          onPilih={setAktif}
-          judulPaket={`${paketNama} · ${tingkat}`}
-        />
-      </aside>
       </div>
     </div>
   );
@@ -595,42 +564,22 @@ function PanelNavigasi({
 function RingkasanHasil({
   paketNama,
   hasil,
-  onUlangi,
-  proses,
 }: {
   paketNama: string;
   hasil: HasilLatihanIq;
-  onUlangi: () => void;
-  proses: boolean;
 }) {
   return (
     <div className="rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-soft)] sm:p-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-        <div className="min-w-0 space-y-1">
-          <h2 className="text-lg font-semibold text-navy-900">
-            Hasil latihan · {paketNama}
-          </h2>
-          <p className="text-sm leading-relaxed text-muted">
-            Latihan ini tidak menghasilkan angka IQ dan tidak masuk Riwayat
-            Hasil try out akademik. Hasilnya tersimpan dan terbaca pengajar.
-            Gunakan pembahasan di bawah untuk menelusuri cara berpikir tiap
-            soal, terutama yang jawabannya keliru.
-          </p>
-        </div>
-        <Button
-          type="button"
-          variant="outline"
-          onClick={onUlangi}
-          disabled={proses}
-          className="shrink-0"
-        >
-          {proses ? (
-            <LoaderCircle className="size-4 animate-spin" />
-          ) : (
-            <RotateCcw className="size-4" />
-          )}
-          Ulangi
-        </Button>
+      <div className="min-w-0 space-y-1">
+        <h2 className="text-lg font-semibold text-navy-900">
+          Hasil latihan · {paketNama}
+        </h2>
+        <p className="text-sm leading-relaxed text-muted">
+          Latihan ini tidak menghasilkan angka IQ dan tidak masuk Riwayat
+          Hasil try out akademik. Hasilnya tersimpan dan terbaca pengajar.
+          Gunakan pembahasan di bawah untuk menelusuri cara berpikir tiap
+          soal, terutama yang jawabannya keliru.
+        </p>
       </div>
 
       <dl className="mt-5 grid grid-cols-3 gap-3">

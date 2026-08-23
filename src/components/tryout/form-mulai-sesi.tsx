@@ -1,32 +1,25 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
-import { AlertCircle, KeyRound, LoaderCircle, PlayCircle } from "lucide-react";
+import { AlertCircle, LoaderCircle, PlayCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Field, Input } from "@/components/ui/field";
 import { mulaiSesi, type MulaiSesiState } from "@/lib/actions-sesi";
 
 /**
- * Verifikasi kesiapan dan password sesi sebelum peserta masuk ruang ujian.
- * Tombol baru aktif setelah pernyataan dicentang; password diverifikasi di
- * server sehingga password yang salah tidak dapat membuka sesi.
+ * Tombol mulai sesi try out akademik.
+ * Password tidak diperlukan — peserta langsung memulai sesi.
  */
 export function FormMulaiSesi({
   paketId,
   sesiId,
   namaSesi,
-  passwordBawaan,
 }: {
   paketId: string;
   sesiId: string;
   namaSesi: string;
-  /**
-   * Password bawaan demo. Hanya dikirim server pada pengembangan lokal dan
-   * selama password sesi belum pernah diganti admin — di produksi selalu
-   * kosong agar tidak ada password yang bocor lewat HTML.
-   */
+  /** @deprecated Password tidak lagi digunakan untuk try out akademik. */
   passwordBawaan?: string;
 }) {
   const aksi = mulaiSesi.bind(null, paketId, sesiId);
@@ -39,32 +32,14 @@ export function FormMulaiSesi({
     >
       <div className="space-y-1">
         <h2 className="flex items-center gap-2 text-sm font-semibold text-navy-900">
-          <KeyRound className="size-4 text-navy-600" />
-          Password Sesi
+          <PlayCircle className="size-4 text-navy-600" />
+          Mulai Sesi
         </h2>
         <p className="text-xs leading-relaxed text-muted">
-          Password dibagikan pengajar saat sesi dibuka. Sesi tidak dapat dimulai
-          tanpa password yang benar.
+          Tekan tombol di bawah untuk memulai {namaSesi}. Pastikan Anda sudah
+          membaca instruksi dan tata tertib sebelum memulai.
         </p>
       </div>
-
-      <Field label={`Password ${namaSesi}`} htmlFor="password">
-        <Input
-          id="password"
-          name="password"
-          type="password"
-          autoComplete="off"
-          placeholder="Masukkan password sesi"
-          required
-        />
-      </Field>
-
-      {passwordBawaan ? (
-        <p className="rounded-xl border border-gold-200 bg-gold-50 px-3.5 py-2.5 text-xs text-gold-800">
-          Password bawaan (khusus pengembangan lokal):{" "}
-          <span className="font-mono font-semibold">{passwordBawaan}</span>.
-        </p>
-      ) : null}
 
       {state.error ? (
         <p
