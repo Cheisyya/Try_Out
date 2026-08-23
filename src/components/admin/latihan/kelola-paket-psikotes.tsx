@@ -294,7 +294,6 @@ export function KelolaPaketPsikotes({
                         </Badge>
                       </Td>
                       <Td>
-                        <div className="flex justify-end gap-1">
                         <TombolPaket
                           paket={paket}
                           proses={proses}
