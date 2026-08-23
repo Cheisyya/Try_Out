@@ -588,6 +588,28 @@ export function SesiPsikotes(props: Props) {
               </div>
             </div>
           ) : null}
+
+          {/* Tombol submit versi mobile — muncul di bawah soal */}
+          <div className="lg:hidden rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-soft)] sm:p-6">
+            <p className="text-sm text-muted">
+              {terjawab === jumlahButir
+                ? "Semua butir sudah terisi. Tekan tombol di bawah untuk menutup sesi."
+                : `Masih ada ${jumlahButir - terjawab} butir yang belum terisi. Sesi akan menutup sendiri ketika waktunya habis.`}
+            </p>
+            <Button
+              type="button"
+              onClick={() => tutup(false)}
+              disabled={proses}
+              className="mt-4 w-full"
+            >
+              {proses ? (
+                <LoaderCircle className="size-4 animate-spin" />
+              ) : (
+                <Send className="size-4" />
+              )}
+              {props.jenis === "epps" ? "Selesai & lihat profil" : "Selesai & lihat pembahasan"}
+            </Button>
+          </div>
         </section>
 
         <aside className="hidden min-w-0 lg:sticky lg:top-24 lg:block">
@@ -596,11 +618,13 @@ export function SesiPsikotes(props: Props) {
             jawaban={jawaban}
             aktif={aktif}
             onPilih={setAktif}
+            terjawab={terjawab}
+            jumlahButir={jumlahButir}
+            jenis={props.jenis}
+            proses={proses}
+            onTutup={() => tutup(false)}
           />
         </aside>
-
-        {/* Tombol submit di bawah panel navigasi (kolom kanan) */}
-        <div className="lg:col-start-2">{tombolTutup}</div>
       </div>
     </div>,
   );
@@ -615,20 +639,31 @@ function PanelNavigasi({
   jawaban,
   aktif,
   onPilih,
+  terjawab,
+  jumlahButir,
+  jenis,
+  proses,
+  onTutup,
 }: {
   soal: SoalSkorLatihan[];
   jawaban: Record<number, string>;
   aktif: number;
   onPilih: (indeks: number) => void;
+  terjawab?: number;
+  jumlahButir?: number;
+  jenis?: "skor" | "epps";
+  proses?: boolean;
+  onTutup?: () => void;
 }) {
-  const terjawab = Object.keys(jawaban).length;
+  const _terjawab = terjawab ?? Object.keys(jawaban).length;
+  const _total = jumlahButir ?? soal.length;
 
   return (
     <div className="min-w-0 space-y-4 rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-soft)]">
       <div>
         <h2 className="text-sm font-semibold text-navy-900">Navigasi Soal</h2>
         <p className="mt-1 text-xs text-muted">
-          {terjawab} terjawab · {soal.length - terjawab} belum
+          {_terjawab} terjawab · {soal.length - _terjawab} belum
         </p>
       </div>
 
@@ -668,6 +703,30 @@ function PanelNavigasi({
           Belum dijawab
         </p>
       </div>
+
+      {/* Tombol submit — hanya tampil di layar lebar */}
+      {onTutup !== undefined && (
+        <div className="border-t border-line pt-4">
+          <p className="text-xs text-muted">
+            {_terjawab === _total
+              ? "Semua butir sudah terisi."
+              : `${_total - _terjawab} butir belum terisi. Boleh dikosongkan.`}
+          </p>
+          <Button
+            type="button"
+            onClick={onTutup}
+            disabled={proses}
+            className="mt-3 w-full"
+          >
+            {proses ? (
+              <LoaderCircle className="size-4 animate-spin" />
+            ) : (
+              <Send className="size-4" />
+            )}
+            {jenis === "epps" ? "Selesai & lihat profil" : "Selesai & lihat pembahasan"}
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

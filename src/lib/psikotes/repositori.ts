@@ -278,7 +278,10 @@ export async function setAktifPaketPsikotes(
   paketId: string,
   aktif: boolean,
 ): Promise<HasilBank<null>> {
-  if (!(await daftarId()).includes(paketId)) {
+  // Validasi memakai cariPaketPsikotes agar paket bawaan (yang terbundel di
+  // kode dan belum pernah ditulis ke Postgres) tetap dapat diaktifkan/dinonaktifkan.
+  const paket = await cariPaketPsikotes(paketId);
+  if (!paket) {
     return { ok: false, masalah: [`Paket "${paketId}" tidak dikenal.`] };
   }
 

@@ -48,10 +48,13 @@ export type HasilAksiIqAdmin =
 const MAKS_BYTE = 8 * 1024 * 1024;
 
 function segarkan(paketId: string) {
+  // Hanya segarkan panel admin. Halaman siswa memakai cookies() dan notFound()
+  // bila paket dimatikan; merevalidasinya dari sesi admin membuat Next.js
+  // menelan redirect/404 dan menjatuhkan halaman ini — membuat tambah/edit/hapus
+  // gagal secara silent.
   revalidatePath("/admin/tes-iq");
   revalidatePath("/admin/tes-iq/soal");
-  revalidatePath("/siswa/tes-iq");
-  revalidatePath(`/siswa/tes-iq/${paketId}`);
+  void paketId; // dipertahankan untuk kompatibilitas pemanggil
 }
 
 function teks(formData: FormData, nama: string) {

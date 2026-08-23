@@ -200,7 +200,10 @@ export async function setAktifPaketIq(
   paketId: string,
   aktif: boolean,
 ): Promise<HasilBankIq<null>> {
-  if (!(await daftarId()).includes(paketId)) {
+  // Validasi memakai cariPaketIq agar paket bawaan (yang terbundel di kode
+  // dan belum pernah ditulis ke Postgres) tetap dapat diaktifkan/dinonaktifkan.
+  const paket = await cariPaketIq(paketId);
+  if (!paket) {
     return { ok: false, masalah: [`Paket "${paketId}" tidak dikenal.`] };
   }
 

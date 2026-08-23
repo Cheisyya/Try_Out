@@ -419,7 +419,7 @@ export function LatihanIq({
         ) : null}
       </section>
 
-      {/* Panel navigasi versi layar lebar */}
+      {/* Panel navigasi versi layar lebar — sudah termasuk tombol submit */}
       <aside className="hidden min-w-0 lg:sticky lg:top-24 lg:block">
         <PanelNavigasi
           soal={soal}
@@ -427,30 +427,33 @@ export function LatihanIq({
           aktif={aktif}
           onPilih={setAktif}
           judulPaket={`${paketNama} · ${tingkat}`}
+          belum={belum}
+          proses={proses}
+          onKumpulkan={() => kumpulkan(false)}
         />
       </aside>
+      </div>
 
-      {/* Tombol submit di bawah panel navigasi (kolom kanan) */}
-      <div className="lg:col-start-2 rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-soft)] sm:p-6">
-          <p className="text-sm text-muted">
-            {belum === 0
-              ? "Semua soal sudah dijawab. Tekan tombol di bawah untuk melihat koreksi dan pembahasannya."
-              : `Masih ada ${belum} soal yang belum dijawab. Soal yang dikosongkan tetap diberi pembahasan, jadi Anda boleh menyelesaikannya sekarang.`}
-          </p>
-          <Button
-            type="button"
-            onClick={() => kumpulkan(false)}
-            disabled={proses}
-            className="mt-4 w-full sm:w-auto"
-          >
-            {proses ? (
-              <LoaderCircle className="size-4 animate-spin" />
-            ) : (
-              <Send className="size-4" />
-            )}
-            Selesai &amp; lihat pembahasan
-          </Button>
-        </div>
+      {/* Tombol submit versi mobile — muncul di bawah soal */}
+      <div className="lg:hidden rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-soft)] sm:p-6">
+        <p className="text-sm text-muted">
+          {belum === 0
+            ? "Semua soal sudah dijawab. Tekan tombol di bawah untuk melihat koreksi dan pembahasannya."
+            : `Masih ada ${belum} soal yang belum dijawab. Soal yang dikosongkan tetap diberi pembahasan, jadi Anda boleh menyelesaikannya sekarang.`}
+        </p>
+        <Button
+          type="button"
+          onClick={() => kumpulkan(false)}
+          disabled={proses}
+          className="mt-4 w-full"
+        >
+          {proses ? (
+            <LoaderCircle className="size-4 animate-spin" />
+          ) : (
+            <Send className="size-4" />
+          )}
+          Selesai & lihat pembahasan
+        </Button>
       </div>
     </div>
   );
@@ -491,12 +494,18 @@ function PanelNavigasi({
   aktif,
   onPilih,
   judulPaket,
+  belum,
+  proses,
+  onKumpulkan,
 }: {
   soal: SoalIqLatihan[];
   jawaban: Record<number, HurufIq>;
   aktif: number;
   onPilih: (indeks: number) => void;
   judulPaket?: string;
+  belum?: number;
+  proses?: boolean;
+  onKumpulkan?: () => void;
 }) {
   const terjawab = Object.keys(jawaban).length;
 
@@ -551,6 +560,30 @@ function PanelNavigasi({
           <b className="text-navy-700">A–D</b> memilih jawaban.
         </p>
       </div>
+
+      {/* Tombol submit — hanya tampil di layar lebar (di mobile ada versi tersendiri) */}
+      {onKumpulkan !== undefined && belum !== undefined && (
+        <div className="border-t border-line pt-4">
+          <p className="text-xs text-muted">
+            {belum === 0
+              ? "Semua soal sudah dijawab."
+              : `${belum} soal belum dijawab. Boleh dikosongkan.`}
+          </p>
+          <Button
+            type="button"
+            onClick={onKumpulkan}
+            disabled={proses}
+            className="mt-3 w-full"
+          >
+            {proses ? (
+              <LoaderCircle className="size-4 animate-spin" />
+            ) : (
+              <Send className="size-4" />
+            )}
+            Selesai & lihat pembahasan
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

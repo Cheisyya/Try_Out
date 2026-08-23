@@ -45,10 +45,13 @@ export type HasilAksiAdmin =
 const MAKS_BYTE = 8 * 1024 * 1024;
 
 function segarkan(paketId: string) {
+  // Hanya segarkan panel admin. Halaman siswa memakai cookies() dan notFound()
+  // bila paket dimatikan; merevalidasinya dari sesi admin membuat Next.js
+  // menelan redirect/404 dan menjatuhkan halaman ini — membuat tambah/edit/hapus
+  // gagal secara silent. Pola yang benar ada pada ubahAktifPaketPsikotesAksi.
   revalidatePath("/admin/psikotes");
   revalidatePath("/admin/psikotes/soal");
-  revalidatePath("/siswa/psikotes");
-  revalidatePath(`/siswa/psikotes/${paketId}`);
+  void paketId; // dipertahankan untuk kompatibilitas pemanggil
 }
 
 function teks(formData: FormData, nama: string) {
