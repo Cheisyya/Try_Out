@@ -79,7 +79,7 @@ export default async function DashboardSiswaPage() {
     },
   ];
   const paketAktif = paketBerikutnya(paketList, ctx);
-  const ringkasanAktif = ringkasanPaket(paketAktif, ctx);
+  const ringkasanAktif = paketAktif ? ringkasanPaket(paketAktif, ctx) : null;
   const hasilTerakhir = hasil[0];
 
   return (
@@ -93,110 +93,126 @@ export default async function DashboardSiswaPage() {
         <div className="min-w-0 space-y-6 lg:col-span-2">
           {pengaturan.tryoutAkademikAktif ? (
             <>
-              <Card>
-                <CardHeader
-                  judul="Paket yang Sedang Dikerjakan"
-                  deskripsi="Lanjutkan dari sesi yang belum diselesaikan."
-                  aksi={
-                    <Badge tone={ringkasanAktif.sedangBerlangsung ? "gold" : "navy"}>
-                      {ringkasanAktif.sesiSelesai} dari {paketAktif.sesi.length} sesi selesai
-                    </Badge>
-                  }
-                />
-                <CardBody className="space-y-5">
-                  <div className="flex items-start gap-4">
-                    <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-navy-900 text-lg font-bold text-gold-300">
-                      {paketAktif.nomor}
-                    </span>
-                    <div className="min-w-0">
-                      <h3 className="text-lg font-semibold text-navy-900">
-                        {paketAktif.nama}
-                      </h3>
-                      <p className="mt-1 text-sm leading-relaxed text-muted">
-                        {paketAktif.deskripsi}
-                      </p>
-                    </div>
-                  </div>
-
-                  <Progress
-                    nilai={ringkasanAktif.persen}
-                    tone={ringkasanAktif.tuntas ? "navy" : "gold"}
-                  />
-
-                  <ul className="grid gap-3 sm:grid-cols-2">
-                    {sesiTerurut(paketAktif).map((sesi) => {
-                      const status = ringkasanAktif.status[sesi.id];
-                      const terkunci = sesiTerkunci(paketAktif, sesi.id, ctx);
-                      return (
-                        <li
-                          key={sesi.id}
-                          className="rounded-xl border border-line px-4 py-3.5"
-                        >
-                          <div className="flex items-center justify-between gap-3">
-                            <p className="text-sm font-semibold text-navy-900">
-                              {sesi.nama}
-                            </p>
-                            {terkunci ? (
-                              <Badge tone="netral">
-                                <Lock className="size-3" />
-                                Terkunci
-                              </Badge>
-                            ) : (
-                              <Badge tone={NADA_STATUS[status]}>
-                                {status === "Sedang Berlangsung" ? (
-                                  <CircleDot className="size-3" />
-                                ) : status === "Selesai" ? (
-                                  <CheckCircle2 className="size-3.5" />
-                                ) : null}
-                                {status}
-                              </Badge>
-                            )}
-                          </div>
-                          <p className="mt-1.5 text-xs text-muted">{ringkasMataUji(sesi)}</p>
-                          <p className="mt-1 text-xs text-muted">
-                            {totalSoalSesi(sesi)} soal · {totalDurasiSesi(sesi)} menit
-                          </p>
-                        </li>
-                      );
-                    })}
-                  </ul>
-
-                  <div className="flex flex-wrap items-center gap-3 border-t border-line pt-4">
-                    <ButtonLink href={`/siswa/tryout/${paketAktif.id}`}>
-                      Buka Paket Ini
-                      <ArrowRight className="size-4" />
-                    </ButtonLink>
-                    <p className="text-xs text-muted">
-                      {totalSoalPaket(paketAktif)} soal pilihan ganda · {totalDurasiPaket(paketAktif)}{" "}
-                      menit per paket
-                    </p>
-                  </div>
-                </CardBody>
-              </Card>
-
-              {rekap.length > 0 ? (
-                <Card>
-                  <CardHeader
-                    judul="Perkembangan Nilai"
-                    deskripsi="Rata-rata nilai Anda pada setiap paket try out."
-                  />
-                  <CardBody>
-                    <GrafikGaris
-                      labelX={labelPaket}
-                      seri={seriRataRata}
-                      satuan="rata-rata nilai"
+              {paketAktif && ringkasanAktif ? (
+                <>
+                  <Card>
+                    <CardHeader
+                      judul="Paket yang Sedang Dikerjakan"
+                      deskripsi="Lanjutkan dari sesi yang belum diselesaikan."
+                      aksi={
+                        <Badge tone={ringkasanAktif.sedangBerlangsung ? "gold" : "navy"}>
+                          {ringkasanAktif.sesiSelesai} dari {paketAktif.sesi.length} sesi selesai
+                        </Badge>
+                      }
                     />
-                  </CardBody>
-                </Card>
+                    <CardBody className="space-y-5">
+                      <div className="flex items-start gap-4">
+                        <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-navy-900 text-lg font-bold text-gold-300">
+                          {paketAktif.nomor}
+                        </span>
+                        <div className="min-w-0">
+                          <h3 className="text-lg font-semibold text-navy-900">
+                            {paketAktif.nama}
+                          </h3>
+                          <p className="mt-1 text-sm leading-relaxed text-muted">
+                            {paketAktif.deskripsi}
+                          </p>
+                        </div>
+                      </div>
+
+                      <Progress
+                        nilai={ringkasanAktif.persen}
+                        tone={ringkasanAktif.tuntas ? "navy" : "gold"}
+                      />
+
+                      <ul className="grid gap-3 sm:grid-cols-2">
+                        {sesiTerurut(paketAktif).map((sesi) => {
+                          const status = ringkasanAktif.status[sesi.id];
+                          const terkunci = sesiTerkunci(paketAktif, sesi.id, ctx);
+                          return (
+                            <li
+                              key={sesi.id}
+                              className="rounded-xl border border-line px-4 py-3.5"
+                            >
+                              <div className="flex items-center justify-between gap-3">
+                                <p className="text-sm font-semibold text-navy-900">
+                                  {sesi.nama}
+                                </p>
+                                {terkunci ? (
+                                  <Badge tone="netral">
+                                    <Lock className="size-3" />
+                                    Terkunci
+                                  </Badge>
+                                ) : (
+                                  <Badge tone={NADA_STATUS[status]}>
+                                    {status === "Sedang Berlangsung" ? (
+                                      <CircleDot className="size-3" />
+                                    ) : status === "Selesai" ? (
+                                      <CheckCircle2 className="size-3.5" />
+                                    ) : null}
+                                    {status}
+                                  </Badge>
+                                )}
+                              </div>
+                              <p className="mt-1.5 text-xs text-muted">{ringkasMataUji(sesi)}</p>
+                              <p className="mt-1 text-xs text-muted">
+                                {totalSoalSesi(sesi)} soal · {totalDurasiSesi(sesi)} menit
+                              </p>
+                            </li>
+                          );
+                        })}
+                      </ul>
+
+                      <div className="flex flex-wrap items-center gap-3 border-t border-line pt-4">
+                        <ButtonLink href={`/siswa/tryout/${paketAktif.id}`}>
+                          Buka Paket Ini
+                          <ArrowRight className="size-4" />
+                        </ButtonLink>
+                        <p className="text-xs text-muted">
+                          {totalSoalPaket(paketAktif)} soal pilihan ganda · {totalDurasiPaket(paketAktif)}{" "}
+                          menit per paket
+                        </p>
+                      </div>
+                    </CardBody>
+                  </Card>
+
+                  {rekap.length > 0 ? (
+                    <Card>
+                      <CardHeader
+                        judul="Perkembangan Nilai"
+                        deskripsi="Rata-rata nilai Anda pada setiap paket try out."
+                      />
+                      <CardBody>
+                        <GrafikGaris
+                          labelX={labelPaket}
+                          seri={seriRataRata}
+                          satuan="rata-rata nilai"
+                        />
+                      </CardBody>
+                    </Card>
+                  ) : (
+                    <Card>
+                      <CardHeader
+                        judul="Perkembangan Nilai"
+                        deskripsi="Grafik muncul setelah Anda menyelesaikan paket try out pertama."
+                      />
+                      <CardBody>
+                        <p className="py-6 text-center text-sm text-muted">
+                          Belum ada nilai untuk digambarkan.
+                        </p>
+                      </CardBody>
+                    </Card>
+                  )}
+                </>
               ) : (
                 <Card>
                   <CardHeader
-                    judul="Perkembangan Nilai"
-                    deskripsi="Grafik muncul setelah Anda menyelesaikan paket try out pertama."
+                    judul="Paket yang Sedang Dikerjakan"
+                    deskripsi="Belum ada paket try out yang tersedia saat ini."
                   />
                   <CardBody>
                     <p className="py-6 text-center text-sm text-muted">
-                      Belum ada nilai untuk digambarkan.
+                      Silakan tunggu jadwal try out dari pengajar.
                     </p>
                   </CardBody>
                 </Card>
