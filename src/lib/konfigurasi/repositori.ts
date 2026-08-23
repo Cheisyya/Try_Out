@@ -120,6 +120,21 @@ async function bacaKonfigurasi(): Promise<KonfigurasiTryOut> {
 
   const dariStore = await bacaJsonTersimpan<KonfigurasiTryOut>(KUNCI);
   if (dariStore && Array.isArray(dariStore.paket)) {
+    // Migrasi otomatis: serentakkan jadwal semua paket ke 23 Agustus 2026 dan hapus batas waktu
+    let adaPerubahan = false;
+    for (const p of dariStore.paket) {
+      if (p.jadwal !== "2026-08-23T08:00" || p.ditutupPada !== undefined) {
+        p.jadwal = "2026-08-23T08:00";
+        delete p.ditutupPada;
+        adaPerubahan = true;
+      }
+    }
+    
+    if (adaPerubahan) {
+      // Simpan pembaruan kembali ke store (database/berkas)
+      await cobaSimpan(() => tulisJson(KUNCI, dariStore), "Gagal migrasi jadwal.");
+    }
+    
     cache = { waktu: Date.now(), data: dariStore };
     return dariStore;
   }
