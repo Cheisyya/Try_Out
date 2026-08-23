@@ -153,25 +153,20 @@ export async function ubahAktifPaketPsikotesAksi(
   paketId: string,
   aktif: boolean,
 ): Promise<HasilAksiAdmin> {
-  try {
-    await wajibSesi("admin");
+  await wajibSesi("admin");
 
-    const hasil = await setAktifPaketPsikotes(paketId, aktif);
-    if (!hasil.ok) return hasil;
+  const tujuan = aktif === true;
+  const hasil = await setAktifPaketPsikotes(paketId, tujuan);
+  if (!hasil.ok) return hasil;
 
-    revalidatePath("/siswa/psikotes");
-    revalidatePath(`/siswa/psikotes/${paketId}`);
-    return {
-      ok: true,
-      pesan: aktif ? "Paket diaktifkan." : "Paket dinonaktifkan.",
-    };
-  } catch (error) {
-    console.error("ubahAktifPaketPsikotesAksi:", error);
-    return {
-      ok: false,
-      masalah: ["Perubahan status gagal disimpan. Coba lagi."],
-    };
-  }
+  // Hanya segarkan panel admin. Halaman siswa memakai cookies() dan notFound()
+  // bila paket dimatikan; merevalidasinya dari sesi admin membuat Next.js
+  // menelan redirect/404 dan menjatuhkan halaman ini.
+  revalidatePath("/admin/psikotes");
+  return {
+    ok: true,
+    pesan: tujuan ? "Paket diaktifkan." : "Paket dinonaktifkan.",
+  };
 }
 
 /* -------------------------------------------------------------------------- */

@@ -64,7 +64,7 @@ export async function setAktifPaketOverlay(
   aktif: boolean,
 ): Promise<{ ok: true } | { ok: false; masalah: string[] }> {
   const overlay = await bacaOverlay(kunci);
-  overlay.paket[paketId] = aktif;
+  overlay.paket[paketId] = aktif === true;
   return tulisOverlay(kunci, overlay);
 }
 

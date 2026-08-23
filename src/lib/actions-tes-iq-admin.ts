@@ -144,25 +144,20 @@ export async function ubahAktifPaketIqAksi(
   paketId: string,
   aktif: boolean,
 ): Promise<HasilAksiIqAdmin> {
-  try {
-    await wajibSesi("admin");
+  await wajibSesi("admin");
 
-    const hasil = await setAktifPaketIq(paketId, aktif);
-    if (!hasil.ok) return hasil;
+  const tujuan = aktif === true;
+  const hasil = await setAktifPaketIq(paketId, tujuan);
+  if (!hasil.ok) return hasil;
 
-    revalidatePath("/siswa/tes-iq");
-    revalidatePath(`/siswa/tes-iq/${paketId}`);
-    return {
-      ok: true,
-      pesan: aktif ? "Paket diaktifkan." : "Paket dinonaktifkan.",
-    };
-  } catch (error) {
-    console.error("ubahAktifPaketIqAksi:", error);
-    return {
-      ok: false,
-      masalah: ["Perubahan status gagal disimpan. Coba lagi."],
-    };
-  }
+  // Hanya segarkan panel admin. Halaman siswa memakai cookies() dan notFound()
+  // bila paket dimatikan; merevalidasinya dari sesi admin membuat Next.js
+  // menelan redirect/404 dan menjatuhkan halaman ini.
+  revalidatePath("/admin/tes-iq");
+  return {
+    ok: true,
+    pesan: tujuan ? "Paket diaktifkan." : "Paket dinonaktifkan.",
+  };
 }
 
 /* -------------------------------------------------------------------------- */

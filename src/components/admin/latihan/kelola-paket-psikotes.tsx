@@ -97,32 +97,76 @@ function PesanMasalah({ hasil }: { hasil: HasilAksiAdmin | null }) {
 
 function IkonAksi({
   label,
-  onClick,
-  disabled,
   className,
   children,
-}: {
-  label: string;
-  onClick: () => void;
-  disabled?: boolean;
-  className?: string;
-  children: React.ReactNode;
-}) {
+  ...props
+}: React.ComponentProps<"button"> & { label: string }) {
   return (
     <button
       type="button"
       title={label}
-      onClick={onClick}
-      disabled={disabled}
       className={cn(
-        "grid size-9 shrink-0 place-items-center rounded-lg border border-transparent text-navy-600 transition",
-        "hover:border-navy-200 hover:bg-navy-50 disabled:opacity-50",
+        "grid size-9 shrink-0 place-items-center rounded-lg border border-transparent text-navy-600 transition hover:border-navy-200 hover:bg-navy-50 disabled:pointer-events-none disabled:opacity-50",
         className,
       )}
+      {...props}
     >
       {children}
       <span className="sr-only">{label}</span>
     </button>
+  );
+}
+
+function TombolPaket({
+  paket,
+  proses,
+  onAturSesi,
+  onSunting,
+  onUbahAktif,
+  onHapus,
+}: {
+  paket: BarisPaketPsikotes;
+  proses: boolean;
+  onAturSesi: () => void;
+  onSunting: () => void;
+  onUbahAktif: () => void;
+  onHapus: () => void;
+}) {
+  const labelAktif = paket.aktif ? "Nonaktifkan paket" : "Aktifkan paket";
+
+  return (
+    <div className="flex justify-end gap-1">
+      <IkonAksi label="Atur sesi" onClick={onAturSesi} disabled={proses}>
+        <Settings2 className="size-4.5" />
+      </IkonAksi>
+      <IkonAksi label="Sunting paket" onClick={onSunting} disabled={proses}>
+        <Pencil className="size-4.5" />
+      </IkonAksi>
+      <IkonAksi
+        label={labelAktif}
+        onClick={onUbahAktif}
+        disabled={proses}
+        className={
+          paket.aktif
+            ? "text-rose-600 hover:bg-rose-50 hover:text-rose-700"
+            : "text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700"
+        }
+      >
+        {proses ? (
+          <LoaderCircle className="size-4.5 animate-spin" />
+        ) : (
+          <Power className="size-4.5" />
+        )}
+      </IkonAksi>
+      <IkonAksi
+        label="Hapus paket"
+        onClick={onHapus}
+        disabled={proses}
+        className="text-rose-600 hover:bg-rose-50 hover:text-rose-700"
+      >
+        <Trash2 className="size-4.5" />
+      </IkonAksi>
+    </div>
   );
 }
 
@@ -197,7 +241,7 @@ export function KelolaPaketPsikotes({
           }
         />
         <CardBody className="p-0 sm:p-0">
-          {daftar.length === 0 ? (
+          {daftarLokal.length === 0 ? (
             <KeadaanKosong
               judul="Belum ada paket psikotes"
               ikon={FileText}
@@ -217,7 +261,7 @@ export function KelolaPaketPsikotes({
                   </tr>
                 </thead>
                 <tbody>
-                  {daftar.map((paket) => (
+                  {daftarLokal.map((paket) => (
                     <tr key={paket.id}>
                       <Td className="font-semibold text-navy-900">
                         {paket.nomor}
@@ -251,47 +295,14 @@ export function KelolaPaketPsikotes({
                       </Td>
                       <Td>
                         <div className="flex justify-end gap-1">
-                          <IkonAksi
-                            label="Atur sesi"
-                            onClick={() => setAturSesi(paket)}
-                            disabled={proses}
-                          >
-                            <Settings2 className="size-4.5" />
-                          </IkonAksi>
-                          <IkonAksi
-                            label="Sunting paket"
-                            onClick={() => setSunting(paket)}
-                            disabled={proses}
-                          >
-                            <Pencil className="size-4.5" />
-                          </IkonAksi>
-                          <IkonAksi
-                            label={
-                              paket.aktif ? "Nonaktifkan paket" : "Aktifkan paket"
-                            }
-                            onClick={() => ubahAktif(paket)}
-                            disabled={proses}
-                            className={
-                              paket.aktif
-                                ? "text-rose-600 hover:bg-rose-50 hover:text-rose-700"
-                                : "text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700"
-                            }
-                          >
-                            {proses ? (
-                              <LoaderCircle className="size-4.5 animate-spin" />
-                            ) : (
-                              <Power className="size-4.5" />
-                            )}
-                          </IkonAksi>
-                          <IkonAksi
-                            label="Hapus paket"
-                            onClick={() => hapus(paket)}
-                            disabled={proses}
-                            className="text-rose-600 hover:bg-rose-50 hover:text-rose-700"
-                          >
-                            <Trash2 className="size-4.5" />
-                          </IkonAksi>
-                        </div>
+                        <TombolPaket
+                          paket={paket}
+                          proses={proses}
+                          onAturSesi={() => setAturSesi(paket)}
+                          onSunting={() => setSunting(paket)}
+                          onUbahAktif={() => ubahAktif(paket)}
+                          onHapus={() => hapus(paket)}
+                        />
                       </Td>
                     </tr>
                   ))}
