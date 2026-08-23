@@ -1,4 +1,5 @@
 import { bacaJson, cobaSimpan, tulisJson } from "@/lib/penyimpanan";
+import { getOverlay, setOverlay } from "@/lib/kv";
 
 /**
  * Overlay status aktif/nonaktif paket latihan (Tes IQ & Psikotes).
@@ -19,6 +20,12 @@ export type OverlayStatus = {
 const KOSONG: OverlayStatus = { paket: {}, sesi: {} };
 
 export async function bacaOverlay(kunci: string): Promise<OverlayStatus> {
+  if (process.env.NODE_ENV === "production") {
+    const stored = await getOverlay(kunci);
+    if (stored) return stored as OverlayStatus;
+    // fallback to empty if not set
+    return { paket: {}, sesi: {} };
+  }
   const tersimpan = await bacaJson<Partial<OverlayStatus>>(kunci);
   const paket =
     tersimpan?.paket && typeof tersimpan.paket === "object"
@@ -33,6 +40,10 @@ async function tulisOverlay(
   kunci: string,
   overlay: OverlayStatus,
 ): Promise<{ ok: true } | { ok: false; masalah: string[] }> {
+  if (process.env.NODE_ENV === "production") {
+    const success = await setOverlay(kunci, overlay);
+    return success ? { ok: true } : { ok: false, masalah: ["Gagal menulis ke KV."] };
+  }
   const hasil = await cobaSimpan(
     () => tulisJson(kunci, overlay),
     "Gagal menyimpan status paket.",
