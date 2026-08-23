@@ -241,6 +241,8 @@ export async function tambahPaketIq(nama: string): Promise<HasilBankIq<PaketIq>>
 
   const indeks = await tulisIndeks([...daftar, id]);
   if (!indeks.ok) return { ok: false, masalah: indeks.masalah };
+
+  await setAktifPaketOverlay(KUNCI_STATUS, id, true);
   return { ok: true, data: paket };
 }
 

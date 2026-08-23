@@ -232,24 +232,32 @@ export async function buatPaket(masukan: {
   const masalah = validasiPaket(masukan);
   if (masalah.length) return { ok: false, masalah };
 
-  const nomor =
+  const terpakai = new Set(data.paket.map((item) => item.id));
+  let nomor =
     data.paket.reduce((maks, paket) => Math.max(maks, paket.nomor), 0) + 1;
+  let id = `paket-${nomor}`;
+  while (terpakai.has(id)) {
+    nomor += 1;
+    id = `paket-${nomor}`;
+  }
+
   const paket: PaketKonfig = {
-    id: `paket-${nomor}`,
+    id,
     nomor,
     nama: masukan.nama.trim(),
     deskripsi: masukan.deskripsi.trim(),
     jadwal: masukan.jadwal,
     ditutupPada: masukan.ditutupPada?.trim() || undefined,
-    aktif: masukan.aktif,
+    aktif: masukan.aktif === true,
     sesi: sesiBawaan(nomor),
   };
 
-  const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paket.id, paket.aktif);
-  if (!overlay.ok) return overlay;
-
+  // Tulis konfigurasi dulu: overlay status tidak boleh menghalangi paket baru.
   const hasil = await simpan({ paket: [...data.paket, paket] });
-  return hasil.ok ? { ok: true, paket } : hasil;
+  if (!hasil.ok) return hasil;
+
+  await setAktifPaketOverlay(KUNCI_STATUS, paket.id, paket.aktif);
+  return { ok: true, paket };
 }
 
 export async function perbaruiPaket(
@@ -269,26 +277,22 @@ export async function perbaruiPaket(
   const masalah = validasiPaket(perubahan);
   if (masalah.length) return { ok: false, masalah };
 
-  const overlay = await setAktifPaketOverlay(
-    KUNCI_STATUS,
-    paketId,
-    perubahan.aktif,
-  );
-  if (!overlay.ok) return overlay;
-
   const baru: PaketKonfig = {
     ...lama,
     nama: perubahan.nama.trim(),
     deskripsi: perubahan.deskripsi.trim(),
     jadwal: perubahan.jadwal,
     ditutupPada: perubahan.ditutupPada?.trim() || undefined,
-    aktif: perubahan.aktif,
+    aktif: perubahan.aktif === true,
   };
 
   const hasil = await simpan({
     paket: data.paket.map((paket) => (paket.id === paketId ? baru : paket)),
   });
-  return hasil.ok ? { ok: true, paket: baru } : hasil;
+  if (!hasil.ok) return hasil;
+
+  await setAktifPaketOverlay(KUNCI_STATUS, paketId, baru.aktif);
+  return { ok: true, paket: baru };
 }
 
 /**

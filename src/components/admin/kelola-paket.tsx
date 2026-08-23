@@ -360,6 +360,7 @@ export function KelolaPaket({ daftar }: { daftar: BarisPaket[] }) {
 
       {formTerbuka ? (
         <FormPaket
+          key={formTerbuka === "baru" ? "baru" : formTerbuka.id}
           paket={formTerbuka === "baru" ? null : formTerbuka}
           onSelesai={() => {
             setFormTerbuka(null);
@@ -428,13 +429,16 @@ function FormPaket({
   onTutup: () => void;
   onSelesai: () => void;
 }) {
-  const aksi = simpanPaketAksi.bind(null, paket?.id ?? null);
-  const [state, formAction] = useActionState<KonfigState, FormData>(aksi, {});
+  const [state, formAction] = useActionState<KonfigState, FormData>(
+    simpanPaketAksi,
+    {},
+  );
 
-  if (state.sukses) {
-    // Setelah tersimpan, tutup modal dan segarkan tabel.
-    queueMicrotask(onSelesai);
-  }
+  useEffect(() => {
+    if (state.sukses) onSelesai();
+    // onSelesai berubah tiap render; cukup bereaksi pada hasil simpan.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.sukses]);
 
   return (
     <Modal
@@ -445,6 +449,8 @@ function FormPaket({
       onTutup={onTutup}
     >
       <form action={formAction} className="space-y-4">
+        <input type="hidden" name="paketId" value={paket?.id ?? ""} />
+
         <Field label="Nama Paket" htmlFor="nama">
           <Input
             id="nama"

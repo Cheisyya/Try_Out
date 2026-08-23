@@ -23,18 +23,20 @@ import { isSesiId } from "@/lib/konfigurasi/tipe";
 export type KonfigState = { masalah?: string[]; sukses?: string };
 
 function segarkan() {
-  revalidatePath("/admin", "layout");
-  revalidatePath("/siswa", "layout");
-  revalidatePath("/ujian", "layout");
+  // Hanya panel admin. Layout /siswa dan halaman /ujian memakai wajibSesi("siswa")
+  // / wajibFitur — merevalidasinya dari sesi admin memicu redirect/404 dan
+  // membuat Tambah Paket gagal secara silent meskipun data sudah tersimpan.
+  revalidatePath("/admin/tryout");
+  revalidatePath("/admin/bank-soal");
 }
 
 export async function simpanPaketAksi(
-  paketId: string | null,
   _prev: KonfigState,
   formData: FormData,
 ): Promise<KonfigState> {
   await wajibSesi("admin");
 
+  const paketId = String(formData.get("paketId") ?? "").trim() || null;
   const masukan = {
     nama: String(formData.get("nama") ?? "").trim(),
     deskripsi: String(formData.get("deskripsi") ?? "").trim(),

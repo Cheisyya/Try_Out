@@ -29,7 +29,7 @@ export default async function PembahasanPaketPage({ params }: Props) {
 
   // Ensure the paket is active before fetching pembahasan
   const paket = await getPaket(paketId);
-  if (!paket || !paket.aktif) notFound();
+  if (!paket || paket.aktif === false) notFound();
 
   const data = await pembahasanPaket(sesi.identitas, paketId);
   if (!data) notFound();

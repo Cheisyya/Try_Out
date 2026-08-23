@@ -55,7 +55,7 @@ export async function SeksiPaket() {
         jadwal: paket.jadwal,
         ditutupPada: paket.ditutupPada,
         statusJendela: jendelaPaket(paket).status,
-        aktif: paket.aktif,
+        aktif: paket.aktif !== false,
         jumlahSesi: paket.sesi.length,
         totalSoal: totalSoalPaket(paket),
         totalDurasi: totalDurasiPaket(paket),
