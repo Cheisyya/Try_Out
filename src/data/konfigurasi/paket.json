@@ -63,7 +63,7 @@
       "nomor": 2,
       "nama": "Try Out Paket 2",
       "deskripsi": "Paket penalaran tingkat menengah: menganalisis informasi, menafsirkan data, dan menerapkan konsep pada situasi baru.",
-      "jadwal": "2026-09-06T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -121,7 +121,7 @@
       "nomor": 3,
       "nama": "Try Out Paket 3",
       "deskripsi": "Penekanan pada penalaran bertahap — sebagian besar soal menuntut lebih dari satu langkah sebelum sampai pada kesimpulan.",
-      "jadwal": "2026-09-20T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -179,7 +179,7 @@
       "nomor": 4,
       "nama": "Try Out Paket 4",
       "deskripsi": "Lompatan tingkat kesulitan: seluruh soal bertaraf Hard–Very Hard dengan penalaran bertingkat dan distraktor kuat.",
-      "jadwal": "2026-10-04T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -237,7 +237,7 @@
       "nomor": 5,
       "nama": "Try Out Paket 5",
       "deskripsi": "Penekanan pada analisis data percobaan dan pembacaan grafik — informasi harus disaring sebelum dihitung.",
-      "jadwal": "2026-10-18T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -295,7 +295,7 @@
       "nomor": 6,
       "nama": "Try Out Paket 6",
       "deskripsi": "Sintesis lintas konsep: satu soal menuntut dua atau lebih konsep dipakai bersamaan.",
-      "jadwal": "2026-11-01T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -353,7 +353,7 @@
       "nomor": 7,
       "nama": "Try Out Paket 7",
       "deskripsi": "Evaluasi argumen dan pengambilan keputusan berdasarkan bukti yang tidak seluruhnya sejalan.",
-      "jadwal": "2026-11-15T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -411,7 +411,7 @@
       "nomor": 8,
       "nama": "Try Out Paket 8",
       "deskripsi": "Paket dasar kedua tingkat Easy dengan cakupan kategori yang sama, soal berbeda.",
-      "jadwal": "2026-11-29T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -469,7 +469,7 @@
       "nomor": 9,
       "nama": "Try Out Paket 9",
       "deskripsi": "Porsi HOTS bertambah: mengevaluasi informasi, memprediksi akibat suatu kondisi, dan memilih strategi penyelesaian.",
-      "jadwal": "2026-12-13T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -527,7 +527,7 @@
       "nomor": 10,
       "nama": "Try Out Paket 10",
       "deskripsi": "Simulasi menjelang seleksi dengan stimulus panjang, tabel data, dan grafik hasil percobaan yang harus ditafsirkan.",
-      "jadwal": "2026-12-27T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -585,7 +585,7 @@
       "nomor": 11,
       "nama": "Try Out Paket 11",
       "deskripsi": "Simulasi akhir setara pelaksanaan seleksi: seluruh keterampilan berpikir tingkat tinggi diuji sekaligus.",
-      "jadwal": "2027-01-10T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -643,7 +643,7 @@
       "nomor": 12,
       "nama": "Try Out Paket 12",
       "deskripsi": "Strategi penyelesaian: soal yang metodenya tidak langsung terlihat dan menuntut pemodelan masalah.",
-      "jadwal": "2027-01-24T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -701,7 +701,7 @@
       "nomor": 13,
       "nama": "Try Out Paket 13",
       "deskripsi": "Prediksi akibat dan hubungan sebab-akibat pada situasi baru yang belum pernah ditemui peserta.",
-      "jadwal": "2027-02-07T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -759,7 +759,7 @@
       "nomor": 14,
       "nama": "Try Out Paket 14",
       "deskripsi": "Optimasi dan pencarian pola — mencari nilai terbaik, batas, atau keteraturan di balik data.",
-      "jadwal": "2027-02-21T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -817,7 +817,7 @@
       "nomor": 15,
       "nama": "Try Out Paket 15",
       "deskripsi": "Simulasi seleksi bertaraf tinggi dengan stimulus panjang, tabel, dan diagram yang wajib ditafsirkan.",
-      "jadwal": "2027-03-07T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
@@ -875,7 +875,7 @@
       "nomor": 16,
       "nama": "Try Out Paket 16",
       "deskripsi": "Paket puncak: gabungan seluruh keterampilan berpikir tingkat tinggi pada taraf tersulit yang masih wajar untuk SMP.",
-      "jadwal": "2027-03-21T08:00",
+      "jadwal": "2026-08-23T08:00",
       "aktif": true,
       "sesi": [
         {
