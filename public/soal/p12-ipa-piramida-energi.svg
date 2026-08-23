@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" role="img" aria-label="Piramida energi bertingkat empat pada sebuah ekosistem. Tingkat paling bawah adalah produsen dengan energi tersimpan 40.000 kilojoule. Di atasnya konsumen tingkat satu dengan 4.000 kilojoule. Di atasnya lagi konsumen tingkat dua dengan 400 kilojoule. Tingkat teratas adalah konsumen tingkat tiga dengan 40 kilojoule.">
+  <style>
+    .tingkat { stroke: #16274c; stroke-width: 3; }
+    .t1 { fill: #dff0e2; }
+    .t2 { fill: #f2e2bd; }
+    .t3 { fill: #e5c98f; }
+    .t4 { fill: #d3b06a; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="340" fill="#f5f7fb" />
+
+  <!-- tingkat 1 (bawah) sampai tingkat 4 (atas) -->
+  <polygon class="tingkat t1" points="80,290 520,290 460,230 140,230" />
+  <polygon class="tingkat t2" points="140,230 460,230 400,170 200,170" />
+  <polygon class="tingkat t3" points="200,170 400,170 340,110 260,110" />
+  <polygon class="tingkat t4" points="260,110 340,110 300,50" />
+
+  <text class="tebal" x="300" y="268" text-anchor="middle">Produsen — 40.000 kJ</text>
+  <text class="tebal" x="300" y="208" text-anchor="middle">Konsumen I — 4.000 kJ</text>
+  <text class="tebal" x="300" y="148" text-anchor="middle">Konsumen II — 400 kJ</text>
+  <text class="teks" x="352" y="90">Konsumen III — 40 kJ</text>
+</svg>

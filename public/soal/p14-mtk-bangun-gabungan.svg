@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Sebuah bangun datar dibentuk dari persegi bersisi 14 sentimeter. Pada sisi kanan persegi ditempelkan sebuah setengah lingkaran berdiameter 14 sentimeter yang menonjol keluar. Pada sisi kiri persegi dipotong sebuah setengah lingkaran berukuran sama sehingga bagian itu menjorok ke dalam. Bagian bangun yang tersisa diarsir.">
+  <style>
+    .bangun { fill: #f2e2bd; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.8; stroke-dasharray: 7 5; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="360" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 18 px. Persegi 14 cm = 252 px, sudut kiri atas (180, 40) -->
+  <!-- Bangun: mulai kiri atas, ke kanan sepanjang sisi atas, setengah lingkaran menonjol di kanan,
+       kembali sepanjang sisi bawah, lalu setengah lingkaran menjorok ke dalam di kiri -->
+  <path class="bangun" d="M180 40 H432 A126 126 0 0 1 432 292 H180 A126 126 0 0 0 180 40 Z" />
+
+  <!-- garis putus-putus menandai sisi persegi asal -->
+  <path class="putus" d="M180 40 V292 M432 40 V292" />
+
+  <text class="tebal" x="306" y="172" text-anchor="middle">persegi asal</text>
+  <text class="teks" x="500" y="172" text-anchor="middle">tonjolan</text>
+  <text class="teks" x="120" y="172" text-anchor="middle">takik</text>
+
+  <!-- ukuran sisi persegi -->
+  <path class="ukur" d="M180 320 H432 M180 314 V326 M432 314 V326" />
+  <text class="teks" x="306" y="342" text-anchor="middle">14 cm</text>
+
+  <!-- ukuran tinggi persegi -->
+  <path class="ukur" d="M156 40 V292 M150 40 H162 M150 292 H162" />
+  <text class="teks" x="138" y="166" text-anchor="middle" transform="rotate(-90 138 166)">14 cm</text>
+</svg>

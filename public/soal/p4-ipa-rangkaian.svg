@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" role="img" aria-label="Rangkaian listrik dengan sumber tegangan 12 volt. Dari kutub positif baterai, arus mengalir melalui hambatan R satu sebesar 3 ohm yang terpasang seri. Setelah R satu rangkaian bercabang menjadi dua: cabang atas berisi R dua sebesar 4 ohm dan cabang bawah berisi R tiga sebesar 12 ohm. Kedua cabang bertemu kembali lalu kembali ke kutub negatif baterai.">
+  <style>
+    .kawat { fill: none; stroke: #16274c; stroke-width: 3; stroke-linecap: round; }
+    .hambat { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .plat { stroke: #16274c; stroke-width: 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+    .simpul { fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="620" height="300" fill="#f5f7fb" />
+
+  <!-- rangka luar -->
+  <path class="kawat" d="M60 150 V70 H140" />
+  <path class="kawat" d="M200 70 H300" />
+  <path class="kawat" d="M470 70 H560 V250 H60 V190" />
+
+  <!-- baterai 12 V pada sisi kiri -->
+  <path class="plat" d="M38 150 H82" />
+  <path class="plat" d="M50 168 H70" />
+  <text class="tebal" x="96" y="176">12 V</text>
+
+  <!-- R1 seri -->
+  <rect class="hambat" x="140" y="56" width="60" height="28" rx="4" />
+  <text class="teks" x="170" y="46" text-anchor="middle">R₁ = 3 Ω</text>
+
+  <!-- percabangan -->
+  <circle class="simpul" cx="300" cy="70" r="5" />
+  <circle class="simpul" cx="470" cy="70" r="5" />
+
+  <!-- cabang atas: R2 -->
+  <path class="kawat" d="M300 70 H350" />
+  <rect class="hambat" x="350" y="56" width="60" height="28" rx="4" />
+  <path class="kawat" d="M410 70 H470" />
+  <text class="teks" x="380" y="46" text-anchor="middle">R₂ = 4 Ω</text>
+
+  <!-- cabang bawah: R3 -->
+  <path class="kawat" d="M300 70 V170 H350" />
+  <rect class="hambat" x="350" y="156" width="60" height="28" rx="4" />
+  <path class="kawat" d="M410 170 H470 V70" />
+  <text class="teks" x="380" y="204" text-anchor="middle">R₃ = 12 Ω</text>
+</svg>

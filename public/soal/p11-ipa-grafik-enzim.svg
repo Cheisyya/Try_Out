@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Grafik hasil percobaan kecepatan kerja enzim terhadap suhu. Sumbu datar suhu dalam derajat Celsius dari 0 sampai 70, sumbu tegak kecepatan reaksi dalam satuan sembarang dari 0 sampai 100. Kurva naik perlahan dari suhu 0 derajat, mencapai puncak sebesar 100 satuan pada suhu 37 derajat, lalu turun sangat curam sampai mencapai nol pada suhu 55 derajat dan tetap nol sesudahnya.">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .kurva { fill: none; stroke: #1baf7a; stroke-width: 3.5; stroke-linejoin: round; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .label { font-size: 14px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="320" fill="#f5f7fb" />
+
+  <!-- grid: tiap 10 derajat dan tiap 20 satuan -->
+  <g class="grid">
+    <path d="M150 40 V250" /><path d="M220 40 V250" /><path d="M290 40 V250" />
+    <path d="M360 40 V250" /><path d="M430 40 V250" /><path d="M500 40 V250" />
+    <path d="M570 40 V250" />
+    <path d="M80 208 H575" /><path d="M80 166 H575" /><path d="M80 124 H575" />
+    <path d="M80 82 H575" /><path d="M80 40 H575" />
+  </g>
+
+  <path class="sumbu" d="M80 250 H580" />
+  <path class="sumbu" d="M80 35 V252" />
+
+  <!-- skala suhu: 1 derajat = 7 px -->
+  <g class="teks" text-anchor="middle">
+    <text x="80" y="270">0</text><text x="150" y="270">10</text>
+    <text x="220" y="270">20</text><text x="290" y="270">30</text>
+    <text x="360" y="270">40</text><text x="430" y="270">50</text>
+    <text x="500" y="270">60</text><text x="570" y="270">70</text>
+  </g>
+
+  <!-- skala kecepatan: 20 satuan = 42 px -->
+  <g class="teks" text-anchor="end">
+    <text x="72" y="255">0</text><text x="72" y="213">20</text>
+    <text x="72" y="171">40</text><text x="72" y="129">60</text>
+    <text x="72" y="87">80</text><text x="72" y="45">100</text>
+  </g>
+
+  <!-- kurva: naik landai ke puncak pada 37 derajat lalu turun curam sampai nol pada 55 derajat -->
+  <path class="kurva" d="M80 250 C 180 240, 270 150, 339 40 C 360 90, 390 200, 465 250 L 575 250" />
+
+  <!-- penanda puncak -->
+  <g class="putus">
+    <path d="M339 40 V250" />
+  </g>
+  <circle cx="339" cy="40" r="5" fill="#16274c" />
+  <text class="teks label" x="348" y="34">puncak pada 37 °C</text>
+
+  <text class="label" x="330" y="292" text-anchor="middle">suhu (°C)</text>
+  <text class="label" x="18" y="145" transform="rotate(-90 18 145)" text-anchor="middle">kecepatan reaksi (satuan sembarang)</text>
+</svg>

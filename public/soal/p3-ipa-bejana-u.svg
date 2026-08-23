@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Bejana berhubungan berbentuk huruf U. Kaki kiri berisi air dan kaki kanan berisi minyak yang tidak bercampur. Bidang batas antara air dan minyak berada pada kaki kanan. Diukur dari bidang batas itu, tinggi kolom minyak pada kaki kanan 20 sentimeter, sedangkan tinggi kolom air pada kaki kiri 16 sentimeter.">
+  <style>
+    .kaca { fill: none; stroke: #16274c; stroke-width: 4; stroke-linejoin: round; }
+    .air { fill: #9dc4ef; }
+    .minyak { fill: #edc873; }
+    .ukur { fill: none; stroke: #16274c; stroke-width: 1.5; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-weight: 700; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="300" fill="#f5f7fb" />
+
+  <!-- isi cairan: air pada kaki kiri dan dasar, minyak pada kaki kanan -->
+  <path class="air" d="M170 90 H210 V210 H310 V130 H350 V250 H170 Z" />
+  <rect class="minyak" x="310" y="50" width="40" height="80" />
+
+  <!-- dinding bejana -->
+  <path class="kaca" d="M170 60 V250 H350 V40" />
+  <path class="kaca" d="M210 60 V210 H310 V40" />
+
+  <!-- bidang batas air-minyak -->
+  <path class="putus" d="M296 130 H364" />
+  <text class="teks tebal" x="368" y="135">bidang batas</text>
+
+  <!-- garis bantu permukaan air kaki kiri -->
+  <path class="putus" d="M156 90 H224" />
+
+  <!-- ukuran kolom minyak -->
+  <path class="ukur" d="M400 50 V130 M394 50 H406 M394 130 H406" />
+  <text class="teks" x="410" y="95">20 cm (minyak)</text>
+
+  <!-- ukuran kolom air di atas bidang batas -->
+  <path class="ukur" d="M140 90 V130 M134 90 H146 M134 130 H146" />
+  <text class="teks" x="4" y="86">16 cm</text>
+  <text class="teks" x="4" y="104">(air)</text>
+  <path class="putus" d="M140 130 H196" />
+
+  <!-- nama cairan -->
+  <text class="teks tebal" x="176" y="180">air</text>
+  <text class="teks tebal" x="314" y="86">minyak</text>
+</svg>

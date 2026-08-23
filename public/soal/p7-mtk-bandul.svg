@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" role="img" aria-label="Sebuah bandul terdiri atas kerucut di bagian atas dengan ujung runcing menghadap ke atas dan setengah bola di bagian bawah. Alas kerucut berimpit dengan permukaan datar setengah bola. Jari-jari alas kerucut sekaligus jari-jari setengah bola adalah 6 sentimeter dan tinggi kerucut 8 sentimeter.">
+  <style>
+    .bangun { fill: #f2e2bd; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.8; stroke-dasharray: 7 5; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="340" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 18 px. Jari-jari 6 cm = 108 px, tinggi kerucut 8 cm = 144 px -->
+  <!-- kerucut: puncak (260,40), alas dari (152,184) sampai (368,184) -->
+  <polygon class="bangun" points="260,40 152,184 368,184" />
+  <!-- setengah bola di bawah: pusat (260,184), jari-jari 108 -->
+  <path class="bangun" d="M152 184 A108 108 0 0 0 368 184 Z" />
+
+  <!-- garis batas antara kerucut dan setengah bola -->
+  <path class="putus" d="M152 184 H368" />
+  <!-- tinggi kerucut -->
+  <path class="putus" d="M260 40 V184" />
+
+  <!-- ukuran jari-jari -->
+  <path class="ukur" d="M260 158 H368 M368 152 V164" />
+  <text class="teks" x="314" y="150" text-anchor="middle">6 cm</text>
+
+  <!-- ukuran tinggi kerucut -->
+  <path class="ukur" d="M116 40 V184 M110 40 H122 M110 184 H122" />
+  <text class="teks" x="100" y="112" text-anchor="middle" transform="rotate(-90 100 112)">8 cm</text>
+</svg>

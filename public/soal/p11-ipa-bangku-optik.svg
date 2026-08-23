@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 280" role="img" aria-label="Susunan percobaan bangku optik. Sebuah lilin berdiri tegak sebagai benda, di sebelah kanannya berdiri sebuah lensa cembung, dan di sebelah kanan lensa berdiri sebuah layar. Jarak benda ke lensa 30 sentimeter dan jarak lensa ke layar 60 sentimeter. Pada layar terbentuk bayangan yang tajam dan terbalik.">
+  <style>
+    .rel { fill: #d7dfee; stroke: #16274c; stroke-width: 2; }
+    .lensa { fill: #cfe2f7; stroke: #16274c; stroke-width: 3; }
+    .layar { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .benda { fill: #c8953a; stroke: #16274c; stroke-width: 2; }
+    .sumbu { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .ukur { fill: none; stroke: #16274c; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-weight: 700; }
+  </style>
+
+  <rect x="0" y="0" width="620" height="280" fill="#f5f7fb" />
+
+  <!-- rel bangku optik -->
+  <rect class="rel" x="40" y="196" width="540" height="18" rx="4" />
+
+  <!-- sumbu utama -->
+  <path class="sumbu" d="M40 140 H580" />
+
+  <!-- benda berupa lilin pada 30 cm di kiri lensa: skala 1 cm = 4 px -->
+  <rect class="benda" x="112" y="96" width="16" height="100" rx="4" />
+  <polygon class="benda" points="120,76 128,96 112,96" />
+  <text class="teks tebal" x="120" y="66" text-anchor="middle">benda</text>
+
+  <!-- lensa cembung -->
+  <ellipse class="lensa" cx="240" cy="140" rx="14" ry="66" />
+  <text class="teks tebal" x="240" y="62" text-anchor="middle">lensa cembung</text>
+
+  <!-- layar -->
+  <rect class="layar" x="474" y="66" width="12" height="130" />
+  <rect class="layar" x="440" y="66" width="34" height="130" opacity="0" />
+  <text class="teks tebal" x="480" y="58" text-anchor="middle">layar</text>
+
+  <!-- bayangan terbalik pada layar -->
+  <rect fill="#c8953a" stroke="#16274c" stroke-width="2" x="452" y="140" width="14" height="44" rx="3" />
+  <polygon fill="#c8953a" stroke="#16274c" stroke-width="2" points="459,204 466,184 452,184" />
+
+  <!-- garis ukur 30 cm -->
+  <path class="ukur" d="M120 240 H240 M120 234 V246 M240 234 V246" />
+  <text class="teks" x="180" y="264" text-anchor="middle">30 cm</text>
+
+  <!-- garis ukur 60 cm -->
+  <path class="ukur" d="M240 240 H480 M480 234 V246" />
+  <text class="teks" x="360" y="264" text-anchor="middle">60 cm</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 320" role="img" aria-label="Grafik kuat arus terhadap beda potensial untuk dua hambatan P dan Q. Sumbu datar adalah beda potensial dalam volt dari 0 sampai 8, sumbu tegak adalah kuat arus dalam ampere dari 0 sampai 2. Garis P berupa garis lurus melalui titik nol dan melewati titik 2 volt dan 0,5 ampere, 4 volt dan 1,0 ampere, serta 6 volt dan 1,5 ampere. Garis Q berupa garis lurus melalui titik nol dan melewati titik 2 volt dan 0,25 ampere, 4 volt dan 0,5 ampere, serta 6 volt dan 0,75 ampere.">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .garisP { fill: none; stroke: #c8953a; stroke-width: 3.5; }
+    .garisQ { fill: none; stroke: #16274c; stroke-width: 3.5; stroke-dasharray: 9 6; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .label { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="580" height="320" fill="#f5f7fb" />
+
+  <!-- Skala: 1 volt = 55 px mulai x = 70; 0,5 A = 60 px mulai y = 250 -->
+  <g class="grid">
+    <path d="M70 190 H510" /><path d="M70 130 H510" /><path d="M70 70 H510" />
+    <path d="M125 60 V250" /><path d="M180 60 V250" /><path d="M235 60 V250" />
+    <path d="M290 60 V250" /><path d="M345 60 V250" /><path d="M400 60 V250" />
+    <path d="M455 60 V250" /><path d="M510 60 V250" />
+  </g>
+
+  <path class="sumbu" d="M70 250 H520" />
+  <path class="sumbu" d="M70 55 V252" />
+
+  <g class="teks" text-anchor="end">
+    <text x="62" y="255">0</text>
+    <text x="62" y="195">0,5</text>
+    <text x="62" y="135">1,0</text>
+    <text x="62" y="75">1,5</text>
+  </g>
+
+  <g class="teks" text-anchor="middle">
+    <text x="70" y="270">0</text>
+    <text x="125" y="270">1</text>
+    <text x="180" y="270">2</text>
+    <text x="235" y="270">3</text>
+    <text x="290" y="270">4</text>
+    <text x="345" y="270">5</text>
+    <text x="400" y="270">6</text>
+    <text x="455" y="270">7</text>
+    <text x="510" y="270">8</text>
+  </g>
+
+  <text class="label" x="295" y="296" text-anchor="middle">beda potensial (volt)</text>
+  <text class="label" x="22" y="155" text-anchor="middle" transform="rotate(-90 22 155)">kuat arus (ampere)</text>
+
+  <!-- P: I = 0,25 V; pada 6 V arus 1,5 A -> y = 250 - 1,5/0,5*60 = 70 -->
+  <path class="garisP" d="M70 250 L400 70" />
+  <!-- Q: I = 0,125 V; pada 8 V arus 1,0 A -> y = 130 -->
+  <path class="garisQ" d="M70 250 L510 130" />
+
+  <circle cx="400" cy="70" r="5" fill="#c8953a" />
+  <circle cx="400" cy="160" r="5" fill="#16274c" />
+
+  <text class="label" x="412" y="60" fill="#c8953a">P</text>
+  <text class="label" x="520" y="126">Q</text>
+</svg>

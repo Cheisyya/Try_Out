@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" role="img" aria-label="Diagram rangkaian listrik. Sumber tegangan 24 volt dihubungkan seri dengan resistor R1 sebesar 4 ohm. Setelah R1 rangkaian bercabang menjadi dua jalur paralel: jalur atas berisi R2 sebesar 6 ohm dan jalur bawah berisi R3 sebesar 12 ohm. Kedua jalur bertemu kembali lalu kembali ke sumber tegangan.">
+  <style>
+    .kabel { fill: none; stroke: #16274c; stroke-width: 3; stroke-linecap: round; }
+    .kotak { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-weight: 700; }
+    .titik { fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="540" height="260" fill="#f5f7fb" />
+
+  <!-- rail atas: baterai -> R1 -> titik cabang P -->
+  <path class="kabel" d="M60 50 H145" />
+  <rect class="kotak" x="145" y="35" width="82" height="30" rx="4" />
+  <text class="teks" x="156" y="55">R₁ = 4 Ω</text>
+  <path class="kabel" d="M227 50 H300" />
+
+  <!-- percabangan paralel -->
+  <path class="kabel" d="M300 50 V180" />
+  <path class="kabel" d="M300 100 H335" />
+  <path class="kabel" d="M300 180 H335" />
+  <rect class="kotak" x="335" y="85" width="86" height="30" rx="4" />
+  <rect class="kotak" x="335" y="165" width="86" height="30" rx="4" />
+  <text class="teks" x="345" y="105">R₂ = 6 Ω</text>
+  <text class="teks" x="343" y="185">R₃ = 12 Ω</text>
+  <path class="kabel" d="M421 100 H465" />
+  <path class="kabel" d="M421 180 H465" />
+  <path class="kabel" d="M465 100 V220" />
+
+  <!-- rail bawah kembali ke baterai -->
+  <path class="kabel" d="M465 220 H60" />
+  <path class="kabel" d="M60 220 V152" />
+  <path class="kabel" d="M60 112 V50" />
+
+  <!-- baterai -->
+  <line x1="42" y1="112" x2="78" y2="112" stroke="#16274c" stroke-width="6" />
+  <line x1="52" y1="152" x2="68" y2="152" stroke="#16274c" stroke-width="4" />
+  <text class="teks tebal" x="2" y="138">24 V</text>
+
+  <!-- penanda titik cabang -->
+  <circle class="titik" cx="300" cy="100" r="5" />
+  <circle class="titik" cx="465" cy="180" r="5" />
+  <text class="teks tebal" x="272" y="88">P</text>
+  <text class="teks tebal" x="478" y="202">Q</text>
+</svg>

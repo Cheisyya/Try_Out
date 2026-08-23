@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Grafik simpangan terhadap jarak sebuah gelombang transversal. Sumbu datar menyatakan jarak dalam sentimeter dari 0 sampai 16, sedangkan sumbu tegak menyatakan simpangan dalam sentimeter dari negatif 4 sampai 4. Kurva berbentuk gelombang sinus dengan simpangan terbesar 4 sentimeter dan satu gelombang penuh terbentuk setiap 8 sentimeter, sehingga sepanjang 16 sentimeter terbentuk dua gelombang penuh.">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .kurva { fill: none; stroke: #c8953a; stroke-width: 3.5; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .label { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="300" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm mendatar = 30 px mulai x = 70; 1 cm tegak = 22 px, nol pada y = 150 -->
+  <g class="grid">
+    <path d="M70 62 H550" /><path d="M70 106 H550" /><path d="M70 194 H550" /><path d="M70 238 H550" />
+    <path d="M130 55 V245" /><path d="M190 55 V245" /><path d="M250 55 V245" /><path d="M310 55 V245" />
+    <path d="M370 55 V245" /><path d="M430 55 V245" /><path d="M490 55 V245" /><path d="M550 55 V245" />
+  </g>
+
+  <path class="sumbu" d="M70 150 H565" />
+  <path class="sumbu" d="M70 50 V250" />
+
+  <g class="teks" text-anchor="end">
+    <text x="62" y="67">4</text>
+    <text x="62" y="155">0</text>
+    <text x="62" y="243">−4</text>
+  </g>
+
+  <g class="teks" text-anchor="middle">
+    <text x="130" y="268">2</text>
+    <text x="190" y="268">4</text>
+    <text x="250" y="268">6</text>
+    <text x="310" y="268">8</text>
+    <text x="370" y="268">10</text>
+    <text x="430" y="268">12</text>
+    <text x="490" y="268">14</text>
+    <text x="550" y="268">16</text>
+  </g>
+
+  <text class="label" x="310" y="292" text-anchor="middle">jarak (cm)</text>
+  <text class="label" x="22" y="150" text-anchor="middle" transform="rotate(-90 22 150)">simpangan (cm)</text>
+
+  <!-- dua gelombang penuh: panjang gelombang 8 cm = 240 px -->
+  <path class="kurva" d="M70 150 C 100 62, 160 62, 190 150 C 220 238, 280 238, 310 150 C 340 62, 400 62, 430 150 C 460 238, 520 238, 550 150" />
+
+  <g class="putus">
+    <path d="M70 150 V62 M310 150 V62" />
+    <path d="M70 62 H310" />
+  </g>
+  <text class="teks" x="190" y="52" text-anchor="middle">satu gelombang penuh</text>
+</svg>

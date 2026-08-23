@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "p1-bindo-01",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah paragraf berikut.\n\nHutan mangrove tumbuh di daerah pantai yang berlumpur. Akarnya yang menjulang menahan lumpur sehingga garis pantai tidak mudah terkikis ombak. Sela-sela akarnya juga menjadi tempat ikan-ikan kecil berlindung.\n\nGagasan utama paragraf tersebut adalah ...",
+    "options": {
+      "A": "Hutan mangrove tumbuh di pantai berlumpur",
+      "B": "Ikan kecil berlindung di sela-sela akar",
+      "C": "Akar mangrove menjulang ke permukaan tanah",
+      "D": "Manfaat hutan mangrove bagi pantai dan ikan"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Kalimat pertama memperkenalkan mangrove, lalu dua kalimat berikutnya menyebut manfaatnya: menahan abrasi dan menjadi tempat berlindung ikan. Gagasan utama merangkum keseluruhan isi, bukan satu rincian saja.",
+    "question_order": 1,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-02",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah paragraf berikut.\n\nSetiap pagi Rina berjalan kaki ke sekolah yang berjarak satu kilometer. Ia berangkat pukul 06.00 agar tidak terlambat. Kebiasaan itu membuat badannya sehat dan jarang sakit.\n\nSimpulan paragraf tersebut adalah ...",
+    "options": {
+      "A": "Rina berangkat ke sekolah pukul 06.00",
+      "B": "Jarak sekolah Rina satu kilometer",
+      "C": "Rina tidak pernah terlambat ke sekolah",
+      "D": "Berjalan kaki ke sekolah membuat Rina sehat"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Simpulan mencakup isi seluruh paragraf. Kalimat terakhir menegaskan akibat dari kebiasaan berjalan kaki, yaitu badan sehat dan jarang sakit. Pilihan lain hanya mengulang satu rincian.",
+    "question_order": 2,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-03",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah paragraf berikut.\n\nSampah plastik membutuhkan waktu ratusan tahun untuk terurai. Karena itu, membawa tas belanja sendiri jauh lebih baik daripada meminta kantong plastik di toko.\n\nHubungan antarkalimat pada paragraf tersebut adalah hubungan ...",
+    "options": {
+      "A": "penambahan",
+      "B": "pertentangan",
+      "C": "perbandingan waktu",
+      "D": "sebab akibat"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Ungkapan penghubung \"karena itu\" menandai akibat dari pernyataan sebelumnya: karena plastik sulit terurai, membawa tas sendiri menjadi pilihan yang lebih baik. Jadi hubungannya sebab akibat.",
+    "question_order": 3,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-04",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah teks berikut.\n\nPerpustakaan sekolah buka setiap Senin sampai Jumat pukul 07.00 sampai 15.00. Siswa boleh meminjam paling banyak dua buku selama satu minggu.\n\nPernyataan yang sesuai dengan teks tersebut adalah ...",
+    "options": {
+      "A": "Perpustakaan juga buka pada hari Sabtu",
+      "B": "Siswa boleh meminjam tiga buku sekaligus",
+      "C": "Perpustakaan tutup pukul 14.00",
+      "D": "Masa peminjaman buku selama satu minggu"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Teks menyebutkan batas peminjaman satu minggu. Perpustakaan hanya buka Senin sampai Jumat, paling banyak dua buku, dan tutup pukul 15.00, sehingga tiga pilihan lain bertentangan dengan teks.",
+    "question_order": 4,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-05",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah paragraf berikut.\n\nBanjir di kawasan itu terjadi setiap musim hujan. Selokan yang penuh sampah tidak mampu menampung air. Warga pun sepakat mengadakan kerja bakti membersihkan selokan setiap akhir pekan.\n\nMasalah yang dibahas pada paragraf tersebut adalah ...",
+    "options": {
+      "A": "kerja bakti warga setiap akhir pekan",
+      "B": "musim hujan yang datang setiap tahun",
+      "C": "selokan tersumbat sampah sehingga terjadi banjir",
+      "D": "kesepakatan yang dibuat warga kawasan itu"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Inti masalahnya adalah selokan penuh sampah sehingga air meluap dan terjadi banjir. Kerja bakti merupakan solusi yang diambil warga, bukan masalahnya.",
+    "question_order": 5,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-06",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Perhatikan kalimat berikut.\n\nAdik membeli buku, pensil dan penggaris di koperasi sekolah.\n\nPerbaikan penggunaan tanda baca yang tepat adalah ...",
+    "options": {
+      "A": "Adik membeli buku, pensil dan, penggaris di koperasi sekolah.",
+      "B": "Adik membeli buku pensil dan penggaris di koperasi sekolah.",
+      "C": "Adik membeli buku; pensil; dan penggaris di koperasi sekolah.",
+      "D": "Adik membeli buku, pensil, dan penggaris di koperasi sekolah."
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Pada perincian yang terdiri atas tiga unsur atau lebih, tanda koma dipakai juga sebelum kata \"dan\". Penulisan yang benar adalah buku, pensil, dan penggaris.",
+    "question_order": 6,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-07",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Perhatikan kalimat berikut.\n\nIbu pergi ke pasar tradisionil setiap hari minggu.\n\nPerbaikan penulisan yang tepat adalah ...",
+    "options": {
+      "A": "tradisionil menjadi tradisional dan hari minggu menjadi hari Minggu",
+      "B": "tradisionil menjadi tradisionel, penulisan hari sudah benar",
+      "C": "hari minggu menjadi Hari Minggu, penulisan tradisionil sudah benar",
+      "D": "kalimat tersebut sudah benar dan tidak perlu diperbaiki"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Bentuk baku dari tradisionil adalah tradisional. Nama hari termasuk nama diri sehingga huruf awalnya kapital, menjadi hari Minggu.",
+    "question_order": 7,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-08",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Perhatikan kalimat berikut.\n\nKarena hujan deras, sehingga upacara bendera ditunda.\n\nAlasan kalimat tersebut belum efektif adalah ...",
+    "options": {
+      "A": "kalimat tidak memiliki objek",
+      "B": "kalimat memakai kata yang tidak baku",
+      "C": "kalimat tidak memiliki keterangan waktu",
+      "D": "kalimat memakai dua konjungsi sekaligus"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Kata karena dan sehingga sama-sama konjungsi sebab akibat. Memakai keduanya sekaligus membuat kalimat kehilangan induk kalimat. Cukup salah satu: Karena hujan deras, upacara bendera ditunda.",
+    "question_order": 8,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-09",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Perhatikan kalimat berikut.\n\nPara siswa-siswa mengikuti lomba kebersihan kelas.\n\nPerbaikan kalimat tersebut adalah ...",
+    "options": {
+      "A": "Para siswa mengikuti lomba kebersihan kelas.",
+      "B": "Para siswa-siswa semua mengikuti lomba kebersihan kelas.",
+      "C": "Siswa-siswa para mengikuti lomba kebersihan kelas.",
+      "D": "Para siswa-siswanya mengikuti lomba kebersihan kelas."
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Kata para sudah menyatakan makna jamak sehingga tidak perlu diikuti bentuk ulang siswa-siswa. Penulisan yang hemat dan benar adalah para siswa.",
+    "question_order": 9,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-10",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Perhatikan kalimat berikut.\n\nKami menghimbau agar seluruh peserta hadir tepat waktu.\n\nKata tidak baku pada kalimat tersebut adalah ...",
+    "options": {
+      "A": "menghimbau",
+      "B": "peserta",
+      "C": "seluruh",
+      "D": "hadir"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Bentuk bakunya adalah mengimbau, dari kata dasar imbau. Awalan meng- pada kata dasar berawal huruf vokal tidak menambahkan huruf h.",
+    "question_order": 10,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-11",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Perhatikan kalimat berikut.\n\nPemerintah daerah memberikan bantuan kepada korban bencana.\n\nSinonim kata bantuan pada kalimat tersebut adalah ...",
+    "options": {
+      "A": "hadiah",
+      "B": "hukuman",
+      "C": "pinjaman",
+      "D": "pertolongan"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Bantuan bermakna sesuatu yang diberikan untuk meringankan beban, sepadan dengan pertolongan. Hadiah diberikan sebagai penghargaan, sedangkan pinjaman harus dikembalikan.",
+    "question_order": 11,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-12",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Perhatikan kalimat berikut.\n\nHarga bahan pokok mengalami kenaikan menjelang hari raya.\n\nAntonim kata kenaikan adalah ...",
+    "options": {
+      "A": "peningkatan",
+      "B": "pertambahan",
+      "C": "penurunan",
+      "D": "perubahan"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Antonim adalah lawan kata. Lawan dari kenaikan adalah penurunan. Peningkatan dan pertambahan justru bersinonim dengan kenaikan.",
+    "question_order": 12,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-13",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Perhatikan kalimat berikut.\n\nAyah menjadi tulang punggung keluarga sejak kakek meninggal.\n\nMakna ungkapan tulang punggung pada kalimat tersebut adalah ...",
+    "options": {
+      "A": "anggota keluarga yang paling tua",
+      "B": "orang yang paling sering sakit",
+      "C": "orang yang bertubuh paling kuat",
+      "D": "penopang utama penghidupan keluarga"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Tulang punggung adalah ungkapan untuk pihak yang menjadi penopang utama, dalam hal ini penopang penghidupan keluarga. Maknanya kiasan, bukan bagian tubuh.",
+    "question_order": 13,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-14",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Perhatikan kalimat berikut.\n\nKegiatan itu bersifat wajib bagi seluruh anggota.\n\nMakna kata wajib pada kalimat tersebut adalah ...",
+    "options": {
+      "A": "boleh dilakukan",
+      "B": "mudah dilakukan",
+      "C": "jarang dilakukan",
+      "D": "harus dilakukan"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Wajib berarti harus dilakukan dan tidak boleh ditinggalkan. Lawannya adalah sukarela atau tidak wajib.",
+    "question_order": 14,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-15",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Perhatikan kalimat berikut.\n\nWarga menyiapkan mitigasi bencana sebelum musim hujan tiba.\n\nMakna kata mitigasi pada kalimat tersebut adalah ...",
+    "options": {
+      "A": "upaya mengurangi risiko bencana",
+      "B": "upaya membangun kembali setelah bencana",
+      "C": "pemberitahuan datangnya bencana",
+      "D": "pemberian bantuan bagi korban bencana"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Mitigasi adalah serangkaian upaya untuk mengurangi risiko dan dampak bencana, dilakukan sebelum bencana terjadi. Pembangunan kembali setelah bencana disebut rehabilitasi.",
+    "question_order": 15,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-16",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Perhatikan kalimat berikut.\n\nPetani itu menanam jagung di ladang.\n\nPola kalimat tersebut adalah ...",
+    "options": {
+      "A": "S-P-O",
+      "B": "S-P-Pel",
+      "C": "S-P-K",
+      "D": "S-P-O-K"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Petani itu berfungsi sebagai subjek, menanam sebagai predikat, jagung sebagai objek, dan di ladang sebagai keterangan tempat. Jadi polanya S-P-O-K.",
+    "question_order": 16,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-17",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Kalimat berikut yang menggunakan konjungsi syarat adalah ...",
+    "options": {
+      "A": "Ia belajar giat sehingga lulus ujian.",
+      "B": "Ayah membaca koran ketika pagi hari.",
+      "C": "Meskipun lelah, ia tetap berlatih.",
+      "D": "Jika hujan turun, pertandingan akan ditunda."
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Konjungsi syarat menyatakan prasyarat terjadinya suatu peristiwa dan ditandai kata jika, apabila, atau kalau. Sehingga menyatakan akibat, meskipun menyatakan penyungguhan, dan ketika menyatakan waktu.",
+    "question_order": 17,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-18",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Perhatikan kalimat berikut.\n\nBuku itu dibaca oleh Andi.\n\nKalimat tersebut termasuk kalimat ...",
+    "options": {
+      "A": "aktif transitif",
+      "B": "aktif intransitif",
+      "C": "pasif",
+      "D": "perintah"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Ciri kalimat pasif adalah subjek dikenai pekerjaan dan predikatnya berimbuhan di-. Buku itu dikenai pekerjaan membaca, sehingga kalimatnya pasif.",
+    "question_order": 18,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-19",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Kalimat berikut yang merupakan kalimat majemuk setara adalah ...",
+    "options": {
+      "A": "Ayah membaca koran dan ibu menyiram bunga.",
+      "B": "Ia tidak masuk sekolah karena sakit.",
+      "C": "Saya belajar dengan giat agar lulus ujian.",
+      "D": "Ketika bel berbunyi, siswa masuk ke kelas."
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Kalimat majemuk setara menggabungkan dua klausa yang kedudukannya sederajat, biasanya dengan dan, tetapi, atau atau. Tiga pilihan lain memakai konjungsi bertingkat yaitu sebab, tujuan, dan waktu.",
+    "question_order": 19,
+    "active": true
+  },
+  {
+    "id": "p1-bindo-20",
+    "package_id": "paket-1",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Perhatikan kalimat berikut.\n\nDi halaman sekolah ditanami berbagai bunga.\n\nBagian di halaman sekolah pada kalimat tersebut berfungsi sebagai ...",
+    "options": {
+      "A": "subjek",
+      "B": "predikat",
+      "C": "objek",
+      "D": "keterangan tempat"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Frasa yang diawali kata depan di menunjukkan lokasi sehingga fungsinya keterangan tempat, meskipun letaknya berada di awal kalimat.",
+    "question_order": 20,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-01",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Kimia Dasar Unsur",
+    "question": "Lambang kimia untuk unsur besi adalah ...",
+    "options": {
+      "A": "Fe",
+      "B": "Be",
+      "C": "Br",
+      "D": "Ba"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Lambang besi adalah Fe, diambil dari nama Latinnya ferrum. Be adalah berilium, Br adalah bromin, dan Ba adalah barium.",
+    "question_order": 1,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-02",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Kimia Dasar Unsur",
+    "question": "Partikel penyusun atom yang bermuatan negatif adalah ...",
+    "options": {
+      "A": "proton",
+      "B": "neutron",
+      "C": "elektron",
+      "D": "inti atom"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Elektron bermuatan negatif dan bergerak mengelilingi inti. Proton bermuatan positif, neutron tidak bermuatan, dan keduanya berada di dalam inti atom.",
+    "question_order": 2,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-03",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Kimia Dasar Terapan",
+    "question": "Larutan berikut yang bersifat basa adalah ...",
+    "options": {
+      "A": "air jeruk",
+      "B": "cuka dapur",
+      "C": "air sabun",
+      "D": "air aki"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Air sabun bersifat basa dan terasa licin serta memerahkan lakmus merah menjadi biru. Air jeruk, cuka, dan air aki semuanya bersifat asam.",
+    "question_order": 3,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-04",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Kimia Dasar Terapan",
+    "question": "Perubahan berikut yang termasuk perubahan kimia adalah ...",
+    "options": {
+      "A": "es batu mencair",
+      "B": "gula larut dalam air",
+      "C": "air mendidih menjadi uap",
+      "D": "besi berkarat"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Besi berkarat menghasilkan zat baru yaitu karat besi, sehingga termasuk perubahan kimia. Mencair, menguap, dan melarut hanya mengubah wujud atau penyebaran zat tanpa membentuk zat baru.",
+    "question_order": 4,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-05",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Energetika",
+    "question": "A stone is held at a height of 2 metres above the ground. The type of energy stored in the stone is ...",
+    "options": {
+      "A": "kinetic energy",
+      "B": "electrical energy",
+      "C": "sound energy",
+      "D": "gravitational potential energy"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "An object at a height stores gravitational potential energy, calculated as mass times gravity times height. Kinetic energy only appears once the stone is moving.",
+    "question_order": 5,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-06",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Energetika",
+    "question": "Perubahan energi yang terjadi pada kipas angin listrik yang menyala adalah ...",
+    "options": {
+      "A": "energi listrik menjadi energi gerak",
+      "B": "energi gerak menjadi energi listrik",
+      "C": "energi kimia menjadi energi listrik",
+      "D": "energi cahaya menjadi energi gerak"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Kipas angin mengubah energi listrik menjadi energi gerak pada baling-balingnya. Sebagian kecil juga berubah menjadi energi bunyi dan panas.",
+    "question_order": 6,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-07",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Kalor",
+    "question": "Perpindahan kalor pada sendok logam yang dicelupkan ke dalam air panas terjadi secara ...",
+    "options": {
+      "A": "konduksi",
+      "B": "konveksi",
+      "C": "radiasi",
+      "D": "evaporasi"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Kalor merambat melalui zat padat tanpa disertai perpindahan partikelnya, yaitu konduksi. Konveksi terjadi pada zat cair dan gas, sedangkan radiasi tidak memerlukan zat perantara.",
+    "question_order": 7,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-08",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Kalor",
+    "question": "Air dipanaskan dari suhu 20 derajat Celsius menjadi 70 derajat Celsius. Kenaikan suhu air tersebut adalah ...",
+    "options": {
+      "A": "30 derajat Celsius",
+      "B": "40 derajat Celsius",
+      "C": "50 derajat Celsius",
+      "D": "90 derajat Celsius"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Kenaikan suhu dihitung dari selisih suhu akhir dan suhu awal, yaitu 70 dikurangi 20 sama dengan 50 derajat Celsius.",
+    "question_order": 8,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-09",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Elektromagnet",
+    "question": "Ujung-ujung magnet batang yang gaya magnetnya paling kuat disebut ...",
+    "options": {
+      "A": "kutub magnet",
+      "B": "medan magnet",
+      "C": "garis gaya magnet",
+      "D": "sumbu magnet"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Gaya magnet paling kuat berada di kedua ujung magnet yang disebut kutub, yaitu kutub utara dan kutub selatan. Medan magnet adalah daerah di sekitar magnet yang masih dipengaruhi gaya magnet.",
+    "question_order": 9,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-10",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Elektromagnet",
+    "question": "Cara membuat magnet dengan mengalirkan arus listrik pada kumparan kawat disebut ...",
+    "options": {
+      "A": "induksi",
+      "B": "memanaskan",
+      "C": "menggosok",
+      "D": "elektromagnetik"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Arus listrik yang mengalir pada kumparan menimbulkan medan magnet sehingga inti besi di dalamnya menjadi magnet. Cara ini disebut cara elektromagnetik.",
+    "question_order": 10,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-11",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Fluida",
+    "question": "Kapal laut yang terbuat dari baja dapat terapung karena ...",
+    "options": {
+      "A": "baja lebih ringan daripada air",
+      "B": "kapal bergerak terus-menerus",
+      "C": "air laut memiliki tekanan yang rendah",
+      "D": "kapal berbentuk berongga sehingga volumenya besar"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Rongga besar pada badan kapal membuat volume air yang dipindahkan menjadi besar, sehingga gaya apungnya cukup untuk menahan berat kapal.",
+    "question_order": 11,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-12",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Fluida",
+    "question": "Alat yang bekerja berdasarkan hukum Pascal adalah ...",
+    "options": {
+      "A": "dongkrak hidrolik",
+      "B": "termometer",
+      "C": "barometer",
+      "D": "dinamometer"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Hukum Pascal menyatakan tekanan pada zat cair dalam ruang tertutup diteruskan sama besar ke segala arah. Prinsip inilah yang dipakai dongkrak hidrolik.",
+    "question_order": 12,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-13",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Gaya",
+    "question": "A book stays still on a table. The force that balances the weight of the book is ...",
+    "options": {
+      "A": "friction force",
+      "B": "air resistance",
+      "C": "magnetic force",
+      "D": "normal force from the table"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "The table pushes the book upward with a normal force equal to the book's weight, so the resultant force is zero and the book remains at rest.",
+    "question_order": 13,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-14",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Gaya",
+    "question": "Sebuah benda didorong dengan gaya 20 newton ke kanan dan 8 newton ke kiri. Resultan gaya pada benda tersebut adalah ...",
+    "options": {
+      "A": "12 newton ke kanan",
+      "B": "12 newton ke kiri",
+      "C": "28 newton ke kanan",
+      "D": "28 newton ke kiri"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Dua gaya berlawanan arah dikurangkan: 20 dikurangi 8 sama dengan 12 newton. Arahnya mengikuti gaya yang lebih besar, yaitu ke kanan.",
+    "question_order": 14,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-15",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Gelombang",
+    "question": "Bunyi tidak dapat merambat melalui ...",
+    "options": {
+      "A": "udara",
+      "B": "air",
+      "C": "besi",
+      "D": "ruang hampa"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Bunyi termasuk gelombang mekanik sehingga memerlukan zat perantara. Di ruang hampa tidak ada partikel yang dapat merambatkan getaran, jadi bunyi tidak dapat merambat.",
+    "question_order": 15,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-16",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Gelombang",
+    "question": "Sebuah gelombang memiliki frekuensi 5 hertz. Artinya, dalam satu detik terjadi ...",
+    "options": {
+      "A": "5 getaran",
+      "B": "10 getaran",
+      "C": "15 getaran",
+      "D": "50 getaran"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Frekuensi adalah banyaknya getaran tiap satu detik. Frekuensi 5 hertz berarti terjadi 5 getaran setiap detik.",
+    "question_order": 16,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-17",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Optik",
+    "question": "Bayangan yang dibentuk oleh cermin datar bersifat ...",
+    "options": {
+      "A": "nyata, terbalik, diperkecil",
+      "B": "maya, terbalik, diperkecil",
+      "C": "nyata, tegak, diperbesar",
+      "D": "maya, tegak, sama besar"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Cermin datar selalu membentuk bayangan maya, tegak, sama besar dengan bendanya, dan jaraknya sama dengan jarak benda ke cermin.",
+    "question_order": 17,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-18",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Optik",
+    "question": "Penderita rabun jauh atau miopi dapat ditolong dengan kacamata berlensa ...",
+    "options": {
+      "A": "cembung",
+      "B": "rangkap",
+      "C": "silindris",
+      "D": "cekung"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Pada rabun jauh, bayangan jatuh di depan retina. Lensa cekung yang bersifat menyebarkan cahaya memundurkan bayangan sehingga tepat jatuh di retina.",
+    "question_order": 18,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-19",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Rangkaian Listrik",
+    "question": "Tiga lampu dipasang seri. Bila satu lampu putus, maka ...",
+    "options": {
+      "A": "lampu lain tetap menyala terang",
+      "B": "lampu lain menyala lebih redup",
+      "C": "semua lampu ikut padam",
+      "D": "hanya satu lampu yang padam"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Pada rangkaian seri hanya ada satu jalur arus. Jika salah satu lampu putus, jalur itu terputus sehingga arus berhenti mengalir dan semua lampu padam.",
+    "question_order": 19,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-20",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Rangkaian Listrik",
+    "question": "Sebuah lampu dialiri arus 2 ampere pada tegangan 6 volt. Hambatan lampu tersebut adalah ...",
+    "options": {
+      "A": "3 ohm",
+      "B": "4 ohm",
+      "C": "8 ohm",
+      "D": "12 ohm"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Menurut hukum Ohm, hambatan sama dengan tegangan dibagi arus. Jadi 6 volt dibagi 2 ampere sama dengan 3 ohm.",
+    "question_order": 20,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-21",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Ciri Kehidupan",
+    "question": "Ciri makhluk hidup yang ditunjukkan oleh tumbuhan putri malu yang menguncup saat disentuh adalah ...",
+    "options": {
+      "A": "bergerak dan peka terhadap rangsang",
+      "B": "berkembang biak",
+      "C": "tumbuh dan berkembang",
+      "D": "memerlukan makanan"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Menguncupnya daun putri malu ketika disentuh menunjukkan kepekaan terhadap rangsang atau iritabilitas, yang diwujudkan melalui gerak.",
+    "question_order": 21,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-22",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Ciri Kehidupan",
+    "question": "Proses pengeluaran zat sisa berupa keringat melalui kulit disebut ...",
+    "options": {
+      "A": "respirasi",
+      "B": "reproduksi",
+      "C": "adaptasi",
+      "D": "ekskresi"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Ekskresi adalah proses pengeluaran zat sisa metabolisme dari tubuh. Keringat merupakan zat sisa yang dikeluarkan melalui kulit.",
+    "question_order": 22,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-23",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Lingkungan (Ekologi)",
+    "question": "Perhatikan rantai makanan berikut.\n\npadi - tikus - ular - elang\n\nMakhluk hidup yang berperan sebagai produsen adalah ...",
+    "options": {
+      "A": "padi",
+      "B": "tikus",
+      "C": "ular",
+      "D": "elang"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Produsen adalah makhluk hidup yang dapat membuat makanannya sendiri melalui fotosintesis. Pada rantai makanan tersebut, padi berperan sebagai produsen.",
+    "question_order": 23,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-24",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Lingkungan (Ekologi)",
+    "question": "In a food chain, organisms that break down dead bodies into simple substances are called ...",
+    "options": {
+      "A": "producers",
+      "B": "consumers",
+      "C": "decomposers",
+      "D": "predators"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Decomposers such as bacteria and fungi break down dead organisms and return the nutrients to the soil, so the cycle of matter keeps going.",
+    "question_order": 24,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-25",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Genetika",
+    "question": "Bagian sel yang membawa sifat menurun dari induk kepada keturunannya adalah ...",
+    "options": {
+      "A": "gen",
+      "B": "dinding sel",
+      "C": "sitoplasma",
+      "D": "vakuola"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Gen terletak pada kromosom di dalam inti sel dan membawa informasi sifat menurun dari induk kepada keturunannya.",
+    "question_order": 25,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-26",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Genetika",
+    "question": "Persilangan antara mawar merah bergenotipe MM dengan mawar putih bergenotipe mm menghasilkan keturunan pertama bergenotipe ...",
+    "options": {
+      "A": "MM (homozigot dominan)",
+      "B": "campuran MM dan mm sama banyak",
+      "C": "mm (homozigot resesif)",
+      "D": "Mm (heterozigot)"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Induk MM hanya menghasilkan gamet M dan induk mm hanya menghasilkan gamet m. Semua keturunan pertama menerima satu M dan satu m, sehingga bergenotipe Mm atau heterozigot.",
+    "question_order": 26,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-27",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Hewan (Fisiologi)",
+    "question": "Alat pernapasan pada ikan adalah ...",
+    "options": {
+      "A": "paru-paru",
+      "B": "kulit",
+      "C": "trakea",
+      "D": "insang"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Ikan bernapas dengan insang yang menyerap oksigen terlarut dalam air. Trakea adalah alat pernapasan serangga, sedangkan paru-paru dimiliki hewan darat.",
+    "question_order": 27,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-28",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Tumbuhan (Botani)",
+    "question": "Bagian tumbuhan yang berfungsi menyerap air dan mineral dari dalam tanah adalah ...",
+    "options": {
+      "A": "daun",
+      "B": "batang",
+      "C": "akar",
+      "D": "bunga"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Akar, khususnya rambut akar, menyerap air dan mineral dari tanah lalu mengalirkannya ke seluruh bagian tumbuhan melalui pembuluh xilem.",
+    "question_order": 28,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-29",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Tumbuhan (Botani)",
+    "question": "Photosynthesis in green plants produces ...",
+    "options": {
+      "A": "glucose and oxygen",
+      "B": "carbon dioxide and water",
+      "C": "protein and nitrogen",
+      "D": "salt and mineral"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Photosynthesis uses carbon dioxide, water, and sunlight to produce glucose as food and oxygen as a by-product that is released into the air.",
+    "question_order": 29,
+    "active": true
+  },
+  {
+    "id": "p1-ipa-30",
+    "package_id": "paket-1",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Bioteknologi Mutakhir",
+    "question": "Pembuatan tempe dari kedelai memanfaatkan mikroorganisme berupa ...",
+    "options": {
+      "A": "jamur Rhizopus",
+      "B": "bakteri Lactobacillus",
+      "C": "ganggang hijau",
+      "D": "virus"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Tempe dibuat melalui fermentasi kedelai oleh jamur Rhizopus yang benang-benangnya mengikat biji kedelai menjadi padat.",
+    "question_order": 30,
+    "active": true
+  },
+  {
+    "id": "p1-ing-01",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the text below.\n\nThe school library opens from Monday to Friday. Students may borrow two books at a time and must return them within one week. Late returns are fined one thousand rupiah per day.\n\nWhat is the text about?",
+    "options": {
+      "A": "The rules for borrowing library books",
+      "B": "The list of new books in the library",
+      "C": "The way to become a library member",
+      "D": "The schedule of school activities"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "The text explains opening days, how many books may be borrowed, the loan period, and the fine. All of these are borrowing rules.",
+    "question_order": 1,
+    "active": true
+  },
+  {
+    "id": "p1-ing-02",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the text below.\n\nThe school library opens from Monday to Friday. Students may borrow two books at a time and must return them within one week. Late returns are fined one thousand rupiah per day.\n\nHow long may a student keep a book?",
+    "options": {
+      "A": "One day",
+      "B": "Two days",
+      "C": "One week",
+      "D": "Two weeks"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "The text says students must return the books within one week, so one week is the longest a student may keep them.",
+    "question_order": 2,
+    "active": true
+  },
+  {
+    "id": "p1-ing-03",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the text below.\n\nRani gets up at five o'clock every morning. She helps her mother prepare breakfast, then takes a bath and goes to school by bicycle. She arrives at school at half past six.\n\nHow does Rani go to school?",
+    "options": {
+      "A": "On foot",
+      "B": "By motorcycle",
+      "C": "By bus",
+      "D": "By bicycle"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "The text states that Rani goes to school by bicycle after taking a bath.",
+    "question_order": 3,
+    "active": true
+  },
+  {
+    "id": "p1-ing-04",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the text below.\n\nRani gets up at five o'clock every morning. She helps her mother prepare breakfast, then takes a bath and goes to school by bicycle. She arrives at school at half past six.\n\nWhat does Rani do after getting up?",
+    "options": {
+      "A": "She takes a bath",
+      "B": "She rides her bicycle",
+      "C": "She helps her mother prepare breakfast",
+      "D": "She goes straight to school"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "The order in the text is: gets up, helps her mother prepare breakfast, takes a bath, then goes to school.",
+    "question_order": 4,
+    "active": true
+  },
+  {
+    "id": "p1-ing-05",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the notice below.\n\nNO PARKING IN FRONT OF THE GATE\n\nWhere do you usually find this notice?",
+    "options": {
+      "A": "In a classroom",
+      "B": "At the entrance of a building",
+      "C": "Inside a library",
+      "D": "On a food package"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "A notice about parking in front of a gate is placed at the entrance of a building so drivers can read it before parking.",
+    "question_order": 5,
+    "active": true
+  },
+  {
+    "id": "p1-ing-06",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the text below.\n\nElephants are the largest land animals. They use their long trunks to take food and to drink water. Elephants live in groups led by the oldest female.\n\nWhat is the function of an elephant's trunk according to the text?",
+    "options": {
+      "A": "To protect itself from the sun",
+      "B": "To take food and drink water",
+      "C": "To lead the group",
+      "D": "To make a loud sound"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "The second sentence states that elephants use their long trunks to take food and to drink water.",
+    "question_order": 6,
+    "active": true
+  },
+  {
+    "id": "p1-ing-07",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the text below.\n\nElephants are the largest land animals. They use their long trunks to take food and to drink water. Elephants live in groups led by the oldest female.\n\nWho leads a group of elephants?",
+    "options": {
+      "A": "The oldest female",
+      "B": "The largest male",
+      "C": "The youngest elephant",
+      "D": "The fastest elephant"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "The last sentence says elephant groups are led by the oldest female.",
+    "question_order": 7,
+    "active": true
+  },
+  {
+    "id": "p1-ing-08",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "My sister ... to school every morning.",
+    "options": {
+      "A": "go",
+      "B": "goes",
+      "C": "going",
+      "D": "gone"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "The subject my sister is third person singular, and the sentence uses simple present tense marked by every morning, so the verb takes -es: goes.",
+    "question_order": 8,
+    "active": true
+  },
+  {
+    "id": "p1-ing-09",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Look! The children ... football in the yard.",
+    "options": {
+      "A": "play",
+      "B": "plays",
+      "C": "are playing",
+      "D": "played"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "The word Look! shows the action is happening now, so present continuous is used: are playing. The subject the children is plural, so it takes are.",
+    "question_order": 9,
+    "active": true
+  },
+  {
+    "id": "p1-ing-10",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Yesterday I ... a very interesting book.",
+    "options": {
+      "A": "read",
+      "B": "reads",
+      "C": "am reading",
+      "D": "will read"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "The time signal yesterday requires the past tense. The past form of read is also written read, while the other options are present or future.",
+    "question_order": 10,
+    "active": true
+  },
+  {
+    "id": "p1-ing-11",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "There ... many students in the hall now.",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "was",
+      "D": "be"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "The noun students is plural and the time is now, so the correct verb is are.",
+    "question_order": 11,
+    "active": true
+  },
+  {
+    "id": "p1-ing-12",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "This bag is ... than that one.",
+    "options": {
+      "A": "heavy",
+      "B": "heavier",
+      "C": "heaviest",
+      "D": "more heavy"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "The word than signals a comparative. For a two-syllable adjective ending in -y, the comparative is formed with -ier, so heavy becomes heavier.",
+    "question_order": 12,
+    "active": true
+  },
+  {
+    "id": "p1-ing-13",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "She ... finish her homework before dinner.",
+    "options": {
+      "A": "must",
+      "B": "musts",
+      "C": "musting",
+      "D": "to must"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Must is a modal verb, so it never changes form and is always followed by the base form of the verb.",
+    "question_order": 13,
+    "active": true
+  },
+  {
+    "id": "p1-ing-14",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Rina and I ... classmates since last year.",
+    "options": {
+      "A": "am",
+      "B": "is",
+      "C": "are",
+      "D": "be"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "The subject Rina and I is plural, so the linking verb is are.",
+    "question_order": 14,
+    "active": true
+  },
+  {
+    "id": "p1-ing-15",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "The opposite of the word difficult is ...",
+    "options": {
+      "A": "hard",
+      "B": "easy",
+      "C": "heavy",
+      "D": "strong"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Difficult means not easy to do, so its opposite or antonym is easy. Hard is a synonym of difficult.",
+    "question_order": 15,
+    "active": true
+  },
+  {
+    "id": "p1-ing-16",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "We buy medicine at the ...",
+    "options": {
+      "A": "bakery",
+      "B": "pharmacy",
+      "C": "library",
+      "D": "stationery"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "A pharmacy is a shop that sells medicine. A bakery sells bread, a library lends books, and a stationery shop sells writing tools.",
+    "question_order": 16,
+    "active": true
+  },
+  {
+    "id": "p1-ing-17",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "A person who teaches students at school is called a ...",
+    "options": {
+      "A": "doctor",
+      "B": "teacher",
+      "C": "farmer",
+      "D": "driver"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "A teacher is a person whose job is to teach students at school.",
+    "question_order": 17,
+    "active": true
+  },
+  {
+    "id": "p1-ing-18",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "The word delicious has a similar meaning to ...",
+    "options": {
+      "A": "tasty",
+      "B": "salty",
+      "C": "spicy",
+      "D": "fresh"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Delicious means having a very pleasant taste, so its synonym is tasty. Salty and spicy describe particular flavours only.",
+    "question_order": 18,
+    "active": true
+  },
+  {
+    "id": "p1-ing-19",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "We use an umbrella when it is ...",
+    "options": {
+      "A": "windy",
+      "B": "rainy",
+      "C": "sunny and dry",
+      "D": "cold and dry"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "An umbrella protects us from the rain, so it is used when the weather is rainy.",
+    "question_order": 19,
+    "active": true
+  },
+  {
+    "id": "p1-ing-20",
+    "package_id": "paket-1",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "The room where we cook food is called the ...",
+    "options": {
+      "A": "bedroom",
+      "B": "kitchen",
+      "C": "bathroom",
+      "D": "garage"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "The kitchen is the room used for cooking. A bedroom is for sleeping, a bathroom for bathing, and a garage for keeping vehicles.",
+    "question_order": 20,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-01",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Nilai x yang memenuhi persamaan x + 7 = 12 adalah ...",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "19"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Kurangkan 7 pada kedua ruas: x = 12 dikurangi 7, sehingga x sama dengan 5.",
+    "question_order": 1,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-02",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Nilai y yang memenuhi persamaan 3y = 21 adalah ...",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "8",
+      "D": "18"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Bagi kedua ruas dengan 3: y sama dengan 21 dibagi 3, yaitu 7.",
+    "question_order": 2,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-03",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Bentuk sederhana dari 5a + 3a dikurangi 2a adalah ...",
+    "options": {
+      "A": "4a",
+      "B": "6a",
+      "C": "8a",
+      "D": "10a"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Suku sejenis dijumlahkan dan dikurangkan koefisiennya: 5 tambah 3 kurang 2 sama dengan 6, sehingga hasilnya 6a.",
+    "question_order": 3,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-04",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Jika p sama dengan 4, nilai dari 2p + 5 adalah ...",
+    "options": {
+      "A": "11",
+      "B": "12",
+      "C": "13",
+      "D": "14"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Substitusikan p sama dengan 4: 2 kali 4 sama dengan 8, lalu ditambah 5 menjadi 13.",
+    "question_order": 4,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-05",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "The solution of the equation 2x minus 6 = 10 is ...",
+    "options": {
+      "A": "x = 2",
+      "B": "x = 4",
+      "C": "x = 8",
+      "D": "x = 16"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Add 6 to both sides to get 2x = 16, then divide both sides by 2, so x = 8.",
+    "question_order": 5,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-06",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Harga 3 buku sama dengan Rp15.000,00. Harga 5 buku yang sama adalah ...",
+    "options": {
+      "A": "Rp20.000,00",
+      "B": "Rp25.000,00",
+      "C": "Rp30.000,00",
+      "D": "Rp35.000,00"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Harga satu buku adalah 15.000 dibagi 3 sama dengan 5.000 rupiah. Harga 5 buku adalah 5 kali 5.000 sama dengan 25.000 rupiah.",
+    "question_order": 6,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-07",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Hasil dari 4(x + 3) adalah ...",
+    "options": {
+      "A": "4x + 3",
+      "B": "4x + 7",
+      "C": "4x + 12",
+      "D": "7x"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Kalikan 4 dengan setiap suku di dalam kurung: 4 kali x sama dengan 4x, dan 4 kali 3 sama dengan 12, sehingga hasilnya 4x + 12.",
+    "question_order": 7,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-08",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Umur Andi sekarang x tahun. Lima tahun yang akan datang umurnya dinyatakan dengan ...",
+    "options": {
+      "A": "x dikurangi 5",
+      "B": "x tambah 5",
+      "C": "5x",
+      "D": "x dibagi 5"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Umur pada waktu yang akan datang diperoleh dengan menambahkan selisih tahunnya, sehingga lima tahun lagi umurnya x tambah 5.",
+    "question_order": 8,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-09",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Luas persegi panjang dengan panjang 12 cm dan lebar 5 cm adalah ...",
+    "options": {
+      "A": "17 cm persegi",
+      "B": "34 cm persegi",
+      "C": "60 cm persegi",
+      "D": "120 cm persegi"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Luas persegi panjang sama dengan panjang kali lebar, yaitu 12 kali 5 sama dengan 60 sentimeter persegi.",
+    "question_order": 9,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-10",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Keliling persegi dengan panjang sisi 9 cm adalah ...",
+    "options": {
+      "A": "18 cm",
+      "B": "27 cm",
+      "C": "36 cm",
+      "D": "81 cm"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Keliling persegi sama dengan 4 kali panjang sisinya, yaitu 4 kali 9 sama dengan 36 sentimeter.",
+    "question_order": 10,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-11",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Luas segitiga dengan alas 10 cm dan tinggi 6 cm adalah ...",
+    "options": {
+      "A": "16 cm persegi",
+      "B": "30 cm persegi",
+      "C": "60 cm persegi",
+      "D": "80 cm persegi"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Luas segitiga sama dengan setengah kali alas kali tinggi, yaitu setengah kali 10 kali 6 sama dengan 30 sentimeter persegi.",
+    "question_order": 11,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-12",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Volume kubus dengan panjang rusuk 4 cm adalah ...",
+    "options": {
+      "A": "12 cm kubik",
+      "B": "16 cm kubik",
+      "C": "48 cm kubik",
+      "D": "64 cm kubik"
+    },
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "explanation": "Volume kubus sama dengan rusuk pangkat tiga, yaitu 4 kali 4 kali 4 sama dengan 64 sentimeter kubik.",
+    "question_order": 12,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-13",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Besar sudut yang terbentuk oleh dua garis yang saling tegak lurus adalah ...",
+    "options": {
+      "A": "45 derajat",
+      "B": "60 derajat",
+      "C": "90 derajat",
+      "D": "180 derajat"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Dua garis yang saling tegak lurus membentuk sudut siku-siku yang besarnya 90 derajat.",
+    "question_order": 13,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-14",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "The area of a circle with a radius of 7 cm, using pi = 22/7, is ...",
+    "options": {
+      "A": "44 square centimetres",
+      "B": "154 square centimetres",
+      "C": "308 square centimetres",
+      "D": "616 square centimetres"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "The area of a circle is pi times the radius squared: 22/7 times 7 times 7 = 154 square centimetres.",
+    "question_order": 14,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-15",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Jumlah besar seluruh sudut dalam sebuah segitiga adalah ...",
+    "options": {
+      "A": "90 derajat",
+      "B": "180 derajat",
+      "C": "270 derajat",
+      "D": "360 derajat"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Jumlah ketiga sudut dalam segitiga selalu 180 derajat, berapa pun bentuk segitiganya.",
+    "question_order": 15,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-16",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Bangun ruang yang memiliki 6 sisi berbentuk persegi adalah ...",
+    "options": {
+      "A": "balok",
+      "B": "kubus",
+      "C": "prisma segitiga",
+      "D": "limas segi empat"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Kubus memiliki 6 sisi yang seluruhnya berbentuk persegi dengan ukuran sama. Balok sisinya persegi panjang.",
+    "question_order": 16,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-17",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Banyaknya cara menyusun 3 buku berbeda secara berjajar adalah ...",
+    "options": {
+      "A": "3 cara",
+      "B": "6 cara",
+      "C": "9 cara",
+      "D": "12 cara"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Banyak susunan 3 benda berbeda adalah 3 faktorial, yaitu 3 kali 2 kali 1 sama dengan 6 cara.",
+    "question_order": 17,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-18",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Rina memiliki 3 baju dan 2 celana. Banyaknya pasangan baju dan celana yang dapat dipakai adalah ...",
+    "options": {
+      "A": "5 pasang",
+      "B": "6 pasang",
+      "C": "8 pasang",
+      "D": "9 pasang"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Menurut aturan perkalian, banyak pasangan adalah 3 kali 2 sama dengan 6 pasang.",
+    "question_order": 18,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-19",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Sebuah dadu dilempar satu kali. Peluang muncul mata dadu 4 adalah ...",
+    "options": {
+      "A": "satu per enam",
+      "B": "satu per empat",
+      "C": "satu per tiga",
+      "D": "satu per dua"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "Dadu memiliki 6 sisi dan hanya ada satu sisi bermata 4, sehingga peluangnya satu per enam.",
+    "question_order": 19,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-20",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Sebuah koin dilempar satu kali. Peluang muncul sisi angka adalah ...",
+    "options": {
+      "A": "nol",
+      "B": "satu per empat",
+      "C": "satu per dua",
+      "D": "satu"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Koin memiliki dua sisi yang sama-sama mungkin muncul, yaitu angka dan gambar, sehingga peluang muncul angka adalah satu per dua.",
+    "question_order": 20,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-21",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "A box contains 4 red balls and 6 blue balls. One ball is taken at random. The probability of taking a red ball is ...",
+    "options": {
+      "A": "4/10",
+      "B": "6/10",
+      "C": "4/6",
+      "D": "1/4"
+    },
+    "correct_answer": "A",
+    "difficulty": "Easy",
+    "explanation": "There are 10 balls in total and 4 of them are red, so the probability of taking a red ball is 4 out of 10.",
+    "question_order": 21,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-22",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Dari angka 1, 2, dan 3 akan dibentuk bilangan dua angka berbeda. Banyak bilangan yang dapat dibentuk adalah ...",
+    "options": {
+      "A": "3 bilangan",
+      "B": "6 bilangan",
+      "C": "8 bilangan",
+      "D": "9 bilangan"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Angka puluhan dapat dipilih 3 cara, lalu angka satuan tersisa 2 pilihan karena harus berbeda. Jadi 3 kali 2 sama dengan 6 bilangan.",
+    "question_order": 22,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-23",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Banyaknya cara memilih seorang ketua dan seorang wakil dari 4 calon adalah ...",
+    "options": {
+      "A": "4 cara",
+      "B": "8 cara",
+      "C": "12 cara",
+      "D": "16 cara"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Ketua dapat dipilih dengan 4 cara, lalu wakil dipilih dari 3 orang yang tersisa. Jadi 4 kali 3 sama dengan 12 cara.",
+    "question_order": 23,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-24",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Faktor persekutuan terbesar dari 12 dan 18 adalah ...",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "6",
+      "D": "36"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Faktor 12 adalah 1, 2, 3, 4, 6, 12 dan faktor 18 adalah 1, 2, 3, 6, 9, 18. Faktor persekutuan terbesarnya adalah 6.",
+    "question_order": 24,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-25",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Kelipatan persekutuan terkecil dari 4 dan 6 adalah ...",
+    "options": {
+      "A": "10",
+      "B": "12",
+      "C": "18",
+      "D": "24"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Kelipatan 4 adalah 4, 8, 12, 16 dan kelipatan 6 adalah 6, 12, 18. Kelipatan persekutuan yang terkecil adalah 12.",
+    "question_order": 25,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-26",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Bilangan berikut yang merupakan bilangan prima adalah ...",
+    "options": {
+      "A": "9",
+      "B": "15",
+      "C": "17",
+      "D": "21"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Bilangan prima hanya habis dibagi 1 dan dirinya sendiri. Angka 17 memenuhi syarat itu, sedangkan 9, 15, dan 21 masing-masing habis dibagi 3.",
+    "question_order": 26,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-27",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Hasil dari negatif 8 tambah 15 adalah ...",
+    "options": {
+      "A": "negatif 23",
+      "B": "negatif 7",
+      "C": "7",
+      "D": "23"
+    },
+    "correct_answer": "C",
+    "difficulty": "Easy",
+    "explanation": "Dua bilangan berbeda tanda dikurangkan nilainya: 15 dikurangi 8 sama dengan 7, dan tandanya mengikuti bilangan yang lebih besar yaitu positif.",
+    "question_order": 27,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-28",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Which number is divisible by both 3 and 5?",
+    "options": {
+      "A": "25",
+      "B": "30",
+      "C": "33",
+      "D": "44"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "A number divisible by both 3 and 5 must be a multiple of 15. Among the options only 30 is a multiple of 15.",
+    "question_order": 28,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-29",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Bentuk pecahan paling sederhana dari 18 per 24 adalah ...",
+    "options": {
+      "A": "dua per tiga",
+      "B": "tiga per empat",
+      "C": "empat per lima",
+      "D": "enam per delapan"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "Bagi pembilang dan penyebut dengan faktor persekutuan terbesarnya yaitu 6, sehingga 18 per 24 menjadi 3 per 4.",
+    "question_order": 29,
+    "active": true
+  },
+  {
+    "id": "p1-mtk-30",
+    "package_id": "paket-1",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Hasil dari 25 persen dari 200 adalah ...",
+    "options": {
+      "A": "25",
+      "B": "50",
+      "C": "75",
+      "D": "100"
+    },
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "explanation": "25 persen sama dengan seperempat. Seperempat dari 200 adalah 50.",
+    "question_order": 30,
+    "active": true
+  }
+]

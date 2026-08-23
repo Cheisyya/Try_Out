@@ -1,0 +1,1994 @@
+[
+  {
+    "id": "p16-bindo-01",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah teks berikut.\n\nSebuah rumah sakit mengumumkan bahwa tingkat keberhasilan operasi jantungnya mencapai 98 persen, jauh di atas rumah sakit rujukan nasional yang hanya 88 persen. Angka itu benar. Namun, rumah sakit rujukan nasional menerima seluruh pasien yang ditolak rumah sakit lain karena keadaannya paling berat, sedangkan rumah sakit tersebut hanya menerima pasien yang risikonya rendah. Ketika kedua rumah sakit dibandingkan pada kelompok pasien dengan tingkat risiko yang sama, keberhasilannya hampir tidak berbeda.\n\nSimpulan yang paling tepat berdasarkan teks tersebut adalah ...",
+    "options": {
+      "A": "Rumah sakit rujukan nasional sebaiknya berhenti menerima pasien yang keadaannya paling berat.",
+      "B": "Perbandingan angka keberhasilan menjadi menyesatkan apabila kelompok pasien yang dibandingkan tidak setara.",
+      "C": "Angka 98 persen yang diumumkan rumah sakit tersebut merupakan hasil pencatatan yang keliru.",
+      "D": "Tingkat keberhasilan operasi merupakan ukuran mutu rumah sakit yang paling dapat dipercaya."
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Teks menegaskan bahwa kedua angka itu benar, lalu menunjukkan bahwa keduanya dihitung dari kelompok pasien yang sama sekali berbeda tingkat risikonya, dan menutupnya dengan perbandingan setara yang hasilnya hampir sama. Rangkaian itu adalah gambaran perbandingan yang menyesatkan karena dasarnya tidak setara — pilihan B. Pilihan A mengubah temuan menjadi anjuran yang justru akan menelantarkan pasien terberat. Pilihan C bertentangan dengan kalimat Angka itu benar. Pilihan D menyatakan kebalikan dari yang dibuktikan teks.",
+    "question_order": 1,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-02",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah teks berikut.\n\nSebuah kabupaten mengumumkan bahwa program beasiswanya berhasil karena 95 persen penerima beasiswa lulus tepat waktu, jauh di atas angka kelulusan tepat waktu siswa pada umumnya yang hanya 72 persen. Beasiswa itu diberikan kepada siswa yang nilai rapornya berada pada peringkat sepuluh besar di sekolah masing-masing.\n\nAsumsi yang harus benar agar kesimpulan kabupaten tersebut dapat dipertahankan adalah ...",
+    "options": {
+      "A": "Jumlah penerima beasiswa cukup banyak untuk mewakili seluruh siswa di kabupaten itu.",
+      "B": "Siswa peringkat sepuluh besar tidak akan lulus tepat waktu sebanyak itu seandainya tidak menerima beasiswa.",
+      "C": "Seluruh siswa penerima beasiswa berasal dari keluarga yang keadaan ekonominya sama.",
+      "D": "Angka kelulusan tepat waktu siswa pada umumnya akan naik pada tahun-tahun berikutnya."
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Penerima beasiswa bukan siswa sembarangan: mereka sudah terpilih sebagai peringkat sepuluh besar, yaitu kelompok yang memang paling mungkin lulus tepat waktu bahkan tanpa bantuan apa pun. Kesimpulan bahwa beasiswalah penyebabnya karena itu hanya sah bila kelompok tersebut tidak akan mencapai angka setinggi itu tanpa beasiswa — asumsi pada pilihan B. Pilihan A menyangkut keterwakilan, yang tidak menyelamatkan kesimpulan sebab-akibat betapa pun banyak penerimanya. Pilihan C menyangkut keseragaman ekonomi yang tidak diperlukan, dan pilihan D menyangkut masa depan yang tidak berkaitan.",
+    "question_order": 2,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-03",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Perhatikan tabel berikut baik-baik.\n\nSatu-satunya pernyataan yang seluruhnya didukung oleh angka pada tabel itu adalah ...",
+    "options": {
+      "A": "Sisa persediaan akhir bulan selalu bertambah ketika barang yang masuk bertambah banyak.",
+      "B": "Barang yang terjual selalu lebih sedikit daripada barang yang masuk pada bulan yang sama.",
+      "C": "Toko itu mengalami kekurangan persediaan pada setiap bulan sepanjang enam bulan tersebut.",
+      "D": "Sisa persediaan berkurang pada setiap bulan ketika barang terjual melampaui barang masuk."
+    },
+    "correct_answer": "D",
+    "difficulty": "Hard",
+    "explanation": "Bandingkan barang masuk dan barang terjual tiap bulan. Barang terjual melampaui barang masuk pada Februari (500 > 460), April (610 > 520), dan Juni (620 > 480), dan pada ketiga bulan itu sisa persediaan memang berkurang dibandingkan bulan sebelumnya: 180 menjadi 140, 200 menjadi 110, dan 230 menjadi 90. Pilihan D benar. Pilihan A dibantah Februari yang barang masuknya lebih sedikit daripada Januari tetapi tidak menaikkan persediaan, dan lebih tegas lagi oleh Juni. Pilihan B dibantah tiga bulan tersebut. Pilihan C keliru karena persediaan tidak pernah habis sama sekali.",
+    "table": {
+      "judul": "Data enam bulan penjualan dan persediaan sebuah toko bahan bangunan",
+      "kolom": [
+        "Bulan",
+        "Barang masuk (unit)",
+        "Barang terjual (unit)",
+        "Sisa persediaan akhir bulan (unit)"
+      ],
+      "baris": [
+        [
+          "Januari",
+          "500",
+          "420",
+          "180"
+        ],
+        [
+          "Februari",
+          "460",
+          "500",
+          "140"
+        ],
+        [
+          "Maret",
+          "600",
+          "540",
+          "200"
+        ],
+        [
+          "April",
+          "520",
+          "610",
+          "110"
+        ],
+        [
+          "Mei",
+          "700",
+          "580",
+          "230"
+        ],
+        [
+          "Juni",
+          "480",
+          "620",
+          "90"
+        ]
+      ]
+    },
+    "question_order": 3,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-04",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah kedua teks berikut.\n\nTeks I\nMelarang penjualan minuman berpemanis di kantin sekolah adalah cara paling langsung menekan angka gigi berlubang pada siswa. Di sekolah yang menerapkannya, penjualan minuman berpemanis di kantin turun sampai nol.\n\nTeks II\nPenjualan di kantin memang berhenti, tetapi pencatatan di tiga sekolah menunjukkan jumlah botol minuman berpemanis yang ditemukan di tempat sampah sekolah hanya berkurang seperlima. Sebagian besar siswa kini membelinya di warung sekitar sekolah sebelum masuk. Angka gigi berlubang pada pemeriksaan tahunan tidak berbeda dengan sekolah yang tidak menerapkan larangan.\n\nKeterangan pada Teks II yang paling langsung meruntuhkan klaim Teks I adalah ...",
+    "options": {
+      "A": "penjualan minuman berpemanis di kantin memang berhenti sama sekali",
+      "B": "sebagian besar siswa kini membeli minuman itu di warung sekitar sekolah",
+      "C": "angka gigi berlubang pada pemeriksaan tahunan ternyata tidak berbeda dengan sekolah tanpa larangan",
+      "D": "pencatatan tersebut hanya dilakukan pada tiga buah sekolah"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Klaim Teks I bukan sekadar bahwa penjualan berhenti, melainkan bahwa larangan itu menekan angka gigi berlubang. Keterangan yang meruntuhkan klaim semacam itu haruslah keterangan yang mengukur angka gigi berlubang itu sendiri, dan hanya pilihan C yang melakukannya. Pilihan B memang menjelaskan mengapa larangan itu gagal, tetapi ia baru menerangkan jalannya peristiwa dan belum membuktikan hasil akhirnya — itulah sebabnya ia menjadi jebakan terkuat. Pilihan A justru mengulang kenyataan yang mendukung Teks I. Pilihan D mempersoalkan sedikitnya sekolah yang dicatat, yaitu meragukan mutu bukti tanpa membantah isinya.",
+    "question_order": 4,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-05",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah teks berikut.\n\nPada awal abad kesembilan belas, seorang dokter di Wina memperhatikan bahwa perempuan yang melahirkan di bangsal yang ditangani mahasiswa kedokteran jauh lebih sering meninggal daripada mereka yang ditangani bidan. Ia memeriksa segala hal yang berbeda di antara kedua bangsal: udara, kepadatan, bahkan arah pasien berbaring. Semuanya sama. Yang berbeda hanya satu: mahasiswa kedokteran datang ke bangsal itu langsung dari ruang bedah mayat, sedangkan bidan tidak. Ketika ia mewajibkan mahasiswa mencuci tangan dengan larutan kapur sebelum masuk, angka kematian di bangsal itu turun sepersepuluh dalam sebulan.\n\nSimpulan yang paling tepat mengenai cara kerja dokter tersebut adalah ...",
+    "options": {
+      "A": "Ia menemukan sebab dengan menyingkirkan satu per satu hal yang sama pada kedua bangsal sampai tersisa satu perbedaan.",
+      "B": "Ia lebih dahulu menduga adanya kuman, lalu mencari bukti yang menyokong dugaannya itu.",
+      "C": "Ia menyimpulkan bahwa bidan lebih terampil menangani persalinan daripada mahasiswa kedokteran.",
+      "D": "Ia membuktikan bahwa udara di bangsal mahasiswa lebih buruk daripada udara di bangsal bidan."
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Teks menggambarkan satu cara kerja yang khas: dokter itu mendaftar segala hal yang mungkin berbeda, memeriksanya satu per satu, dan mendapati semuanya sama sampai tersisa satu perbedaan tunggal. Perbedaan yang tersisa itulah yang diujinya dengan tindakan, dan hasilnya membenarkannya. Pilihan A merangkum cara kerja tersebut. Pilihan B membalik urutannya menjadi dugaan lebih dahulu; teks justru menggambarkan penyisihan sampai dugaannya muncul. Pilihan C dan D menyebut kesimpulan yang justru dibantah teks, sebab keterampilan tidak diuji dan udara dinyatakan sama.",
+    "question_order": 5,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-06",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Membaca",
+    "question": "Bacalah teks berikut.\n\nPohon-pohon di dalam satu hutan terhubung di bawah tanah oleh jaring benang jamur yang membungkus akar mereka. Jamur itu mengambil sebagian gula hasil fotosintesis pohon dan sebagai gantinya menyerahkan air serta zat hara yang dijangkaunya jauh lebih luas daripada jangkauan akar pohon sendiri. Melalui jaring yang sama, pohon besar yang terkena cahaya penuh terbukti mengirimkan gula kepada anakan pohon yang ternaungi di bawahnya, termasuk kepada anakan yang bukan keturunannya.\n\nSimpulan yang paling tepat berdasarkan teks tersebut adalah ...",
+    "options": {
+      "A": "Jamur di dalam tanah merupakan hama yang merugikan pohon-pohon di hutan itu.",
+      "B": "Anakan pohon yang ternaungi tidak memerlukan cahaya matahari sama sekali untuk hidup.",
+      "C": "Pohon besar mengirimkan gula hanya kepada anakan yang merupakan keturunannya sendiri.",
+      "D": "Hubungan antara pohon dan jamur itu saling menguntungkan, dan jaring jamur juga menjadi jalan perpindahan zat antarpohon."
+    },
+    "correct_answer": "D",
+    "difficulty": "Hard",
+    "explanation": "Teks menyampaikan dua hal berurutan. Pertama, jamur mengambil gula dan menyerahkan air serta zat hara, yaitu pertukaran yang menguntungkan kedua pihak. Kedua, jaring jamur yang sama dipakai sebagai jalan gula berpindah dari pohon besar ke anakan yang ternaungi. Pilihan D menyatukan keduanya. Pilihan A membaca pengambilan gula sebagai kerugian dan mengabaikan imbalannya. Pilihan B terlalu jauh karena anakan yang ternaungi tetap berfotosintesis, hanya sedikit. Pilihan C bertentangan langsung dengan keterangan termasuk kepada anakan yang bukan keturunannya.",
+    "question_order": 6,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-07",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Cermati kalimat berikut.\n\nMeskipun jumlah pengunjung museum itu meningkat tajam, namun pendapatan dari penjualan tiket justru mengalami penurunan yang cukup signifikan.\n\nPerbaikan yang paling tepat terhadap kalimat tersebut adalah ...",
+    "options": {
+      "A": "Meskipun jumlah pengunjung museum itu meningkat tajam, namun pendapatan dari penjualan tiket justru turun cukup tajam.",
+      "B": "Walaupun jumlah pengunjung museum itu meningkat tajam, namun pendapatan penjualan tiket justru mengalami penurunan.",
+      "C": "Jumlah pengunjung museum itu meningkat tajam, namun pendapatan dari penjualan tiket justru mengalami penurunan yang cukup signifikan.",
+      "D": "Meskipun jumlah pengunjung museum itu meningkat tajam, pendapatan dari penjualan tiket justru turun cukup tajam."
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Kalimat asal memuat dua persoalan. Pertama, meskipun dan namun sama-sama menyatakan pertentangan sehingga salah satunya berlebih; karena anak kalimatnya diawali meskipun, yang dibuang adalah namun. Kedua, mengalami penurunan yang cukup signifikan dapat diringkas menjadi turun cukup tajam tanpa kehilangan makna, sekaligus mengganti kata serapan yang belum perlu. Hanya pilihan D memperbaiki keduanya. Pilihan A dan B masih menyisakan namun, sedangkan pilihan C membuang meskipun sehingga kalimatnya berubah menjadi dua klausa setara dan hubungan bertingkatnya hilang.",
+    "question_order": 7,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-08",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Cermati paragraf berikut.\n\n(1) Panitia menetapkan tiga syarat bagi calon peserta lomba. (2) Syarat pertama, peserta harus berstatus siswa kelas VII sampai kelas IX. (3) Syarat kedua, peserta wajib membawa surat keterangan dari sekolahnya masing-masing. (4) Syarat ke-tiga, peserta harus mendaftar paling lambat tanggal 20 Agustus 2026.\n\nPenulisan lambang bilangan yang menyimpang dari kaidah terdapat pada kalimat ...",
+    "options": {
+      "A": "(1)",
+      "B": "(2)",
+      "C": "(3)",
+      "D": "(4)"
+    },
+    "correct_answer": "D",
+    "difficulty": "Hard",
+    "explanation": "Bilangan tingkat yang dinyatakan dengan huruf ditulis serangkai tanpa tanda hubung, sehingga yang benar adalah ketiga, bukan ke-tiga. Tanda hubung hanya dipakai bila bilangan tingkatnya ditulis dengan angka, seperti ke-3 atau ke-20. Kalimat (1) memakai tiga sebagai bilangan biasa yang memang ditulis dengan huruf. Kalimat (2) memakai angka Romawi untuk tingkat kelas, yang sudah lazim. Kalimat (3) tidak memuat lambang bilangan sama sekali, dan kata kedua di dalamnya justru sudah ditulis serangkai dengan benar.",
+    "question_order": 8,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-09",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Kalimat berikut yang seluruh unsurnya sudah baku dan efektif adalah ...",
+    "options": {
+      "A": "Berdasarkan hasil rapat, maka panitia memutuskan untuk menunda pelaksanaan lomba sampai bulan depan.",
+      "B": "Panitia memutuskan untuk menunda pelaksanaan lomba sampai bulan depan berdasarkan hasil rapat.",
+      "C": "Berdasarkan hasil rapat, panitia memutuskan menunda pelaksanaan lomba sampai bulan depan.",
+      "D": "Berdasarkan daripada hasil rapat, panitia memutuskan untuk menunda pelaksanaan lomba sampai bulan depan."
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Pilihan C lengkap unsurnya dan tidak memuat kata mubazir: keterangan Berdasarkan hasil rapat mendahului induk kalimat yang bersubjek panitia dan berpredikat memutuskan. Pilihan A menambahkan maka setelah anak kalimat, yang berlebih. Pilihan B memang gramatikal, tetapi menempatkan keterangan dasar keputusan jauh di belakang sehingga sesaat terbaca seakan-akan lomba ditunda berdasarkan hasil rapat, bukan keputusannya. Pilihan D memakai berdasarkan daripada, yaitu dua kata depan bertumpuk yang tidak berterima.",
+    "question_order": 9,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-10",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Cermati kalimat berikut.\n\nIa bertanya kepada petugas: \"Apakah ruang baca masih dibuka sampai pukul sembilan malam?\"\n\nKesalahan pada penulisan kalimat tersebut terletak pada ...",
+    "options": {
+      "A": "penggunaan tanda titik dua sebelum kalimat langsung",
+      "B": "penggunaan huruf kapital pada kata Apakah",
+      "C": "penggunaan tanda tanya di dalam tanda petik",
+      "D": "penggunaan kata kepada setelah kata bertanya"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Bagian pengiring yang mendahului kalimat langsung dipisahkan dengan tanda koma, bukan tanda titik dua; tanda titik dua dipakai pada penulisan percakapan naskah drama atau sebelum perincian. Penulisan yang benar karena itu Ia bertanya kepada petugas, \"Apakah ...\". Pilihan B keliru karena kata pertama pada kalimat langsung memang ditulis dengan huruf kapital. Pilihan C keliru karena tanda tanya pada kalimat langsung yang berupa pertanyaan memang diletakkan di dalam tanda petik. Pilihan D keliru karena bertanya kepada adalah pasangan yang lazim.",
+    "question_order": 10,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-11",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Menyunting",
+    "question": "Cermati paragraf berikut.\n\n(1) Terumbu karang di teluk itu mulai memutih sejak dua tahun lalu. (2) Kenaikan suhu air laut membuat karang mengusir alga yang selama ini hidup di dalam jaringannya. (3) Padahal, alga itulah yang menyerahkan sebagian besar makanan bagi karang. (4) Oleh sebab itu, karang yang memutih akan mati kelaparan apabila suhu air tidak segera turun, sehingga oleh karena itu pemulihan teluk memerlukan waktu bertahun-tahun.\n\nPerbaikan yang tepat terhadap kalimat (4) adalah ...",
+    "options": {
+      "A": "mengganti frasa Oleh sebab itu dengan Namun",
+      "B": "menghilangkan frasa sehingga oleh karena itu dan menggantinya dengan sehingga",
+      "C": "menghilangkan kata apabila pada anak kalimat kedua",
+      "D": "mengganti kata memutih dengan berubah warna"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Kalimat (4) memuat tiga penanda hubungan akibat sekaligus: Oleh sebab itu di awal, sehingga di tengah, dan oleh karena itu tepat sesudahnya. Dua yang terakhir bertumpuk pada satu sambungan yang sama, sehingga cukup disisakan satu, yaitu sehingga. Pilihan A menukar hubungan akibat menjadi pertentangan, padahal kalimat (4) memang merupakan akibat dari kalimat (3). Pilihan C menghapus penanda syarat yang justru diperlukan. Pilihan D menukar kata yang sudah tepat sekaligus memperpanjang kalimat.",
+    "question_order": 11,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-12",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Cermati kalimat berikut.\n\nLaporan itu hanya menyajikan data dari sekolah-sekolah yang programnya berhasil, sehingga gambarannya menjadi ... dan tidak mewakili keadaan yang sesungguhnya.\n\nKata yang seharusnya menempati bagian yang dikosongkan itu adalah ...",
+    "options": {
+      "A": "objektif",
+      "B": "komprehensif",
+      "C": "konsisten",
+      "D": "bias"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Menyajikan hanya sekolah yang berhasil berarti memilih data secara berat sebelah, dan gambaran yang lahir dari pemilihan semacam itu disebut bias. Objektif justru berarti tidak berat sebelah, sehingga berlawanan dengan keterangan pada anak kalimatnya. Komprehensif berarti menyeluruh, dan laporan yang hanya memuat satu golongan sekolah jelas tidak menyeluruh. Konsisten berarti taat asas atau tidak berubah-ubah, yang menyangkut keajekan dan bukan keberpihakan pemilihan datanya.",
+    "question_order": 12,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-13",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Cermati situasi berikut.\n\nSebuah perusahaan mengiklankan produknya besar-besaran di seluruh media dan menghabiskan dana yang sangat besar. Namun, mutu produknya sendiri tidak diperbaiki sama sekali sehingga pembeli hanya membeli satu kali lalu tidak pernah kembali.\n\nPeribahasa yang paling tepat menggambarkan keadaan perusahaan tersebut adalah ...",
+    "options": {
+      "A": "Besar kapal besar gelombang.",
+      "B": "Air beriak tanda tak dalam.",
+      "C": "Sekali merengkuh dayung, dua tiga pulau terlampaui.",
+      "D": "Malu bertanya sesat di jalan."
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Peribahasa air beriak tanda tak dalam menggambarkan sesuatu yang tampak ramai dan menonjol di permukaan tetapi kosong isinya — persis perusahaan yang gencar beriklan tanpa memperbaiki mutu produknya. Besar kapal besar gelombang menggambarkan makin besar usaha makin besar pula tantangannya, yang tidak sesuai karena persoalannya bukan tantangan melainkan kekosongan mutu. Sekali merengkuh dayung menggambarkan satu pekerjaan yang menghasilkan beberapa keuntungan sekaligus. Malu bertanya sesat di jalan menggambarkan akibat enggan bertanya.",
+    "question_order": 13,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-14",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Kalimat yang seluruh kata bentukan dan kata serapannya ditulis secara baku adalah ...",
+    "options": {
+      "A": "Tim penilai mengklasifikasi seluruh karya berdasarkan tema dan tehnik penyajiannya.",
+      "B": "Tim penilai mengklasifikasikan seluruh karya berdasarkan tema dan teknik penyajiannya.",
+      "C": "Tim penilai mengklasifikasikan seluruh karya berdasarkan tema dan tehnik penyajiannya.",
+      "D": "Tim penilai mengklasifikasi seluruh karya berdasarkan tema dan teknik penyajiannya."
+    },
+    "correct_answer": "B",
+    "difficulty": "Hard",
+    "explanation": "Dua hal diuji sekaligus. Pertama, kata dasar klasifikasi memerlukan akhiran -kan agar dapat menerima objek, sehingga bentuknya mengklasifikasikan; bentuk mengklasifikasi tanpa akhiran tidak lazim dipakai bersama objek. Kedua, bentuk baku serapannya adalah teknik dengan huruf k, bukan tehnik. Hanya pilihan B memenuhi keduanya. Perhatikan pula bahwa huruf k pada klasifikasi tidak luluh karena diikuti konsonan, berbeda dengan kata seperti kampanye yang huruf k-nya diikuti vokal sehingga luluh menjadi mengampanyekan.",
+    "question_order": 14,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-15",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Kosa Kata",
+    "question": "Cermati kalimat berikut.\n\nKepala sekolah tidak menolak usul itu, tetapi juga tidak menyetujuinya; ia hanya mengatakan bahwa usul tersebut \"akan dipertimbangkan pada waktu yang tepat\".\n\nSikap kepala sekolah tersebut paling tepat disebut ...",
+    "options": {
+      "A": "tegas",
+      "B": "lugas",
+      "C": "mengambang",
+      "D": "terbuka"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Kepala sekolah itu tidak menutup pintu tetapi juga tidak membukanya, dan janjinya diberi syarat waktu yang tidak jelas kapan tibanya. Sikap yang tidak menetapkan kedudukan seperti itu disebut mengambang. Tegas berarti menyatakan pendirian dengan jelas, dan lugas berarti langsung tanpa berbelit — keduanya berlawanan dengan keadaan pada kalimat. Terbuka berarti bersedia menerima masukan secara jujur, dan meskipun sekilas terdengar mirip, sikap yang digambarkan justru menghindari jawaban, bukan mempersilakan.",
+    "question_order": 15,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-16",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Cermati kalimat berikut.\n\nSetiap pagi, petugas kebersihan yang bertugas di gedung itu menyapu seluruh lantai sebelum karyawan datang.\n\nKalimat tersebut berpola ...",
+    "options": {
+      "A": "S-P-O-K",
+      "B": "K-S-P-O",
+      "C": "S-P-K-O",
+      "D": "K-S-P-O-K"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Uraikan seluruh unsurnya. Setiap pagi adalah keterangan waktu yang mendahului kalimat. Petugas kebersihan yang bertugas di gedung itu adalah subjek beserta anak kalimat perluasannya. Menyapu adalah predikat dan seluruh lantai adalah objek, terbukti karena dapat dijadikan subjek pasif. Bagian sebelum karyawan datang juga menyatakan waktu, sehingga menjadi keterangan kedua yang berada di belakang. Karena keterangan muncul di kedua ujung kalimat, polanya K-S-P-O-K. Pilihan B melewatkan keterangan yang terakhir, sedangkan pilihan A melewatkan keterangan yang di depan.",
+    "question_order": 16,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-17",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Kalimat yang mengandung anak kalimat pengganti objek adalah ...",
+    "options": {
+      "A": "Panitia menunda pengumuman karena berkas peserta belum lengkap seluruhnya.",
+      "B": "Panitia mengumumkan bahwa pendaftaran akan ditutup pada akhir pekan ini.",
+      "C": "Panitia mengumumkan jadwal seleksi yang telah disepakati dalam rapat kemarin.",
+      "D": "Ketika berkas peserta sudah lengkap, panitia segera mengumumkan jadwal seleksi."
+    },
+    "correct_answer": "B",
+    "difficulty": "Hard",
+    "explanation": "Anak kalimat menduduki objek apabila ia mengisi tempat yang dituntut predikat dan dapat digantikan oleh satu kata benda. Pada pilihan B, predikatnya mengumumkan dan anak kalimat bahwa pendaftaran akan ditutup pada akhir pekan ini mengisi tempat objek; ujinya, bagian itu dapat diganti menjadi Panitia mengumumkan hal itu. Pilihan A memuat anak kalimat sebab dan pilihan D memuat anak kalimat waktu, keduanya menduduki keterangan. Pilihan C memuat anak kalimat yang memperluas kata benda jadwal seleksi, sehingga ia pewatas objek, bukan objeknya sendiri.",
+    "question_order": 17,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-18",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Cermati kalimat berikut.\n\nBantuan itu diserahkan langsung oleh gubernur kepada perwakilan warga pada acara peringatan hari jadi kota.\n\nKalimat tersebut apabila diubah menjadi kalimat aktif yang tepat adalah ...",
+    "options": {
+      "A": "Gubernur menyerahkan langsung bantuan itu kepada perwakilan warga pada acara peringatan hari jadi kota.",
+      "B": "Perwakilan warga menyerahkan bantuan itu langsung kepada gubernur pada acara peringatan hari jadi kota.",
+      "C": "Bantuan itu gubernur serahkan langsung kepada perwakilan warga pada acara peringatan hari jadi kota.",
+      "D": "Kepada perwakilan warga, gubernur menyerahkan langsung bantuan itu pada acara peringatan hari jadi kota."
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Pada kalimat pasif ini, subjeknya Bantuan itu, pelakunya gubernur, dan kepada perwakilan warga berkedudukan sebagai keterangan tujuan. Pada pengubahan menjadi aktif, pelakunya naik menjadi subjek dan subjek pasifnya turun menjadi objek, sehingga terbentuk Gubernur menyerahkan bantuan itu .... Pilihan B menukar peran gubernur dan perwakilan warga sehingga maknanya berbalik. Pilihan C masih berbentuk pasif, hanya memakai pola tanpa di- yang justru tidak berlaku bagi pelaku orang ketiga. Pilihan D sudah aktif tetapi memindahkan keterangan tujuan ke depan sehingga penekanannya berubah.",
+    "question_order": 18,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-19",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Cermati kalimat berikut.\n\nPenonton menyaksikan pertunjukan itu dari tribun utara sampai lampu panggung dipadamkan.\n\nKalimat tersebut bermakna ganda. Perbaikan agar kalimat itu hanya bermakna bahwa penonton menonton hingga lampu panggung padam adalah ...",
+    "options": {
+      "A": "Penonton menyaksikan pertunjukan itu dari tribun utara hingga akhir lampu panggung dipadamkan.",
+      "B": "Sampai lampu panggung dipadamkan, penonton menyaksikan pertunjukan itu dari tribun utara.",
+      "C": "Penonton dari tribun utara menyaksikan pertunjukan itu sampai lampu panggung dipadamkan.",
+      "D": "Penonton menyaksikan, dari tribun utara, pertunjukan itu sampai lampu panggung dipadamkan."
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Kemenduaan muncul karena rangkaian dari tribun utara sampai lampu panggung dipadamkan dapat terbaca sebagai satu kesatuan yang menyatakan jangkauan, seolah-olah dari suatu tempat sampai suatu peristiwa. Memindahkan bagian sampai lampu panggung dipadamkan ke awal kalimat memutus rangkaian itu sehingga hanya tersisa satu bacaan, yaitu keterangan waktu bagi seluruh kalimat — pilihan B. Pilihan C memang memperjelas kedudukan dari tribun utara, tetapi rangkaian sampai lampu panggung dipadamkan masih berdampingan dengan pertunjukan itu sehingga dapat terbaca sebagai bagian pertunjukannya. Pilihan A menambah kata tanpa memutus rangkaian, dan pilihan D hanya menyisipkan koma yang tidak lazim di antara predikat dan objeknya.",
+    "question_order": 19,
+    "active": true
+  },
+  {
+    "id": "p16-bindo-20",
+    "package_id": "paket-16",
+    "subject": "Bahasa Indonesia",
+    "session": "sesi-1",
+    "category": "Struktur Bahasa Indonesia",
+    "question": "Di antara kalimat berikut, yang seluruh perinciannya sudah sejajar bentuknya adalah ...",
+    "options": {
+      "A": "Program tersebut bertujuan mengenalkan kesenian daerah, pelestarian bahasa ibu, dan menumbuhkan rasa bangga pada budaya sendiri.",
+      "B": "Program tersebut bertujuan pengenalan kesenian daerah, melestarikan bahasa ibu, dan penumbuhan rasa bangga pada budaya sendiri.",
+      "C": "Program tersebut bertujuan mengenalkan kesenian daerah, melestarikan bahasa ibu, dan menumbuhkan rasa bangga pada budaya sendiri.",
+      "D": "Program tersebut bertujuan pengenalan kesenian daerah, pelestarian bahasa ibu, dan menumbuhkan rasa bangga pada budaya sendiri."
+    },
+    "correct_answer": "C",
+    "difficulty": "Hard",
+    "explanation": "Kesejajaran menuntut seluruh perincian dalam satu deret memakai bentuk kata yang sama. Pada pilihan C ketiganya berupa kata kerja berawalan meN-: mengenalkan, melestarikan, dan menumbuhkan. Pilihan A mencampur dua kata kerja dengan satu kata benda pelestarian. Pilihan B mencampur dua kata benda dengan satu kata kerja. Pilihan D mencampur dua kata benda dengan satu kata kerja pada kedudukan terakhir. Perhatikan bahwa deret kata benda pun sesungguhnya sah asalkan ketiganya seragam; yang membuat ketiga pilihan lain keliru adalah percampurannya.",
+    "question_order": 20,
+    "active": true
+  },
+  {
+    "id": "p16-ing-01",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the following passage.\n\nBefore 1956, loading a cargo ship was work for gangs of dockworkers who carried barrels, sacks and crates aboard one item at a time. A ship could sit in port for a week, and the cost of moving goods across an ocean was so high that most factories sold only to buyers a few hundred kilometres away. Then a trucking businessman named Malcolm McLean asked a plain question: why unload a truck at all? His answer was a steel box that could be lifted straight from a truck bed onto a ship and, at the far end, onto another truck.\n\nThe box itself required no great cleverness to design. What mattered was that every port, every railway company and every truck maker eventually agreed on one set of dimensions, so that a box packed in one country could travel anywhere in the world without ever being opened. Loading costs fell by more than ninety per cent. Factories could now be built wherever labour was cheapest rather than wherever the customers happened to live, and the map of world manufacturing was redrawn within a single generation.\n\nThe change was not painless. The old ports had grown up along narrow city rivers and had no room for the cranes and the acres of stacking yards that the boxes demanded, so shipping moved to new deep-water ports built on empty coastline. Cities that had lived on dock labour for two centuries lost their industry in less than twenty years.\n\nAccording to the passage, the most important reason for the container's success was ...",
+    "options": {
+      "A": "the strength of the steel from which the boxes were built",
+      "B": "the speed at which McLean's own trucks were able to travel",
+      "C": "the worldwide agreement to build every container to a single set of dimensions",
+      "D": "the decision to keep handling cargo at ports along narrow city rivers"
+    },
+    "correct_answer": "C",
+    "difficulty": "Hard",
+    "explanation": "The second paragraph states directly that the box required no great cleverness to design and that what mattered was the agreement on one set of dimensions, which allowed a box to travel anywhere without being opened. That contrast — the object was ordinary, the agreement was decisive — points to option C. Option A is rejected by the same sentence about the design. Option B mentions McLean's trucks, which the passage never presents as unusually fast. Option D reverses the last paragraph, where the river ports had to be abandoned.",
+    "question_order": 1,
+    "active": true
+  },
+  {
+    "id": "p16-ing-02",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the following passage.\n\nBefore 1956, loading a cargo ship was work for gangs of dockworkers who carried barrels, sacks and crates aboard one item at a time. A ship could sit in port for a week, and the cost of moving goods across an ocean was so high that most factories sold only to buyers a few hundred kilometres away. Then a trucking businessman named Malcolm McLean asked a plain question: why unload a truck at all? His answer was a steel box that could be lifted straight from a truck bed onto a ship and, at the far end, onto another truck.\n\nThe box itself required no great cleverness to design. What mattered was that every port, every railway company and every truck maker eventually agreed on one set of dimensions, so that a box packed in one country could travel anywhere in the world without ever being opened. Loading costs fell by more than ninety per cent. Factories could now be built wherever labour was cheapest rather than wherever the customers happened to live, and the map of world manufacturing was redrawn within a single generation.\n\nThe change was not painless. The old ports had grown up along narrow city rivers and had no room for the cranes and the acres of stacking yards that the boxes demanded, so shipping moved to new deep-water ports built on empty coastline. Cities that had lived on dock labour for two centuries lost their industry in less than twenty years.\n\nThe writer mentions that factories \"could now be built wherever labour was cheapest\" mainly in order to show that ...",
+    "options": {
+      "A": "the fall in shipping costs changed where in the world goods came to be made",
+      "B": "workers in the old port cities had been paid far too much for their labour",
+      "C": "containers turned out to be most useful for carrying heavy factory machinery",
+      "D": "manufacturers had always preferred to remain close to their own customers"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "The sentence sits between a statement about a ninety per cent fall in loading costs and a statement that the map of world manufacturing was redrawn, so its purpose is to link the two: once distance became cheap, the reason for building a factory near its buyers disappeared. That is option A. Option B reads a judgement about wages into a passage that makes none. Option C invents a cargo type the passage never mentions. Option D describes the situation before containers, which the sentence is explaining the end of, not the continuation of.",
+    "question_order": 2,
+    "active": true
+  },
+  {
+    "id": "p16-ing-03",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the following passage.\n\nBefore 1956, loading a cargo ship was work for gangs of dockworkers who carried barrels, sacks and crates aboard one item at a time. A ship could sit in port for a week, and the cost of moving goods across an ocean was so high that most factories sold only to buyers a few hundred kilometres away. Then a trucking businessman named Malcolm McLean asked a plain question: why unload a truck at all? His answer was a steel box that could be lifted straight from a truck bed onto a ship and, at the far end, onto another truck.\n\nThe box itself required no great cleverness to design. What mattered was that every port, every railway company and every truck maker eventually agreed on one set of dimensions, so that a box packed in one country could travel anywhere in the world without ever being opened. Loading costs fell by more than ninety per cent. Factories could now be built wherever labour was cheapest rather than wherever the customers happened to live, and the map of world manufacturing was redrawn within a single generation.\n\nThe change was not painless. The old ports had grown up along narrow city rivers and had no room for the cranes and the acres of stacking yards that the boxes demanded, so shipping moved to new deep-water ports built on empty coastline. Cities that had lived on dock labour for two centuries lost their industry in less than twenty years.\n\nWhich of the following can be inferred about the old river ports?",
+    "options": {
+      "A": "They refused to handle containers because of a disagreement between their owners.",
+      "B": "They stood so far inland that ocean-going ships could no longer reach them at all.",
+      "C": "Their dockworkers were unwilling to be trained in the operation of the new cranes.",
+      "D": "Their physical layout, rather than any decision of their own, left them unable to handle containers."
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "The passage gives one cause and one cause only: the old ports had grown up along narrow rivers and had no room for cranes and stacking yards. Lack of room is a matter of layout, and layout is not something a port chooses after the fact — hence option D. Options A and C both blame a decision or an attitude, and the passage attributes the outcome to neither. Option B overstates the case, since the difficulty described is space on land, not depth or distance for the ships.",
+    "question_order": 3,
+    "active": true
+  },
+  {
+    "id": "p16-ing-04",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the following passage.\n\nBefore 1956, loading a cargo ship was work for gangs of dockworkers who carried barrels, sacks and crates aboard one item at a time. A ship could sit in port for a week, and the cost of moving goods across an ocean was so high that most factories sold only to buyers a few hundred kilometres away. Then a trucking businessman named Malcolm McLean asked a plain question: why unload a truck at all? His answer was a steel box that could be lifted straight from a truck bed onto a ship and, at the far end, onto another truck.\n\nThe box itself required no great cleverness to design. What mattered was that every port, every railway company and every truck maker eventually agreed on one set of dimensions, so that a box packed in one country could travel anywhere in the world without ever being opened. Loading costs fell by more than ninety per cent. Factories could now be built wherever labour was cheapest rather than wherever the customers happened to live, and the map of world manufacturing was redrawn within a single generation.\n\nThe change was not painless. The old ports had grown up along narrow city rivers and had no room for the cranes and the acres of stacking yards that the boxes demanded, so shipping moved to new deep-water ports built on empty coastline. Cities that had lived on dock labour for two centuries lost their industry in less than twenty years.\n\nThe writer's attitude towards containerisation is best described as ...",
+    "options": {
+      "A": "openly hostile to a change that brought little of value",
+      "B": "acknowledging its enormous benefits while recognising its human cost",
+      "C": "entirely enthusiastic, treating the change as pure gain",
+      "D": "detached and uninterested in any of its consequences"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "The first two paragraphs report the gains in strong terms: costs down by more than ninety per cent, the map of manufacturing redrawn. The last paragraph opens with The change was not painless and closes with cities losing two centuries of industry in under twenty years. Holding both halves at once is option B. Option C notices only the first half and option A only the second. Option D is contradicted by the deliberate turn at the start of the final paragraph, which shows the writer is far from indifferent.",
+    "question_order": 4,
+    "active": true
+  },
+  {
+    "id": "p16-ing-05",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the following discussion.\n\nSpeaker A\nOur secondary school begins at half past six in the morning. Sleep researchers have shown for decades that during adolescence the body's internal clock shifts later, so a fifteen-year-old who is sent to bed at nine simply lies awake. Ringing the bell at half past six does not produce an early sleeper; it produces a tired student. Schools that have moved their opening to eight o'clock report fewer absences and better marks.\n\nSpeaker B\nI do not doubt the research on adolescent sleep at all. My objection is a practical one. Our school shares its buses with two primary schools, and those buses cannot make the journey twice. If we begin at eight, the younger children must begin at half past six instead, and they are the ones who genuinely do wake early. Moving the bell does not create sleep; it moves the shortage from one group of children to another.\n\nSpeaker B's main objection to the later starting time is that ...",
+    "options": {
+      "A": "the shared bus service means one group of children must lose exactly the hours the other group gains",
+      "B": "the research on adolescent sleep has never been repeated by any other team",
+      "C": "younger children are known to learn far better in the late afternoon",
+      "D": "the teachers at the school would refuse to arrive any later than they do now"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Speaker B's reasoning runs in three steps: the buses cannot make the journey twice, so a later secondary start forces an earlier primary start, and the sleep lost by the younger children equals the sleep gained by the older ones. The closing sentence names this directly as moving the shortage from one group to another — option A. Option B is ruled out by B's opening sentence accepting the research. Options C and D introduce claims about afternoon learning and teachers that appear nowhere in the discussion.",
+    "question_order": 5,
+    "active": true
+  },
+  {
+    "id": "p16-ing-06",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the following discussion.\n\nSpeaker A\nOur secondary school begins at half past six in the morning. Sleep researchers have shown for decades that during adolescence the body's internal clock shifts later, so a fifteen-year-old who is sent to bed at nine simply lies awake. Ringing the bell at half past six does not produce an early sleeper; it produces a tired student. Schools that have moved their opening to eight o'clock report fewer absences and better marks.\n\nSpeaker B\nI do not doubt the research on adolescent sleep at all. My objection is a practical one. Our school shares its buses with two primary schools, and those buses cannot make the journey twice. If we begin at eight, the younger children must begin at half past six instead, and they are the ones who genuinely do wake early. Moving the bell does not create sleep; it moves the shortage from one group of children to another.\n\nWhich statement would both speakers accept?",
+    "options": {
+      "A": "Primary school children ought to begin their school day before secondary students do.",
+      "B": "School starting times have no measurable effect on attendance or on marks.",
+      "C": "Teenagers naturally fall asleep later at night than younger children do.",
+      "D": "The bus timetable, rather than any other consideration, should decide the school timetable."
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Speaker A builds an entire argument on the later shift of the adolescent body clock, and Speaker B opens by saying the research is not in doubt and then contrasts teenagers with younger children who genuinely do wake early. Both therefore accept option C, and it is the only shared ground between them. Option A is what B's argument would cost, not what B endorses. Option B is denied by A's figures on absences and marks. Option D turns B's practical difficulty into a principle B never states.",
+    "question_order": 6,
+    "active": true
+  },
+  {
+    "id": "p16-ing-07",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the following discussion.\n\nSpeaker A\nOur secondary school begins at half past six in the morning. Sleep researchers have shown for decades that during adolescence the body's internal clock shifts later, so a fifteen-year-old who is sent to bed at nine simply lies awake. Ringing the bell at half past six does not produce an early sleeper; it produces a tired student. Schools that have moved their opening to eight o'clock report fewer absences and better marks.\n\nSpeaker B\nI do not doubt the research on adolescent sleep at all. My objection is a practical one. Our school shares its buses with two primary schools, and those buses cannot make the journey twice. If we begin at eight, the younger children must begin at half past six instead, and they are the ones who genuinely do wake early. Moving the bell does not create sleep; it moves the shortage from one group of children to another.\n\nSpeaker B's sentence \"Moving the bell does not create sleep\" is best understood as a claim that ...",
+    "options": {
+      "A": "adolescents will go on sleeping badly even after the starting time has been changed",
+      "B": "the proposal redistributes an existing shortage instead of removing it",
+      "C": "school bells ought to be replaced with a quieter signal for the morning",
+      "D": "the sleep researchers have been measuring entirely the wrong thing"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "The sentence is followed immediately by its own explanation: it moves the shortage from one group of children to another. B is not denying that a later start helps teenagers; B is saying the total amount of sleep available across the three schools stays fixed while the buses stay fixed. That is option B. Option A misreads B as denying the benefit to teenagers, which B has already accepted. Option C takes the word bell literally. Option D contradicts B's first sentence.",
+    "question_order": 7,
+    "active": true
+  },
+  {
+    "id": "p16-ing-08",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Reading",
+    "question": "Read the following discussion.\n\nSpeaker A\nOur secondary school begins at half past six in the morning. Sleep researchers have shown for decades that during adolescence the body's internal clock shifts later, so a fifteen-year-old who is sent to bed at nine simply lies awake. Ringing the bell at half past six does not produce an early sleeper; it produces a tired student. Schools that have moved their opening to eight o'clock report fewer absences and better marks.\n\nSpeaker B\nI do not doubt the research on adolescent sleep at all. My objection is a practical one. Our school shares its buses with two primary schools, and those buses cannot make the journey twice. If we begin at eight, the younger children must begin at half past six instead, and they are the ones who genuinely do wake early. Moving the bell does not create sleep; it moves the shortage from one group of children to another.\n\nWhich piece of information, if it were true, would most weaken Speaker B's objection?",
+    "options": {
+      "A": "The later starting time has already been adopted by schools in three other countries.",
+      "B": "Students at the secondary school say that they would much prefer to start at eight.",
+      "C": "The primary schools' examination results are already higher than the secondary school's.",
+      "D": "The district has just bought enough extra buses for all three schools to be served at the same hour."
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "B's objection rests entirely on one premise: the buses cannot make the journey twice. Remove that premise and the forced trade between the two groups of children disappears, taking the objection with it — option D. Option A adds outside precedent but leaves the bus problem exactly where it was. Option B strengthens A's case without touching B's, and B has never disputed what the teenagers want. Option C compares results between schools, which plays no part in B's reasoning at all.",
+    "question_order": 8,
+    "active": true
+  },
+  {
+    "id": "p16-ing-09",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Choose the option that completes the sentence correctly.\n\nIf the committee ... the report on time last week, we ... in this difficult position now.",
+    "options": {
+      "A": "submits ... will not be",
+      "B": "would submit ... were not",
+      "C": "had submitted ... would not be",
+      "D": "submitted ... would not have been"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "The sentence pairs a past condition, marked by last week, with a present result, marked by now. English handles this with the mixed conditional: past perfect in the if-clause and would plus the bare infinitive in the main clause, giving had submitted ... would not be. Option D is a fully past conditional, which would require a past result rather than one holding now. Option A is a first conditional and cannot describe a condition that was already not met. Option B puts would inside the if-clause, which standard usage avoids.",
+    "question_order": 9,
+    "active": true
+  },
+  {
+    "id": "p16-ing-10",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Choose the option that completes the sentence correctly.\n\nNeither the students nor their teacher ... aware that the deadline had been moved forward.",
+    "options": {
+      "A": "was",
+      "B": "were",
+      "C": "are",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "With neither ... nor, the verb agrees with the subject standing nearest to it, and here that subject is their teacher, which is singular. The tense must also match had been moved, which places the sentence in the past. Both requirements are met only by was. Option B agrees with students instead, ignoring the proximity rule. Options C and D are present forms and clash with the past perfect in the second half of the sentence.",
+    "question_order": 10,
+    "active": true
+  },
+  {
+    "id": "p16-ing-11",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Choose the option that completes the sentence correctly.\n\nThe scientist, together with her two assistants, ... water samples from the river every morning before sunrise.",
+    "options": {
+      "A": "collect",
+      "B": "collects",
+      "C": "are collecting",
+      "D": "have collected"
+    },
+    "correct_answer": "B",
+    "difficulty": "Hard",
+    "explanation": "A phrase introduced by together with, as well as, or along with does not join a new subject to the old one; it is set off by commas and leaves the grammatical subject unchanged. The subject here is therefore the singular the scientist, which takes collects. Option A treats the assistants as part of the subject, the commonest error with this structure. Options C and D are grammatical in themselves but do not suit every morning, which calls for the simple present of a habit.",
+    "question_order": 11,
+    "active": true
+  },
+  {
+    "id": "p16-ing-12",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Choose the option that completes the sentence correctly.\n\nHardly ... the announcement when the whole hall began to cheer loudly.",
+    "options": {
+      "A": "the principal had finished",
+      "B": "finished the principal",
+      "C": "the principal finished",
+      "D": "had the principal finished"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "When a negative or near-negative word such as hardly, scarcely, or never opens a sentence, the subject and the auxiliary must change places. The pattern is therefore Hardly had the principal finished .... Option A keeps the ordinary word order after hardly and so misses the inversion. Option C both misses the inversion and drops the past perfect that hardly ... when requires. Option B inverts a main verb with its subject, which English allows only in a few fixed constructions and not here.",
+    "question_order": 12,
+    "active": true
+  },
+  {
+    "id": "p16-ing-13",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Choose the option that completes the sentence correctly.\n\nThe bridge, ... construction began as long ago as 1998, was finally opened to traffic last month.",
+    "options": {
+      "A": "whose",
+      "B": "which",
+      "C": "which its",
+      "D": "that its"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "The relative word here must show possession, since the construction belongs to the bridge. English uses whose for that relationship with things as well as with people, giving The bridge, whose construction began .... Option B leaves construction without any link to the bridge. Options C and D try to supply possession with the pronoun its while also using a relative word, which doubles the reference and is not allowed. Note also that that never introduces a clause set off by commas.",
+    "question_order": 13,
+    "active": true
+  },
+  {
+    "id": "p16-ing-14",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Grammar",
+    "question": "Choose the option that completes the sentence correctly.\n\nNot until the very last box had been checked ... the missing document.",
+    "options": {
+      "A": "they found",
+      "B": "did they found",
+      "C": "did they find",
+      "D": "found they"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "The sentence opens with the negative phrase Not until, so the main clause that follows must be inverted with the auxiliary do: did they find. Option A leaves the main clause in ordinary order, which the opening no longer permits. Option B inverts correctly but then keeps the past form found after did, whereas an auxiliary is always followed by the bare infinitive. Option D inverts a main verb with its subject, a pattern English does not use here.",
+    "question_order": 14,
+    "active": true
+  },
+  {
+    "id": "p16-ing-15",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "Choose the word that best completes the sentence.\n\nThe evidence gathered so far is still ..., which is why the researchers refuse to state any firm conclusion in public.",
+    "options": {
+      "A": "conclusive",
+      "B": "abundant",
+      "C": "decisive",
+      "D": "tentative"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "The reason clause explains why no firm conclusion has been announced, so the missing word must describe evidence that is not yet settled. Tentative carries exactly that sense of being held provisionally and open to revision. Conclusive and decisive are near opposites: either one would mean the matter is already settled, which would leave the refusal to announce a conclusion unexplained. Abundant describes only how much evidence there is, and a large pile of evidence can still point in several directions at once, so it does not account for the researchers’ caution either.",
+    "question_order": 15,
+    "active": true
+  },
+  {
+    "id": "p16-ing-16",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "Select the word that fits the sentence best.\n\nSince the two surveys were carried out on completely different groups of people, their results are not ...",
+    "options": {
+      "A": "accurate",
+      "B": "comparable",
+      "C": "detailed",
+      "D": "lengthy"
+    },
+    "correct_answer": "B",
+    "difficulty": "Hard",
+    "explanation": "The reason given is that the two surveys covered different groups, and different groups make it unsound to place one result beside the other and read a difference into it. The word for that is comparable. Option A would claim that both surveys are wrong, which does not follow, since each may describe its own group perfectly well. Options C and D describe how much detail or length a report has, and neither depends in any way on which people were surveyed.",
+    "question_order": 16,
+    "active": true
+  },
+  {
+    "id": "p16-ing-17",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "Pick the word that completes the sentence most suitably.\n\nThe manager's reply was so ... that nobody leaving the room could say whether the project had been approved or rejected.",
+    "options": {
+      "A": "concise",
+      "B": "blunt",
+      "C": "ambiguous",
+      "D": "courteous"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "The effect described is that listeners could not tell which of two opposite meanings was intended, and a statement open to more than one reading is ambiguous. Option A means short, and a short reply can still be perfectly clear — indeed a one-word yes would settle the matter. Option B means direct to the point of rudeness, which would make the answer clearer, not less clear. Option D describes politeness of manner and says nothing about whether the meaning came through.",
+    "question_order": 17,
+    "active": true
+  },
+  {
+    "id": "p16-ing-18",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "Complete the sentence with the most appropriate word.\n\nAfter the flood had passed, the villagers worked side by side to ... the damaged bridge so that supplies could reach the valley once more.",
+    "options": {
+      "A": "restore",
+      "B": "abandon",
+      "C": "postpone",
+      "D": "inspect"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "The purpose clause is decisive: the work is done so that supplies can reach the valley again, which requires the bridge to be brought back into use. Restore carries exactly that meaning. Option D is the strongest distractor, since inspecting a damaged bridge is a sensible thing to do, but an inspection alone leaves the bridge just as unusable as before and cannot fulfil the stated purpose. Option B means to give the bridge up, and option C applies to events that can be delayed, not to structures.",
+    "question_order": 18,
+    "active": true
+  },
+  {
+    "id": "p16-ing-19",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "Choose the option that best completes the sentence.\n\nThe company was forced to ... its plan to open three new branches this year when the bank refused the loan.",
+    "options": {
+      "A": "carry out",
+      "B": "take up",
+      "C": "look into",
+      "D": "call off"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "The loan was refused, so the plan cannot go ahead, and the phrasal verb meaning to cancel something already arranged is call off. Option A means to perform or complete a plan, which is the opposite of what the refusal permits. Option B means to begin an activity or occupy space or time. Option C means to investigate, and a company that has just lost its funding is not being described as starting an inquiry. Note that all four are ordinary phrasal verbs, so the sentence must be read for its consequence rather than for a familiar collocation.",
+    "question_order": 19,
+    "active": true
+  },
+  {
+    "id": "p16-ing-20",
+    "package_id": "paket-16",
+    "subject": "Bahasa Inggris",
+    "session": "sesi-2",
+    "category": "Vocabulary",
+    "question": "Choose the word that makes the sentence complete.\n\nAlthough the new drug worked well in the laboratory, its results could not be ... in a large trial on real patients, and the company therefore withdrew its application.",
+    "options": {
+      "A": "invented",
+      "B": "replicated",
+      "C": "exaggerated",
+      "D": "abandoned"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "The sentence sets a laboratory success against a failure in a larger trial, so the missing word must name what the larger trial tried and failed to do: obtain the same result a second time. That is to replicate a result, and a result that cannot be replicated is exactly the reason an application would be withdrawn. Option A would accuse the company of fabricating the laboratory work, an accusation the word Although does not support. Option C describes overstating a result rather than repeating it. Option D is close in feeling but wrong in sense here, since what was abandoned was the application, not the results themselves.",
+    "question_order": 20,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-01",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Energetika",
+    "question": "Sebuah eskalator mengangkut rata-rata 60 orang setiap menit ke ketinggian 5 m. Massa rata-rata seorang penumpang 60 kg. (g = 10 m/s²)\n\nDaya minimum motor penggerak eskalator tersebut adalah ...",
+    "options": {
+      "A": "300 W",
+      "B": "1.800 W",
+      "C": "18.000 W",
+      "D": "3.000 W"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Usaha yang dilakukan tiap menit = jumlah orang × berat tiap orang × ketinggian = 60 × (60 × 10) × 5 = 180.000 J. Satu menit sama dengan 60 sekon, sehingga daya minimumnya = 180.000 ÷ 60 = 3.000 W. Pilihan C adalah jawaban bila waktunya dipakai dalam menit, sedangkan pilihan A muncul bila hanya seorang penumpang yang diperhitungkan. Pilihan B adalah hasil melupakan percepatan gravitasi sehingga massa langsung dipakai sebagai berat.",
+    "question_order": 1,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-02",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Hewan (Fisiologi)",
+    "question": "Seseorang yang kedua ginjalnya tidak lagi berfungsi menjalani cuci darah dua kali seminggu. Selama proses itu, darahnya dialirkan melalui pipa berselaput sangat tipis yang direndam di dalam cairan khusus, lalu darah yang sudah bersih dikembalikan ke tubuhnya.\n\nZat yang berpindah dari darah ke dalam cairan khusus tersebut adalah ...",
+    "options": {
+      "A": "sel darah merah dan protein plasma",
+      "B": "seluruh glukosa dan seluruh air di dalam darah",
+      "C": "urea serta kelebihan air dan garam",
+      "D": "hormon dan enzim pencernaan"
+    },
+    "correct_answer": "C",
+    "difficulty": "Hard",
+    "explanation": "Alat cuci darah menirukan pekerjaan ginjal, yaitu membuang zat sisa dan kelebihan zat tanpa membuang yang masih diperlukan tubuh. Selaput yang dipakai berlubang sangat halus sehingga hanya molekul kecil seperti urea, air, dan garam yang dapat menembusnya — pilihan C. Pilihan A keliru karena sel darah merah dan protein berukuran jauh lebih besar daripada lubang selaput itu, persis seperti pada penyaringan di glomerulus. Pilihan B keliru karena membuang seluruh glukosa dan air justru membahayakan. Pilihan D menyebut zat yang tidak menjadi sasaran pembuangan ginjal.",
+    "question_order": 2,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-03",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Kimia Dasar Terapan",
+    "question": "Perhatikan hasil pengamatan berikut.\n\nUrutan ketiga logam tersebut mulai dari yang paling reaktif adalah ...",
+    "options": {
+      "A": "R, Q, P",
+      "B": "P, Q, R",
+      "C": "Q, P, R",
+      "D": "P, R, Q"
+    },
+    "correct_answer": "B",
+    "difficulty": "Hard",
+    "explanation": "Kereaktifan logam diukur dari seberapa mudah dan seberapa cepat ia bereaksi. Logam P bereaksi dengan asam secara sangat cepat dan bahkan bereaksi dengan air dingin, sehingga paling reaktif. Logam Q bereaksi dengan asam meskipun perlahan, tetapi tidak bereaksi dengan air, sehingga berada di tengah. Logam R tidak bereaksi sama sekali, sehingga paling tidak reaktif. Urutannya P, Q, R. Pilihan A membalik seluruh urutannya, yaitu kekeliruan membaca kata paling reaktif sebagai paling akhir bereaksi.",
+    "table": {
+      "judul": "Hasil pengamatan reaksi tiga logam",
+      "kolom": [
+        "Logam",
+        "Direaksikan dengan asam klorida encer",
+        "Direaksikan dengan air dingin"
+      ],
+      "baris": [
+        [
+          "P",
+          "gelembung muncul sangat cepat",
+          "gelembung muncul perlahan"
+        ],
+        [
+          "Q",
+          "gelembung muncul perlahan",
+          "tidak terjadi reaksi"
+        ],
+        [
+          "R",
+          "tidak terjadi reaksi",
+          "tidak terjadi reaksi"
+        ]
+      ]
+    },
+    "question_order": 3,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-04",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Optik",
+    "question": "Sebuah benda setinggi 6 cm diletakkan 30 cm di depan sebuah cermin cekung yang jarak fokusnya 10 cm.\n\nPerbesaran bayangan yang terbentuk adalah ...",
+    "options": {
+      "A": "0,5 kali",
+      "B": "2 kali",
+      "C": "1,5 kali",
+      "D": "3 kali"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Cari jarak bayangannya lebih dahulu: 1/s′ = 1/f − 1/s = 1/10 − 1/30 = (3 − 1)/30 = 2/30, sehingga s′ = 15 cm. Perbesarannya = s′ ÷ s = 15 ÷ 30 = 0,5 kali, yang berarti bayangannya diperkecil menjadi setengah — tinggi bayangannya 3 cm. Hasil ini masuk akal karena benda berada di luar dua kali jarak fokus (2f = 20 cm), dan pada kedudukan itu bayangan cermin cekung selalu diperkecil. Pilihan B adalah kebalikan perbandingannya, yaitu 30 ÷ 15, kekeliruan yang paling sering terjadi karena rumus perbesarannya dibalik.",
+    "question_order": 4,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-05",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Genetika",
+    "question": "Pada suatu populasi tanaman hias, 75% berbunga merah dan 25% berbunga putih. Warna merah ditentukan gen M yang dominan penuh terhadap gen m yang menentukan warna putih. Seluruh tanaman pada populasi itu merupakan keturunan dari persilangan antara sesama tanaman heterozigot.\n\nPernyataan yang benar mengenai tanaman yang berbunga merah pada populasi tersebut adalah ...",
+    "options": {
+      "A": "seluruhnya bergenotipe MM",
+      "B": "seluruhnya bergenotipe Mm",
+      "C": "sepertiganya bergenotipe Mm dan dua pertiganya bergenotipe MM",
+      "D": "dua pertiganya bergenotipe Mm dan sepertiganya bergenotipe MM"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Persilangan Mm × Mm menghasilkan perbandingan genotipe 1 MM : 2 Mm : 1 mm. Bagian yang berbunga merah mencakup MM dan Mm, yaitu 3 bagian dari 4, dan itu cocok dengan angka 75% pada soal. Di dalam ketiga bagian itu, satu bagian MM dan dua bagian Mm, sehingga sepertiganya homozigot dan dua pertiganya heterozigot — pilihan D. Pilihan C menukar kedua pecahan itu. Pilihan A dan B keliru karena kelompok berbunga merah selalu tercampur dua genotipe pada persilangan semacam ini, dan itulah sebabnya sifat putih dapat muncul kembali pada keturunan berikutnya.",
+    "question_order": 5,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-06",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Rangkaian Listrik",
+    "question": "Perhatikan rangkaian berikut. Tiga lampu identik yang masing-masing berhambatan 3 Ω dipasang berderet pada baterai 18 V, lalu kedua ujung lampu L₂ dihubungkan oleh sepotong kawat tanpa hambatan.\n\nYang terjadi pada lampu L₁ dan L₃ setelah kawat itu dipasang adalah ...",
+    "options": {
+      "A": "keduanya ikut padam karena seluruh arus mengalir melewati kawat penghubung",
+      "B": "keduanya menyala lebih terang karena hambatan total rangkaian berkurang sehingga arusnya bertambah",
+      "C": "keduanya menyala lebih redup karena arus kini terbagi antara lampu dan kawat penghubung",
+      "D": "nyala keduanya tidak berubah sama sekali karena tegangan baterai tetap 18 V"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Arus selalu memilih jalan yang hambatannya paling kecil, sehingga hampir seluruh arus melewati kawat tanpa hambatan dan L₂ padam. Namun L₁ dan L₃ tetap berada pada jalur utama. Sebelum kawat dipasang, hambatan totalnya 3 + 3 + 3 = 9 Ω sehingga arusnya 18 ÷ 9 = 2 A. Setelah L₂ terhubung singkat, hambatan totalnya tinggal 3 + 3 = 6 Ω sehingga arusnya naik menjadi 18 ÷ 6 = 3 A, dan kedua lampu yang tersisa justru menyala lebih terang. Pilihan A keliru karena kawat itu hanya menjembatani L₂, bukan seluruh rangkaian. Pilihan C keliru karena pada susunan seri arus tidak terbagi.",
+    "image": {
+      "src": "/soal/p16-ipa-lampu-hubung-singkat.svg",
+      "alt": "Rangkaian dengan baterai 18 volt dan tiga lampu identik 3 ohm yang dipasang seri; lampu kedua dijembatani kawat tanpa hambatan.",
+      "keterangan": "Kawat penghubung dianggap tidak memiliki hambatan sama sekali."
+    },
+    "question_order": 6,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-07",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Lingkungan (Ekologi)",
+    "question": "Pengelola sebuah danau memusnahkan seluruh ikan pemangsa dengan maksud melindungi ikan kecil yang menjadi mangsanya. Lima tahun kemudian, populasi ikan kecil di danau itu justru menurun drastis, dan ikan yang tersisa berukuran jauh lebih kecil daripada sebelumnya.\n\nPenjelasan yang paling tepat mengenai keadaan tersebut adalah ...",
+    "options": {
+      "A": "Ikan kecil kehilangan sumber makanan utamanya, yaitu ikan pemangsa yang telah dimusnahkan.",
+      "B": "Ikan kecil berpindah ke danau lain karena danau itu menjadi terlalu sepi tanpa pemangsa.",
+      "C": "Tanpa pemangsa, populasi ikan kecil meledak sehingga makanannya habis dan pertumbuhan tiap individu terhambat.",
+      "D": "Sebagian ikan kecil berubah menjadi ikan pemangsa untuk mengisi kekosongan pada rantai makanan."
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Dua kenyataan harus dijelaskan sekaligus: populasi menurun dan ukuran tiap ikan mengecil. Keduanya cocok dengan satu rangkaian: hilangnya pemangsa membuat ikan kecil berkembang biak tanpa penekan sampai jumlahnya melampaui persediaan makanan; tiap ikan lalu memperoleh makanan sangat sedikit sehingga tumbuh kerdil, dan pada akhirnya banyak yang mati kelaparan — pilihan C. Pilihan A membalik rantai makanan. Pilihan B tidak menjelaskan mengecilnya ukuran ikan. Pilihan D mengandaikan perubahan jenis yang tidak mungkin terjadi.",
+    "question_order": 7,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-08",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Gaya",
+    "question": "Sebuah benda bermassa 6 kg berada di atas lantai licin. Pada benda itu bekerja dua gaya mendatar yang berlawanan arah, yaitu 30 N ke kanan dan 18 N ke kiri.\n\nPercepatan yang dialami benda tersebut adalah ...",
+    "options": {
+      "A": "2 m/s²",
+      "B": "8 m/s²",
+      "C": "5 m/s²",
+      "D": "3 m/s²"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Kedua gaya berlawanan arah sehingga resultannya adalah selisihnya: 30 − 18 = 12 N, dan arahnya mengikuti gaya yang lebih besar, yaitu ke kanan. Percepatannya = F ÷ m = 12 ÷ 6 = 2 m/s². Pilihan B adalah hasil menjumlahkan kedua gaya (48 ÷ 6), yaitu memperlakukan gaya berlawanan seolah-olah searah. Pilihan C adalah 30 ÷ 6, yaitu hanya memperhitungkan gaya yang lebih besar. Pilihan D adalah 18 ÷ 6, yaitu hanya memperhitungkan gaya yang lebih kecil.",
+    "question_order": 8,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-09",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Kimia Dasar Unsur",
+    "question": "Empat unsur berikut disusun menurut kenaikan nomor atomnya: A dengan nomor atom 3, B dengan nomor atom 11, C dengan nomor atom 19, dan D dengan nomor atom 37. Keempatnya terletak pada golongan yang sama dalam sistem periodik unsur.\n\nPernyataan yang benar mengenai keempat unsur tersebut adalah ...",
+    "options": {
+      "A": "Keempatnya memiliki jumlah kulit elektron yang sama banyak.",
+      "B": "Unsur A adalah yang paling mudah melepaskan elektron terluarnya.",
+      "C": "Keempatnya cenderung menerima satu elektron untuk mencapai kestabilan.",
+      "D": "Unsur D paling mudah melepaskan elektron terluarnya karena elektron itu paling jauh dari inti atomnya."
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Susunan elektron keempatnya berturut-turut 2,1; 2,8,1; 2,8,8,1; dan 2,8,18,8,1 — seluruhnya berakhir dengan satu elektron terluar, itulah sebabnya mereka satu golongan. Namun jumlah kulitnya bertambah dari dua sampai lima, sehingga elektron terluar unsur D paling jauh dari inti dan paling lemah tertahan; unsur itulah yang paling mudah melepaskannya — pilihan D. Pilihan A keliru karena jumlah kulitnya justru bertambah. Pilihan B membalik urutannya. Pilihan C keliru karena unsur dengan satu elektron terluar jauh lebih mudah melepas satu elektron daripada menerima tujuh.",
+    "question_order": 9,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-10",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Fluida",
+    "question": "Sebuah kapal selam yang semula mengapung di permukaan laut menyelam dengan cara memasukkan air laut ke dalam tangki pemberat yang terdapat di lambungnya. Bentuk dan ukuran luar kapal tidak berubah.\n\nPenjelasan yang paling tepat mengenai cara kapal selam itu menyelam adalah ...",
+    "options": {
+      "A": "Massa jenis air laut di sekitar kapal bertambah sehingga kapal terdorong turun ke bawah.",
+      "B": "Gaya ke atas yang dialami kapal berkurang karena volume kapal ikut mengecil.",
+      "C": "Massa kapal bertambah sedangkan volume air yang dipindahkannya tetap, sehingga beratnya melampaui gaya ke atas.",
+      "D": "Mesin kapal mendorong badan kapal ke bawah dengan gaya yang melawan gaya ke atas."
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Gaya ke atas sama dengan berat air laut yang dipindahkan, dan besarnya hanya bergantung pada volume bagian kapal yang tercelup. Karena bentuk luar kapal tidak berubah, gaya ke atasnya praktis tetap. Yang berubah adalah beratnya: air laut yang masuk ke tangki menambah massa kapal, sehingga beratnya melampaui gaya ke atas dan kapal turun — pilihan C. Pilihan B keliru karena volume luar kapal tidak mengecil. Pilihan A keliru karena massa jenis air laut tidak berubah oleh perbuatan kapal. Pilihan D keliru karena kapal tetap dapat menyelam meskipun tidak melaju.",
+    "question_order": 10,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-11",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Bioteknologi Mutakhir",
+    "question": "A laboratory can now take a bucket of river water, read the fragments of DNA floating in it, and list the animal species that have passed through that stretch of river in recent days. The method is known as environmental DNA.\n\nCompared with catching and counting animals with nets, the most important advantage of this method is that ...",
+    "options": {
+      "A": "it can detect rare or well-hidden species without anyone having to catch or disturb them",
+      "B": "it tells researchers exactly how many individuals of each species are present in the river",
+      "C": "it works equally well in river water, in dry soil, and inside solid rock",
+      "D": "it removes the need to identify the species involved at all"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Netting works only on animals that happen to swim into the net, so the rarest and most secretive species — often the very ones conservationists most need to find — are the ones most likely to be missed, and the catching itself disturbs them. Reading the DNA they shed removes both problems at once, which is option A. Option B claims a count of individuals, and environmental DNA gives presence far more reliably than numbers. Option C overstates the range of materials the method suits. Option D is the opposite of what happens, since identifying species is exactly what the method does.",
+    "question_order": 11,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-12",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Kalor",
+    "question": "Es bermassa 200 g bersuhu −10 °C dipanaskan sampai seluruhnya berubah menjadi air bersuhu 0 °C. Kalor jenis es 2.100 J/kg°C dan kalor lebur es 336.000 J/kg.\n\nKalor total yang diperlukan pada seluruh proses tersebut adalah ...",
+    "options": {
+      "A": "67.200 J",
+      "B": "71.400 J",
+      "C": "4.200 J",
+      "D": "75.600 J"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Prosesnya terdiri atas dua tahap yang harus dihitung terpisah. Tahap pertama menaikkan suhu es dari −10 °C menjadi 0 °C: Q₁ = m c ΔT = 0,2 × 2.100 × 10 = 4.200 J. Tahap kedua meleburkan seluruh es pada suhu tetap 0 °C: Q₂ = m L = 0,2 × 336.000 = 67.200 J. Kalor totalnya = 4.200 + 67.200 = 71.400 J. Pilihan A hanya menghitung tahap peleburan dan pilihan C hanya tahap pemanasan, keduanya jawaban bagi yang berhenti pada satu tahap saja. Pilihan D muncul bila kalor lebur keliru dikalikan dengan 0,225 kg.",
+    "question_order": 12,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-13",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Gelombang",
+    "question": "Bunyi ledakan di luar angkasa sama sekali tidak dapat terdengar oleh astronaut yang berada di dekatnya, sedangkan kilatan cahayanya tetap terlihat dengan jelas.\n\nPenjelasan yang paling tepat mengenai kenyataan tersebut adalah ...",
+    "options": {
+      "A": "Cahaya merambat jauh lebih cepat daripada bunyi sehingga bunyi tertinggal terlalu jauh.",
+      "B": "Bunyi memiliki panjang gelombang yang jauh lebih besar daripada panjang gelombang cahaya.",
+      "C": "Cahaya memiliki frekuensi yang jauh lebih tinggi daripada frekuensi bunyi.",
+      "D": "Bunyi merupakan gelombang mekanik yang memerlukan partikel medium untuk merambat, sedangkan cahaya merupakan gelombang elektromagnetik yang tidak memerlukannya."
+    },
+    "correct_answer": "D",
+    "difficulty": "Hard",
+    "explanation": "Bunyi merambat dengan cara mendorong partikel medium sehingga rapatan dan renggangan berpindah dari satu partikel ke partikel berikutnya. Di luar angkasa hampir tidak ada partikel, sehingga tidak ada yang dapat didorong dan bunyi tidak pernah sampai. Cahaya merambat sebagai perubahan medan listrik dan medan magnet yang tidak memerlukan partikel apa pun, sehingga tetap sampai — pilihan D. Pilihan A, B, dan C seluruhnya menyebutkan perbedaan yang memang benar antara bunyi dan cahaya, tetapi tidak satu pun menjelaskan mengapa yang satu berhenti sama sekali sedangkan yang lain tetap merambat.",
+    "question_order": 13,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-14",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Elektromagnet",
+    "question": "Sebuah transformator ideal dipakai menaikkan tegangan dari 110 V menjadi 220 V. Kumparan primernya terdiri atas 200 lilitan.\n\nJumlah lilitan pada kumparan sekunder transformator tersebut adalah ...",
+    "options": {
+      "A": "400 lilitan",
+      "B": "100 lilitan",
+      "C": "800 lilitan",
+      "D": "220 lilitan"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Pada transformator, perbandingan jumlah lilitan sama dengan perbandingan tegangannya: Np ÷ Ns = Vp ÷ Vs. Maka 200 ÷ Ns = 110 ÷ 220, sehingga Ns = 200 × 2 = 400 lilitan. Karena tegangannya dinaikkan dua kali lipat, jumlah lilitan sekundernya memang harus dua kali lipat jumlah lilitan primer. Pilihan B membalik perbandingannya sehingga menjadi transformator penurun tegangan. Pilihan D hanyalah angka tegangan sekunder yang disalin sebagai jumlah lilitan.",
+    "question_order": 14,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-15",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Tumbuhan (Botani)",
+    "question": "Pada sebuah percobaan, pucuk sebuah tanaman dipotong. Beberapa minggu kemudian, tunas-tunas samping yang selama ini tidak pernah tumbuh mulai bermunculan di sepanjang batangnya. Percobaan itu dilakukan pada tempat yang cahayanya sama sepanjang waktu.\n\nPenjelasan yang paling tepat mengenai peristiwa tersebut adalah ...",
+    "options": {
+      "A": "Pemotongan pucuk merangsang akar menyerap air dalam jumlah yang jauh lebih banyak.",
+      "B": "Tunas samping menerima cahaya matahari lebih banyak setelah pucuk tanaman dipotong.",
+      "C": "Pucuk menghasilkan hormon yang menekan pertumbuhan tunas samping, dan penekanan itu hilang ketika pucuk dipotong.",
+      "D": "Luka pada batang bekas pemotongan menghasilkan zat makanan tambahan bagi tunas samping."
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Keterangan bahwa cahayanya sama sepanjang waktu sengaja diberikan untuk menyingkirkan pilihan B. Pucuk tanaman menghasilkan auksin yang mengalir turun di sepanjang batang dan menahan tunas samping agar tetap tidur; gejala ini disebut dominansi apikal. Ketika pucuk dipotong, sumber hormon itu hilang sehingga tunas samping terbebas dan mulai tumbuh — pilihan C, dan itulah dasar kebiasaan memangkas ujung tanaman agar bercabang lebat. Pilihan A dan D menawarkan sebab yang tidak berkaitan dengan hormon maupun dengan letak tunas yang tumbuh.",
+    "question_order": 15,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-16",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Ciri Kehidupan",
+    "question": "Sebuah robot dirancang agar dapat mencari sendiri sumber listrik ketika dayanya menipis, menghindari rintangan yang menghalangi jalannya, dan bahkan merakit salinan dirinya dari komponen yang tersedia di sekitarnya.\n\nCiri makhluk hidup yang tetap tidak dimiliki robot tersebut adalah ...",
+    "options": {
+      "A": "menanggapi rangsang yang datang dari lingkungan sekitarnya",
+      "B": "tumbuh dari bentuk sederhana menjadi bentuk dewasa melalui pertambahan dan pembelahan sel",
+      "C": "memerlukan pasokan energi dari lingkungan untuk dapat terus bekerja",
+      "D": "menghasilkan salinan dirinya sendiri dari bahan yang tersedia"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Ketiga ciri pada pilihan A, C, dan D justru sudah disebutkan dimiliki robot itu: menghindari rintangan adalah menanggapi rangsang, mencari listrik adalah memerlukan energi, dan merakit salinan diri adalah menghasilkan keturunan. Yang tersisa adalah pertumbuhan. Makhluk hidup tumbuh dari dalam melalui pembelahan sel dan pertambahan zat penyusun tubuhnya sendiri, sedangkan robot hanya dapat dirakit dari komponen yang sudah jadi — ia tidak pernah membesar sendiri dari bentuk kecil. Soal ini menegaskan bahwa mesin dapat menirukan banyak ciri makhluk hidup, tetapi pertumbuhan seluler tetap membedakannya.",
+    "question_order": 16,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-17",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Energetika",
+    "question": "Sebuah lampu LED berdaya 12 W dinyalakan selama 8 jam setiap hari, sedangkan sebuah lampu pijar berdaya 60 W dinyalakan selama 4 jam setiap hari.\n\nPerbandingan energi listrik yang dipakai lampu LED terhadap energi listrik yang dipakai lampu pijar dalam sehari adalah ...",
+    "options": {
+      "A": "1 : 5",
+      "B": "1 : 2",
+      "C": "5 : 2",
+      "D": "2 : 5"
+    },
+    "correct_answer": "D",
+    "difficulty": "Hard",
+    "explanation": "Energi listrik = daya × lama pemakaian. Lampu LED memakai 12 × 8 = 96 Wh, sedangkan lampu pijar memakai 60 × 4 = 240 Wh. Perbandingannya 96 : 240, dan bila kedua angka dibagi 48 diperoleh 2 : 5. Pilihan A adalah perbandingan dayanya saja, yaitu 12 : 60, jawaban bagi yang melupakan lamanya pemakaian yang berbeda. Pilihan C membalik urutan perbandingannya, sedangkan pilihan B tidak sesuai dengan perbandingan mana pun pada soal.",
+    "question_order": 17,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-18",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Hewan (Fisiologi)",
+    "question": "Seseorang yang sebagian besar usus halusnya harus diangkat karena penyakit mengalami penurunan berat badan yang terus-menerus, padahal jumlah dan jenis makanan yang dimakannya sama seperti sebelum operasi.\n\nPenjelasan yang paling tepat mengenai keadaan tersebut adalah ...",
+    "options": {
+      "A": "Lambungnya tidak lagi menghasilkan asam lambung sehingga makanan tidak dapat dicerna sama sekali.",
+      "B": "Makanan tidak lagi dapat dikunyah dengan sempurna sebelum tertelan.",
+      "C": "Luas permukaan penyerapan sari makanan sangat berkurang sehingga sebagian besar sari makanan terbuang bersama sisa pencernaan.",
+      "D": "Usus besar mengambil alih seluruh tugas penyerapan sari makanan sehingga penyerapannya menjadi berlebihan."
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Usus halus adalah tempat hampir seluruh sari makanan diserap, dan dindingnya berlipat-lipat serta berjonjot sehingga luas permukaannya sangat besar. Mengangkat sebagian besar usus halus berarti memangkas luas permukaan itu, sehingga sari makanan lewat terlalu cepat dan sebagian besar terbuang tanpa sempat diserap — pilihan C. Pilihan A dan B menyebut tahap pencernaan yang tidak tersentuh operasi. Pilihan D keliru karena usus besar hanya menyerap air dan sebagian garam, dan lagi pula penyerapan yang berlebihan justru akan menambah berat badan, bukan menguranginya.",
+    "question_order": 18,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-19",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Kimia Dasar Terapan",
+    "question": "Sebanyak 50 mL larutan A dicampurkan dengan 50 mL larutan B di dalam gelas kimia. Selama pencampuran terjadi perubahan warna, dan suhu campuran terukur turun dari 27 °C menjadi 19 °C. Gelas kimia terasa dingin ketika dipegang.\n\nReaksi yang terjadi pada pencampuran tersebut tergolong ...",
+    "options": {
+      "A": "reaksi endoterm, karena campuran menyerap kalor dari lingkungannya",
+      "B": "reaksi eksoterm, karena campuran melepaskan kalor ke lingkungannya",
+      "C": "bukan reaksi kimia, karena yang berubah hanyalah suhunya",
+      "D": "reaksi eksoterm, karena suhu campuran menjadi lebih rendah daripada semula"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Suhu campuran yang turun menandakan campuran itu mengambil kalor dari sekelilingnya, termasuk dari gelas dan tangan yang memegangnya — itulah sebabnya gelas terasa dingin. Reaksi yang menyerap kalor disebut endoterm. Pilihan D memakai istilah yang salah meskipun mengamati gejalanya dengan benar, dan itulah jebakan terkuatnya. Pilihan B membalik arah perpindahan kalornya. Pilihan C keliru karena perubahan warna yang menyertainya justru menandakan terbentuknya zat baru, sehingga peristiwa itu memang reaksi kimia.",
+    "question_order": 19,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-20",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Optik",
+    "question": "Seberkas cahaya putih yang dilewatkan melalui sebuah prisma kaca terurai menjadi jajaran warna merah sampai ungu.\n\nPenjelasan yang paling tepat mengenai peristiwa tersebut adalah ...",
+    "options": {
+      "A": "Prisma kaca menambahkan warna-warna baru pada cahaya putih yang melewatinya.",
+      "B": "Setiap warna merambat dengan kelajuan yang sedikit berbeda di dalam kaca sehingga dibelokkan dengan sudut yang berbeda pula.",
+      "C": "Cahaya putih dipantulkan berulang kali di dalam prisma sehingga warnanya berubah-ubah.",
+      "D": "Kaca prisma menyerap sebagian cahaya sehingga hanya warna yang tersisa yang tampak."
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Cahaya putih sesungguhnya sudah merupakan campuran seluruh warna itu sejak semula; prisma hanya memisahkannya. Pemisahan itu terjadi karena kelajuan cahaya di dalam kaca sedikit berbeda untuk tiap warna — cahaya ungu paling lambat dan merah paling cepat — sehingga sudut pembiasannya pun berbeda dan berkasnya terurai — pilihan B. Pilihan A keliru karena prisma tidak dapat menciptakan warna; buktinya, jajaran warna itu dapat digabungkan kembali menjadi putih dengan prisma kedua. Pilihan C dan D menawarkan mekanisme yang tidak menghasilkan urutan warna yang tetap.",
+    "question_order": 20,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-21",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Genetika",
+    "question": "Seorang peternak memiliki seekor kelinci berbulu hitam. Warna hitam ditentukan gen H yang dominan penuh terhadap warna putih yang ditentukan gen h, sehingga kelinci itu dapat bergenotipe HH ataupun Hh, dan peternak tersebut belum mengetahui yang mana.\n\nCara yang paling meyakinkan untuk menentukan genotipe kelinci tersebut adalah ...",
+    "options": {
+      "A": "menyilangkannya dengan kelinci berbulu hitam yang sudah dipastikan bergenotipe HH",
+      "B": "mengamati warna bulu kedua induk kelinci itu, lalu menyimpulkan genotipenya dari warna tersebut",
+      "C": "menyilangkannya dengan kelinci berbulu putih, lalu memeriksa apakah ada anak yang berbulu putih",
+      "D": "menyilangkannya dengan sesama kelinci berbulu hitam yang genotipenya juga belum diketahui"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Kelinci berbulu putih pasti bergenotipe hh, sehingga ia hanya dapat menyumbangkan gen h. Bila kelinci hitam itu HH, seluruh anaknya menerima H dan semuanya berbulu hitam. Bila ia Hh, separuh anaknya menerima h dari kedua pihak sehingga berbulu putih. Jadi munculnya seekor saja anak berbulu putih langsung membuktikan genotipenya Hh — inilah yang disebut uji silang, yakni pilihan C. Pilihan A tidak berguna karena pasangan HH selalu menyumbangkan H sehingga seluruh anak berbulu hitam pada kedua kemungkinan. Pilihan D tidak meyakinkan sebab bila tidak ada anak berbulu putih yang muncul, genotipe keduanya tetap tidak dapat dipastikan. Pilihan B keliru karena induk berbulu hitam pun dapat menyimpan gen h tanpa menampakkannya.",
+    "question_order": 21,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-22",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Rangkaian Listrik",
+    "question": "Sebuah alat listrik bertuliskan 100 W; 220 V. Hambatan kawat di dalam alat itu dianggap tetap.\n\nBesar hambatan kawat pada alat tersebut adalah ...",
+    "options": {
+      "A": "2,2 Ω",
+      "B": "22 Ω",
+      "C": "220 Ω",
+      "D": "484 Ω"
+    },
+    "correct_answer": "D",
+    "difficulty": "Hard",
+    "explanation": "Hubungan antara daya, tegangan, dan hambatan adalah P = V² ÷ R, sehingga R = V² ÷ P = 220² ÷ 100 = 48.400 ÷ 100 = 484 Ω. Pilihan C adalah angka tegangannya yang keliru disalin sebagai hambatan. Pilihan A adalah 220 ÷ 100, yaitu memakai V ÷ P alih-alih V² ÷ P. Pemeriksaan cepat: arus yang mengalir = 100 ÷ 220 ≈ 0,45 A, dan 220 ÷ 0,45 memang mendekati 484 Ω.",
+    "question_order": 22,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-23",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Biologi Lingkungan (Ekologi)",
+    "question": "Sebuah kota menanam puluhan ribu pohon di sepanjang jalan untuk menyerap karbon dioksida dari udara. Seorang ahli mengingatkan bahwa manfaat penyerapan itu baru akan terasa penuh setelah puluhan tahun.\n\nAlasan yang paling tepat mendasari peringatan tersebut adalah ...",
+    "options": {
+      "A": "Sebatang pohon menyerap karbon dioksida paling banyak ketika tajuknya sudah lebar dan batangnya besar, dan keadaan itu memerlukan waktu bertahun-tahun.",
+      "B": "Pohon yang masih muda justru melepaskan karbon dioksida ke udara, bukan menyerapnya.",
+      "C": "Karbon dioksida baru dapat diserap oleh pohon setelah pohon itu mulai berbunga dan berbuah.",
+      "D": "Penyerapan karbon dioksida oleh pohon hanya berlangsung pada malam hari ketika udara dingin."
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Karbon yang diserap pohon tersimpan sebagai bahan penyusun batang, cabang, dan daunnya, sehingga banyaknya karbon yang tertahan sebanding dengan besarnya pohon itu. Bibit yang baru ditanam menyerap sangat sedikit, dan penyerapannya baru menjadi besar setelah pohon tumbuh besar — itulah sebabnya manfaat penuhnya menunggu puluhan tahun, yakni pilihan A. Pilihan B keliru karena pohon muda tetap berfotosintesis meskipun sedikit. Pilihan C keliru karena fotosintesis tidak menunggu pembungaan. Pilihan D membalik keadaan, sebab fotosintesis justru memerlukan cahaya.",
+    "question_order": 23,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-24",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Gaya",
+    "question": "Sebuah benda bermassa 5 kg diletakkan di atas lantai sebuah lift. Lift itu kemudian bergerak ke atas dengan percepatan tetap 2 m/s². (g = 10 m/s²)\n\nBesar gaya yang dikerjakan lantai lift pada benda tersebut adalah ...",
+    "options": {
+      "A": "40 N",
+      "B": "60 N",
+      "C": "50 N",
+      "D": "10 N"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Pada benda bekerja dua gaya tegak: gaya dari lantai yang mengarah ke atas dan berat benda 5 × 10 = 50 N yang mengarah ke bawah. Karena benda ikut dipercepat ke atas sebesar 2 m/s², resultannya harus mengarah ke atas dan besarnya m a = 5 × 2 = 10 N. Maka gaya lantai = berat + resultan = 50 + 10 = 60 N. Pilihan C adalah berat benda, yaitu jawaban bila lift diam atau bergerak tetap. Pilihan A adalah gaya lantai bila lift justru dipercepat ke bawah, dan pilihan D hanyalah resultannya.",
+    "question_order": 24,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-25",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Kimia Dasar Unsur",
+    "question": "Unsur X dan unsur Y bergabung membentuk sebuah senyawa dengan perbandingan massa X terhadap Y selalu tetap, yaitu 3 : 8. Sebanyak 15 gram unsur X direaksikan dengan 50 gram unsur Y.\n\nMassa senyawa yang terbentuk dan massa zat yang tersisa berturut-turut adalah ...",
+    "options": {
+      "A": "65 gram dan tidak ada zat yang tersisa",
+      "B": "55 gram dan tersisa 5 gram unsur X",
+      "C": "50 gram dan tersisa 15 gram unsur Y",
+      "D": "55 gram dan tersisa 10 gram unsur Y"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Perbandingan massa 3 : 8 berarti setiap 3 gram X memerlukan tepat 8 gram Y. Untuk 15 gram X diperlukan 15 × 8 ÷ 3 = 40 gram Y, sedangkan yang tersedia 50 gram, sehingga X habis bereaksi dan Y berlebih. Massa senyawa yang terbentuk = 15 + 40 = 55 gram, dan Y yang tersisa = 50 − 40 = 10 gram. Pilihan A mengandaikan seluruh zat bereaksi habis, padahal perbandingan tetapnya tidak mengizinkan. Pilihan B menyatakan X yang tersisa, padahal justru X-lah yang membatasi jalannya reaksi.",
+    "question_order": 25,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-26",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Fluida",
+    "question": "Sebuah balon udara panas mulai naik ketika udara di dalam balon dipanaskan dengan pembakar. Bagian bawah balon dibiarkan terbuka, dan bentuk maupun ukuran balon hampir tidak berubah selama pemanasan.\n\nPenjelasan yang paling tepat mengenai naiknya balon tersebut adalah ...",
+    "options": {
+      "A": "Udara di dalam balon memuai sehingga sebagian keluar melalui lubang bawah; massa udara di dalam balon berkurang sedangkan volumenya tetap, sehingga massa jenis rata-rata balon menjadi lebih kecil daripada udara di luar.",
+      "B": "Udara panas selalu bergerak ke atas, dan gerakan itulah yang mendorong balon ke atas.",
+      "C": "Semburan api dari pembakar menghasilkan gaya dorong yang mengangkat balon ke atas.",
+      "D": "Kain balon menyusut ketika dipanaskan sehingga balon menjadi jauh lebih ringan daripada semula."
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Kunci soal ini adalah lubang di bagian bawah balon. Udara yang dipanaskan memuai, tetapi karena volume balon tetap, kelebihannya keluar melalui lubang itu. Akibatnya massa udara yang tertahan di dalam berkurang sementara volumenya tetap, sehingga massa jenis rata-rata balon beserta isinya turun di bawah massa jenis udara luar dan gaya ke atas melampaui beratnya. Pilihan B menyebutkan gejala yang benar tetapi bukan penyebab naiknya balon; balon terangkat oleh gaya ke atas, bukan didorong aliran udara. Pilihan C keliru karena pembakar mengarah ke dalam balon, bukan ke bawah. Pilihan D bertentangan dengan keterangan bahwa ukuran balon hampir tidak berubah.",
+    "question_order": 26,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-27",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Bioteknologi Mutakhir",
+    "question": "Sebuah kebun raya memperbanyak jenis anggrek langka yang hampir punah dengan teknik kultur jaringan.\n\nBagian tanaman yang paling tepat dipakai sebagai bahan awal kultur jaringan tersebut adalah ...",
+    "options": {
+      "A": "daun tua yang warnanya sudah mulai menguning",
+      "B": "bagian akar yang sudah mengeras dan berkayu",
+      "C": "jaringan meristem pada ujung tunas yang masih muda",
+      "D": "kelopak bunga yang sudah layu dan hendak gugur"
+    },
+    "correct_answer": "C",
+    "difficulty": "Hard",
+    "explanation": "Kultur jaringan menuntut sel yang masih mampu membelah dengan cepat dan belum tertentu tugasnya, sebab dari sel semacam itulah tanaman utuh dapat dibentuk kembali. Jaringan meristem pada ujung tunas justru terdiri atas sel-sel demikian, dan letaknya yang terlindung juga membuatnya paling bersih dari kuman — dua alasan yang menjadikannya pilihan C. Pilihan A, B, dan D seluruhnya berupa jaringan yang selnya sudah tua dan sudah tertentu tugasnya, sehingga daya membelahnya sangat rendah dan kemungkinan tercemar kumannya jauh lebih besar.",
+    "question_order": 27,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-28",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Kalor",
+    "question": "Sebuah panci logam yang pegangannya terbuat dari kayu dipakai memasak air sampai mendidih. Meskipun badan panci sangat panas, pegangan kayunya tetap dapat dipegang dengan tangan telanjang.\n\nPenjelasan yang paling tepat mengenai kenyataan tersebut adalah ...",
+    "options": {
+      "A": "Suhu kayu selalu lebih rendah daripada suhu logam, berapa pun panas yang diterimanya.",
+      "B": "Kayu menghantarkan kalor jauh lebih lambat daripada logam, sehingga kalor dari panci hampir tidak sampai ke tangan.",
+      "C": "Kayu menyerap seluruh kalor dari panci lalu menyimpannya rapat-rapat di bagian dalamnya.",
+      "D": "Permukaan kayu memantulkan kembali kalor yang datang ke arah badan panci."
+    },
+    "correct_answer": "B",
+    "difficulty": "Hard",
+    "explanation": "Logam menghantarkan kalor dengan sangat baik karena elektron bebasnya dapat berpindah cepat membawa energi, sedangkan kayu tidak memiliki elektron bebas sehingga kalor hanya merambat perlahan dari partikel ke partikel. Akibatnya, ujung pegangan yang dipegang tangan tetap dingin meskipun ujung lainnya menempel pada panci yang panas — pilihan B. Pilihan A keliru sebab kayu pun akan panas bila kalornya sempat sampai. Pilihan C keliru karena kalor yang terserap justru akan menaikkan suhu kayu itu sendiri. Pilihan D menggambarkan pemantulan radiasi, sedangkan yang berlangsung di sini adalah hantaran.",
+    "question_order": 28,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-29",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Gelombang",
+    "question": "Perhatikan grafik simpangan terhadap waktu sebuah benda yang bergetar berikut.\n\nAmplitudo dan frekuensi getaran benda tersebut berturut-turut adalah ...",
+    "options": {
+      "A": "10 cm dan 2,5 Hz",
+      "B": "5 cm dan 0,4 Hz",
+      "C": "5 cm dan 2,5 Hz",
+      "D": "10 cm dan 0,4 Hz"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Amplitudo adalah simpangan terjauh dari kedudukan setimbang, bukan jarak dari puncak ke lembah. Dari grafik, kurva mencapai +5 cm dan −5 cm, sehingga amplitudonya 5 cm — pilihan yang menyebut 10 cm mengukur jarak puncak ke lembah, kekeliruan tersering pada pembacaan grafik getaran. Periode adalah waktu untuk satu getaran penuh, dan grafik menunjukkan satu getaran selesai pada 0,4 sekon. Frekuensinya = 1 ÷ 0,4 = 2,5 Hz. Pilihan B dan D menyalin nilai periode sebagai frekuensi tanpa membalikkannya.",
+    "image": {
+      "src": "/soal/p16-ipa-grafik-getaran.svg",
+      "alt": "Grafik simpangan terhadap waktu sebuah benda bergetar dengan simpangan terbesar 5 cm dan satu getaran penuh berlangsung 0,4 sekon.",
+      "keterangan": "Sumbu datar menyatakan waktu dan sumbu tegak menyatakan simpangan."
+    },
+    "question_order": 29,
+    "active": true
+  },
+  {
+    "id": "p16-ipa-30",
+    "package_id": "paket-16",
+    "subject": "IPA",
+    "session": "sesi-1",
+    "category": "Fisika Elektromagnet",
+    "question": "Kutub utara jarum sebuah kompas selalu menunjuk ke arah kutub utara geografi bumi. Diketahui pula bahwa kutub magnet yang sejenis saling tolak-menolak, sedangkan kutub magnet yang tidak sejenis saling tarik-menarik.\n\nKesimpulan yang dapat ditarik dari kedua kenyataan tersebut adalah ...",
+    "options": {
+      "A": "kutub magnet bumi yang berada di dekat kutub utara geografi sesungguhnya merupakan kutub selatan magnet",
+      "B": "kutub magnet bumi yang berada di dekat kutub utara geografi merupakan kutub utara magnet",
+      "C": "bumi sesungguhnya sama sekali tidak memiliki medan magnet sendiri",
+      "D": "jarum kompas menunjuk ke utara karena tertarik oleh gaya gravitasi bumi"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Kutub utara jarum kompas tertarik ke arah utara bumi, dan tarik-menarik hanya terjadi antara kutub yang tidak sejenis. Karena itu kutub magnet bumi yang berada di sana pastilah kutub selatan magnet, meskipun tempatnya kita namai kutub utara menurut letaknya di bola bumi — pilihan A. Penamaan yang tampak berlawanan itu memang membingungkan, tetapi ia terpaksa demikian sejak kutub jarum yang menunjuk ke utara itu sendiri dinamai kutub utara. Pilihan B melanggar aturan tarik-menarik yang sudah diberikan. Pilihan C bertentangan dengan kenyataan bahwa jarum menyearahkan diri, dan pilihan D keliru karena gravitasi tidak memiliki arah mendatar.",
+    "question_order": 30,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-01",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Diketahui sebuah bilangan real x memenuhi x + 1/x = 5.\n\nNilai dari x² + 1/x² adalah ...",
+    "options": {
+      "A": "25",
+      "B": "27",
+      "C": "21",
+      "D": "23"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Kuadratkan kedua ruas: (x + 1/x)² = 5², yaitu x² + 2·x·(1/x) + 1/x² = 25. Suku tengahnya bernilai tepat 2, sehingga x² + 1/x² + 2 = 25 dan hasilnya 23. Pilihan A adalah jawaban bila kuadrat langsung diterapkan pada tiap suku tanpa memperhatikan suku tengah. Pilihan B adalah hasil menambahkan 2 alih-alih menguranginya, kekeliruan tanda yang paling sering terjadi. Pilihan C adalah hasil mengurangi 4, yaitu mengira suku tengahnya bernilai 4.",
+    "question_order": 1,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-02",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Diketahui f(x) = 2x − 3 dan f(g(x)) = 4x + 1.\n\nRumus untuk g(x) adalah ...",
+    "options": {
+      "A": "2x − 2",
+      "B": "2x + 2",
+      "C": "4x + 4",
+      "D": "x + 2"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Menyusun f(g(x)) berarti memasukkan g(x) ke tempat x pada rumus f, sehingga f(g(x)) = 2·g(x) − 3. Samakan dengan yang diketahui: 2·g(x) − 3 = 4x + 1, maka 2·g(x) = 4x + 4 dan g(x) = 2x + 2. Pemeriksaan: f(2x + 2) = 2(2x + 2) − 3 = 4x + 1, tepat. Pilihan C adalah hasil lupa membagi dengan 2 pada langkah terakhir. Pilihan A berasal dari kekeliruan tanda ketika memindahkan angka 3.",
+    "question_order": 2,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-03",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Persamaan kuadrat x² − 6x + k = 0 memiliki dua akar real yang selisihnya sama dengan 4.\n\nNilai k adalah ...",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "5",
+      "D": "4"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Misalkan kedua akarnya p dan q. Dari koefisiennya, jumlah akar p + q = 6 dan hasil kali akar p·q = k. Syarat pada soal memberi p − q = 4. Menjumlahkan p + q = 6 dengan p − q = 4 diperoleh 2p = 10 sehingga p = 5, lalu q = 1. Maka k = 5 × 1 = 5. Pemeriksaan: x² − 6x + 5 = 0 berakar 5 dan 1, dan selisihnya memang 4. Pilihan B adalah nilai k yang membuat kedua akarnya kembar, sedangkan pilihan D berasal dari menyalin angka selisihnya sebagai jawaban.",
+    "question_order": 3,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-04",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Sebuah pecahan bernilai 2/5. Apabila pembilang dan penyebut pecahan itu masing-masing ditambah 4, nilai pecahan tersebut berubah menjadi 1/2.\n\nPecahan yang dimaksud adalah ...",
+    "options": {
+      "A": "8/20",
+      "B": "6/15",
+      "C": "4/10",
+      "D": "10/25"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Perhatikan bahwa keempat pilihan seluruhnya bernilai 2/5, sehingga syarat pertama tidak dapat dipakai memilih dan syarat keduanyalah yang menentukan. Misalkan pecahan itu 2k/5k. Syarat kedua memberi (2k + 4)/(5k + 4) = 1/2, sehingga 2(2k + 4) = 5k + 4, yaitu 4k + 8 = 5k + 4 dan k = 4. Pecahan yang dicari 8/20. Pemeriksaan: 8/20 memang bernilai 2/5, dan setelah pembilang serta penyebutnya ditambah 4 menjadi 12/24 = 1/2. Pilihan C berpangkal pada k = 2, pilihan B pada k = 3, dan pilihan D pada k = 5 — ketiganya gagal memenuhi syarat kedua.",
+    "question_order": 4,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-05",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "A certain whole number has the following property. When the number is increased by 5 and the result is then squared, the answer is 105 greater than the square of the original number.\n\nThe original number is ...",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "8",
+      "D": "10"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Let the number be n. The condition gives (n + 5)² = n² + 105. Expanding the left-hand side gives n² + 10n + 25 = n² + 105. The n² terms cancel, leaving 10n + 25 = 105, so 10n = 80 and n = 8. A quick check confirms it: 13² = 169 and 8² = 64, and 169 − 64 is indeed 105. Option D comes from forgetting the constant 25 and solving 10n = 105 carelessly, while options A and B are the results of trial values abandoned before the check is completed.",
+    "question_order": 5,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-06",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Diketahui a dan b bilangan real yang memenuhi a + b = 7 dan a·b = 10.\n\nNilai dari a³ + b³ adalah ...",
+    "options": {
+      "A": "343",
+      "B": "217",
+      "C": "123",
+      "D": "133"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Gunakan hubungan a³ + b³ = (a + b)³ − 3ab(a + b). Dengan a + b = 7 dan ab = 10 diperoleh 7³ − 3 × 10 × 7 = 343 − 210 = 133. Pemeriksaan cepat: kedua bilangan yang jumlahnya 7 dan hasil kalinya 10 adalah 5 dan 2, dan 125 + 8 memang 133. Pilihan A adalah (a + b)³ tanpa pengurangan, jawaban bagi yang mengira pemangkatan dapat langsung dibagikan pada tiap suku. Pilihan B adalah hasil mengurangkan 3ab saja tanpa mengalikannya dengan (a + b).",
+    "question_order": 6,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-07",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Sebuah barisan aritmetika memiliki suku ke-4 sama dengan 17 dan suku ke-9 sama dengan 37.\n\nJumlah dua puluh suku pertama barisan tersebut adalah ...",
+    "options": {
+      "A": "860",
+      "B": "800",
+      "C": "900",
+      "D": "820"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Selisih antara suku ke-9 dan suku ke-4 mencakup lima langkah beda, sehingga 5b = 37 − 17 = 20 dan b = 4. Suku pertamanya a = 17 − 3 × 4 = 5. Jumlah dua puluh suku pertama = (20 ÷ 2) × (2a + 19b) = 10 × (10 + 76) = 860. Pilihan D muncul bila beda dihitung sebagai 20 ÷ 4 alih-alih 20 ÷ 5. Pilihan B adalah hasil memakai 19a + 2b pada rumus, yaitu menukar kedudukan a dan b.",
+    "question_order": 7,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-08",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Aljabar",
+    "question": "Himpunan penyelesaian dari pertidaksamaan (2x − 1)/(x + 3) < 1 adalah ...",
+    "options": {
+      "A": "x < −3 atau x > 4",
+      "B": "−3 < x < 4",
+      "C": "x < 4 untuk setiap bilangan real x",
+      "D": "x > −3 untuk setiap bilangan real x"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Pertidaksamaan pecahan tidak boleh diselesaikan dengan mengalikan silang, sebab tanda penyebutnya belum diketahui. Pindahkan seluruhnya ke satu ruas: (2x − 1)/(x + 3) − 1 < 0, lalu satukan menjadi (2x − 1 − x − 3)/(x + 3) < 0, yaitu (x − 4)/(x + 3) < 0. Pecahan bernilai negatif hanya ketika pembilang dan penyebutnya berlawanan tanda, dan itu terjadi pada −3 < x < 4. Pilihan A adalah daerah tempat pecahan itu justru bernilai positif. Pilihan C adalah jawaban bila kedua ruas langsung dikalikan (x + 3) tanpa memeriksa tandanya.",
+    "question_order": 8,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-09",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Perhatikan gambar berikut. Pada sebuah persegi bersisi 14 cm dilukis empat buah seperempat lingkaran berjari-jari 7 cm yang berpusat di keempat titik sudut persegi.\n\nLuas daerah yang diarsir adalah ...",
+    "options": {
+      "A": "56 cm²",
+      "B": "49 cm²",
+      "C": "154 cm²",
+      "D": "42 cm²"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Keempat seperempat lingkaran berjari-jari sama dan pusatnya berjarak 14 cm, tepat sama dengan 7 + 7, sehingga busurnya hanya bersinggungan di titik tengah tiap sisi dan tidak pernah saling menindih. Karena itu luasnya boleh dijumlahkan begitu saja: 4 × ¼ × (22/7) × 7² = 154 cm², yang kebetulan sama dengan luas satu lingkaran penuh berjari-jari 7 cm. Luas persegi = 14 × 14 = 196 cm², sehingga daerah arsirnya = 196 − 154 = 42 cm². Pilihan C adalah luas keempat juring itu sendiri, dan pilihan B adalah luas seperempat persegi.",
+    "image": {
+      "src": "/soal/p16-mtk-persegi-juring.svg",
+      "alt": "Persegi bersisi 14 cm dengan empat seperempat lingkaran berjari-jari 7 cm yang berpusat di keempat titik sudutnya; daerah yang diarsir adalah bagian persegi di luar keempat seperempat lingkaran itu.",
+      "keterangan": "Gunakan π = 22/7."
+    },
+    "question_order": 9,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-10",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Sebuah kolam berbentuk persegi panjang berukuran 12 m × 8 m. Di sekeliling kolam itu dibuat jalan setapak yang lebarnya sama pada keempat sisinya, yaitu 1,5 m.\n\nLuas jalan setapak tersebut adalah ...",
+    "options": {
+      "A": "69 m²",
+      "B": "60 m²",
+      "C": "78 m²",
+      "D": "96 m²"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Jalan setapak menambah lebar 1,5 m pada kedua ujung setiap ukuran, bukan pada satu ujung saja. Panjang daerah luar menjadi 12 + 1,5 + 1,5 = 15 m dan lebarnya 8 + 1,5 + 1,5 = 11 m, sehingga luas daerah luar = 15 × 11 = 165 m². Luas kolamnya sendiri = 12 × 8 = 96 m². Luas jalannya = 165 − 96 = 69 m². Pilihan D adalah luas kolam yang keliru disalin sebagai jawaban. Pilihan C adalah hasil menganggap lebar jalan 2 m, sedangkan pilihan B muncul bila 1,5 m hanya ditambahkan pada satu ujung tiap ukuran — kekeliruan tersering pada soal berbingkai.",
+    "question_order": 10,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-11",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Sebuah kerucut memiliki jari-jari alas 6 cm dan tinggi 8 cm. (π = 3,14)\n\nLuas seluruh permukaan kerucut tersebut adalah ...",
+    "options": {
+      "A": "188,4 cm²",
+      "B": "226,08 cm²",
+      "C": "301,44 cm²",
+      "D": "351,68 cm²"
+    },
+    "correct_answer": "C",
+    "difficulty": "Hard",
+    "explanation": "Cari garis pelukisnya lebih dahulu dengan teorema Pythagoras: s = √(6² + 8²) = √100 = 10 cm. Luas seluruh permukaan kerucut = luas selimut + luas alas = πrs + πr² = πr(s + r) = 3,14 × 6 × 16 = 301,44 cm². Pilihan A adalah luas selimutnya saja, yaitu jawaban bila alasnya terlupa. Pilihan B adalah hasil memakai tinggi 8 cm sebagai garis pelukis. Pilihan D muncul bila garis pelukis keliru dihitung sebagai 6 + 8 = 14.",
+    "question_order": 11,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-12",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Sebuah juring lingkaran memiliki sudut pusat 72° dan jari-jari 10 cm. (π = 3,14)\n\nKeliling juring tersebut adalah ...",
+    "options": {
+      "A": "12,56 cm",
+      "B": "32,56 cm",
+      "C": "62,8 cm",
+      "D": "20 cm"
+    },
+    "correct_answer": "B",
+    "difficulty": "Hard",
+    "explanation": "Keliling juring terdiri atas busurnya ditambah kedua jari-jari yang mengapitnya, bukan busurnya saja. Panjang busur = (72 ÷ 360) × 2 × 3,14 × 10 = 0,2 × 62,8 = 12,56 cm. Kedua jari-jarinya berjumlah 2 × 10 = 20 cm. Kelilingnya = 12,56 + 20 = 32,56 cm. Pilihan A adalah panjang busurnya saja, yaitu kekeliruan yang paling sering terjadi pada soal keliling juring. Pilihan C adalah keliling lingkaran penuh, jawaban bila sudut pusatnya diabaikan. Pilihan D hanyalah jumlah kedua jari-jarinya.",
+    "question_order": 12,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-13",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Dua buah segitiga sebangun memiliki perbandingan keliling 3 : 5. Luas segitiga yang lebih kecil adalah 27 cm².\n\nLuas segitiga yang lebih besar adalah ...",
+    "options": {
+      "A": "75 cm²",
+      "B": "45 cm²",
+      "C": "135 cm²",
+      "D": "81 cm²"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Pada bangun-bangun yang sebangun, perbandingan keliling sama dengan perbandingan panjang sisinya, yaitu 3 : 5, sedangkan perbandingan luasnya adalah kuadrat dari perbandingan itu, yaitu 9 : 25. Maka luas segitiga besar = 27 × 25 ÷ 9 = 75 cm². Pilihan B adalah hasil memakai perbandingan 3 : 5 langsung pada luasnya, kekeliruan yang paling sering terjadi pada soal kesebangunan. Pilihan C adalah 27 × 5, dan pilihan D adalah 27 × 3.",
+    "question_order": 13,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-14",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Perhatikan gambar berikut. Ruas garis AB merupakan diameter lingkaran yang berpusat di O, dan titik C terletak pada lingkaran tersebut. Besar sudut CAB adalah 32°.\n\nBesar sudut ABC adalah ...",
+    "options": {
+      "A": "32°",
+      "B": "90°",
+      "C": "64°",
+      "D": "58°"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Kunci gambar ini adalah kedudukan AB sebagai diameter. Sudut keliling yang menghadap diameter selalu bernilai 90°, sehingga sudut ACB = 90° dan segitiga ABC siku-siku di C. Karena jumlah sudut segitiga 180°, maka sudut ABC = 180° − 90° − 32° = 58°. Pilihan C adalah 2 × 32° = 64°, yaitu besar sudut pusat BOC yang menghadap busur yang sama dengan sudut A — benar sebagai sudut pusat, tetapi bukan yang ditanyakan. Pilihan A mengandaikan segitiganya sama kaki, padahal AC dan BC bukan jari-jari. Pilihan B menyalin sudut siku-siku di titik C ke titik B.",
+    "image": {
+      "src": "/soal/p16-mtk-sudut-lingkaran.svg",
+      "alt": "Lingkaran berpusat O dengan AB sebagai diameter mendatar dan titik C pada busur di atas; terbentuk segitiga ABC dengan sudut CAB sebesar 32 derajat dan sudut ABC ditanyakan.",
+      "keterangan": "Titik O merupakan pusat lingkaran dan AB merupakan diameter."
+    },
+    "question_order": 14,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-15",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "Sebuah taman berbentuk belah ketupat dengan panjang kedua diagonalnya 24 m dan 10 m. Di sekeliling taman itu akan dipasang pagar.\n\nPanjang pagar yang diperlukan adalah ...",
+    "options": {
+      "A": "34 m",
+      "B": "68 m",
+      "C": "52 m",
+      "D": "48 m"
+    },
+    "correct_answer": "C",
+    "difficulty": "Hard",
+    "explanation": "Kedua diagonal belah ketupat berpotongan tegak lurus dan saling membagi dua sama panjang, sehingga terbentuk empat segitiga siku-siku bersisi tegak 12 m dan 5 m. Panjang sisi belah ketupat adalah sisi miringnya, yaitu √(144 + 25) = √169 = 13 m. Kelilingnya = 4 × 13 = 52 m. Pilihan A adalah jumlah kedua diagonal, dan pilihan B adalah dua kali jumlah itu — keduanya jawaban bagi yang mengira keliling dapat dihitung langsung dari diagonalnya. Pilihan D adalah 4 × 12, yaitu memakai setengah diagonal panjang sebagai sisi.",
+    "question_order": 15,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-16",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Geometri",
+    "question": "A cylindrical tank whose inner radius is 7 cm contains water to a depth of 20 cm. A solid metal ball is then lowered into the tank until it is completely under water, and the water level rises to a depth of 25 cm. No water spills out of the tank. (π = 22/7)\n\nThe volume of the metal ball is ...",
+    "options": {
+      "A": "154 cm³",
+      "B": "770 cm³",
+      "C": "3.080 cm³",
+      "D": "385 cm³"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "A submerged object pushes aside a volume of water exactly equal to its own volume, so the ball's volume is the volume of the extra column of water created by the rise in level. The rise is 25 − 20 = 5 cm, and the cross-section of the tank stays the same, so the volume is πr²h = (22/7) × 7² × 5 = 22 × 7 × 5 = 770 cm³. Option C is the volume of water that was in the tank before the ball was added, using the depth of 20 cm instead of the rise. Option A is the base area of the tank on its own, and option D is half of the correct answer, which comes from using a rise of 2,5 cm.",
+    "question_order": 16,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-17",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Sebuah tim yang beranggotakan 3 orang akan dipilih dari 8 orang calon. Dua orang di antara kedelapan calon itu bersaudara, dan panitia menetapkan bahwa keduanya tidak boleh terpilih bersama-sama dalam satu tim. Kedudukan setiap anggota tim dianggap sama.\n\nBanyak tim berbeda yang mungkin terbentuk adalah ...",
+    "options": {
+      "A": "56",
+      "B": "48",
+      "C": "42",
+      "D": "50"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Hitung seluruh kemungkinan lebih dahulu, lalu buang yang terlarang. Tanpa syarat apa pun, banyak tim = C(8,3) = (8 × 7 × 6) ÷ (3 × 2 × 1) = 56. Tim yang terlarang adalah tim yang memuat kedua bersaudara itu sekaligus; pada tim semacam itu dua kedudukan sudah terisi dan tinggal memilih seorang lagi dari 6 calon yang tersisa, sehingga ada 6 tim terlarang. Jawabannya 56 − 6 = 50. Pilihan A adalah jumlah seluruh tim tanpa memperhatikan syarat. Pilihan C adalah hasil membuang 14 tim, yaitu mengira setiap tim yang memuat salah seorang bersaudara itu terlarang.",
+    "question_order": 17,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-18",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Sebuah bendera disusun atas tiga jalur mendatar, dan setiap jalur diwarnai dengan salah satu dari 5 warna yang tersedia. Dua jalur yang bersebelahan tidak boleh berwarna sama, tetapi jalur paling atas dan jalur paling bawah boleh berwarna sama.\n\nBanyak bendera berbeda yang dapat dibuat adalah ...",
+    "options": {
+      "A": "80",
+      "B": "60",
+      "C": "125",
+      "D": "100"
+    },
+    "correct_answer": "A",
+    "difficulty": "Very Hard",
+    "explanation": "Warnai jalur demi jalur mulai dari atas. Jalur pertama bebas, yaitu 5 pilihan. Jalur kedua wajib berbeda dari jalur pertama, sehingga tersisa 4 pilihan. Jalur ketiga hanya wajib berbeda dari jalur kedua, dan warna jalur pertama justru boleh dipakai kembali, sehingga tersedia 4 pilihan pula. Banyak bendera = 5 × 4 × 4 = 80. Pilihan B adalah 5 × 4 × 3, yaitu jawaban bila ketiga jalur dikira harus berlainan warna seluruhnya — jebakan terkuat pada soal ini, sebab syaratnya hanya berlaku bagi jalur yang bersebelahan. Pilihan C adalah 5³, yaitu jawaban bila syaratnya diabaikan sama sekali.",
+    "question_order": 18,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-19",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Di dalam sebuah kelas terdapat 30 siswa. Sebanyak 18 siswa mengikuti klub musik, 15 siswa mengikuti klub olahraga, dan 5 siswa tidak mengikuti klub mana pun.\n\nApabila seorang siswa dipilih secara acak dari kelas itu, peluang terpilihnya siswa yang mengikuti kedua klub sekaligus adalah ...",
+    "options": {
+      "A": "1/6",
+      "B": "3/10",
+      "C": "4/15",
+      "D": "8/25"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Siswa yang mengikuti sekurang-kurangnya satu klub = 30 − 5 = 25 orang. Bila kedua kelompok klub dijumlahkan diperoleh 18 + 15 = 33, yaitu 8 lebih banyak daripada 25; kelebihan itu tepat sama dengan banyaknya siswa yang terhitung dua kali, yakni mereka yang mengikuti kedua klub sekaligus. Jadi ada 8 siswa demikian, dan peluangnya 8/30 = 4/15. Pilihan D memakai 25 sebagai penyebut, padahal siswa dipilih dari seluruh kelas yang berjumlah 30. Pilihan A adalah 5/30, yaitu peluang terpilihnya siswa yang tidak mengikuti klub mana pun. Pilihan B adalah 9/30, yang muncul bila kelebihan tadi dihitung dari 30 alih-alih dari 25.",
+    "question_order": 19,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-20",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Enam orang akan duduk mengelilingi sebuah meja bundar. Dua orang tertentu di antara mereka harus selalu duduk berdampingan. Susunan yang hanya berbeda oleh perputaran meja dihitung sebagai satu susunan yang sama.\n\nBanyak susunan duduk yang mungkin adalah ...",
+    "options": {
+      "A": "120",
+      "B": "48",
+      "C": "240",
+      "D": "60"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Ikat kedua orang yang harus berdampingan itu sehingga mereka dianggap satu kesatuan. Kini terdapat 5 kesatuan yang duduk melingkar, dan banyak susunan melingkar dari 5 kesatuan adalah (5 − 1)! = 24. Di dalam kesatuan itu sendiri kedua orang masih dapat bertukar tempat, sehingga banyak susunannya dikalikan 2 menjadi 48. Pilihan A adalah 5!, yaitu lupa bahwa susunan melingkar memakai (n − 1)! dan bukan n!. Pilihan D adalah banyak susunan melingkar 6 orang tanpa syarat berdampingan, yaitu 5! = 120 yang keliru dibagi 2.",
+    "question_order": 20,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-21",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "A password is made up of four characters. The first two characters must be letters taken from A, B, C and D, and the last two characters must be digits taken from 1, 2, 3, 4 and 5. No letter may be used twice and no digit may be used twice within the same password.\n\nThe number of different passwords that can be formed is ...",
+    "options": {
+      "A": "400",
+      "B": "100",
+      "C": "120",
+      "D": "240"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Fill the four positions one at a time. The first letter can be chosen in 4 ways, and since it cannot be repeated the second letter can be chosen in only 3 ways, giving 12 possible pairs of letters. The first digit can be chosen in 5 ways and the second in 4 ways, giving 20 possible pairs of digits. Every letter pair can be joined to every digit pair, so the total is 12 × 20 = 240. Option A is 4 × 4 × 5 × 5, which is the answer when repetition is wrongly allowed. Option C is 12 + 20 multiplied by 4, and option B ignores the letters altogether.",
+    "question_order": 21,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-22",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Sebuah dadu setimbang bermata enam dilempar sebanyak tiga kali.\n\nPeluang munculnya mata dadu 6 tepat dua kali adalah ...",
+    "options": {
+      "A": "1/36",
+      "B": "5/216",
+      "C": "5/72",
+      "D": "15/36"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Satu susunan tertentu, misalnya 6 pada lemparan pertama dan kedua lalu bukan 6 pada lemparan ketiga, berpeluang (1/6) × (1/6) × (5/6) = 5/216. Namun lemparan yang bukan 6 itu dapat jatuh pada lemparan pertama, kedua, atau ketiga, sehingga ada C(3,2) = 3 susunan yang berbeda. Peluang seluruhnya = 3 × 5/216 = 15/216 = 5/72. Pilihan B menghitung hanya satu susunan dan melupakan ketiga kedudukannya — jebakan terkuat pada soal ini. Pilihan A adalah peluang munculnya 6 dua kali berturut-turut tanpa memperhatikan lemparan ketiga.",
+    "question_order": 22,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-23",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Kombinatorika",
+    "question": "Pada sebuah ulangan tersedia 10 butir soal, dan setiap siswa harus mengerjakan tepat 8 butir di antaranya. Soal nomor 1 dan nomor 2 wajib dikerjakan oleh setiap siswa.\n\nBanyak cara memilih butir soal yang dikerjakan adalah ...",
+    "options": {
+      "A": "28",
+      "B": "45",
+      "C": "56",
+      "D": "36"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Karena soal nomor 1 dan nomor 2 wajib dikerjakan, keduanya tidak lagi menjadi bahan pilihan dan langsung menempati dua dari delapan tempat yang tersedia. Yang tersisa adalah memilih 8 − 2 = 6 butir dari 10 − 2 = 8 butir yang belum tentu. Banyaknya = C(8,6), dan karena memilih 6 untuk dikerjakan sama saja dengan memilih 2 untuk ditinggalkan, nilainya = C(8,2) = (8 × 7) ÷ 2 = 28. Pilihan B adalah C(10,8) = 45, yaitu jawaban bila syarat wajib itu dilewatkan sama sekali. Pilihan C adalah C(8,3) = 56, yang muncul bila banyak soal yang masih dipilih dihitung 5 alih-alih 6.",
+    "question_order": 23,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-24",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Sisa pembagian 7¹⁰⁰ oleh 5 adalah ...",
+    "options": {
+      "A": "2",
+      "B": "1",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Ganti dahulu bilangan pokoknya dengan sisanya terhadap 5: 7 bersisa 2, sehingga 7¹⁰⁰ bersisa sama dengan 2¹⁰⁰. Sisa pemangkatan 2 terhadap 5 berulang dengan pola 2, 4, 3, 1 lalu kembali ke 2, jadi panjang daurnya 4. Karena 100 habis dibagi 4, pangkat itu jatuh tepat pada ujung daur, yaitu sisa 1. Pilihan A adalah sisa 7¹ dan pilihan D adalah sisa 7², yakni jawaban bagi yang berhenti pada langkah pertama daur. Pilihan C adalah sisa 7³.",
+    "question_order": 24,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-25",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Bilangan asli terkecil yang apabila dibagi 4 bersisa 3, dibagi 5 bersisa 4, dan dibagi 6 bersisa 5 adalah ...",
+    "options": {
+      "A": "29",
+      "B": "41",
+      "C": "59",
+      "D": "119"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Perhatikan bahwa pada ketiga syarat, sisanya selalu kurang satu dari pembaginya. Maka bilangan itu ditambah 1 akan habis dibagi 4, 5, maupun 6 sekaligus, sehingga bilangan tambah satu itu merupakan kelipatan KPK(4, 5, 6) = 60. Nilai terkecilnya 60, sehingga bilangan yang dicari 59. Pemeriksaan: 59 ÷ 4 bersisa 3, 59 ÷ 5 bersisa 4, dan 59 ÷ 6 bersisa 5. Pilihan D adalah kelipatan berikutnya, yaitu 120 − 1, yang memenuhi syarat tetapi bukan yang terkecil. Pilihan A dan B tidak memenuhi seluruh syarat sekaligus.",
+    "question_order": 25,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-26",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "FPB dari dua bilangan asli adalah 12 dan KPK kedua bilangan itu adalah 180. Salah satu bilangan tersebut adalah 36.\n\nBilangan yang lain adalah ...",
+    "options": {
+      "A": "15",
+      "B": "24",
+      "C": "45",
+      "D": "60"
+    },
+    "correct_answer": "D",
+    "difficulty": "Hard",
+    "explanation": "Hasil kali dua bilangan selalu sama dengan hasil kali FPB dan KPK-nya, yaitu 12 × 180 = 2.160. Karena salah satu bilangannya 36, bilangan yang lain = 2.160 ÷ 36 = 60. Pemeriksaan: FPB(36, 60) = 12 dan KPK(36, 60) = 180, keduanya cocok. Pilihan A adalah 180 ÷ 12, yaitu memakai KPK dibagi FPB sebagai jawaban. Pilihan B adalah 36 − 12, dan pilihan C adalah 180 ÷ 4 — keduanya tidak berhubungan FPB 12 dengan 36 sebagaimana mestinya.",
+    "question_order": 26,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-27",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "A whole number is divided by 5. It turns out that the quotient and the remainder of this division are equal to each other.\n\nThe largest whole number with this property is ...",
+    "options": {
+      "A": "20",
+      "B": "24",
+      "C": "29",
+      "D": "30"
+    },
+    "correct_answer": "B",
+    "difficulty": "Very Hard",
+    "explanation": "Write the number as 5q + r, where q is the quotient and r is the remainder. A remainder must always be smaller than the divisor, so r can only be 0, 1, 2, 3 or 4. The condition of the question says q = r, so the number equals 5r + r = 6r. To make the number as large as possible, take the largest allowed remainder, r = 4, which gives 6 × 4 = 24. A check confirms it: 24 divided by 5 gives quotient 4 and remainder 4, and the two are indeed equal. Option C fails because 29 divided by 5 gives quotient 5 and remainder 4, which are not equal. Option D gives remainder 0 but quotient 6, and option A gives remainder 0 but quotient 4.",
+    "question_order": 27,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-28",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Banyaknya faktor positif dari bilangan 360 adalah ...",
+    "options": {
+      "A": "24",
+      "B": "6",
+      "C": "12",
+      "D": "18"
+    },
+    "correct_answer": "A",
+    "difficulty": "Hard",
+    "explanation": "Uraikan 360 atas faktor primanya: 360 = 2³ × 3² × 5¹. Banyak faktor positifnya diperoleh dengan menambahkan satu pada setiap pangkat lalu mengalikannya: (3 + 1)(2 + 1)(1 + 1) = 4 × 3 × 2 = 24. Pilihan B adalah 3 × 2 × 1, yaitu mengalikan pangkatnya langsung tanpa menambahkan satu. Pilihan C adalah (3 + 1)(2 + 1) = 12, yaitu melupakan faktor 5 sama sekali. Pilihan D adalah 3 × 3 × 2, yang muncul bila 360 keliru diuraikan menjadi 2² × 3² × 5².",
+    "question_order": 28,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-29",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Angka satuan dari bilangan 3²⁰²⁶ adalah ...",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "7",
+      "D": "9"
+    },
+    "correct_answer": "D",
+    "difficulty": "Very Hard",
+    "explanation": "Angka satuan pemangkatan 3 berulang menurut daur 3, 9, 7, 1 untuk pangkat 1, 2, 3, dan 4, lalu kembali ke 3 pada pangkat 5. Panjang daurnya 4, sehingga cukup diperiksa sisa pembagian pangkatnya oleh 4. Karena 2.026 ÷ 4 bersisa 2, angka satuannya sama dengan angka satuan 3², yaitu 9. Pilihan A adalah jawaban bila sisanya dikira 0, pilihan B bila sisanya dikira 1, dan pilihan C bila sisanya dikira 3 — ketiganya menunjukkan bahwa langkah menentukan sisa itulah yang menentukan benar atau salahnya jawaban.",
+    "question_order": 29,
+    "active": true
+  },
+  {
+    "id": "p16-mtk-30",
+    "package_id": "paket-16",
+    "subject": "Matematika",
+    "session": "sesi-2",
+    "category": "Teori Bilangan",
+    "question": "Diketahui bahwa jumlah tiga bilangan bulat berurutan selalu habis dibagi 3.\n\nDi antara pernyataan berikut, yang juga selalu benar untuk setiap tiga bilangan bulat berurutan adalah ...",
+    "options": {
+      "A": "jumlah ketiga bilangan itu selalu habis dibagi 6",
+      "B": "jumlah ketiga bilangan itu selalu merupakan bilangan ganjil",
+      "C": "hasil kali ketiga bilangan itu selalu habis dibagi 6",
+      "D": "hasil kali ketiga bilangan itu selalu habis dibagi 4"
+    },
+    "correct_answer": "C",
+    "difficulty": "Very Hard",
+    "explanation": "Di antara tiga bilangan bulat berurutan pasti terdapat sekurang-kurangnya satu bilangan genap dan pasti terdapat tepat satu kelipatan 3. Karena itu hasil kalinya selalu memuat faktor 2 dan faktor 3 sekaligus, sehingga selalu habis dibagi 6 — pilihan C. Pilihan A gugur oleh contoh 1 + 2 + 3 = 6 yang memang habis dibagi 6, tetapi 2 + 3 + 4 = 9 yang tidak; jumlahnya habis dibagi 6 hanya ketika bilangan tengahnya genap. Pilihan B gugur oleh contoh yang sama, sebab 9 ganjil sedangkan 6 genap. Pilihan D gugur oleh contoh 1 × 2 × 3 = 6, yang tidak habis dibagi 4; hal itu terjadi karena tiga bilangan berurutan tidak selalu memuat dua bilangan genap.",
+    "question_order": 30,
+    "active": true
+  }
+]

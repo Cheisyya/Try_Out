@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 310" role="img" aria-label="Grafik jarak terhadap waktu dua pengendara sepeda pada lintasan yang sama. Sumbu datar waktu dalam menit dari 0 sampai 60, sumbu tegak jarak dalam kilometer dari 0 sampai 16. Garis A berupa garis lurus dari titik nol menit nol kilometer sampai titik 60 menit 12 kilometer. Garis B berupa garis lurus dari titik 20 menit nol kilometer sampai titik 60 menit 16 kilometer. Kedua garis berpotongan pada titik 40 menit 8 kilometer.">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .seriA { fill: none; stroke: #2a78d6; stroke-width: 3.5; }
+    .seriB { fill: none; stroke: #c8953a; stroke-width: 3.5; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .label { font-size: 14px; font-weight: 700; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="310" fill="#f5f7fb" />
+
+  <!-- grid: tiap 10 menit dan tiap 4 km -->
+  <g class="grid">
+    <path d="M150 40 V250" /><path d="M230 40 V250" /><path d="M310 40 V250" />
+    <path d="M390 40 V250" /><path d="M470 40 V250" /><path d="M550 40 V250" />
+    <path d="M70 200 H560" /><path d="M70 150 H560" /><path d="M70 100 H560" />
+    <path d="M70 50 H560" />
+  </g>
+
+  <!-- sumbu -->
+  <path class="sumbu" d="M70 250 H565" />
+  <path class="sumbu" d="M70 35 V252" />
+
+  <!-- skala waktu: 1 menit = 8 px -->
+  <g class="teks" text-anchor="middle">
+    <text x="70" y="270">0</text><text x="150" y="270">10</text>
+    <text x="230" y="270">20</text><text x="310" y="270">30</text>
+    <text x="390" y="270">40</text><text x="470" y="270">50</text>
+    <text x="550" y="270">60</text>
+  </g>
+
+  <!-- skala jarak: 1 km = 12,5 px -->
+  <g class="teks" text-anchor="end">
+    <text x="62" y="255">0</text><text x="62" y="205">4</text>
+    <text x="62" y="155">8</text><text x="62" y="105">12</text>
+    <text x="62" y="55">16</text>
+  </g>
+
+  <!-- garis perjalanan -->
+  <path class="seriA" d="M70 250 L550 100" />
+  <path class="seriB" d="M230 250 L550 50" />
+
+  <!-- titik potong -->
+  <g class="putus">
+    <path d="M390 150 V250" />
+    <path d="M70 150 H390" />
+  </g>
+  <circle cx="390" cy="150" r="5" fill="#16274c" />
+
+  <!-- nama garis -->
+  <text class="teks label" x="562" y="104" fill="#2a78d6">A</text>
+  <text class="teks label" x="562" y="54" fill="#c8953a">B</text>
+
+  <text class="teks label" x="315" y="292" text-anchor="middle">waktu (menit)</text>
+  <text class="teks label" x="18" y="145" transform="rotate(-90 18 145)" text-anchor="middle">jarak (km)</text>
+</svg>

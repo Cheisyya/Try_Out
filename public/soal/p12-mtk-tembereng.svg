@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" role="img" aria-label="Sebuah lingkaran berpusat di titik O dengan jari-jari 14 sentimeter. Dua jari-jari OA dan OB ditarik sehingga membentuk sudut pusat 90 derajat. Titik A dan titik B dihubungkan oleh sebuah tali busur. Daerah yang diarsir adalah daerah di antara tali busur AB dan busur lingkaran AB, yaitu daerah tembereng.">
+  <style>
+    .lingkaran { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .juring { fill: none; stroke: #16274c; stroke-width: 3; }
+    .arsir { fill: #c8953a; fill-opacity: 0.4; stroke: #c8953a; stroke-width: 2.5; }
+    .siku { fill: none; stroke: #16274c; stroke-width: 2; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .titik { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="380" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 9 px, jari-jari 14 cm = 126 px, pusat (260, 200) -->
+  <circle class="lingkaran" cx="260" cy="200" r="126" />
+
+  <!-- tembereng antara tali busur AB dan busur AB: A(386,200) di kanan, B(260,74) di atas -->
+  <path class="arsir" d="M386 200 A126 126 0 0 0 260 74 L386 200 Z" />
+
+  <!-- jari-jari OA dan OB -->
+  <path class="juring" d="M260 200 L386 200" />
+  <path class="juring" d="M260 200 L260 74" />
+
+  <!-- tanda sudut siku-siku di O -->
+  <path class="siku" d="M260 178 H282 V200" />
+
+  <circle cx="260" cy="200" r="5" fill="#16274c" />
+  <circle cx="386" cy="200" r="5" fill="#16274c" />
+  <circle cx="260" cy="74" r="5" fill="#16274c" />
+
+  <text class="titik" x="238" y="222">O</text>
+  <text class="titik" x="394" y="222">A</text>
+  <text class="titik" x="238" y="66">B</text>
+
+  <!-- ukuran jari-jari -->
+  <path class="ukur" d="M260 226 H386 M386 220 V232" />
+  <text class="teks" x="323" y="248" text-anchor="middle">14 cm</text>
+
+  <text class="teks" x="260" y="360" text-anchor="middle">Daerah yang diarsir adalah tembereng.</text>
+</svg>

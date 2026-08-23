@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" role="img" aria-label="Sebuah pompa hidrolik berbentuk bejana berhubungan berisi minyak. Penampang kiri adalah pengisap kecil dengan luas 10 sentimeter persegi yang ditekan oleh gaya F ke bawah. Penampang kanan adalah pengisap besar dengan luas 250 sentimeter persegi yang di atasnya diletakkan beban seberat 2.000 newton. Kedua pengisap dihubungkan oleh pipa berisi minyak yang sama.">
+  <style>
+    .bejana { fill: none; stroke: #16274c; stroke-width: 4; stroke-linejoin: round; }
+    .minyak { fill: #c8953a; fill-opacity: 0.35; }
+    .pengisap { fill: #16274c; }
+    .beban { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .panah { fill: none; stroke: #c8953a; stroke-width: 4; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="620" height="320" fill="#f5f7fb" />
+
+  <!-- minyak di dalam bejana -->
+  <path class="minyak" d="M120 150 H180 V230 H400 V120 H500 V260 H120 Z" />
+
+  <!-- dinding bejana berhubungan: tabung kiri sempit, tabung kanan lebar -->
+  <path class="bejana" d="M120 140 V260 H500 V110" />
+  <path class="bejana" d="M180 140 V230 H400 V110" />
+
+  <!-- pengisap kecil -->
+  <rect class="pengisap" x="116" y="142" width="68" height="12" rx="3" />
+  <path class="panah" d="M150 76 V126" />
+  <polygon fill="#c8953a" points="150,140 140,118 160,118" />
+  <text class="tebal" x="150" y="66" text-anchor="middle">F</text>
+  <text class="teks" x="98" y="182" text-anchor="middle">A₁ = 10 cm²</text>
+
+  <!-- pengisap besar -->
+  <rect class="pengisap" x="396" y="112" width="108" height="12" rx="3" />
+  <rect class="beban" x="404" y="56" width="92" height="56" rx="5" />
+  <text class="tebal" x="450" y="90" text-anchor="middle">2.000 N</text>
+  <text class="teks" x="556" y="152" text-anchor="middle">A₂ = 250 cm²</text>
+
+  <!-- garis permukaan minyak -->
+  <path class="ukur" d="M184 148 H396" />
+  <text class="teks" x="290" y="292" text-anchor="middle">minyak pengisi bejana</text>
+</svg>

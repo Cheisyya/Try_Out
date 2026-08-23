@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" role="img" aria-label="Grafik simpangan terhadap jarak sebuah gelombang transversal. Sumbu tegak simpangan dalam sentimeter dari negatif 4 sampai 4, sumbu datar jarak dalam meter dari 0 sampai 8. Grafik membentuk dua gelombang penuh sepanjang 8 meter dengan simpangan maksimum 4 sentimeter">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .kurva { fill: none; stroke: #c8953a; stroke-width: 3.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .label { font-size: 13px; font-weight: 700; }
+  </style>
+
+  <rect x="0" y="0" width="560" height="280" fill="#f5f7fb" />
+
+  <!-- grid vertikal tiap 1 m -->
+  <g class="grid">
+    <path d="M120 40 V220" /><path d="M170 40 V220" /><path d="M220 40 V220" />
+    <path d="M270 40 V220" /><path d="M320 40 V220" /><path d="M370 40 V220" />
+    <path d="M420 40 V220" /><path d="M470 40 V220" />
+    <path d="M70 80 H510" /><path d="M70 180 H510" />
+  </g>
+
+  <!-- sumbu -->
+  <path class="sumbu" d="M70 130 H520" />
+  <path class="sumbu" d="M70 30 V230" />
+
+  <!-- skala sumbu x -->
+  <g class="teks" text-anchor="middle">
+    <text x="120" y="150">1</text><text x="170" y="150">2</text>
+    <text x="220" y="150">3</text><text x="270" y="150">4</text>
+    <text x="320" y="150">5</text><text x="370" y="150">6</text>
+    <text x="420" y="150">7</text><text x="470" y="150">8</text>
+  </g>
+
+  <!-- skala sumbu y -->
+  <g class="teks" text-anchor="end">
+    <text x="62" y="85">4</text>
+    <text x="62" y="134">0</text>
+    <text x="62" y="185">-4</text>
+  </g>
+
+  <text class="teks label" x="486" y="122">x (m)</text>
+  <text class="teks label" x="76" y="26">y (cm)</text>
+
+  <!-- dua gelombang penuh: panjang gelombang 4 m = 200 px -->
+  <path class="kurva" d="M70 130 C 95 30, 145 30, 170 130 C 195 230, 245 230, 270 130 C 295 30, 345 30, 370 130 C 395 230, 445 230, 470 130" />
+</svg>

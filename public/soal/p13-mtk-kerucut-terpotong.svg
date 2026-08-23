@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" role="img" aria-label="Sebuah kerucut dipotong oleh sebuah bidang datar yang sejajar alasnya, tepat pada setengah tinggi kerucut. Potongan itu menghasilkan sebuah kerucut kecil di bagian atas dan sebuah bangun berbentuk kerucut terpancung di bagian bawah.">
+  <style>
+    .atas { fill: #f2e2bd; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .bawah { fill: #dff0e2; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 2; stroke-dasharray: 8 5; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="340" fill="#f5f7fb" />
+
+  <!-- puncak (260,40); alas dari (110,280) sampai (410,280); bidang potong pada y = 160 dengan lebar setengahnya -->
+  <polygon class="bawah" points="110,280 410,280 335,160 185,160" />
+  <polygon class="atas" points="260,40 335,160 185,160" />
+
+  <path class="putus" d="M185 160 H335" />
+  <path class="putus" d="M260 40 V280" />
+
+  <text class="tebal" x="392" y="122">kerucut kecil</text>
+  <text class="tebal" x="392" y="238">bagian bawah</text>
+
+  <!-- tinggi bagian atas -->
+  <path class="ukur" d="M84 40 V160 M78 40 H90 M78 160 H90" />
+  <text class="teks" x="66" y="100" text-anchor="middle" transform="rotate(-90 66 100)">½ t</text>
+
+  <!-- tinggi bagian bawah -->
+  <path class="ukur" d="M84 160 V280 M78 280 H90" />
+  <text class="teks" x="66" y="220" text-anchor="middle" transform="rotate(-90 66 220)">½ t</text>
+</svg>

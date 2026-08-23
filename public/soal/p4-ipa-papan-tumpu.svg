@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" role="img" aria-label="Sebuah papan seragam sepanjang 4 meter diletakkan di atas satu titik tumpu berbentuk segitiga yang berjarak 1,5 meter dari ujung kiri papan. Di ujung kiri papan digantungkan beban 60 newton. Berat papan sendiri sebesar 40 newton bekerja pada titik tengah papan, yaitu 2 meter dari ujung kiri. Di ujung kanan papan digantungkan beban W yang belum diketahui besarnya.">
+  <style>
+    .papan { fill: #16274c; }
+    .tumpu { fill: #16274c; }
+    .beban { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .tali { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .panah { fill: none; stroke: #c8953a; stroke-width: 4; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="620" height="300" fill="#f5f7fb" />
+
+  <!-- Skala: 1 m = 120 px. Ujung kiri x = 70, ujung kanan x = 550, papan pada y = 110 -->
+  <rect class="papan" x="70" y="110" width="480" height="12" rx="4" />
+
+  <!-- titik tumpu pada 1,5 m dari ujung kiri: x = 250 -->
+  <polygon class="tumpu" points="250,122 226,178 274,178" />
+  <rect class="tumpu" x="208" y="178" width="84" height="10" rx="4" />
+
+  <!-- beban 60 N di ujung kiri -->
+  <path class="tali" d="M70 122 V146" />
+  <rect class="beban" x="38" y="146" width="64" height="38" rx="5" />
+  <text class="tebal" x="70" y="170" text-anchor="middle">60 N</text>
+
+  <!-- berat papan 40 N pada titik tengah: x = 310 -->
+  <path class="panah" d="M310 122 V166" />
+  <polygon fill="#c8953a" points="310,180 300,158 320,158" />
+  <text class="teks" x="326" y="160">berat papan 40 N</text>
+
+  <!-- beban W di ujung kanan -->
+  <path class="tali" d="M550 122 V146" />
+  <rect class="beban" x="518" y="146" width="64" height="38" rx="5" />
+  <text class="tebal" x="550" y="170" text-anchor="middle">W</text>
+
+  <!-- garis ukur 1,5 m -->
+  <path class="ukur" d="M70 224 H250 M70 218 V230 M250 218 V230" />
+  <text class="teks" x="160" y="246" text-anchor="middle">1,5 m</text>
+
+  <!-- garis ukur 4 m -->
+  <path class="ukur" d="M70 264 H550 M70 258 V270 M550 258 V270" />
+  <text class="teks" x="310" y="286" text-anchor="middle">panjang papan 4 m</text>
+</svg>

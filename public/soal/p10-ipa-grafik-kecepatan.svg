@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 310" role="img" aria-label="Grafik kecepatan terhadap waktu sebuah mobil. Sumbu datar waktu dalam sekon dari 0 sampai 16, sumbu tegak kecepatan dalam meter per sekon dari 0 sampai 16. Dari detik ke-0 sampai detik ke-4 kecepatan naik lurus dari 0 menjadi 12 meter per sekon. Dari detik ke-4 sampai detik ke-10 kecepatan tetap 12 meter per sekon. Dari detik ke-10 sampai detik ke-14 kecepatan turun lurus dari 12 menjadi nol.">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .kurva { fill: none; stroke: #2a78d6; stroke-width: 3.5; stroke-linejoin: round; }
+    .arsir { fill: #dbe7f8; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .label { font-size: 14px; font-weight: 700; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="310" fill="#f5f7fb" />
+
+  <!-- grid: 2 s = 60 px, 4 m/s = 50 px -->
+  <g class="grid">
+    <path d="M130 40 V250" /><path d="M190 40 V250" /><path d="M250 40 V250" />
+    <path d="M310 40 V250" /><path d="M370 40 V250" /><path d="M430 40 V250" />
+    <path d="M490 40 V250" /><path d="M550 40 V250" />
+    <path d="M70 200 H560" /><path d="M70 150 H560" /><path d="M70 100 H560" />
+    <path d="M70 50 H560" />
+  </g>
+
+  <!-- daerah di bawah grafik -->
+  <polygon class="arsir" points="70,250 190,100 370,100 490,250" />
+
+  <path class="sumbu" d="M70 250 H565" />
+  <path class="sumbu" d="M70 35 V252" />
+
+  <!-- skala waktu: 1 s = 30 px -->
+  <g class="teks" text-anchor="middle">
+    <text x="70" y="270">0</text><text x="130" y="270">2</text>
+    <text x="190" y="270">4</text><text x="250" y="270">6</text>
+    <text x="310" y="270">8</text><text x="370" y="270">10</text>
+    <text x="430" y="270">12</text><text x="490" y="270">14</text>
+    <text x="550" y="270">16</text>
+  </g>
+
+  <!-- skala kecepatan: 1 m/s = 12,5 px -->
+  <g class="teks" text-anchor="end">
+    <text x="62" y="255">0</text><text x="62" y="205">4</text>
+    <text x="62" y="155">8</text><text x="62" y="105">12</text>
+    <text x="62" y="55">16</text>
+  </g>
+
+  <!-- grafik kecepatan -->
+  <path class="kurva" d="M70 250 L190 100 L370 100 L490 250" />
+
+  <g class="putus">
+    <path d="M190 100 V250" />
+    <path d="M370 100 V250" />
+    <path d="M70 100 H190" />
+  </g>
+
+  <text class="teks label" x="315" y="292" text-anchor="middle">waktu (s)</text>
+  <text class="teks label" x="16" y="145" transform="rotate(-90 16 145)" text-anchor="middle">kecepatan (m/s)</text>
+</svg>

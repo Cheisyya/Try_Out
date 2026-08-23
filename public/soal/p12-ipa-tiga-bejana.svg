@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" role="img" aria-label="Tiga bejana berbeda bentuk berdiri berdampingan di atas satu meja datar. Bejana I berbentuk kerucut terbalik yang menyempit ke bawah, bejana II berbentuk tabung lurus, dan bejana III melebar ke atas seperti corong. Ketiga bejana memiliki luas alas yang sama dan diisi air sampai ketinggian yang sama, yaitu 30 sentimeter diukur dari dasar bejana.">
+  <style>
+    .dinding { fill: none; stroke: #16274c; stroke-width: 3.5; stroke-linejoin: round; }
+    .air { fill: #9fc3e8; stroke: none; }
+    .permukaan { fill: none; stroke: #16274c; stroke-width: 2; }
+    .meja { fill: none; stroke: #16274c; stroke-width: 4; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="620" height="300" fill="#f5f7fb" />
+
+  <!-- meja: dasar semua bejana pada y = 220; tinggi air 30 cm = 120 px sehingga permukaan pada y = 100 -->
+  <path class="meja" d="M40 220 H580" />
+
+  <!-- Bejana I: kerucut terbalik, alas selebar 60 px pada dasar, melebar ke atas 160 px -->
+  <path class="air" d="M100 220 H160 L200 100 H60 Z" />
+  <path class="dinding" d="M60 80 L100 220 H160 L200 80" />
+  <path class="permukaan" d="M63 100 H197" />
+
+  <!-- Bejana II: tabung lurus lebar 60 px -->
+  <path class="air" d="M280 220 H340 V100 H280 Z" />
+  <path class="dinding" d="M280 80 V220 H340 V80" />
+  <path class="permukaan" d="M280 100 H340" />
+
+  <!-- Bejana III: melebar ke atas seperti corong lebar, alas 60 px -->
+  <path class="air" d="M450 220 H510 L560 100 H400 Z" />
+  <path class="dinding" d="M398 80 L450 220 H510 L562 80" />
+  <path class="permukaan" d="M402 100 H558" />
+
+  <text class="tebal" x="130" y="252" text-anchor="middle">Bejana I</text>
+  <text class="tebal" x="310" y="252" text-anchor="middle">Bejana II</text>
+  <text class="tebal" x="480" y="252" text-anchor="middle">Bejana III</text>
+
+  <!-- tinggi air -->
+  <path class="ukur" d="M240 100 V220 M234 100 H246 M234 220 H246" />
+  <text class="teks" x="228" y="160" text-anchor="middle" transform="rotate(-90 228 160)">30 cm</text>
+
+  <text class="teks" x="310" y="284" text-anchor="middle">Luas alas ketiga bejana sama besar.</text>
+</svg>

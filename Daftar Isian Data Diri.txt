@@ -1,0 +1,89 @@
+DAFTAR ISIAN DATA DIRI SISWA
+
+1. Biodata Siswa (yang perlu diisi)
+
+1. Jalur Pendaftaran = 
+2. Sumbangan Sukarela = 
+3. NISN = 
+4. Peminatan = 
+5. Nama Lengkap = 
+6. Jenis Kelamin = 
+7. Agama = 
+8. Tempat Lahir = 
+9. Tanggal Lahir = 
+10. Nama SMP / Setingkat = 
+11. Provinsi Sekolah = 
+12. Kabupaten/Kota Sekolah = 
+13. Kecamatan Sekolah = 
+14. Kelurahan Sekolah = 
+15. Kode Pos Sekolah = 
+16. Hobi = 
+17. Cita-cita = 
+18. Imunisasi = 
+19. Tinggi Badan = 
+20. Berat Badan = 
+21. Ukuran Sepatu = 
+22. Ukuran Baju = 
+23. Ukuran Celana / Rok = 
+
+2. Data Orang Tua/Wali (yang perlu diisi)
+
+1. Nama Ayah / Wali = 
+2. Nama Ibu / Wali = 
+3. Suku Ayah = 
+4. Suku Ibu = 
+5. Pekerjaan Ayah = 
+6. Pekerjaan Ibu = 
+7. Penghasilan Ayah = 
+8. Penghasilan Ibu = 
+9. Telepon Rumah = 
+10. Telepon Seluler = 
+11. Alamat Rumah = 
+12. Provinsi = 
+13. Kabupaten / Kota = 
+14. Kecamatan = 
+15. Kelurahan = 
+16. Kode Pos = 
+
+3. Data Akademik (yang perlu diisi)
+
+1. Bahasa Indonesia — nilai semester 1 sampai 4 = 
+2. Bahasa Inggris — nilai semester 1 sampai 4 = 
+3. Matematika — nilai semester 1 sampai 4 = 
+4. Ilmu Pengetahuan Alam — nilai semester 1 sampai 4 = 
+
+Nilai diambil dari rapor, kolom nilai pengetahuan.
+
+4. Kelengkapan Dokumen (berkas yang dikirim)
+
+1. Pas Foto
+2. Surat Keterangan Sehat dari Dokter (Pemerintah/Militer/Puskesmas/dsb.)
+3. Kartu Pelajar SMP/MTS
+4. Akta Kelahiran
+5. Nilai Rapor (Nilai Pengetahuan) Photocopy Legalisir
+6. Foto Seluruh Badan (Terlihat dari kepala sampai ujung kaki)
+7. Kartu Keluarga
+8. KTP Orang Tua / Wali Siswa (Cukup salah satu, Ayah/Ibu/Wali)
+9. Surat Keterangan dan Pernyataan dari Kepala SMP
+10. Surat Pernyataan dari Orang Tua
+11. Surat Pernyataan dari Siswa
+12. Sertifikat Bukti Prestasi 1 (Maks. 3 Pencapaian Tertinggi) (tidak wajib)
+12. Sertifikat Bukti Prestasi 2 (Maks. 3 Pencapaian Tertinggi) (tidak wajib)
+12. Sertifikat Bukti Prestasi 3 (Maks. 3 Pencapaian Tertinggi) (tidak wajib)
+13. Sertifikat Vaksinasi COVID-19 / Lainnya (Tidak Wajib)
+14. Hasil Test IQ (Tidak Wajib)
+
+5. Data Prestasi (yang perlu diisi)
+
+1. Nama Kegiatan / Lomba
+2. Sumber
+3. Tingkat
+4. Peringkat
+5. Penyelenggara
+6. Tahun
+
+Diulang untuk tiap prestasi, maksimal 3 prestasi tertinggi. Bila tidak ada, bagian ini cukup dilewati.
+
+---
+Dibuat otomatis dari src/lib/pendaftaran/daftar-isian.ts.
+Perbarui dengan: npm run daftar-isian

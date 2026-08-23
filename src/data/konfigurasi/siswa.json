@@ -1,0 +1,92 @@
+[
+  {
+    "id": "2026001",
+    "username": "aditya.pratama",
+    "nama": "Aditya Pratama",
+    "email": "aditya.pratama@email.com",
+    "asalSekolah": "SMP Negeri 1 Magelang",
+    "kelas": "IX-A",
+    "status": "Aktif",
+    "sandi": {
+      "salt": "2351527a114c3137c40c4a8bef8d60e4",
+      "hash": "257174f1b33498e5bfff3ad6580380748aeeb7b007297705c3931cc23b431f51ac69ddbfe3f16f87d851967e0b084c4ba2a37b60ffe9f3f573c2ca80ebea296e",
+      "diperbaruiPada": 1786427134841
+    },
+    "dibuatPada": 1786427134841,
+    "statusKelulusan": "Lulus",
+    "tautanDrive": "https://drive.google.com/drive/folders/aditya-2026001",
+    "catatanDrive": "Berisi format surat dan berkas contoh untuk Aditya."
+  },
+  {
+    "id": "2026002",
+    "username": "nabila.safitri",
+    "nama": "Nabila Ayu Safitri",
+    "email": "nabila.safitri@email.com",
+    "asalSekolah": "SMP Negeri 3 Yogyakarta",
+    "kelas": "IX-B",
+    "status": "Aktif",
+    "sandi": {
+      "salt": "d82873395b2d12edd1f78416fd2382fa",
+      "hash": "453371f4c37c40f70c300a4fb35686e7c6d9cf81a537f52b3ab1716b6c3e1e52b123770f850970a1ddc6313781e848c519cfb27ec21d57fd294208deeb745ca6",
+      "diperbaruiPada": 1786427134989
+    },
+    "dibuatPada": 1786427134989,
+    "statusKelulusan": "Sedang Proses",
+    "tautanDrive": "",
+    "catatanDrive": ""
+  },
+  {
+    "id": "2026003",
+    "username": "rangga.wijaya",
+    "nama": "Rangga Wijaya",
+    "email": "rangga.wijaya@email.com",
+    "asalSekolah": "SMP Islam Al Azhar Semarang",
+    "kelas": "IX-A",
+    "status": "Aktif",
+    "sandi": {
+      "salt": "05005b63e80f93b67f9ee19992042c7d",
+      "hash": "0f91bf933906d53b984e478edb77c98c0895feb4f0d244e069228e077d59482e9f622d3f4ed9c063670c90f2ba3590858d32087c46764e06e7e9224f70c52a06",
+      "diperbaruiPada": 1786427135128
+    },
+    "dibuatPada": 1786427135128,
+    "statusKelulusan": "Sedang Proses",
+    "tautanDrive": "",
+    "catatanDrive": ""
+  },
+  {
+    "id": "2026004",
+    "username": "kirana.maheswari",
+    "nama": "Kirana Maheswari",
+    "email": "kirana.maheswari@email.com",
+    "asalSekolah": "SMP Negeri 5 Surabaya",
+    "kelas": "IX-C",
+    "status": "Aktif",
+    "sandi": {
+      "salt": "0cac167947270c2f1ee4a3a5edc92cbb",
+      "hash": "fefcc5bb10e21272602e6ad532116ebed57354b428a6e3e7956ee27ac839d1ac8fe1fc6868a1cd136f60bcfa7a4930db858c8e132e81bb86b00b65f269a603c2",
+      "diperbaruiPada": 1786427135268
+    },
+    "dibuatPada": 1786427135268,
+    "statusKelulusan": "Sedang Proses",
+    "tautanDrive": "",
+    "catatanDrive": ""
+  },
+  {
+    "id": "2026005",
+    "username": "bagas.setiawan",
+    "nama": "Bagas Setiawan",
+    "email": "bagas.setiawan@email.com",
+    "asalSekolah": "SMP Negeri 2 Malang",
+    "kelas": "IX-B",
+    "status": "Aktif",
+    "sandi": {
+      "salt": "3f2969d52e89a743c58ce0536a63175c",
+      "hash": "7e4f9d311c14e65466dd526f317676970ece8eb65c780c233f51c0ff19b2939e2a00e4e33fe4555e25aa8a84be985c5d876f960529179f62d0191b4ac798171c",
+      "diperbaruiPada": 1786427135404
+    },
+    "dibuatPada": 1786427135404,
+    "statusKelulusan": "Sedang Proses",
+    "tautanDrive": "",
+    "catatanDrive": ""
+  }
+]

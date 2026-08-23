@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Segitiga ABC yang siku-siku di titik C. Sisi miring AB mendatar sepanjang 25 sentimeter. Dari titik C ditarik garis tinggi CD yang tegak lurus terhadap AB dan memotongnya di titik D. Jarak dari A ke D adalah 9 sentimeter dan jarak dari D ke B adalah 16 sentimeter.">
+  <style>
+    .segitiga { fill: #ffffff; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .tinggi { fill: none; stroke: #c8953a; stroke-width: 3; stroke-dasharray: 8 5; }
+    .siku { fill: none; stroke: #16274c; stroke-width: 2; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .titik { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="320" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 16 px. A(90,250) B(490,250) C(234,58) D(234,250) -->
+  <polygon class="segitiga" points="90,250 490,250 234,58" />
+  <path class="tinggi" d="M234 58 V250" />
+
+  <!-- tanda siku-siku di C -->
+  <path class="siku" d="M234 82 L252 70 M252 70 L262 88" />
+  <!-- tanda siku-siku di D -->
+  <path class="siku" d="M234 232 H252 V250" />
+
+  <circle cx="90" cy="250" r="5" fill="#16274c" />
+  <circle cx="490" cy="250" r="5" fill="#16274c" />
+  <circle cx="234" cy="58" r="5" fill="#16274c" />
+  <circle cx="234" cy="250" r="5" fill="#c8953a" />
+
+  <text class="titik" x="76" y="272">A</text>
+  <text class="titik" x="496" y="272">B</text>
+  <text class="titik" x="228" y="46">C</text>
+  <text class="titik" x="228" y="276">D</text>
+
+  <!-- ukuran AD -->
+  <path class="ukur" d="M90 292 H234 M90 286 V298 M234 286 V298" />
+  <text class="teks" x="162" y="312" text-anchor="middle">9 cm</text>
+
+  <!-- ukuran DB -->
+  <path class="ukur" d="M234 292 H490 M490 286 V298" />
+  <text class="teks" x="362" y="312" text-anchor="middle">16 cm</text>
+</svg>

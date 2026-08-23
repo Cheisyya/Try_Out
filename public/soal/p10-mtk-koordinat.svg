@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-label="Bidang koordinat Cartesius dengan sumbu X dari negatif 5 sampai 6 dan sumbu Y dari negatif 2 sampai 7. Pada bidang itu digambar segi empat ABCD dengan titik A di koordinat negatif 3 koma 1, titik B di koordinat 2 koma 1, titik C di koordinat 4 koma 5, dan titik D di koordinat negatif 1 koma 5.">
+  <style>
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .bangun { fill: #dbe7f8; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .titik { fill: #16274c; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .nama { font-size: 16px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="420" fill="#f5f7fb" />
+
+  <!-- Skala: 1 satuan = 40 px. Titik asal pada (210, 330) -->
+  <g class="grid">
+    <path d="M10 10 V410" /><path d="M50 10 V410" /><path d="M90 10 V410" />
+    <path d="M130 10 V410" /><path d="M170 10 V410" /><path d="M250 10 V410" />
+    <path d="M290 10 V410" /><path d="M330 10 V410" /><path d="M370 10 V410" />
+    <path d="M410 10 V410" /><path d="M450 10 V410" />
+    <path d="M10 50 H500" /><path d="M10 90 H500" /><path d="M10 130 H500" />
+    <path d="M10 170 H500" /><path d="M10 210 H500" /><path d="M10 250 H500" />
+    <path d="M10 290 H500" /><path d="M10 370 H500" /><path d="M10 410 H500" />
+  </g>
+
+  <path class="sumbu" d="M10 330 H505" />
+  <path class="sumbu" d="M210 8 V415" />
+
+  <!-- segi empat ABCD -->
+  <polygon class="bangun" points="90,290 290,290 370,130 170,130" />
+
+  <g class="titik">
+    <circle cx="90" cy="290" r="5" /><circle cx="290" cy="290" r="5" />
+    <circle cx="370" cy="130" r="5" /><circle cx="170" cy="130" r="5" />
+  </g>
+
+  <g class="nama">
+    <text x="66" y="312">A</text>
+    <text x="298" y="312">B</text>
+    <text x="380" y="124">C</text>
+    <text x="146" y="124">D</text>
+  </g>
+
+  <!-- skala sumbu X -->
+  <g class="teks" text-anchor="middle">
+    <text x="90" y="348">−3</text><text x="130" y="348">−2</text>
+    <text x="170" y="348">−1</text><text x="250" y="348">1</text>
+    <text x="290" y="348">2</text><text x="330" y="348">3</text>
+    <text x="370" y="348">4</text><text x="410" y="348">5</text>
+  </g>
+
+  <!-- skala sumbu Y -->
+  <g class="teks" text-anchor="end">
+    <text x="202" y="295">1</text><text x="202" y="255">2</text>
+    <text x="202" y="215">3</text><text x="202" y="175">4</text>
+    <text x="202" y="135">5</text><text x="202" y="95">6</text>
+  </g>
+
+  <text class="teks nama" x="486" y="322">X</text>
+  <text class="teks nama" x="220" y="26">Y</text>
+</svg>

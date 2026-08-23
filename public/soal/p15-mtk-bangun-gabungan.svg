@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" role="img" aria-label="Sebuah bangun datar tersusun atas sebuah persegi panjang berukuran panjang 20 sentimeter dan lebar 12 sentimeter. Pada sisi kanan persegi panjang ditempelkan sebuah segitiga siku-siku yang sisi tegaknya berimpit dengan sisi kanan persegi panjang sepanjang 12 sentimeter, sedangkan alasnya berada pada perpanjangan sisi bawah persegi panjang sepanjang 9 sentimeter.">
+  <style>
+    .persegi { fill: #dff0e2; stroke: #16274c; stroke-width: 3; }
+    .segitiga { fill: #f2e2bd; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 2; stroke-dasharray: 7 5; }
+    .siku { fill: none; stroke: #16274c; stroke-width: 2; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="620" height="320" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 13 px. Persegi panjang 20 x 12 cm = 260 x 156 px, sudut kiri atas (80, 60) -->
+  <rect class="persegi" x="80" y="60" width="260" height="156" />
+  <!-- segitiga siku-siku: sisi tegak berimpit sisi kanan (340,60)-(340,216), alas 9 cm = 117 px ke kanan -->
+  <polygon class="segitiga" points="340,216 457,216 340,60" />
+
+  <path class="putus" d="M340 60 V216" />
+  <path class="siku" d="M340 194 H362 V216" />
+
+  <text class="teks" x="210" y="146" text-anchor="middle">persegi panjang</text>
+  <text class="teks" x="376" y="196">segitiga</text>
+
+  <!-- ukuran panjang persegi panjang -->
+  <path class="ukur" d="M80 246 H340 M80 240 V252 M340 240 V252" />
+  <text class="teks" x="210" y="268" text-anchor="middle">20 cm</text>
+
+  <!-- ukuran alas segitiga -->
+  <path class="ukur" d="M340 246 H457 M457 240 V252" />
+  <text class="teks" x="400" y="268" text-anchor="middle">9 cm</text>
+
+  <!-- ukuran lebar persegi panjang -->
+  <path class="ukur" d="M56 60 V216 M50 60 H62 M50 216 H62" />
+  <text class="teks" x="38" y="140" text-anchor="middle" transform="rotate(-90 38 140)">12 cm</text>
+</svg>

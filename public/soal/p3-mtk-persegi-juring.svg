@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-label="Sebuah persegi dengan panjang sisi 28 sentimeter. Pada setiap titik sudut persegi digambar seperempat lingkaran berjari-jari 14 sentimeter yang seluruhnya berada di dalam persegi. Keempat seperempat lingkaran itu saling bersinggungan pada pertengahan setiap sisi persegi. Daerah persegi yang berada di luar keempat seperempat lingkaran diarsir.">
+  <style>
+    .rangka { fill: none; stroke: #16274c; stroke-width: 3; }
+    .arsir { fill: #dfe7f5; }
+    .juring { fill: #ffffff; stroke: #16274c; stroke-width: 2.5; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-weight: 700; }
+  </style>
+
+  <rect x="0" y="0" width="400" height="360" fill="#f5f7fb" />
+
+  <!-- persegi 28 cm, skala 1 cm = 9 px sehingga sisi = 252 px -->
+  <rect class="arsir" x="60" y="40" width="252" height="252" />
+
+  <!-- empat seperempat lingkaran berjari-jari 14 cm = 126 px -->
+  <path class="juring" d="M60 40 L186 40 A126 126 0 0 1 60 166 Z" />
+  <path class="juring" d="M312 40 L312 166 A126 126 0 0 1 186 40 Z" />
+  <path class="juring" d="M312 292 L186 292 A126 126 0 0 1 312 166 Z" />
+  <path class="juring" d="M60 292 L60 166 A126 126 0 0 1 186 292 Z" />
+
+  <rect class="rangka" x="60" y="40" width="252" height="252" />
+
+  <!-- penanda jari-jari pada seperempat lingkaran kiri atas -->
+  <path class="ukur" d="M60 40 H186" />
+  <text class="teks" x="123" y="32" text-anchor="middle">14 cm</text>
+
+  <!-- ukuran sisi persegi -->
+  <path class="ukur" d="M60 320 H312 M60 314 V326 M312 314 V326" />
+  <text class="teks" x="186" y="342" text-anchor="middle">28 cm</text>
+
+  <text class="teks tebal" x="186" y="172" text-anchor="middle">arsir</text>
+</svg>

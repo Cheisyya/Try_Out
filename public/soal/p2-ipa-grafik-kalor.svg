@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 310" role="img" aria-label="Grafik suhu terhadap waktu pada pemanasan 100 gram es memakai pemanas berdaya tetap. Sumbu datar waktu dalam menit dari 0 sampai 44, sumbu tegak suhu dalam derajat Celsius dari negatif 20 sampai 120. Ruas I naik lurus dari negatif 20 derajat pada menit ke-0 sampai 0 derajat pada menit ke-2. Ruas II mendatar pada 0 derajat dari menit ke-2 sampai menit ke-18. Ruas III naik lurus dari 0 derajat pada menit ke-18 sampai 100 derajat pada menit ke-38. Ruas IV mendatar pada 100 derajat dari menit ke-38 sampai menit ke-44.">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .kurva { fill: none; stroke: #c8953a; stroke-width: 3.5; stroke-linejoin: round; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .label { font-size: 13px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="580" height="310" fill="#f5f7fb" />
+
+  <!-- grid mendatar tiap 20 derajat, tegak tiap 4 menit -->
+  <g class="grid">
+    <path d="M70 40 H525" /><path d="M70 70 H525" /><path d="M70 100 H525" />
+    <path d="M70 130 H525" /><path d="M70 160 H525" /><path d="M70 190 H525" />
+    <path d="M70 220 H525" />
+    <path d="M110 40 V250" /><path d="M150 40 V250" /><path d="M190 40 V250" />
+    <path d="M230 40 V250" /><path d="M270 40 V250" /><path d="M310 40 V250" />
+    <path d="M350 40 V250" /><path d="M390 40 V250" /><path d="M430 40 V250" />
+    <path d="M470 40 V250" /><path d="M510 40 V250" />
+  </g>
+
+  <!-- sumbu -->
+  <path class="sumbu" d="M70 250 H530" />
+  <path class="sumbu" d="M70 35 V252" />
+
+  <!-- skala suhu: 1 derajat = 1,5 px -->
+  <g class="teks" text-anchor="end">
+    <text x="62" y="45">120</text>
+    <text x="62" y="75">100</text>
+    <text x="62" y="105">80</text>
+    <text x="62" y="135">60</text>
+    <text x="62" y="165">40</text>
+    <text x="62" y="195">20</text>
+    <text x="62" y="225">0</text>
+    <text x="62" y="254">−20</text>
+  </g>
+
+  <!-- skala waktu: 1 menit = 10 px -->
+  <g class="teks" text-anchor="middle">
+    <text x="70" y="270">0</text><text x="150" y="270">8</text>
+    <text x="230" y="270">16</text><text x="310" y="270">24</text>
+    <text x="390" y="270">32</text><text x="470" y="270">40</text>
+  </g>
+
+  <!-- kurva pemanasan: (0,-20) (2,0) (18,0) (38,100) (44,100) -->
+  <path class="kurva" d="M70 250 L90 220 L250 220 L450 70 L510 70" />
+
+  <!-- garis bantu pada titik belok -->
+  <g class="putus">
+    <path d="M90 220 V250" />
+    <path d="M250 220 V250" />
+    <path d="M450 70 V250" />
+  </g>
+
+  <!-- label ruas -->
+  <g class="label" text-anchor="middle">
+    <text x="76" y="212">I</text>
+    <text x="170" y="212">II</text>
+    <text x="360" y="132">III</text>
+    <text x="480" y="62">IV</text>
+  </g>
+
+  <!-- penanda menit ke-2, 18, dan 38 -->
+  <g class="teks" text-anchor="middle" fill="#7c8db5">
+    <text x="90" y="286">2</text>
+    <text x="250" y="286">18</text>
+    <text x="450" y="286">38</text>
+  </g>
+
+  <text class="label" x="300" y="302" text-anchor="middle">waktu (menit)</text>
+  <text class="label" x="16" y="145" transform="rotate(-90 16 145)" text-anchor="middle">suhu (°C)</text>
+</svg>

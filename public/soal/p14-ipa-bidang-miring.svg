@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Sebuah balok berada di atas bidang miring yang licin. Panjang permukaan miring 5 meter dan tinggi ujung atasnya 3 meter di atas dasar. Sebuah gaya F bekerja pada balok dengan arah sejajar permukaan bidang miring, mengarah ke atas sepanjang bidang, untuk menahan balok agar tidak meluncur turun.">
+  <style>
+    .bidang { fill: #dff0e2; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .balok { fill: #f2e2bd; stroke: #16274c; stroke-width: 3; }
+    .panah { fill: none; stroke: #c8953a; stroke-width: 4; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .siku { fill: none; stroke: #16274c; stroke-width: 2; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="320" fill="#f5f7fb" />
+
+  <!-- Skala: 1 m = 60 px. Alas 4 m = 240 px, tinggi 3 m = 180 px, miring 5 m = 300 px -->
+  <!-- Sudut kanan bawah (500,260); puncak (500,80); ujung kiri bawah (260,260) -->
+  <polygon class="bidang" points="260,260 500,260 500,80" />
+  <path class="siku" d="M500 240 H480 V260" />
+
+  <!-- balok pada bidang miring, di titik tengah permukaan miring -->
+  <g transform="translate(380,170) rotate(-36.87)">
+    <rect class="balok" x="-30" y="-46" width="60" height="42" rx="4" />
+    <text class="tebal" x="0" y="-20" text-anchor="middle">20 kg</text>
+  </g>
+
+  <!-- gaya F sejajar bidang, mengarah ke atas sepanjang bidang -->
+  <path class="panah" d="M356 194 L440 131" />
+  <polygon fill="#c8953a" points="452,122 424,126 436,142" />
+  <text class="tebal" x="468" y="118">F</text>
+
+  <!-- ukuran panjang bidang miring -->
+  <path class="ukur" d="M250 274 L494 92" />
+  <text class="teks" x="300" y="200" text-anchor="middle" transform="rotate(-36.87 300 200)">5 m</text>
+
+  <!-- ukuran tinggi -->
+  <path class="ukur" d="M534 80 V260 M528 80 H540 M528 260 H540" />
+  <text class="teks" x="556" y="176" text-anchor="middle" transform="rotate(-90 556 176)">3 m</text>
+</svg>

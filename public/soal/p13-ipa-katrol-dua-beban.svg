@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" role="img" aria-label="Sebuah katrol tetap digantung pada langit-langit. Seutas tali dilewatkan melalui katrol itu. Pada ujung tali sebelah kiri tergantung beban bermassa 5 kilogram, sedangkan pada ujung tali sebelah kanan tergantung beban bermassa 3 kilogram. Beban kiri bergerak turun sedangkan beban kanan bergerak naik.">
+  <style>
+    .langit { fill: #16274c; }
+    .katrol { fill: #ffffff; stroke: #16274c; stroke-width: 4; }
+    .poros { fill: #16274c; }
+    .tali { fill: none; stroke: #16274c; stroke-width: 3; }
+    .beban { fill: #f2e2bd; stroke: #16274c; stroke-width: 3; }
+    .panah { fill: none; stroke: #c8953a; stroke-width: 4; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #16274c; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="340" fill="#f5f7fb" />
+
+  <!-- langit-langit -->
+  <rect class="langit" x="120" y="24" width="280" height="12" rx="4" />
+  <path class="tali" d="M260 36 V56" />
+
+  <!-- katrol -->
+  <circle class="katrol" cx="260" cy="96" r="40" />
+  <circle class="poros" cx="260" cy="96" r="6" />
+
+  <!-- tali melingkari katrol lalu turun ke kedua sisi -->
+  <path class="tali" d="M220 96 V220" />
+  <path class="tali" d="M300 96 V160" />
+  <path class="tali" d="M220 96 A40 40 0 0 1 300 96" />
+
+  <!-- beban kiri 5 kg -->
+  <rect class="beban" x="176" y="220" width="88" height="64" rx="6" />
+  <text class="tebal" x="220" y="258" text-anchor="middle">5 kg</text>
+  <path class="panah" d="M136 232 V276" />
+  <polygon fill="#c8953a" points="136,290 126,268 146,268" />
+
+  <!-- beban kanan 3 kg -->
+  <rect class="beban" x="260" y="160" width="80" height="56" rx="6" />
+  <text class="tebal" x="300" y="194" text-anchor="middle">3 kg</text>
+  <path class="panah" d="M384 208 V166" />
+  <polygon fill="#c8953a" points="384,152 374,174 394,174" />
+
+  <text class="teks" x="260" y="322" text-anchor="middle">Massa tali dan gesekan pada katrol diabaikan.</text>
+</svg>

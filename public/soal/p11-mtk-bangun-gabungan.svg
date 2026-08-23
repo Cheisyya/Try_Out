@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 380" role="img" aria-label="Bangun ruang gabungan berupa sebuah kubus dengan panjang rusuk 12 sentimeter, dan di atas sisi atas kubus itu berdiri sebuah limas yang alasnya berimpit dengan sisi atas kubus. Tinggi limas 8 sentimeter diukur dari sisi atas kubus sampai puncaknya.">
+  <style>
+    .sisi { fill: #e8eef8; stroke: #16274c; stroke-width: 2.5; stroke-linejoin: round; }
+    .atas { fill: #cfe0f5; stroke: #16274c; stroke-width: 2.5; stroke-linejoin: round; }
+    .limas { fill: #f2dcae; stroke: #16274c; stroke-width: 2.5; stroke-linejoin: round; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .ukur { fill: none; stroke: #16274c; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="460" height="380" fill="#f5f7fb" />
+
+  <!-- Skala 1 cm = 10 px. Kubus rusuk 12 cm = 120 px, proyeksi miring 40 px ke kanan atas -->
+  <!-- sisi kanan kubus -->
+  <polygon class="sisi" points="220,180 260,150 260,270 220,300" />
+  <!-- sisi depan kubus -->
+  <polygon class="sisi" points="100,180 220,180 220,300 100,300" />
+  <!-- sisi atas kubus -->
+  <polygon class="atas" points="100,180 220,180 260,150 140,150" />
+
+  <!-- limas di atas kubus, puncak 8 cm di atas bidang atas -->
+  <polygon class="limas" points="100,180 220,180 180,85" />
+  <polygon class="limas" points="220,180 260,150 180,85" />
+  <path class="putus" d="M140 150 L180 85 M140 150 L100 180 M140 150 L260 150" />
+
+  <!-- garis tinggi limas -->
+  <path class="putus" d="M180 85 V165" />
+  <circle cx="180" cy="165" r="3.5" fill="#16274c" />
+
+  <!-- ukuran tinggi limas -->
+  <path class="ukur" d="M320 85 V165 M314 85 H326 M314 165 H326" />
+  <text class="teks" x="332" y="130">8 cm</text>
+  <path class="putus" d="M180 85 H320 M180 165 H320" />
+
+  <!-- ukuran rusuk kubus -->
+  <path class="ukur" d="M100 330 H220 M100 324 V336 M220 324 V336" />
+  <text class="teks" x="160" y="352" text-anchor="middle">12 cm</text>
+  <path class="ukur" d="M70 180 V300 M64 180 H76 M64 300 H76" />
+  <text class="teks" x="56" y="245" text-anchor="end">12 cm</text>
+</svg>

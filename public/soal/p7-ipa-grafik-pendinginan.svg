@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 320" role="img" aria-label="Grafik suhu terhadap waktu pada pendinginan sebuah zat cair. Sumbu datar waktu dalam menit dari 0 sampai 24, sumbu tegak suhu dalam derajat Celsius dari 0 sampai 80. Dari menit ke-0 sampai menit ke-6 suhu turun lurus dari 80 derajat sampai 40 derajat. Dari menit ke-6 sampai menit ke-16 suhu mendatar tetap pada 40 derajat. Dari menit ke-16 sampai menit ke-22 suhu turun kembali dari 40 derajat sampai 20 derajat.">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .kurva { fill: none; stroke: #c8953a; stroke-width: 3.5; stroke-linejoin: round; }
+    .putus { fill: none; stroke: #7c8db5; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .label { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="580" height="320" fill="#f5f7fb" />
+
+  <!-- Skala: 1 menit = 18,5 px mulai x = 70; 1 derajat = 2,5 px, suhu 0 pada y = 250 -->
+  <g class="grid">
+    <path d="M70 200 H520" /><path d="M70 150 H520" /><path d="M70 100 H520" /><path d="M70 50 H520" />
+    <path d="M144 40 V250" /><path d="M218 40 V250" /><path d="M292 40 V250" />
+    <path d="M366 40 V250" /><path d="M440 40 V250" /><path d="M514 40 V250" />
+  </g>
+
+  <path class="sumbu" d="M70 250 H535" />
+  <path class="sumbu" d="M70 40 V252" />
+
+  <g class="teks" text-anchor="end">
+    <text x="62" y="255">0</text>
+    <text x="62" y="205">20</text>
+    <text x="62" y="155">40</text>
+    <text x="62" y="105">60</text>
+    <text x="62" y="55">80</text>
+  </g>
+
+  <g class="teks" text-anchor="middle">
+    <text x="70" y="270">0</text>
+    <text x="144" y="270">4</text>
+    <text x="218" y="270">8</text>
+    <text x="292" y="270">12</text>
+    <text x="366" y="270">16</text>
+    <text x="440" y="270">20</text>
+    <text x="514" y="270">24</text>
+  </g>
+
+  <text class="label" x="300" y="296" text-anchor="middle">waktu (menit)</text>
+  <text class="label" x="22" y="150" text-anchor="middle" transform="rotate(-90 22 150)">suhu (°C)</text>
+
+  <!-- (0,80) -> (6,40) -> (16,40) -> (22,20) -->
+  <path class="kurva" d="M70 50 L181 150 L366 150 L477 200" />
+
+  <g class="putus">
+    <path d="M181 150 V250" />
+    <path d="M366 150 V250" />
+    <path d="M70 150 H366" />
+  </g>
+
+  <circle cx="181" cy="150" r="4" fill="#c8953a" />
+  <circle cx="366" cy="150" r="4" fill="#c8953a" />
+  <circle cx="477" cy="200" r="4" fill="#c8953a" />
+
+  <text class="label" x="120" y="90">I</text>
+  <text class="label" x="270" y="140">II</text>
+  <text class="label" x="440" y="166">III</text>
+</svg>

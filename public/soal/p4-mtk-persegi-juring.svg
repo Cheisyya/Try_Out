@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 380" role="img" aria-label="Sebuah persegi dengan panjang sisi 14 sentimeter. Pada setiap sudut persegi dilukis satu juring seperempat lingkaran berjari-jari 7 sentimeter dengan titik pusat di sudut tersebut. Keempat juring saling bersinggungan tepat di titik tengah setiap sisi persegi dan meninggalkan sebuah daerah kosong di bagian tengah persegi.">
+  <style>
+    .persegi { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .juring { fill: #c8953a; fill-opacity: 0.35; stroke: #c8953a; stroke-width: 2.5; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="580" height="380" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 20 px. Persegi sisi 14 cm = 280 px, sudut kiri atas (150, 40) -->
+  <rect class="persegi" x="150" y="40" width="280" height="280" />
+
+  <!-- empat juring seperempat lingkaran berjari-jari 7 cm = 140 px -->
+  <path class="juring" d="M150 40 L290 40 A140 140 0 0 1 150 180 Z" />
+  <path class="juring" d="M430 40 L430 180 A140 140 0 0 1 290 40 Z" />
+  <path class="juring" d="M430 320 L290 320 A140 140 0 0 1 430 180 Z" />
+  <path class="juring" d="M150 320 L150 180 A140 140 0 0 1 290 320 Z" />
+
+  <!-- jari-jari salah satu juring -->
+  <path class="ukur" d="M150 40 L290 40" />
+  <text class="teks" x="220" y="30" text-anchor="middle">7 cm</text>
+
+  <!-- ukuran sisi persegi -->
+  <path class="ukur" d="M150 348 H430 M150 342 V354 M430 342 V354" />
+  <text class="teks" x="290" y="370" text-anchor="middle">14 cm</text>
+
+  <text class="tebal" x="290" y="186" text-anchor="middle">daerah kosong</text>
+</svg>

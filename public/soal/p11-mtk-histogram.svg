@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-label="Histogram ukuran sepatu 40 siswa. Sumbu tegak menyatakan banyak siswa dari 0 sampai 14. Ukuran 36 dipakai 4 siswa, ukuran 37 dipakai 8 siswa, ukuran 38 dipakai 12 siswa, ukuran 39 dipakai 10 siswa, dan ukuran 40 dipakai 6 siswa.">
+  <style>
+    .sumbu { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .grid { fill: none; stroke: #c3d0e6; stroke-width: 1; }
+    .batang { fill: #2a78d6; stroke: #16274c; stroke-width: 2; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+    .nilai { font-size: 14px; font-weight: 700; fill: #16274c; }
+    .label { font-size: 14px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="560" height="320" fill="#f5f7fb" />
+
+  <!-- grid tiap 2 siswa; 1 siswa = 15 px, dasar pada y = 250 -->
+  <g class="grid">
+    <path d="M80 220 H520" /><path d="M80 190 H520" /><path d="M80 160 H520" />
+    <path d="M80 130 H520" /><path d="M80 100 H520" /><path d="M80 70 H520" />
+    <path d="M80 40 H520" />
+  </g>
+
+  <path class="sumbu" d="M80 250 H525" />
+  <path class="sumbu" d="M80 35 V252" />
+
+  <g class="teks" text-anchor="end">
+    <text x="72" y="255">0</text><text x="72" y="225">2</text>
+    <text x="72" y="195">4</text><text x="72" y="165">6</text>
+    <text x="72" y="135">8</text><text x="72" y="105">10</text>
+    <text x="72" y="75">12</text><text x="72" y="45">14</text>
+  </g>
+
+  <!-- batang: 4, 8, 12, 10, 6 siswa -->
+  <rect class="batang" x="96" y="190" width="76" height="60" />
+  <rect class="batang" x="180" y="130" width="76" height="120" />
+  <rect class="batang" x="264" y="70" width="76" height="180" />
+  <rect class="batang" x="348" y="100" width="76" height="150" />
+  <rect class="batang" x="432" y="160" width="76" height="90" />
+
+  <g class="nilai" text-anchor="middle">
+    <text x="134" y="182">4</text>
+    <text x="218" y="122">8</text>
+    <text x="302" y="62">12</text>
+    <text x="386" y="92">10</text>
+    <text x="470" y="152">6</text>
+  </g>
+
+  <g class="teks" text-anchor="middle">
+    <text x="134" y="270">36</text>
+    <text x="218" y="270">37</text>
+    <text x="302" y="270">38</text>
+    <text x="386" y="270">39</text>
+    <text x="470" y="270">40</text>
+  </g>
+
+  <text class="label" x="300" y="296" text-anchor="middle">ukuran sepatu</text>
+  <text class="label" x="18" y="145" transform="rotate(-90 18 145)" text-anchor="middle">banyak siswa</text>
+</svg>

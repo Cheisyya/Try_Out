@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" role="img" aria-label="Sebuah taman berbentuk persegi panjang dengan panjang 20 meter dan lebar 14 meter. Pada sisi kiri taman terdapat kolam berbentuk setengah lingkaran yang garis tengahnya berimpit dengan sisi pendek taman sepanjang 14 meter, sehingga jari-jari kolam 7 meter. Bagian taman di luar kolam ditanami rumput.">
+  <style>
+    .taman { fill: #dff0e2; stroke: #16274c; stroke-width: 3; }
+    .kolam { fill: #9fc3e8; stroke: #16274c; stroke-width: 3; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="340" fill="#f5f7fb" />
+
+  <!-- Skala: 1 m = 18 px. Taman 20 m x 14 m = 360 px x 252 px, sudut kiri atas (110, 30) -->
+  <rect class="taman" x="110" y="30" width="360" height="252" />
+
+  <!-- kolam setengah lingkaran, garis tengahnya pada sisi kiri taman -->
+  <path class="kolam" d="M110 30 A126 126 0 0 1 110 282 Z" />
+
+  <text class="tebal" x="168" y="162" text-anchor="middle">kolam</text>
+  <text class="tebal" x="360" y="162" text-anchor="middle">rumput</text>
+
+  <!-- ukuran panjang taman -->
+  <path class="ukur" d="M110 308 H470 M110 302 V314 M470 302 V314" />
+  <text class="teks" x="290" y="330" text-anchor="middle">20 m</text>
+
+  <!-- ukuran lebar taman -->
+  <path class="ukur" d="M84 30 V282 M78 30 H90 M78 282 H90" />
+  <text class="teks" x="66" y="156" text-anchor="middle" transform="rotate(-90 66 156)">14 m</text>
+</svg>

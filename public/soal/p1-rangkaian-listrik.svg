@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250" role="img" aria-label="Rangkaian listrik: sumber tegangan 12 volt, resistor R3 empat ohm dipasang seri, kemudian R1 enam ohm dan R2 tiga ohm dipasang paralel di antara titik A dan titik B">
+  <style>
+    .kabel { fill: none; stroke: #16274c; stroke-width: 3; stroke-linecap: round; }
+    .kotak { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-weight: 700; }
+    .titik { fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="250" fill="#f5f7fb" />
+
+  <!-- rail atas: baterai -> R3 -> titik A -->
+  <path class="kabel" d="M60 50 H150" />
+  <rect class="kotak" x="150" y="35" width="80" height="30" rx="4" />
+  <text class="teks" x="161" y="55">R₃ = 4 Ω</text>
+  <path class="kabel" d="M230 50 H300" />
+
+  <!-- percabangan paralel -->
+  <path class="kabel" d="M300 50 V170" />
+  <path class="kabel" d="M300 100 H330" />
+  <path class="kabel" d="M300 170 H330" />
+  <rect class="kotak" x="330" y="85" width="80" height="30" rx="4" />
+  <rect class="kotak" x="330" y="155" width="80" height="30" rx="4" />
+  <text class="teks" x="341" y="105">R₁ = 6 Ω</text>
+  <text class="teks" x="341" y="175">R₂ = 3 Ω</text>
+  <path class="kabel" d="M410 100 H450" />
+  <path class="kabel" d="M410 170 H450" />
+  <path class="kabel" d="M450 100 V210" />
+
+  <!-- rail bawah kembali ke baterai -->
+  <path class="kabel" d="M450 210 H60" />
+  <path class="kabel" d="M60 210 V150" />
+  <path class="kabel" d="M60 110 V50" />
+
+  <!-- baterai -->
+  <line x1="42" y1="110" x2="78" y2="110" stroke="#16274c" stroke-width="6" />
+  <line x1="52" y1="150" x2="68" y2="150" stroke="#16274c" stroke-width="4" />
+  <text class="teks tebal" x="4" y="136">12 V</text>
+
+  <!-- penanda titik -->
+  <circle class="titik" cx="300" cy="100" r="5" />
+  <circle class="titik" cx="450" cy="170" r="5" />
+  <text class="teks tebal" x="268" y="90">A</text>
+  <text class="teks tebal" x="462" y="192">B</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 280" role="img" aria-label="Sebuah tuas berupa batang kaku yang bertumpu pada satu titik tumpu berbentuk segitiga. Di sebelah kiri titik tumpu tergantung dua beban: beban 200 newton berjarak 30 sentimeter dari titik tumpu dan beban 100 newton berjarak 60 sentimeter dari titik tumpu. Di sebelah kanan titik tumpu bekerja gaya kuasa F yang arahnya ke bawah pada jarak 80 sentimeter dari titik tumpu.">
+  <style>
+    .batang { fill: #16274c; }
+    .tumpu { fill: #16274c; }
+    .beban { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .tali { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .panah { fill: none; stroke: #c8953a; stroke-width: 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-weight: 700; }
+  </style>
+
+  <rect x="0" y="0" width="620" height="280" fill="#f5f7fb" />
+
+  <!-- Skala: 10 cm = 32 px. Titik tumpu pada x = 300, batang pada y = 114 -->
+  <rect class="batang" x="80" y="114" width="500" height="12" rx="4" />
+
+  <!-- titik tumpu -->
+  <polygon class="tumpu" points="300,126 276,182 324,182" />
+  <rect class="tumpu" x="258" y="182" width="84" height="10" rx="4" />
+
+  <!-- beban 100 N pada 60 cm di kiri titik tumpu: x = 300 - 192 = 108 -->
+  <path class="tali" d="M108 126 V150" />
+  <rect class="beban" x="76" y="150" width="64" height="40" rx="5" />
+  <text class="teks tebal" x="108" y="175" text-anchor="middle">100 N</text>
+
+  <!-- beban 200 N pada 30 cm di kiri titik tumpu: x = 300 - 96 = 204 -->
+  <path class="tali" d="M204 126 V150" />
+  <rect class="beban" x="172" y="150" width="64" height="40" rx="5" />
+  <text class="teks tebal" x="204" y="175" text-anchor="middle">200 N</text>
+
+  <!-- gaya kuasa pada 80 cm di kanan titik tumpu: x = 300 + 256 = 556 -->
+  <path class="panah" d="M556 44 V100" />
+  <polygon fill="#c8953a" points="556,114 546,92 566,92" />
+  <text class="teks tebal" x="556" y="36" text-anchor="middle">F</text>
+
+  <!-- garis ukur 60 cm -->
+  <path class="ukur" d="M108 246 H300 M108 240 V252 M300 240 V252" />
+  <text class="teks" x="204" y="268" text-anchor="middle">60 cm</text>
+
+  <!-- garis ukur 30 cm -->
+  <path class="ukur" d="M204 216 H300 M204 210 V222 M300 210 V222" />
+  <text class="teks" x="252" y="234" text-anchor="middle">30 cm</text>
+
+  <!-- garis ukur 80 cm -->
+  <path class="ukur" d="M300 246 H556 M556 240 V252" />
+  <text class="teks" x="428" y="268" text-anchor="middle">80 cm</text>
+</svg>

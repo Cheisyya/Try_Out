@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 270" role="img" aria-label="Rangkaian listrik dengan sumber tegangan yang belum diketahui besarnya. Resistor R1 sebesar 2 ohm dipasang seri dengan sumber. Sesudah R1 rangkaian bercabang dua: cabang atas berisi resistor R2 sebesar 6 ohm yang dipasang seri dengan sebuah amperemeter, dan cabang bawah berisi resistor R3 sebesar 3 ohm. Kedua cabang bertemu kembali lalu kembali ke sumber tegangan. Amperemeter menunjukkan angka 1 ampere.">
+  <style>
+    .kabel { fill: none; stroke: #16274c; stroke-width: 3; stroke-linecap: round; }
+    .kotak { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .alat { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-weight: 700; }
+    .titik { fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="560" height="270" fill="#f5f7fb" />
+
+  <!-- rail atas: sumber -> R1 -> titik cabang -->
+  <path class="kabel" d="M60 50 H140" />
+  <rect class="kotak" x="140" y="35" width="80" height="30" rx="4" />
+  <text class="teks" x="151" y="55">R₁ = 2 Ω</text>
+  <path class="kabel" d="M220 50 H285" />
+
+  <!-- percabangan -->
+  <path class="kabel" d="M285 50 V190" />
+  <path class="kabel" d="M285 100 H320" />
+  <path class="kabel" d="M285 190 H330" />
+
+  <!-- cabang atas: R2 lalu amperemeter -->
+  <rect class="kotak" x="320" y="85" width="80" height="30" rx="4" />
+  <text class="teks" x="331" y="105">R₂ = 6 Ω</text>
+  <path class="kabel" d="M400 100 H424" />
+  <circle class="alat" cx="446" cy="100" r="22" />
+  <text class="teks tebal" x="440" y="106">A</text>
+  <path class="kabel" d="M468 100 H500" />
+
+  <!-- cabang bawah: R3 -->
+  <rect class="kotak" x="330" y="175" width="80" height="30" rx="4" />
+  <text class="teks" x="341" y="195">R₃ = 3 Ω</text>
+  <path class="kabel" d="M410 190 H500" />
+
+  <!-- pertemuan cabang dan rail bawah -->
+  <path class="kabel" d="M500 100 V230" />
+  <path class="kabel" d="M500 230 H60" />
+  <path class="kabel" d="M60 230 V150" />
+  <path class="kabel" d="M60 112 V50" />
+
+  <!-- sumber tegangan -->
+  <line x1="42" y1="112" x2="78" y2="112" stroke="#16274c" stroke-width="6" />
+  <line x1="52" y1="150" x2="68" y2="150" stroke="#16274c" stroke-width="4" />
+  <text class="teks tebal" x="6" y="138">V = ?</text>
+
+  <!-- penanda cabang -->
+  <circle class="titik" cx="285" cy="100" r="5" />
+  <circle class="titik" cx="500" cy="190" r="5" />
+
+  <text class="teks" x="424" y="146" text-anchor="middle">amperemeter menunjuk 1 A</text>
+</svg>

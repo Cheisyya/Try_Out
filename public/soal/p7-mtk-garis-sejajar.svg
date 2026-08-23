@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Dua garis mendatar yang sejajar dipotong oleh sebuah garis miring. Pada titik potong garis miring dengan garis atas, sudut yang berada di bawah garis atas dan di sebelah kanan garis miring ditandai dengan ukuran 3x ditambah 10 derajat. Pada titik potong garis miring dengan garis bawah, sudut yang berada di atas garis bawah dan di sebelah kanan garis miring ditandai dengan ukuran 2x ditambah 30 derajat. Kedua sudut yang ditandai itu berada pada sisi yang sama terhadap garis miring dan terletak di antara kedua garis sejajar.">
+  <style>
+    .garis { fill: none; stroke: #16274c; stroke-width: 3; }
+    .potong { fill: none; stroke: #c8953a; stroke-width: 3; }
+    .busur { fill: none; stroke: #c8953a; stroke-width: 2.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="320" fill="#f5f7fb" />
+
+  <!-- garis sejajar -->
+  <path class="garis" d="M60 100 H540" />
+  <path class="garis" d="M60 240 H540" />
+
+  <!-- garis pemotong: melalui (230,100) dan (330,240) -->
+  <path class="potong" d="M180 30 L380 310" />
+
+  <circle cx="230" cy="100" r="5" fill="#16274c" />
+  <circle cx="330" cy="240" r="5" fill="#16274c" />
+
+  <!-- busur sudut di titik atas, di bawah garis dan di kanan garis miring -->
+  <path class="busur" d="M272 100 A42 42 0 0 0 254 134" />
+  <text class="tebal" x="292" y="136">(3x + 10)°</text>
+
+  <!-- busur sudut di titik bawah, di atas garis dan di kanan garis miring -->
+  <path class="busur" d="M306 206 A42 42 0 0 0 372 240" />
+  <text class="tebal" x="386" y="214">(2x + 30)°</text>
+
+  <text class="teks" x="556" y="106">m</text>
+  <text class="teks" x="556" y="246">n</text>
+  <text class="teks" x="392" y="306">t</text>
+</svg>

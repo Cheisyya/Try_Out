@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-label="Diagram jaring-jaring makanan sebuah padang rumput. Rumput dimakan belalang dan dimakan tikus. Belalang dimakan katak dan dimakan burung pipit. Katak dimakan ular. Tikus dimakan ular dan dimakan elang. Burung pipit dimakan elang. Ular dimakan elang.">
+  <style>
+    .kotak { fill: #ffffff; stroke: #16274c; stroke-width: 2.5; }
+    .produsen { fill: #dff0e2; stroke: #16274c; stroke-width: 2.5; }
+    .puncak { fill: #f2e2bd; stroke: #16274c; stroke-width: 2.5; }
+    .panah { fill: none; stroke: #c8953a; stroke-width: 2.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+    .ket { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="640" height="380" fill="#f5f7fb" />
+  <defs>
+    <marker id="ujung" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" fill="#c8953a" />
+    </marker>
+  </defs>
+
+  <!-- Rumput di kiri tengah -->
+  <rect class="produsen" x="30" y="160" width="110" height="46" rx="6" />
+  <text class="teks" x="85" y="189" text-anchor="middle">Rumput</text>
+
+  <!-- Belalang dan Tikus -->
+  <rect class="kotak" x="200" y="80" width="110" height="46" rx="6" />
+  <text class="teks" x="255" y="109" text-anchor="middle">Belalang</text>
+  <rect class="kotak" x="200" y="240" width="110" height="46" rx="6" />
+  <text class="teks" x="255" y="269" text-anchor="middle">Tikus</text>
+
+  <!-- Burung pipit dan Katak -->
+  <rect class="kotak" x="370" y="30" width="120" height="46" rx="6" />
+  <text class="teks" x="430" y="59" text-anchor="middle">Burung pipit</text>
+  <rect class="kotak" x="370" y="130" width="110" height="46" rx="6" />
+  <text class="teks" x="425" y="159" text-anchor="middle">Katak</text>
+
+  <!-- Ular -->
+  <rect class="kotak" x="370" y="250" width="110" height="46" rx="6" />
+  <text class="teks" x="425" y="279" text-anchor="middle">Ular</text>
+
+  <!-- Elang -->
+  <rect class="puncak" x="530" y="140" width="90" height="46" rx="6" />
+  <text class="teks" x="575" y="169" text-anchor="middle">Elang</text>
+
+  <!-- panah dari rumput -->
+  <path class="panah" marker-end="url(#ujung)" d="M140 172 C 170 150, 175 120, 198 108" />
+  <path class="panah" marker-end="url(#ujung)" d="M140 196 C 170 218, 175 248, 198 260" />
+
+  <!-- belalang ke burung pipit dan katak -->
+  <path class="panah" marker-end="url(#ujung)" d="M310 96 C 336 84, 348 62, 366 56" />
+  <path class="panah" marker-end="url(#ujung)" d="M310 112 C 336 124, 348 144, 366 152" />
+
+  <!-- katak ke ular -->
+  <path class="panah" marker-end="url(#ujung)" d="M425 176 V246" />
+
+  <!-- tikus ke ular dan ke elang -->
+  <path class="panah" marker-end="url(#ujung)" d="M310 268 H366" />
+  <path class="panah" marker-end="url(#ujung)" d="M300 240 C 380 200, 470 200, 540 186" />
+
+  <!-- burung pipit ke elang -->
+  <path class="panah" marker-end="url(#ujung)" d="M490 56 C 530 70, 556 110, 570 136" />
+
+  <!-- ular ke elang -->
+  <path class="panah" marker-end="url(#ujung)" d="M480 268 C 522 250, 552 210, 568 190" />
+
+  <text class="ket" x="320" y="356" text-anchor="middle">Arah panah menunjukkan arah perpindahan energi, yaitu dari yang dimakan ke pemakannya.</text>
+</svg>

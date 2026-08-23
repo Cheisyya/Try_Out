@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Sebuah segitiga siku-siku dengan sisi siku-siku mendatar sepanjang 12 sentimeter dan sisi siku-siku tegak sepanjang 6 sentimeter. Di dalam segitiga dilukis sebuah persegi yang salah satu sudutnya berimpit dengan sudut siku-siku segitiga, dua sisinya berada pada kedua sisi siku-siku, dan sudut yang berhadapan dengannya tepat menyentuh sisi miring segitiga. Panjang sisi persegi dinyatakan dengan s.">
+  <style>
+    .segitiga { fill: #ffffff; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .persegi { fill: #e5c98f; fill-opacity: 0.55; stroke: #c8953a; stroke-width: 3; }
+    .siku { fill: none; stroke: #16274c; stroke-width: 2; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="320" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 40 px. Sudut siku-siku di (60, 260) -->
+  <polygon class="segitiga" points="60,260 540,260 60,20" />
+
+  <!-- persegi sisi 4 cm = 160 px -->
+  <rect class="persegi" x="60" y="100" width="160" height="160" />
+
+  <!-- tanda sudut siku-siku -->
+  <path class="siku" d="M60 240 H80 V260" />
+
+  <!-- titik singgung pada sisi miring -->
+  <circle cx="220" cy="100" r="5" fill="#c8953a" />
+
+  <text class="tebal" x="140" y="188" text-anchor="middle">s</text>
+
+  <!-- ukuran sisi mendatar -->
+  <path class="ukur" d="M60 292 H540 M60 286 V298 M540 286 V298" />
+  <text class="teks" x="300" y="314" text-anchor="middle">12 cm</text>
+
+  <!-- ukuran sisi tegak -->
+  <path class="ukur" d="M28 20 V260 M22 20 H34 M22 260 H34" />
+  <text class="teks" x="14" y="146" text-anchor="middle" transform="rotate(-90 14 146)">6 cm</text>
+</svg>

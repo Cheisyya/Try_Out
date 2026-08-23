@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" role="img" aria-label="Sebuah kolam berbentuk persegi panjang berukuran panjang 12 meter dan lebar 8 meter. Di sekeliling kolam terdapat jalan setapak selebar 2 meter yang mengelilingi keempat sisinya. Bagian jalan setapak diarsir, sedangkan bagian kolam tidak diarsir.">
+  <style>
+    .jalan { fill: #e5c98f; stroke: #16274c; stroke-width: 3; }
+    .kolam { fill: #9fc3e8; stroke: #16274c; stroke-width: 3; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="340" fill="#f5f7fb" />
+
+  <!-- Skala: 1 m = 28 px. Luar 16 m x 12 m = 448 x 336... terlalu tinggi; pakai 1 m = 26 px -->
+  <!-- Luar: 16 m x 12 m = 416 x 312 -> kiri atas (100, 14) -->
+  <rect class="jalan" x="100" y="14" width="416" height="312" />
+  <!-- Kolam 12 m x 8 m = 312 x 208, disisipkan 2 m = 52 px dari tiap sisi -->
+  <rect class="kolam" x="152" y="66" width="312" height="208" />
+
+  <text class="tebal" x="308" y="178" text-anchor="middle">kolam</text>
+  <text class="teks" x="308" y="46" text-anchor="middle">jalan setapak</text>
+
+  <!-- ukuran panjang kolam -->
+  <path class="ukur" d="M152 296 H464 M152 290 V302 M464 290 V302" />
+  <text class="teks" x="308" y="292" text-anchor="middle">12 m</text>
+
+  <!-- ukuran lebar kolam -->
+  <path class="ukur" d="M74 66 V274 M68 66 H80 M68 274 H80" />
+  <text class="teks" x="56" y="170" text-anchor="middle" transform="rotate(-90 56 170)">8 m</text>
+
+  <!-- lebar jalan -->
+  <path class="ukur" d="M100 40 H152 M100 34 V46 M152 34 V46" />
+  <text class="teks" x="126" y="30" text-anchor="middle">2 m</text>
+</svg>

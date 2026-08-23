@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-label="Sebuah persegi ABCD dengan panjang sisi 10 sentimeter. Titik A berada di sudut kiri atas, B di sudut kanan atas, C di sudut kanan bawah, dan D di sudut kiri bawah. Titik E adalah titik tengah sisi BC, sedangkan titik F adalah titik tengah sisi CD. Titik A, E, dan F dihubungkan sehingga membentuk sebuah segitiga yang diarsir.">
+  <style>
+    .persegi { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .arsir { fill: #c8953a; fill-opacity: 0.35; stroke: #c8953a; stroke-width: 3; stroke-linejoin: round; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .titik { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 17px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="400" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 28 px. Persegi 10 cm = 280 px, sudut kiri atas (120, 40) -->
+  <rect class="persegi" x="120" y="40" width="280" height="280" />
+  <!-- A(120,40) B(400,40) C(400,320) D(120,320); E titik tengah BC = (400,180); F titik tengah CD = (260,320) -->
+  <polygon class="arsir" points="120,40 400,180 260,320" />
+
+  <circle cx="120" cy="40" r="5" fill="#16274c" />
+  <circle cx="400" cy="40" r="5" fill="#16274c" />
+  <circle cx="400" cy="320" r="5" fill="#16274c" />
+  <circle cx="120" cy="320" r="5" fill="#16274c" />
+  <circle cx="400" cy="180" r="5" fill="#c8953a" />
+  <circle cx="260" cy="320" r="5" fill="#c8953a" />
+
+  <text class="titik" x="102" y="34">A</text>
+  <text class="titik" x="410" y="34">B</text>
+  <text class="titik" x="410" y="342">C</text>
+  <text class="titik" x="102" y="342">D</text>
+  <text class="titik" x="414" y="186">E</text>
+  <text class="titik" x="254" y="344">F</text>
+
+  <!-- ukuran sisi -->
+  <path class="ukur" d="M120 366 H400 M120 360 V372 M400 360 V372" />
+  <text class="teks" x="260" y="388" text-anchor="middle">10 cm</text>
+</svg>

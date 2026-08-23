@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Sebuah persegi dengan panjang sisi 14 sentimeter. Pada setiap titik sudut persegi dilukis seperempat lingkaran berjari-jari 7 sentimeter, sehingga keempat busurnya saling bertemu tepat di titik tengah setiap sisi persegi. Daerah yang diarsir adalah bagian persegi yang berada di luar keempat seperempat lingkaran tersebut, yaitu daerah berbentuk seperti bintang bersudut empat di tengah persegi.">
+  <style>
+    .garis { fill: none; stroke: #16274c; stroke-width: 2.5; }
+    .arsir { fill: #c8953a; fill-opacity: 0.55; stroke: #16274c; stroke-width: 2; }
+    .juring { fill: #ffffff; stroke: #16274c; stroke-width: 2; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="480" height="360" fill="#f5f7fb" />
+
+  <!-- persegi 14 cm = 280 px, dari (100,40) sampai (380,320); jari-jari 7 cm = 140 px -->
+  <g>
+    <!-- persegi diarsir seluruhnya, lalu keempat juring ditimpa putih -->
+    <rect class="arsir" x="100" y="40" width="280" height="280" />
+    <path class="juring" d="M100 40 L240 40 A140 140 0 0 1 100 180 Z" />
+    <path class="juring" d="M380 40 L380 180 A140 140 0 0 1 240 40 Z" />
+    <path class="juring" d="M380 320 L240 320 A140 140 0 0 1 380 180 Z" />
+    <path class="juring" d="M100 320 L100 180 A140 140 0 0 1 240 320 Z" />
+    <rect class="garis" x="100" y="40" width="280" height="280" />
+  </g>
+
+  <!-- ukuran sisi -->
+  <path class="garis" d="M100 340 H380 M100 334 V346 M380 334 V346" />
+  <text class="tebal" x="240" y="358" text-anchor="middle">14 cm</text>
+
+  <!-- jari-jari -->
+  <path class="garis" stroke-dasharray="5 4" d="M100 40 L240 40" />
+  <text class="teks" x="170" y="32" text-anchor="middle">7 cm</text>
+</svg>

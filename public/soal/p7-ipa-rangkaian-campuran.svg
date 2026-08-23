@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" role="img" aria-label="Rangkaian listrik dengan baterai 24 volt. Dari kutub positif, arus melewati dua hambatan yang dipasang paralel, yaitu R satu sebesar 4 ohm pada cabang atas dan R dua sebesar 12 ohm pada cabang bawah. Setelah kedua cabang bertemu kembali, arus melewati R tiga sebesar 3 ohm yang dipasang seri sebelum kembali ke baterai.">
+  <style>
+    .kawat { fill: none; stroke: #16274c; stroke-width: 3; stroke-linecap: round; }
+    .hambat { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .plat { stroke: #16274c; stroke-width: 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+    .simpul { fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="620" height="320" fill="#f5f7fb" />
+
+  <!-- rangka luar -->
+  <path class="kawat" d="M60 150 V70 H160" />
+  <path class="kawat" d="M400 70 H440" />
+  <path class="kawat" d="M500 70 H560 V270 H60 V190" />
+
+  <!-- baterai 24 V -->
+  <path class="plat" d="M38 150 H82" />
+  <path class="plat" d="M50 168 H70" />
+  <text class="tebal" x="96" y="176">24 V</text>
+
+  <!-- simpul percabangan paralel -->
+  <circle class="simpul" cx="160" cy="70" r="5" />
+  <circle class="simpul" cx="400" cy="70" r="5" />
+
+  <!-- cabang atas: R1 -->
+  <path class="kawat" d="M160 70 H250" />
+  <rect class="hambat" x="250" y="56" width="60" height="28" rx="4" />
+  <path class="kawat" d="M310 70 H400" />
+  <text class="teks" x="280" y="46" text-anchor="middle">R₁ = 4 Ω</text>
+
+  <!-- cabang bawah: R2 -->
+  <path class="kawat" d="M160 70 V180 H250" />
+  <rect class="hambat" x="250" y="166" width="60" height="28" rx="4" />
+  <path class="kawat" d="M310 180 H400 V70" />
+  <text class="teks" x="280" y="214" text-anchor="middle">R₂ = 12 Ω</text>
+
+  <!-- R3 seri -->
+  <rect class="hambat" x="440" y="56" width="60" height="28" rx="4" />
+  <text class="teks" x="470" y="46" text-anchor="middle">R₃ = 3 Ω</text>
+</svg>

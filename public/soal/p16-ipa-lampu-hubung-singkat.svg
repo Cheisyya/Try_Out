@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Rangkaian listrik dengan baterai 18 volt dan tiga lampu identik yang masing-masing berhambatan 3 ohm, seluruhnya dipasang berderet dalam satu jalur. Lampu kedua dijembatani oleh sepotong kawat tanpa hambatan yang menghubungkan kedua ujungnya, sehingga arus dapat mengalir melewati kawat itu tanpa melalui lampu kedua.">
+  <style>
+    .kawat { fill: none; stroke: #16274c; stroke-width: 3; stroke-linecap: round; }
+    .jembatan { fill: none; stroke: #c8953a; stroke-width: 4; stroke-linecap: round; }
+    .lampu { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .plat { stroke: #16274c; stroke-width: 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+    .simpul { fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="640" height="300" fill="#f5f7fb" />
+
+  <!-- rangka -->
+  <path class="kawat" d="M60 150 V80 H130" />
+  <path class="kawat" d="M170 80 H270" />
+  <path class="kawat" d="M310 80 H410" />
+  <path class="kawat" d="M450 80 H580 V250 H60 V190" />
+
+  <!-- baterai 18 V -->
+  <path class="plat" d="M38 150 H82" />
+  <path class="plat" d="M50 168 H70" />
+  <text class="tebal" x="96" y="176">18 V</text>
+
+  <!-- tiga lampu -->
+  <circle class="lampu" cx="150" cy="80" r="20" />
+  <path class="kawat" d="M136 66 L164 94 M164 66 L136 94" />
+  <text class="teks" x="150" y="40" text-anchor="middle">L₁ (3 Ω)</text>
+
+  <circle class="lampu" cx="290" cy="80" r="20" />
+  <path class="kawat" d="M276 66 L304 94 M304 66 L276 94" />
+  <text class="teks" x="290" y="40" text-anchor="middle">L₂ (3 Ω)</text>
+
+  <circle class="lampu" cx="430" cy="80" r="20" />
+  <path class="kawat" d="M416 66 L444 94 M444 66 L416 94" />
+  <text class="teks" x="430" y="40" text-anchor="middle">L₃ (3 Ω)</text>
+
+  <!-- kawat penghubung singkat pada L2 -->
+  <circle class="simpul" cx="255" cy="80" r="5" />
+  <circle class="simpul" cx="325" cy="80" r="5" />
+  <path class="jembatan" d="M255 80 V150 H325 V80" />
+  <text class="tebal" x="290" y="174" text-anchor="middle">kawat tanpa hambatan</text>
+</svg>

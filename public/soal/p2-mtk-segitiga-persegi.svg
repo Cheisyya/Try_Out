@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img" aria-label="Segitiga siku-siku ABC dengan siku-siku di titik C. Sisi CA mendatar sepanjang 12 sentimeter dan sisi CB tegak sepanjang 6 sentimeter. Sebuah persegi CDEF berada di dalam segitiga dengan salah satu sudutnya berimpit pada titik sudut siku-siku C, sisi CD terletak pada CA, sisi CF terletak pada CB, dan titik E berada tepat pada sisi miring AB. Daerah segitiga di luar persegi diarsir.">
+  <style>
+    .garis { fill: none; stroke: #16274c; stroke-width: 3; stroke-linejoin: round; }
+    .persegi { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .arsir { fill: #dfe7f5; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-weight: 700; }
+    .titik { fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="500" height="300" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 30 px. C di (70, 230), A di (430, 230), B di (70, 50) -->
+  <polygon class="arsir" points="70,230 430,230 70,50" />
+  <polygon class="persegi" points="70,230 190,230 190,110 70,110" />
+  <polygon class="garis" points="70,230 430,230 70,50" />
+
+  <!-- sudut siku-siku di C -->
+  <path class="garis" d="M70 212 H88 V230" stroke-width="2" />
+
+  <!-- titik dan nama -->
+  <g class="titik">
+    <circle cx="70" cy="230" r="4.5" /><circle cx="430" cy="230" r="4.5" />
+    <circle cx="70" cy="50" r="4.5" /><circle cx="190" cy="110" r="4.5" />
+    <circle cx="190" cy="230" r="4.5" /><circle cx="70" cy="110" r="4.5" />
+  </g>
+  <g class="teks tebal">
+    <text x="52" y="252">C</text>
+    <text x="438" y="250">A</text>
+    <text x="56" y="42">B</text>
+    <text x="198" y="104">E</text>
+    <text x="182" y="252">D</text>
+    <text x="46" y="108">F</text>
+  </g>
+
+  <!-- ukuran CA -->
+  <path class="ukur" d="M70 272 H430 M70 266 V278 M430 266 V278" />
+  <text class="teks" x="250" y="292" text-anchor="middle">12 cm</text>
+
+  <!-- ukuran CB -->
+  <path class="ukur" d="M34 230 V50 M28 230 H40 M28 50 H40" />
+  <text class="teks" x="30" y="145" transform="rotate(-90 30 145)" text-anchor="middle">6 cm</text>
+</svg>

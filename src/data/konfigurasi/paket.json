@@ -1,0 +1,932 @@
+{
+  "paket": [
+    {
+      "id": "paket-1",
+      "nomor": 1,
+      "nama": "Try Out Paket 1",
+      "deskripsi": "Paket dasar tingkat Easy yang mencakup seluruh kategori materi Seleksi Tahap I.",
+      "jadwal": "2026-08-23T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 25,
+              "fokus": "Membaca, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 55,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi tingkat SMP."
+            }
+          ],
+          "sandi": {
+            "salt": "93132cff40c87375652dee23862be029",
+            "hash": "2792f295d5785c2365105b984325e8d83276414126a9c6a446e5c181a42ae4499f05faa06be5908504bcc2046fd74226f1e19f308953ec3243a73eff08036356",
+            "diperbaruiPada": 1787046585343
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 25,
+              "fokus": "Reading, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 55,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan."
+            }
+          ],
+          "sandi": {
+            "salt": "2eb1bfa90b10c83676dd18f9fc548c2f",
+            "hash": "eb4d91495a33587c2c9f3641a2c5395859c562a41e34ff840f1a77cb7635dcc183219e2135becf6b4d3ba05c529a63fad4dd9bbabab07257c7e78ff570e5bd15",
+            "diperbaruiPada": 1786427133008
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-2",
+      "nomor": 2,
+      "nama": "Try Out Paket 2",
+      "deskripsi": "Paket penalaran tingkat menengah: menganalisis informasi, menafsirkan data, dan menerapkan konsep pada situasi baru.",
+      "jadwal": "2026-09-06T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "e5f5d4a205cd3fbf7f63bb71a375090a",
+            "hash": "ca19425cc57de1948f4854eda112b5ec87ec5d366effeafe1ca04c8ff48fe73a7c40ce2baf81caf91ef5835b3f82f5414abbf8a715d6a69903f747ed14588104",
+            "diperbaruiPada": 1787154164637
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "968ac976bcc4378810218b2116ac1f8b",
+            "hash": "e49c073c7e89abefe7a6c009ab07cf8e105aa3540a3534cce043d18ba8fe590cc65d964e0922713fa3e66120a506db44493885177674641c4dcf3e415096bda4",
+            "diperbaruiPada": 1787154164717
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-3",
+      "nomor": 3,
+      "nama": "Try Out Paket 3",
+      "deskripsi": "Penekanan pada penalaran bertahap — sebagian besar soal menuntut lebih dari satu langkah sebelum sampai pada kesimpulan.",
+      "jadwal": "2026-09-20T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "b2d3c565c6b61f97cd8b7bf4df9a2469",
+            "hash": "c608593330208d2f152af655e175ef3976b0db1bb5f001d3296b004e163b13ac79668521a4e26b0158e1d6663e10dfba696bd8cfe08dd01ee6d539a17bb3b045",
+            "diperbaruiPada": 1787154164798
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "ac3db8abaa6b0a875ec4ac0a8bfbf1eb",
+            "hash": "ba425cc600546da55ad8028fae6fe3a9bfe9edfb83dc0dbce6319012f3830ab356f3fb813576b8438114d3e8e16054801c65405e3e845435d8dbd3a509044cad",
+            "diperbaruiPada": 1787154164873
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-4",
+      "nomor": 4,
+      "nama": "Try Out Paket 4",
+      "deskripsi": "Lompatan tingkat kesulitan: seluruh soal bertaraf Hard–Very Hard dengan penalaran bertingkat dan distraktor kuat.",
+      "jadwal": "2026-10-04T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "83c9a3f40f0ce2aca8c16e00dfd772c2",
+            "hash": "b297b4917ce432e24e6712c88fe659b76c692a8e45fad29ed3146d8000d853a4cbc02db762987528abc31ed893c31ab7295a3d1d7f351b25913f64eb4b1e6bab",
+            "diperbaruiPada": 1787197283268
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "89a4d785dfb4ada3b2d64407cb312e77",
+            "hash": "d4835e0a0496cf924302ca6662d8236ba9f2f54c09651219a9fb7229df30d7a65c7021565d61ea3e2d4b660a0f0a045a567d4ced4d79d0971a5cb0db27040f48",
+            "diperbaruiPada": 1787197283401
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-5",
+      "nomor": 5,
+      "nama": "Try Out Paket 5",
+      "deskripsi": "Penekanan pada analisis data percobaan dan pembacaan grafik — informasi harus disaring sebelum dihitung.",
+      "jadwal": "2026-10-18T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "a771e181decfce778bda2fcf45e940ea",
+            "hash": "a186b06f403e2a410b7b289244ebbab77253e2e070886f0af978720e41dd504dfcdb9979a3ec2e493554372e4b488bc9953ac8016a1824515b46dee1791c6926",
+            "diperbaruiPada": 1787197283532
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "d30e201c09d789a2f6dfbdf4692f2108",
+            "hash": "20d15f856188a5845442cf44a5458c0b9ad45087cf77d28f2180215dc6bc1560a78bd4a61b63868d92dc6d517577da32a1be2db942f0efd872bb1f6ab3254ae2",
+            "diperbaruiPada": 1787197283656
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-6",
+      "nomor": 6,
+      "nama": "Try Out Paket 6",
+      "deskripsi": "Sintesis lintas konsep: satu soal menuntut dua atau lebih konsep dipakai bersamaan.",
+      "jadwal": "2026-11-01T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "49a8c97a5669e1199bd3c84ac5a0ed10",
+            "hash": "f78ad3e3ff6708b2ab4dfbd461c21412a59077bacfc2a8701722264e158dfee540e8c73a5c31cac2f7b3a309c7578d00e40271e19e64ad289d35bf55e4f85f9f",
+            "diperbaruiPada": 1787197283770
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "3a59f532841f4b6e741e4c3bb89c91a5",
+            "hash": "bba7daf22021bc401ec0369ed37286cf1fccf5df1e7a00461d13cb3115a415214ff975cce743990edc1c0ee32349c133ea9cf4d5d724f0528c1402ed3acea20a",
+            "diperbaruiPada": 1787197283876
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-7",
+      "nomor": 7,
+      "nama": "Try Out Paket 7",
+      "deskripsi": "Evaluasi argumen dan pengambilan keputusan berdasarkan bukti yang tidak seluruhnya sejalan.",
+      "jadwal": "2026-11-15T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "a3483c849fe37c8ffa7a9fce60a8fb47",
+            "hash": "7b583d28210ad9c86d0f7e6d1898f07ab662d3f06192c0035cb08194911bae70c48230337eb3f42c1033d1f6012db6437db44417582fcefc5c042e50dab3db3f",
+            "diperbaruiPada": 1787197283968
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "4963b3b52bda59273280e23adadb69ad",
+            "hash": "84dea158c7ce0f24e36bca60d7cd8c2c0fcab59e0fa2a5695d4f53d1fddfec9b96727c468428975773108e21090f0c755f1b28e996e4383a09e11d8851c0d2b4",
+            "diperbaruiPada": 1787197284071
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-8",
+      "nomor": 8,
+      "nama": "Try Out Paket 8",
+      "deskripsi": "Paket dasar kedua tingkat Easy dengan cakupan kategori yang sama, soal berbeda.",
+      "jadwal": "2026-11-29T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 25,
+              "fokus": "Membaca, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 55,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi tingkat SMP."
+            }
+          ],
+          "sandi": {
+            "salt": "a9290513def53209ece809705711d215",
+            "hash": "fc5867d233c1bad0d064abb4a05414e8796f8e19a8629205bcbc47b7838a05b77b70b1ed2dd1f9390e26d34e18f5d7c67e3cd8386e89dbdfe392d5c23079fb23",
+            "diperbaruiPada": 1787059643539
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 25,
+              "fokus": "Reading, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 55,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan."
+            }
+          ],
+          "sandi": {
+            "salt": "885d94d0ee71d5e863379c002bc8fec8",
+            "hash": "be243e89ce731d208c77eee54c0238818924d2e4df06afed694dbd41a128921e06df93d66c4122450c994ff44c83087b934c2f53b98c8efd63d204be945bc1d2",
+            "diperbaruiPada": 1786427133279
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-9",
+      "nomor": 9,
+      "nama": "Try Out Paket 9",
+      "deskripsi": "Porsi HOTS bertambah: mengevaluasi informasi, memprediksi akibat suatu kondisi, dan memilih strategi penyelesaian.",
+      "jadwal": "2026-12-13T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "d276425ab1c7e1d83c1d868362ad29ad",
+            "hash": "1ac1003d7af32ec772a6f0636f236df0603364243dbb3cf600dfc03ec4e4a73265e7a085e0142e43dcf70e81386fa2f57ff4b6bd195a2dd1cac90c7f328884ca",
+            "diperbaruiPada": 1787154164952
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "577f44868d4a89a83baa6a27da9ba93f",
+            "hash": "de849c194d49053ca6f844c378b5fe12a02346fc4394e48efc180c1ba4a2981227d1c7ecb588ece8bcac76ae2b2c92e5590403b952f9efcbc910f2e12d7e0b0b",
+            "diperbaruiPada": 1787154165031
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-10",
+      "nomor": 10,
+      "nama": "Try Out Paket 10",
+      "deskripsi": "Simulasi menjelang seleksi dengan stimulus panjang, tabel data, dan grafik hasil percobaan yang harus ditafsirkan.",
+      "jadwal": "2026-12-27T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "c50948cc7ef755ff68f32412e8a17f9e",
+            "hash": "e81b45196fee55c3d598c653c1b88f758e512a92497218380356e864b1182ed5ea22aa1d261371aec8269ef1ed2e2e730c204c32d6ebc3a65ff4caf00c769a4d",
+            "diperbaruiPada": 1787154165112
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "fcb0566ab6e853bfc84a6add194c9f35",
+            "hash": "15e3ab48188962ce9721f938c76d30625afaf5f5f35ca4077d6c65bfeb613f400a7b03d6610e59c0dd46659ebe4a4a219c56fd071f6ce217220bb954d1423333",
+            "diperbaruiPada": 1787154165189
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-11",
+      "nomor": 11,
+      "nama": "Try Out Paket 11",
+      "deskripsi": "Simulasi akhir setara pelaksanaan seleksi: seluruh keterampilan berpikir tingkat tinggi diuji sekaligus.",
+      "jadwal": "2027-01-10T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "6b318d172e3a1cda5b2a426b6d697306",
+            "hash": "01a9b97c696e40c5b4516f4738ca89b3c0aa52aec90022707b9a69a5fc68393fe8be18154c3d59ef54e3733205d071d6b4dcf8c5243fc84988b3756799352d83",
+            "diperbaruiPada": 1787154165264
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "e7874f016f2c62fd794666c587cf76a7",
+            "hash": "87062645632ea13ad93364975492e8aa7d680bad01be8d7a8fba9f1a1c760849408a51ea8610016431de24acc14a7ccc389c9343b42c69f4c44538f7dcd4cea9",
+            "diperbaruiPada": 1787154165340
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-12",
+      "nomor": 12,
+      "nama": "Try Out Paket 12",
+      "deskripsi": "Strategi penyelesaian: soal yang metodenya tidak langsung terlihat dan menuntut pemodelan masalah.",
+      "jadwal": "2027-01-24T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "0b853dba462511a6fbf7057888658cf2",
+            "hash": "b650c008bff9f0c9475998771bf2cbe32c61d1f2fa16ba3bcc66f501ccda7c9ed509ce50a14fdb33fe363af5be752b6c23842e1a32fe153fdbef352c2a63f1c0",
+            "diperbaruiPada": 1787197284170
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "ce9966b246f622416cd26055bfd0728a",
+            "hash": "4ef6ebeebd9a9cfaf30338b084246165b994dfedbb8fad7e8c34528ee4ce35804585576d1c56da483b36e95e6b65c471a1b5d8550bd6fdb3e7c34862357cc2e3",
+            "diperbaruiPada": 1787197284278
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-13",
+      "nomor": 13,
+      "nama": "Try Out Paket 13",
+      "deskripsi": "Prediksi akibat dan hubungan sebab-akibat pada situasi baru yang belum pernah ditemui peserta.",
+      "jadwal": "2027-02-07T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "aae1e74b44e50b3117802ff7f582d1e1",
+            "hash": "6dca1192617015d6d99f47ef0cbbb9e4a20286382fc75483f1c097397f996e98c2124f1e52f0aa74f3f1519ed0359e998d78b5ea621ed36a216602124261d0c3",
+            "diperbaruiPada": 1787197284368
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "544ba3db353c1e1b77940ff07839ae04",
+            "hash": "defcb3b4bb06f3abdec6dd3c6aeb2774c83cd8639776c4aef3385c6579d8780233d78e7c843ec38046f89c806bf9a6d447d00da8cd0f5e2f8ede4a9368f7ba83",
+            "diperbaruiPada": 1787197284467
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-14",
+      "nomor": 14,
+      "nama": "Try Out Paket 14",
+      "deskripsi": "Optimasi dan pencarian pola — mencari nilai terbaik, batas, atau keteraturan di balik data.",
+      "jadwal": "2027-02-21T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "cea96568af5bd151b223593d19dcd975",
+            "hash": "5b959e065b9c95cd1561cf95701e61bc27e618515090d4157a03da59c8e32ce9b10d71fbf516a9ea7d5df4de4139133f8539b0eeff0e44d4d805928ff9fdf6a9",
+            "diperbaruiPada": 1787197284571
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "fc908ff4717dacea635bd02b7f8fa92d",
+            "hash": "117c8114266c28c3b1250ecf606a0ce65354c066c3fe2b0613ba33f4d9978ff82e03f2b2b00c4b4869056f688f6d75ba82f71ed8ac79c1df61027caafbb3cb09",
+            "diperbaruiPada": 1787197284692
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-15",
+      "nomor": 15,
+      "nama": "Try Out Paket 15",
+      "deskripsi": "Simulasi seleksi bertaraf tinggi dengan stimulus panjang, tabel, dan diagram yang wajib ditafsirkan.",
+      "jadwal": "2027-03-07T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "de466812df9763ca2e31b03e1fdf474a",
+            "hash": "e3be6dbfb769a0764d0262a1286f382c7d3ee42ec7cd0994c2b88b66973361fbb80de12d16c8bcb7f4a385bb1ad161f3e6585515668fc131d4364c0737e73514",
+            "diperbaruiPada": 1787197284805
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "bd29ef6b73dc639b7a31185b0c97eb56",
+            "hash": "4c2e716b0e831ad98149ef9ac28aa9835afa52b420b5f385d2d3ae012b84b7b6e4fc08bd7e803cc7347b64b7859a26512a0c5edf23a0f3e03b8e32441848a11c",
+            "diperbaruiPada": 1787197284912
+          }
+        }
+      ]
+    },
+    {
+      "id": "paket-16",
+      "nomor": 16,
+      "nama": "Try Out Paket 16",
+      "deskripsi": "Paket puncak: gabungan seluruh keterampilan berpikir tingkat tinggi pada taraf tersulit yang masih wajar untuk SMP.",
+      "jadwal": "2027-03-21T08:00",
+      "aktif": true,
+      "sesi": [
+        {
+          "id": "sesi-1",
+          "nama": "Sesi 1",
+          "urutan": 1,
+          "mataUji": [
+            {
+              "subject": "Bahasa Indonesia",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Membaca kritis, menyunting, kosa kata, dan struktur bahasa Indonesia."
+            },
+            {
+              "subject": "IPA",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Kimia, fisika, biologi, dan bioteknologi dengan penalaran data percobaan."
+            }
+          ],
+          "sandi": {
+            "salt": "8672dbda6f4ef1684b216c3deb84efd6",
+            "hash": "b5a0aba6a733d0e1e8e698581ac93f447333770c3ce3e2428c8364dca0dc10382b7d6438721ee4471db1fe62c4e7e8826627babb1014c31d0a76165d9fe9b31a",
+            "diperbaruiPada": 1787197285021
+          }
+        },
+        {
+          "id": "sesi-2",
+          "nama": "Sesi 2",
+          "urutan": 2,
+          "mataUji": [
+            {
+              "subject": "Bahasa Inggris",
+              "jumlahSoal": 20,
+              "durasiMenit": 30,
+              "fokus": "Reading comprehension, grammar, dan vocabulary."
+            },
+            {
+              "subject": "Matematika",
+              "jumlahSoal": 30,
+              "durasiMenit": 60,
+              "fokus": "Aljabar, geometri, kombinatorika, dan teori bilangan dengan penalaran bertahap."
+            }
+          ],
+          "sandi": {
+            "salt": "caa2822bc71176d981ae6d55fcfa0495",
+            "hash": "744be70b943bc9423f870a88c4e7020b3fd25b07a9624575d67d0bcb805221f80d5a8f4445348defe2aae5e153a121c2daebc56f8f254d8dd37a488a13bd91c6",
+            "diperbaruiPada": 1787197285133
+          }
+        }
+      ]
+    }
+  ]
+}

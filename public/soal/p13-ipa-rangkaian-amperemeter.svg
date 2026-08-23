@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Rangkaian listrik dengan baterai 18 volt. Sebuah amperemeter A satu dipasang tepat setelah baterai sehingga mengukur arus total. Arus kemudian melewati R satu sebesar 4 ohm yang dipasang seri, lalu bercabang menjadi dua: cabang atas berisi R dua sebesar 6 ohm dan cabang bawah berisi R tiga sebesar 3 ohm yang dipasang berderet dengan amperemeter A dua.">
+  <style>
+    .kawat { fill: none; stroke: #16274c; stroke-width: 3; stroke-linecap: round; }
+    .hambat { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .meter { fill: #ffffff; stroke: #c8953a; stroke-width: 3; }
+    .plat { stroke: #16274c; stroke-width: 4; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #16274c; }
+    .tebal { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #16274c; }
+    .simpul { fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="640" height="320" fill="#f5f7fb" />
+
+  <!-- rangka luar -->
+  <path class="kawat" d="M60 150 V70 H126" />
+  <path class="kawat" d="M154 70 H196" />
+  <path class="kawat" d="M256 70 H320" />
+  <path class="kawat" d="M480 70 H580 V270 H60 V190" />
+
+  <!-- baterai 18 V -->
+  <path class="plat" d="M38 150 H82" />
+  <path class="plat" d="M50 168 H70" />
+  <text class="tebal" x="96" y="176">18 V</text>
+
+  <!-- amperemeter A1 pada jalur utama -->
+  <circle class="meter" cx="140" cy="70" r="16" />
+  <text class="tebal" x="140" y="76" text-anchor="middle">A₁</text>
+
+  <!-- R1 seri -->
+  <rect class="hambat" x="196" y="56" width="60" height="28" rx="4" />
+  <text class="teks" x="226" y="46" text-anchor="middle">R₁ = 4 Ω</text>
+
+  <!-- percabangan -->
+  <circle class="simpul" cx="320" cy="70" r="5" />
+  <circle class="simpul" cx="480" cy="70" r="5" />
+
+  <!-- cabang atas: R2 -->
+  <path class="kawat" d="M320 70 H360" />
+  <rect class="hambat" x="360" y="56" width="60" height="28" rx="4" />
+  <path class="kawat" d="M420 70 H480" />
+  <text class="teks" x="390" y="46" text-anchor="middle">R₂ = 6 Ω</text>
+
+  <!-- cabang bawah: R3 dan amperemeter A2 -->
+  <path class="kawat" d="M320 70 V190 H344" />
+  <rect class="hambat" x="344" y="176" width="60" height="28" rx="4" />
+  <path class="kawat" d="M404 190 H424" />
+  <circle class="meter" cx="440" cy="190" r="16" />
+  <path class="kawat" d="M456 190 H480 V70" />
+  <text class="teks" x="374" y="224" text-anchor="middle">R₃ = 3 Ω</text>
+  <text class="tebal" x="440" y="196" text-anchor="middle">A₂</text>
+</svg>

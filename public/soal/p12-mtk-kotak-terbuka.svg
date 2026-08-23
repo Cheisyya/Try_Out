@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" role="img" aria-label="Selembar karton berbentuk persegi panjang berukuran panjang 16 sentimeter dan lebar 12 sentimeter. Pada keempat sudutnya dipotong sebuah persegi bersisi 3 sentimeter. Bagian sisi yang tersisa kemudian dilipat ke atas sepanjang garis putus-putus sehingga terbentuk kotak tanpa tutup.">
+  <style>
+    .karton { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .potong { fill: #e8ecf4; stroke: #16274c; stroke-width: 2.5; stroke-dasharray: 6 4; }
+    .lipat { fill: none; stroke: #c8953a; stroke-width: 2.5; stroke-dasharray: 8 5; }
+    .alas { fill: #f2e2bd; stroke: none; }
+    .ukur { fill: none; stroke: #7c8db5; stroke-width: 1.5; }
+    .teks { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; fill: #16274c; }
+    .kecil { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 12px; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="600" height="340" fill="#f5f7fb" />
+
+  <!-- Skala: 1 cm = 24 px. Karton 16 x 12 cm = 384 x 288 px, sudut kiri atas (110, 30) -->
+  <rect class="karton" x="110" y="30" width="384" height="288" />
+  <!-- alas kotak setelah dilipat: (16-6) x (12-6) = 10 x 6 cm -->
+  <rect class="alas" x="182" y="102" width="240" height="144" />
+
+  <!-- garis lipatan -->
+  <path class="lipat" d="M182 30 V318 M422 30 V318 M110 102 H494 M110 246 H494" />
+
+  <!-- persegi terpotong pada keempat sudut, sisi 3 cm = 72 px -->
+  <rect class="potong" x="110" y="30" width="72" height="72" />
+  <rect class="potong" x="422" y="30" width="72" height="72" />
+  <rect class="potong" x="110" y="246" width="72" height="72" />
+  <rect class="potong" x="422" y="246" width="72" height="72" />
+
+  <text class="kecil" x="146" y="72" text-anchor="middle">3 cm</text>
+  <text class="kecil" x="458" y="72" text-anchor="middle">3 cm</text>
+  <text class="kecil" x="146" y="288" text-anchor="middle">3 cm</text>
+  <text class="kecil" x="458" y="288" text-anchor="middle">3 cm</text>
+
+  <!-- ukuran panjang -->
+  <path class="ukur" d="M110 332 H494 M110 326 V338 M494 326 V338" />
+  <text class="teks" x="302" y="324" text-anchor="middle">16 cm</text>
+
+  <!-- ukuran lebar -->
+  <path class="ukur" d="M86 30 V318 M80 30 H92 M80 318 H92" />
+  <text class="teks" x="68" y="174" text-anchor="middle" transform="rotate(-90 68 174)">12 cm</text>
+</svg>

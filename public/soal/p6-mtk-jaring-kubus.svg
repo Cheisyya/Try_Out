@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Jaring-jaring kubus berbentuk salib. Empat persegi berjajar mendatar bertanda P, Q, R, dan S dari kiri ke kanan. Satu persegi bertanda T terletak tepat di atas persegi Q, dan satu persegi bertanda U terletak tepat di bawah persegi Q.">
+  <style>
+    .sisi { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .sorot { fill: #f2e2bd; stroke: #16274c; stroke-width: 3; }
+    .huruf { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 26px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="520" height="300" fill="#f5f7fb" />
+
+  <!-- baris mendatar: P, Q, R, S -->
+  <rect class="sisi" x="90" y="110" width="70" height="70" />
+  <rect class="sorot" x="160" y="110" width="70" height="70" />
+  <rect class="sisi" x="230" y="110" width="70" height="70" />
+  <rect class="sisi" x="300" y="110" width="70" height="70" />
+
+  <!-- T di atas Q, U di bawah Q -->
+  <rect class="sisi" x="160" y="40" width="70" height="70" />
+  <rect class="sisi" x="160" y="180" width="70" height="70" />
+
+  <text class="huruf" x="125" y="155" text-anchor="middle">P</text>
+  <text class="huruf" x="195" y="155" text-anchor="middle">Q</text>
+  <text class="huruf" x="265" y="155" text-anchor="middle">R</text>
+  <text class="huruf" x="335" y="155" text-anchor="middle">S</text>
+  <text class="huruf" x="195" y="85" text-anchor="middle">T</text>
+  <text class="huruf" x="195" y="225" text-anchor="middle">U</text>
+</svg>

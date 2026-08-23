@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 480" role="img" aria-label="Jaring-jaring kubus berbentuk salib. Satu lajur tegak terdiri atas empat persegi berurutan dari atas ke bawah bertanda P, R, T, dan U. Pada persegi R menempel dua persegi lain: persegi Q di sebelah kiri R dan persegi S di sebelah kanan R.">
+  <style>
+    .sisi { fill: #ffffff; stroke: #16274c; stroke-width: 3; }
+    .huruf { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 34px; font-weight: 700; fill: #16274c; }
+  </style>
+
+  <rect x="0" y="0" width="420" height="480" fill="#f5f7fb" />
+
+  <!-- lajur tegak: P, R, T, U -->
+  <rect class="sisi" x="150" y="30" width="110" height="110" />
+  <rect class="sisi" x="150" y="140" width="110" height="110" />
+  <rect class="sisi" x="150" y="250" width="110" height="110" />
+  <rect class="sisi" x="150" y="360" width="110" height="110" />
+
+  <!-- sayap kiri dan kanan pada persegi kedua -->
+  <rect class="sisi" x="40" y="140" width="110" height="110" />
+  <rect class="sisi" x="260" y="140" width="110" height="110" />
+
+  <g class="huruf" text-anchor="middle">
+    <text x="205" y="98">P</text>
+    <text x="205" y="208">R</text>
+    <text x="205" y="318">T</text>
+    <text x="205" y="428">U</text>
+    <text x="95" y="208">Q</text>
+    <text x="315" y="208">S</text>
+  </g>
+</svg>
