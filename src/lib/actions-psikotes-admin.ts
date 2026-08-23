@@ -153,16 +153,25 @@ export async function ubahAktifPaketPsikotesAksi(
   paketId: string,
   aktif: boolean,
 ): Promise<HasilAksiAdmin> {
-  await wajibSesi("admin");
+  try {
+    await wajibSesi("admin");
 
-  const hasil = await setAktifPaketPsikotes(paketId, aktif);
-  if (!hasil.ok) return hasil;
+    const hasil = await setAktifPaketPsikotes(paketId, aktif);
+    if (!hasil.ok) return hasil;
 
-  segarkan(paketId);
-  return {
-    ok: true,
-    pesan: aktif ? "Paket diaktifkan." : "Paket dinonaktifkan.",
-  };
+    revalidatePath("/siswa/psikotes");
+    revalidatePath(`/siswa/psikotes/${paketId}`);
+    return {
+      ok: true,
+      pesan: aktif ? "Paket diaktifkan." : "Paket dinonaktifkan.",
+    };
+  } catch (error) {
+    console.error("ubahAktifPaketPsikotesAksi:", error);
+    return {
+      ok: false,
+      masalah: ["Perubahan status gagal disimpan. Coba lagi."],
+    };
+  }
 }
 
 /* -------------------------------------------------------------------------- */

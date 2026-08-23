@@ -285,12 +285,6 @@ export async function setAktifPaketPsikotes(
   const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, aktif);
   if (!overlay.ok) return overlay;
 
-  const tersimpan = sahkanPaket(await bacaJson<PaketPsikotes>(kunciPaket(paketId)));
-  if (tersimpan) {
-    await ubahPaket(paketId, (paket) => {
-      paket.aktif = aktif;
-    });
-  }
   return { ok: true, data: null };
 }
 

@@ -72,13 +72,25 @@ export async function hapusPaketAksi(paketId: string) {
 }
 
 export async function ubahAktifPaketAksi(paketId: string, aktif: boolean) {
-  await wajibSesi("admin");
-  const hasil = await setAktifPaket(paketId, aktif);
-  if (!hasil.ok) {
-    return { ok: false as const, masalah: hasil.masalah };
+  try {
+    await wajibSesi("admin");
+    const hasil = await setAktifPaket(paketId, aktif);
+    if (!hasil.ok) {
+      return { ok: false as const, masalah: hasil.masalah };
+    }
+
+    // Portal siswa perlu disegarkan; panel admin memakai pembaruan optimis.
+    revalidatePath("/siswa/tryout");
+    revalidatePath("/siswa/hasil");
+    revalidatePath("/ujian", "layout");
+    return { ok: true as const };
+  } catch (error) {
+    console.error("ubahAktifPaketAksi:", error);
+    return {
+      ok: false as const,
+      masalah: ["Perubahan status gagal disimpan. Coba lagi."],
+    };
   }
-  segarkan();
-  return { ok: true as const };
 }
 
 export async function simpanSesiAksi(

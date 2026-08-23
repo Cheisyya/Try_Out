@@ -207,12 +207,6 @@ export async function setAktifPaketIq(
   const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, aktif);
   if (!overlay.ok) return overlay;
 
-  const tersimpan = sahkanPaket(await bacaJson<PaketIq>(kunciPaket(paketId)));
-  if (tersimpan) {
-    await ubahPaket(paketId, (paket) => {
-      paket.aktif = aktif;
-    });
-  }
   return { ok: true, data: null };
 }
 

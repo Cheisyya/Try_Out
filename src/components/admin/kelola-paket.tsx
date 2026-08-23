@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useState, useTransition } from "react";
+import { useActionState, useEffect, useState, useTransition } from "react";
 import { useFormStatus } from "react-dom";
 import { useRouter } from "next/navigation";
 import {
@@ -162,17 +162,34 @@ function IkonAksi({
 
 export function KelolaPaket({ daftar }: { daftar: BarisPaket[] }) {
   const router = useRouter();
+  const [daftarLokal, setDaftarLokal] = useState(daftar);
   const [formTerbuka, setFormTerbuka] = useState<null | BarisPaket | "baru">(null);
   const [hapusTerbuka, setHapusTerbuka] = useState<BarisPaket | null>(null);
   const [proses, mulaiTransisi] = useTransition();
   const [galat, setGalat] = useState<string | null>(null);
 
+  useEffect(() => {
+    setDaftarLokal(daftar);
+  }, [daftar]);
+
   const ubahAktif = (paket: BarisPaket) => {
+    const tujuan = !paket.aktif;
     setGalat(null);
+    setDaftarLokal((prev) =>
+      prev.map((item) =>
+        item.id === paket.id ? { ...item, aktif: tujuan } : item,
+      ),
+    );
     mulaiTransisi(async () => {
-      const hasil = await ubahAktifPaketAksi(paket.id, !paket.aktif);
-      if (!hasil.ok) setGalat(hasil.masalah?.[0] ?? "Perubahan gagal disimpan.");
-      else router.refresh();
+      const hasil = await ubahAktifPaketAksi(paket.id, tujuan);
+      if (!hasil.ok) {
+        setDaftarLokal((prev) =>
+          prev.map((item) =>
+            item.id === paket.id ? { ...item, aktif: paket.aktif } : item,
+          ),
+        );
+        setGalat(hasil.masalah?.[0] ?? "Perubahan gagal disimpan.");
+      }
     });
   };
 
@@ -208,7 +225,7 @@ export function KelolaPaket({ daftar }: { daftar: BarisPaket[] }) {
               {galat}
             </p>
           ) : null}
-          {daftar.length === 0 ? (
+          {daftarLokal.length === 0 ? (
             <KeadaanKosong
               judul="Belum ada paket try out"
               deskripsi="Tambahkan paket pertama agar peserta dapat mulai mengerjakan try out. Setiap paket baru otomatis dibuatkan dua sesi bawaan."
@@ -229,7 +246,7 @@ export function KelolaPaket({ daftar }: { daftar: BarisPaket[] }) {
                 </tr>
               </thead>
               <tbody>
-                {daftar.map((paket) => (
+                {daftarLokal.map((paket) => (
                   <tr key={paket.id} className="transition hover:bg-navy-50/40">
                     {/* Cukup nama paket. Deskripsi dibiarkan di formulir saja
                         supaya tinggi tiap baris seragam. */}
@@ -285,7 +302,7 @@ export function KelolaPaket({ daftar }: { daftar: BarisPaket[] }) {
 
           {/* Kartu untuk ponsel dan tablet */}
           <ul className="divide-y divide-line lg:hidden">
-            {daftar.map((paket) => (
+            {daftarLokal.map((paket) => (
               <li key={paket.id} className="space-y-3 px-4 py-4 sm:px-6">
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">

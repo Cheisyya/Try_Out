@@ -116,18 +116,33 @@ export function KelolaPaketIq({ daftar }: { daftar: BarisPaketIq[] }) {
   const toast = useToast();
   const [proses, mulaiTransisi] = useTransition();
 
+  const [daftarLokal, setDaftarLokal] = useState(daftar);
   const [sunting, setSunting] = useState<BarisPaketIq | null>(null);
   const [tambah, setTambah] = useState(false);
 
+  useEffect(() => {
+    setDaftarLokal(daftar);
+  }, [daftar]);
+
   const ubahAktif = (paket: BarisPaketIq) => {
+    const tujuan = !paket.aktif;
+    setDaftarLokal((prev) =>
+      prev.map((item) =>
+        item.id === paket.id ? { ...item, aktif: tujuan } : item,
+      ),
+    );
     mulaiTransisi(async () => {
-      const hasil = await ubahAktifPaketIqAksi(paket.id, !paket.aktif);
+      const hasil = await ubahAktifPaketIqAksi(paket.id, tujuan);
       if (!hasil.ok) {
+        setDaftarLokal((prev) =>
+          prev.map((item) =>
+            item.id === paket.id ? { ...item, aktif: paket.aktif } : item,
+          ),
+        );
         toast.galat(hasil.masalah[0] ?? "Perubahan status gagal disimpan.");
         return;
       }
       toast.sukses(hasil.pesan);
-      router.refresh();
     });
   };
 

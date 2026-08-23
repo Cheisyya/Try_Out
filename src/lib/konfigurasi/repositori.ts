@@ -309,22 +309,17 @@ export async function hapusPaket(paketId: string): Promise<HasilKonfig> {
 
 export async function setAktifPaket(paketId: string, aktif: boolean) {
   const data = await bacaKonfigurasi();
-  const lama = data.paket.find((paket) => paket.id === paketId);
-  if (!lama) return { ok: false as const, masalah: [`Paket "${paketId}" tidak ditemukan.`] };
+  if (!data.paket.some((paket) => paket.id === paketId)) {
+    return { ok: false as const, masalah: [`Paket "${paketId}" tidak ditemukan.`] };
+  }
 
   const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, aktif);
   if (!overlay.ok) return overlay;
 
+  // Status aktif dibaca lewat overlay; tidak perlu menulis ulang konfigurasi
+  // penuh (sering gagal pada Vercel bila paket masih bawaan bundel).
   cache = null;
-
-  const hasil = await simpan({
-    paket: data.paket.map((paket) =>
-      paket.id === paketId ? { ...paket, aktif } : paket,
-    ),
-  });
-  // Overlay sudah tersimpan; sakelar tetap berlaku meski konfigurasi penuh belum
-  // pernah ditulis ke database (mis. paket bawaan pada Vercel).
-  return hasil.ok ? hasil : { ok: true as const };
+  return { ok: true as const };
 }
 
 export type MasukanSesi = {

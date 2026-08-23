@@ -33,7 +33,13 @@ export function namaPenyimpanan() {
 
 export async function bacaTeks(kunci: string): Promise<string | null> {
   const isi = await penyimpanan().baca(kunci);
-  return isi === null ? null : isi.toString("utf8");
+  if (isi === null) return null;
+  if (Buffer.isBuffer(isi)) return isi.toString("utf8");
+  if (typeof isi === "string") {
+    if (isi.startsWith("\\x")) return Buffer.from(isi.slice(2), "hex").toString("utf8");
+    return isi;
+  }
+  return String(isi);
 }
 
 export async function tulisTeks(kunci: string, isi: string): Promise<void> {
@@ -52,7 +58,11 @@ export async function bacaJson<T>(kunci: string): Promise<T | null> {
   try {
     return JSON.parse(teks) as T;
   } catch (error) {
-    console.error(`Penyimpanan: isi "${kunci}" bukan JSON yang sah`, error);
+    if (error instanceof Error && error.name === "SyntaxError") {
+      console.error(`Penyimpanan: isi "${kunci}" bukan JSON yang sah`, error);
+      return null;
+    }
+    console.error(`Penyimpanan: gagal membaca JSON dari "${kunci}"`, error);
     return null;
   }
 }
@@ -89,7 +99,14 @@ export async function bacaBanyakJson<T>(
 
   for (const [nama, isi] of mentah) {
     try {
-      hasil.set(nama, JSON.parse(isi.toString("utf8")) as T);
+      let teks = "";
+      if (Buffer.isBuffer(isi)) teks = isi.toString("utf8");
+      else if (typeof isi === "string") {
+        if (isi.startsWith("\\x")) teks = Buffer.from(isi.slice(2), "hex").toString("utf8");
+        else teks = isi;
+      } else teks = String(isi);
+      
+      hasil.set(nama, JSON.parse(teks) as T);
     } catch (error) {
       console.error(`Penyimpanan: isi "${nama}" bukan JSON yang sah`, error);
     }

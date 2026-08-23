@@ -135,19 +135,34 @@ export function KelolaPaketPsikotes({
   const toast = useToast();
   const [proses, mulaiTransisi] = useTransition();
 
+  const [daftarLokal, setDaftarLokal] = useState(daftar);
   const [sunting, setSunting] = useState<BarisPaketPsikotes | null>(null);
   const [aturSesi, setAturSesi] = useState<BarisPaketPsikotes | null>(null);
   const [tambah, setTambah] = useState(false);
 
+  useEffect(() => {
+    setDaftarLokal(daftar);
+  }, [daftar]);
+
   const ubahAktif = (paket: BarisPaketPsikotes) => {
+    const tujuan = !paket.aktif;
+    setDaftarLokal((prev) =>
+      prev.map((item) =>
+        item.id === paket.id ? { ...item, aktif: tujuan } : item,
+      ),
+    );
     mulaiTransisi(async () => {
-      const hasil = await ubahAktifPaketPsikotesAksi(paket.id, !paket.aktif);
+      const hasil = await ubahAktifPaketPsikotesAksi(paket.id, tujuan);
       if (!hasil.ok) {
+        setDaftarLokal((prev) =>
+          prev.map((item) =>
+            item.id === paket.id ? { ...item, aktif: paket.aktif } : item,
+          ),
+        );
         toast.galat(hasil.masalah[0] ?? "Perubahan status gagal disimpan.");
         return;
       }
       toast.sukses(hasil.pesan);
-      router.refresh();
     });
   };
 

@@ -144,16 +144,25 @@ export async function ubahAktifPaketIqAksi(
   paketId: string,
   aktif: boolean,
 ): Promise<HasilAksiIqAdmin> {
-  await wajibSesi("admin");
+  try {
+    await wajibSesi("admin");
 
-  const hasil = await setAktifPaketIq(paketId, aktif);
-  if (!hasil.ok) return hasil;
+    const hasil = await setAktifPaketIq(paketId, aktif);
+    if (!hasil.ok) return hasil;
 
-  segarkan(paketId);
-  return {
-    ok: true,
-    pesan: aktif ? "Paket diaktifkan." : "Paket dinonaktifkan.",
-  };
+    revalidatePath("/siswa/tes-iq");
+    revalidatePath(`/siswa/tes-iq/${paketId}`);
+    return {
+      ok: true,
+      pesan: aktif ? "Paket diaktifkan." : "Paket dinonaktifkan.",
+    };
+  } catch (error) {
+    console.error("ubahAktifPaketIqAksi:", error);
+    return {
+      ok: false,
+      masalah: ["Perubahan status gagal disimpan. Coba lagi."],
+    };
+  }
 }
 
 /* -------------------------------------------------------------------------- */
