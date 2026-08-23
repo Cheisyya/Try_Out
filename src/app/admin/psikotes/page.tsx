@@ -33,6 +33,8 @@ import { cn, formatTanggalWaktu } from "@/lib/utils";
 
 export const metadata: Metadata = { title: "Psikotes" };
 
+export const dynamic = "force-dynamic";
+
 type Props = {
   searchParams: Promise<{ tab?: string; paket?: string }>;
 };

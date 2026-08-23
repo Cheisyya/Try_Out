@@ -55,11 +55,30 @@ const simpul = globalThis as typeof globalThis & {
   __siapPenyimpanan?: Promise<void>;
 };
 
+function hexKeBuffer(hex: string): Buffer | null {
+  const bersih = hex.replace(/^\\+x/i, "").replace(/\s+/g, "");
+  if (!bersih || bersih.length % 2 !== 0 || /[^0-9a-f]/i.test(bersih)) {
+    return null;
+  }
+  try {
+    return Buffer.from(bersih, "hex");
+  } catch {
+    return null;
+  }
+}
+
 async function kolam(): Promise<Kolam> {
   if (simpul.__kolamPenyimpanan) return simpul.__kolamPenyimpanan;
 
-  const { Pool } = await import("pg");
+  const { Pool, types } = await import("pg");
   const url = urlPostgres();
+
+  // OID 17 = bytea. Parser bawaan kadang menyerahkan string `\x..` alih-alih
+  // Buffer, sehingga JSON paket tidak terurai dan aplikasi kembali ke bundel.
+  types.setTypeParser(17, (nilai: string) => {
+    const buf = hexKeBuffer(nilai);
+    return buf ?? Buffer.from(nilai, "utf8");
+  });
 
   simpul.__kolamPenyimpanan = new Pool({
     connectionString: url,
@@ -110,6 +129,54 @@ function gagal(kunci: string, error: unknown): GagalMenyimpan {
   );
 }
 
+/** Menyeragamkan nilai BYTEA dari `pg` / Neon / Vercel Postgres. */
+export function keBuffer(isi: unknown): Buffer | null {
+  if (isi == null) return null;
+  if (Buffer.isBuffer(isi)) return isi;
+  if (isi instanceof Uint8Array) return Buffer.from(isi);
+  if (typeof isi === "string") {
+    const dipangkas = isi.trim();
+    if (
+      dipangkas.startsWith("{") ||
+      dipangkas.startsWith("[") ||
+      dipangkas.startsWith("\"")
+    ) {
+      return Buffer.from(isi, "utf8");
+    }
+    const dariHex = hexKeBuffer(dipangkas);
+    if (dariHex) return dariHex;
+    return Buffer.from(isi, "utf8");
+  }
+  if (typeof isi === "object" && isi !== null && "data" in isi) {
+    const data = (isi as { data: unknown }).data;
+    if (Array.isArray(data)) return Buffer.from(data as number[]);
+  }
+  return null;
+}
+
+/**
+ * Membaca kunci dari tabel saja, tanpa cadangan bundel `src/data`.
+ * Dipakai untuk memastikan CRUD benar-benar menulis ke database.
+ */
+export async function bacaPostgresTersimpan(
+  kunci: string,
+): Promise<Buffer | null> {
+  const bersih = bersihkanKunci(kunci);
+  try {
+    await siap();
+    const db = await kolam();
+    const hasil = await db.query<{ isi: unknown }>(
+      `SELECT isi FROM ${NAMA_TABEL} WHERE kunci = $1`,
+      [bersih],
+    );
+    if (hasil.rows.length === 0) return null;
+    return keBuffer(hasil.rows[0].isi);
+  } catch (error) {
+    console.error(`Penyimpanan Postgres: gagal membaca "${bersih}"`, error);
+    return null;
+  }
+}
+
 /* --------------------------------- Adapter -------------------------------- */
 
 export const penyimpananPostgres: Penyimpanan = {
@@ -117,19 +184,8 @@ export const penyimpananPostgres: Penyimpanan = {
 
   async baca(kunci) {
     const bersih = bersihkanKunci(kunci);
-    try {
-      await siap();
-      const db = await kolam();
-      const hasil = await db.query<{ isi: Buffer }>(
-        `SELECT isi FROM ${NAMA_TABEL} WHERE kunci = $1`,
-        [bersih],
-      );
-      if (hasil.rows.length > 0) return hasil.rows[0].isi;
-    } catch (error) {
-      // Pembacaan tidak pernah melempar: halaman tetap tampil memakai nilai
-      // bawaan meskipun database sedang tidak dapat dihubungi.
-      console.error(`Penyimpanan Postgres: gagal membaca "${bersih}"`, error);
-    }
+    const tersimpan = await bacaPostgresTersimpan(bersih);
+    if (tersimpan) return tersimpan;
     return bacaBawaan(bersih);
   },
 
@@ -150,11 +206,14 @@ export const penyimpananPostgres: Penyimpanan = {
       await siap();
       const db = await kolam();
       // Satu query untuk seluruh kunci, bukan satu query per kunci.
-      const hasil = await db.query<{ kunci: string; isi: Buffer }>(
+      const hasil = await db.query<{ kunci: string; isi: unknown }>(
         `SELECT kunci, isi FROM ${NAMA_TABEL} WHERE kunci = ANY($1::text[])`,
         [[...asal.keys()]],
       );
-      for (const baris of hasil.rows) tersimpan.set(baris.kunci, baris.isi);
+      for (const baris of hasil.rows) {
+        const isi = keBuffer(baris.isi);
+        if (isi) tersimpan.set(baris.kunci, isi);
+      }
     } catch (error) {
       console.error("Penyimpanan Postgres: gagal membaca banyak kunci", error);
     }
@@ -169,22 +228,45 @@ export const penyimpananPostgres: Penyimpanan = {
 
   async tulis(kunci, isi) {
     const bersih = bersihkanKunci(kunci);
-    if (isi.byteLength > MAKS_BYTE) {
+    const buf = Buffer.isBuffer(isi) ? isi : Buffer.from(isi);
+    if (buf.byteLength > MAKS_BYTE) {
       throw new GagalMenyimpan(
         `Ukuran data untuk "${bersih}" melebihi batas ${Math.round(MAKS_BYTE / 1024 / 1024)} MB.`,
       );
     }
 
+    // Hex + decode() menghindari kesalahan bind BYTEA pada Neon/Vercel
+    // (`incorrect binary data format`) yang membuat JSON paket tidak pernah
+    // masuk tabel — sementara tulis siswa kadang lolos karena isi yang berbeda.
+    const hex = buf.toString("hex");
+
     try {
       await siap();
       const db = await kolam();
-      await db.query(
-        `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
-         VALUES ($1, $2, now())
-         ON CONFLICT (kunci)
-         DO UPDATE SET isi = EXCLUDED.isi, diperbarui = now()`,
-        [bersih, isi],
-      );
+      try {
+        await db.query(
+          `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
+           VALUES ($1, decode($2, 'hex'), now())
+           ON CONFLICT (kunci)
+           DO UPDATE SET isi = decode($2, 'hex'), diperbarui = now()`,
+          [bersih, hex],
+        );
+      } catch {
+        await db.query(
+          `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
+           VALUES ($1, $2::bytea, now())
+           ON CONFLICT (kunci)
+           DO UPDATE SET isi = EXCLUDED.isi, diperbarui = now()`,
+          [bersih, `\\x${hex}`],
+        );
+      }
+
+      const ulang = await bacaPostgresTersimpan(bersih);
+      if (!ulang || Buffer.compare(ulang, buf) !== 0) {
+        throw new Error(
+          "Baris tertulis tetapi isinya tidak terbaca ulang dari database.",
+        );
+      }
     } catch (error) {
       throw gagal(bersih, error);
     }

@@ -24,6 +24,18 @@ function jalur(kunci: string) {
   return path.join(AKAR, ...bersihkanKunci(kunci).split("/"));
 }
 
+/** Membaca berkas yang sudah ditulis, tanpa cadangan bundel `src/data`. */
+export async function bacaBerkasTersimpan(kunci: string): Promise<Buffer | null> {
+  try {
+    return await fs.readFile(jalur(kunci));
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
+      console.error(`Penyimpanan: gagal membaca "${kunci}"`, error);
+    }
+    return null;
+  }
+}
+
 function pesanGagal(kunci: string, error: unknown) {
   const kode =
     error instanceof Error && "code" in error ? String(error.code) : "";

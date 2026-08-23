@@ -10,6 +10,7 @@ import {
   bacaJson,
   cobaSimpan,
   hapusKunci,
+  pastikanJson,
   tulisJson,
 } from "@/lib/penyimpanan";
 import { PAKET_PSIKOTES_BAWAAN } from "@/lib/psikotes/bank";
@@ -63,11 +64,14 @@ export type HasilBank<T> = { ok: true; data: T } | { ok: false; masalah: string[
  * belum terjadi, urutannya mengikuti bank bawaan.
  */
 async function daftarId(): Promise<string[]> {
+  const bawaan = PAKET_PSIKOTES_BAWAAN.map((paket) => paket.id);
+  await pastikanJson(KUNCI_INDEKS, bawaan);
+
   const tersimpan = await bacaJson<string[]>(KUNCI_INDEKS);
   if (Array.isArray(tersimpan) && tersimpan.every((id) => typeof id === "string")) {
     return tersimpan;
   }
-  return PAKET_PSIKOTES_BAWAAN.map((paket) => paket.id);
+  return bawaan;
 }
 
 function bawaan(paketId: string): PaketPsikotes | null {

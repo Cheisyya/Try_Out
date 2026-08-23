@@ -16,6 +16,8 @@ import { wajibSesi } from "@/lib/get-session";
 
 export const metadata: Metadata = { title: "Try Out Akademik" };
 
+export const dynamic = "force-dynamic";
+
 type Props = {
   searchParams: Promise<{ tab?: string }>;
 };

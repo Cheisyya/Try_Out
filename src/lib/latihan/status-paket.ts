@@ -1,4 +1,4 @@
-import { bacaJson, cobaSimpan, tulisJson } from "@/lib/penyimpanan";
+import { bacaJson, cobaSimpan, pastikanJson, tulisJson } from "@/lib/penyimpanan";
 
 /**
  * Overlay status aktif/nonaktif paket latihan (Try Out Akademik, Tes IQ & Psikotes).
@@ -43,6 +43,9 @@ function normalisasiOverlay(tersimpan: Partial<OverlayStatus> | null): OverlaySt
 
 export async function bacaOverlay(kunci: string): Promise<OverlayStatus> {
   const tersimpan = await bacaJson<Partial<OverlayStatus>>(kunci);
+  if (!tersimpan) {
+    await pastikanJson(kunci, KOSONG);
+  }
   return normalisasiOverlay(tersimpan);
 }
 

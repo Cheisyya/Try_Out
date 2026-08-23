@@ -3,7 +3,7 @@ import {
   setAktifPaketOverlay,
   terapkanOverlayPaket,
 } from "@/lib/latihan/status-paket";
-import { bacaJson, cobaSimpan, tulisJson } from "@/lib/penyimpanan";
+import { bacaJson, bacaJsonTersimpan, cobaSimpan, pastikanJson, tulisJson } from "@/lib/penyimpanan";
 import { SUBJECTS, type Subject } from "@/lib/bank-soal/skema";
 import { buatSandi, periksaSandi } from "@/lib/konfigurasi/sandi";
 import {
@@ -118,14 +118,24 @@ let cache: { waktu: number; data: KonfigurasiTryOut } | null = null;
 async function bacaKonfigurasi(): Promise<KonfigurasiTryOut> {
   if (cache && Date.now() - cache.waktu < UMUR_CACHE_MS) return cache.data;
 
-  const tersimpan = await bacaJson<KonfigurasiTryOut>(KUNCI);
-  const data =
-    tersimpan && Array.isArray(tersimpan.paket)
-      ? tersimpan
-      : konfigurasiBawaan();
+  const dariStore = await bacaJsonTersimpan<KonfigurasiTryOut>(KUNCI);
+  if (dariStore && Array.isArray(dariStore.paket)) {
+    cache = { waktu: Date.now(), data: dariStore };
+    return dariStore;
+  }
 
-  cache = { waktu: Date.now(), data };
-  return data;
+  const bundel = await bacaJson<KonfigurasiTryOut>(KUNCI);
+  const data =
+    bundel && Array.isArray(bundel.paket) ? bundel : konfigurasiBawaan();
+
+  // Tanpa baris di database/berkas, CRUD paket hanya mengubah salinan di memori
+  // lalu tertutup lagi oleh bundel. Tanam dulu, baru mutasi berikutnya menimpa.
+  await pastikanJson(KUNCI, data);
+
+  const ulang = await bacaJsonTersimpan<KonfigurasiTryOut>(KUNCI);
+  const final = ulang && Array.isArray(ulang.paket) ? ulang : data;
+  cache = { waktu: Date.now(), data: final };
+  return final;
 }
 
 export type HasilKonfig =

@@ -28,6 +28,8 @@ import { formatTanggalWaktu } from "@/lib/utils";
 
 export const metadata: Metadata = { title: "Tes IQ" };
 
+export const dynamic = "force-dynamic";
+
 type Props = { searchParams: Promise<{ tab?: string }> };
 
 /**

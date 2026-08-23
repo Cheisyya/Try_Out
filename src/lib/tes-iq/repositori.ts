@@ -8,6 +8,7 @@ import {
   bacaJson,
   cobaSimpan,
   hapusKunci,
+  pastikanJson,
   tulisJson,
 } from "@/lib/penyimpanan";
 import { DURASI_IQ_BAWAAN, PAKET_IQ_BAWAAN } from "@/lib/tes-iq/bank";
@@ -51,11 +52,14 @@ export type HasilBankIq<T> =
 /* -------------------------------------------------------------------------- */
 
 async function daftarId(): Promise<string[]> {
+  const bawaan = PAKET_IQ_BAWAAN.map((paket) => paket.id);
+  await pastikanJson(KUNCI_INDEKS, bawaan);
+
   const tersimpan = await bacaJson<string[]>(KUNCI_INDEKS);
   if (Array.isArray(tersimpan) && tersimpan.every((id) => typeof id === "string")) {
     return tersimpan;
   }
-  return PAKET_IQ_BAWAAN.map((paket) => paket.id);
+  return bawaan;
 }
 
 function bawaan(paketId: string): PaketIq | null {
