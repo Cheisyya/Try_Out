@@ -36,6 +36,8 @@ export function urlPostgres() {
   return (
     process.env.DATABASE_URL?.trim() ||
     process.env.POSTGRES_URL?.trim() ||
+    process.env.POSTGRES_PRISMA_URL?.trim() ||
+    process.env.POSTGRES_URL_NON_POOLING?.trim() ||
     ""
   );
 }
@@ -151,28 +153,26 @@ export function keBuffer(isi: unknown): Buffer | null {
  * Membaca kunci dari tabel saja, tanpa cadangan bundel `src/data`.
  * Dipakai untuk memastikan CRUD benar-benar menulis ke database.
  */
-/**
- * Membaca dokumen teks (JSON) lewat convert_from — tidak melewati bind BYTEA
- * yang di Neon/Vercel sering gagal diurai dan membuat aplikasi kembali ke bundel.
- */
 export async function bacaPostgresTeks(kunci: string): Promise<string | null> {
   const bersih = bersihkanKunci(kunci);
   try {
     await siap();
     const db = await kolam();
-    const hasil = await db.query<{ teks: string | null }>(
-      `SELECT convert_from(isi, 'UTF8') AS teks FROM ${NAMA_TABEL} WHERE kunci = $1`,
+    const hasil = await db.query<{ isi: unknown }>(
+      `SELECT isi FROM ${NAMA_TABEL} WHERE kunci = $1`,
       [bersih],
     );
     if (hasil.rows.length === 0) return null;
-    return hasil.rows[0].teks;
+    const buf = keBuffer(hasil.rows[0].isi);
+    if (!buf) return null;
+    return buf.toString("utf8");
   } catch (error) {
     console.error(`Penyimpanan Postgres: gagal membaca teks "${bersih}"`, error);
-    return null;
+    throw gagal(bersih, error);
   }
 }
 
-/** Menulis JSON/teks sebagai UTF-8 di kolom BYTEA tanpa bind biner. */
+/** Menulis teks sebagai UTF-8 dengan mengkonversinya ke hex terlebih dahulu untuk kolom BYTEA. */
 export async function tulisPostgresTeks(kunci: string, teks: string): Promise<void> {
   const bersih = bersihkanKunci(kunci);
   const ukuran = Buffer.byteLength(teks, "utf8");
@@ -182,15 +182,17 @@ export async function tulisPostgresTeks(kunci: string, teks: string): Promise<vo
     );
   }
 
+  const hex = Buffer.from(teks, "utf8").toString("hex");
+
   try {
     await siap();
     const db = await kolam();
     await db.query(
       `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
-       VALUES ($1, convert_to($2, 'UTF8'), now())
+       VALUES ($1, decode($2, 'hex'), now())
        ON CONFLICT (kunci)
-       DO UPDATE SET isi = convert_to($2, 'UTF8'), diperbarui = now()`,
-      [bersih, teks],
+       DO UPDATE SET isi = EXCLUDED.isi, diperbarui = now()`,
+      [bersih, hex],
     );
 
     const ulang = await bacaPostgresTeks(bersih);
@@ -207,9 +209,6 @@ export async function tulisPostgresTeks(kunci: string, teks: string): Promise<vo
 export async function bacaPostgresTersimpan(
   kunci: string,
 ): Promise<Buffer | null> {
-  const teks = await bacaPostgresTeks(kunci);
-  if (teks != null) return Buffer.from(teks, "utf8");
-
   const bersih = bersihkanKunci(kunci);
   try {
     await siap();
@@ -222,7 +221,7 @@ export async function bacaPostgresTersimpan(
     return keBuffer(hasil.rows[0].isi);
   } catch (error) {
     console.error(`Penyimpanan Postgres: gagal membaca "${bersih}"`, error);
-    return null;
+    throw gagal(bersih, error);
   }
 }
 
@@ -254,20 +253,19 @@ export const penyimpananPostgres: Penyimpanan = {
     try {
       await siap();
       const db = await kolam();
-      // Satu query untuk seluruh kunci. convert_from menghindari parser BYTEA
-      // Neon yang membuat JSON paket gagal diurai lalu tertutup data bundel.
-      const hasil = await db.query<{ kunci: string; teks: string | null }>(
-        `SELECT kunci, convert_from(isi, 'UTF8') AS teks
-         FROM ${NAMA_TABEL} WHERE kunci = ANY($1::text[])`,
+      const hasil = await db.query<{ kunci: string; isi: unknown }>(
+        `SELECT kunci, isi FROM ${NAMA_TABEL} WHERE kunci = ANY($1::text[])`,
         [[...asal.keys()]],
       );
       for (const baris of hasil.rows) {
-        if (baris.teks != null) {
-          tersimpan.set(baris.kunci, Buffer.from(baris.teks, "utf8"));
+        const buf = keBuffer(baris.isi);
+        if (buf) {
+          tersimpan.set(baris.kunci, buf);
         }
       }
     } catch (error) {
       console.error("Penyimpanan Postgres: gagal membaca banyak kunci", error);
+      throw error;
     }
 
     for (const [bersih, daftarAsal] of asal) {
@@ -296,7 +294,7 @@ export const penyimpananPostgres: Penyimpanan = {
         `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
          VALUES ($1, decode($2, 'hex'), now())
          ON CONFLICT (kunci)
-         DO UPDATE SET isi = decode($2, 'hex'), diperbarui = now()`,
+         DO UPDATE SET isi = EXCLUDED.isi, diperbarui = now()`,
         [bersih, hex],
       );
     } catch (error) {
