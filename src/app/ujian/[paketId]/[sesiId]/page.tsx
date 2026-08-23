@@ -23,8 +23,8 @@ export default async function RuangUjianPage({ params, searchParams }: Props) {
   const { lanjut } = await searchParams;
 
   const session = await wajibFitur("tryoutAkademikAktif");
-  const paket = await getPaket(paketId);
-  if (!paket || !paket.aktif || !isSesiId(sesiId)) notFound();
+  const paketKonfig = await getPaket(paketId);
+  if (!paketKonfig || !paketKonfig.aktif || !isSesiId(sesiId)) notFound();
 
   // Membaca percobaan aktif sekaligus membukukan mata uji yang waktunya habis.
   const aktif = await percobaanAktif({
