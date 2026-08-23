@@ -9,6 +9,7 @@ import { Card, CardBody } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
 import { KeadaanKosong } from "@/components/ui/state";
 import { wajibFitur } from "@/lib/get-session";
+import { getPaket } from "@/lib/paket-tryout";
 import { pembahasanPaket } from "@/lib/pengerjaan/pembahasan";
 
 export const metadata: Metadata = { title: "Pembahasan" };
@@ -25,6 +26,10 @@ type Props = { params: Promise<{ paketId: string }> };
 export default async function PembahasanPaketPage({ params }: Props) {
   const sesi = await wajibFitur("tryoutAkademikAktif");
   const { paketId } = await params;
+
+  // Ensure the paket is active before fetching pembahasan
+  const paket = await getPaket(paketId);
+  if (!paket || !paket.aktif) notFound();
 
   const data = await pembahasanPaket(sesi.identitas, paketId);
   if (!data) notFound();
