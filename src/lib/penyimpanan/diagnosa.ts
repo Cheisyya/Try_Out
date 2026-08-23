@@ -1,9 +1,11 @@
 import {
   bacaBiner,
   bacaJson,
+  bacaJsonTersimpan,
   hapusKunci,
   namaPenyimpanan,
   tulisBiner,
+  tulisJson,
 } from "@/lib/penyimpanan";
 import { urlPostgres } from "@/lib/penyimpanan/postgres";
 import { akunAdminSiap } from "@/lib/admin/akun";
@@ -21,6 +23,7 @@ import { akunAdminSiap } from "@/lib/admin/akun";
  */
 
 const KUNCI_UJI = "diagnosa/tulis-baca.bin";
+const KUNCI_UJI_JSON = "diagnosa/paket-uji.json";
 
 export type HasilDiagnosa = {
   adapter: "berkas" | "postgres";
@@ -102,16 +105,32 @@ export async function periksaPenyimpanan(): Promise<HasilDiagnosa> {
     hasil.pesan = `Pembacaan gagal: ${error instanceof Error ? error.message : "kesalahan tidak dikenal"}`;
   }
 
-  // Tulis, baca ulang, lalu bersihkan.
+  const contoh = {
+    id: `uji-${Date.now()}`,
+    nama: "uji-persistensi-paket",
+    aktif: true,
+  };
   const penanda = Buffer.from(`uji-${Date.now()}`, "utf8");
   try {
-    await tulisBiner(KUNCI_UJI, penanda);
-    const kembali = await bacaBiner(KUNCI_UJI);
-    hasil.bisaTulis = Boolean(kembali && Buffer.compare(kembali, penanda) === 0);
+    // Jalur yang dipakai CRUD paket: JSON teks, bukan bind BYTEA biner.
+    await tulisJson(KUNCI_UJI_JSON, contoh);
+    const jsonKembali = await bacaJsonTersimpan<typeof contoh>(KUNCI_UJI_JSON);
+    const jsonOk = jsonKembali?.id === contoh.id && jsonKembali?.nama === contoh.nama;
 
-    if (!hasil.bisaTulis && !hasil.pesan) {
+    await tulisBiner(KUNCI_UJI, penanda);
+    const binerKembali = await bacaBiner(KUNCI_UJI);
+    const binerOk = Boolean(
+      binerKembali && Buffer.compare(binerKembali, penanda) === 0,
+    );
+
+    hasil.bisaTulis = jsonOk && binerOk;
+
+    if (!jsonOk) {
       hasil.pesan =
-        "Data berhasil ditulis tetapi tidak terbaca kembali dengan isi yang sama.";
+        "JSON paket gagal ditulis/dibaca ulang dari database. CRUD try out, Tes IQ, dan psikotes tidak akan bertahan.";
+    } else if (!binerOk && !hasil.pesan) {
+      hasil.pesan =
+        "Data biner berhasil ditulis tetapi tidak terbaca kembali dengan isi yang sama.";
     }
   } catch (error) {
     hasil.pesan =
@@ -120,6 +139,7 @@ export async function periksaPenyimpanan(): Promise<HasilDiagnosa> {
         : "Penulisan gagal karena kesalahan tidak dikenal.";
   } finally {
     await hapusKunci(KUNCI_UJI).catch(() => {});
+    await hapusKunci(KUNCI_UJI_JSON).catch(() => {});
   }
 
   return hasil;

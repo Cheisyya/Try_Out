@@ -330,10 +330,13 @@ export async function setAktifPaket(paketId: string, aktif: boolean) {
   const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, aktif);
   if (!overlay.ok) return overlay;
 
-  // Status aktif dibaca lewat overlay; tidak perlu menulis ulang konfigurasi
-  // penuh (sering gagal pada Vercel bila paket masih bawaan bundel).
+  const hasil = await simpan({
+    paket: data.paket.map((paket) =>
+      paket.id === paketId ? { ...paket, aktif } : paket,
+    ),
+  });
   cache = null;
-  return { ok: true as const };
+  return hasil;
 }
 
 export type MasukanSesi = {

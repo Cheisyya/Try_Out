@@ -1,8 +1,10 @@
 import { bacaBerkasTersimpan, penyimpananBerkas } from "@/lib/penyimpanan/berkas";
 import {
+  bacaPostgresTeks,
   bacaPostgresTersimpan,
   keBuffer,
   penyimpananPostgres,
+  tulisPostgresTeks,
   urlPostgres,
 } from "@/lib/penyimpanan/postgres";
 import { GagalMenyimpan, type Penyimpanan } from "@/lib/penyimpanan/tipe";
@@ -72,7 +74,15 @@ export async function bacaJsonTersimpan<T>(kunci: string): Promise<T | null> {
  * kode — tanpa baris di database, CRUD tidak punya tempat menulis.
  */
 export async function pastikanJson(kunci: string, data: unknown): Promise<void> {
-  if (await bacaTersimpan(kunci)) return;
+  const ada = await bacaTersimpan(kunci);
+  if (ada) {
+    try {
+      JSON.parse(bufferKeTeks(ada));
+      return;
+    } catch {
+      // Baris ada tetapi bukan JSON sah (sisa bind BYTEA yang gagal). Timpa.
+    }
+  }
   const hasil = await cobaSimpan(
     () => tulisJson(kunci, data),
     `Gagal menanam "${kunci}" ke penyimpanan permanen.`,
@@ -81,12 +91,20 @@ export async function pastikanJson(kunci: string, data: unknown): Promise<void> 
 }
 
 export async function bacaTeks(kunci: string): Promise<string | null> {
+  if (urlPostgres()) {
+    const dariDb = await bacaPostgresTeks(kunci);
+    if (dariDb != null) return dariDb;
+  }
   const isi = await penyimpanan().baca(kunci);
   if (isi === null) return null;
   return bufferKeTeks(isi);
 }
 
 export async function tulisTeks(kunci: string, isi: string): Promise<void> {
+  if (urlPostgres()) {
+    await tulisPostgresTeks(kunci, isi);
+    return;
+  }
   await penyimpanan().tulis(kunci, Buffer.from(isi, "utf8"));
 }
 
@@ -114,8 +132,10 @@ export async function bacaJson<T>(kunci: string): Promise<T | null> {
 export async function tulisJson(kunci: string, data: unknown): Promise<void> {
   const teks = `${JSON.stringify(data, null, 2)}\n`;
   await tulisTeks(kunci, teks);
-  const balik = await bacaTersimpan(kunci);
-  if (!balik || bufferKeTeks(balik) !== teks) {
+  const balik = urlPostgres()
+    ? await bacaPostgresTeks(kunci)
+    : bufferKeTeks((await bacaTersimpan(kunci)) ?? Buffer.alloc(0));
+  if (balik !== teks) {
     throw new GagalMenyimpan(
       `Data "${kunci}" gagal tersimpan di ${namaPenyimpanan() === "postgres" ? "database" : "berkas"}.`,
     );

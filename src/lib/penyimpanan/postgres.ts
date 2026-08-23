@@ -70,15 +70,8 @@ function hexKeBuffer(hex: string): Buffer | null {
 async function kolam(): Promise<Kolam> {
   if (simpul.__kolamPenyimpanan) return simpul.__kolamPenyimpanan;
 
-  const { Pool, types } = await import("pg");
+  const { Pool } = await import("pg");
   const url = urlPostgres();
-
-  // OID 17 = bytea. Parser bawaan kadang menyerahkan string `\x..` alih-alih
-  // Buffer, sehingga JSON paket tidak terurai dan aplikasi kembali ke bundel.
-  types.setTypeParser(17, (nilai: string) => {
-    const buf = hexKeBuffer(nilai);
-    return buf ?? Buffer.from(nilai, "utf8");
-  });
 
   simpul.__kolamPenyimpanan = new Pool({
     connectionString: url,
@@ -158,9 +151,65 @@ export function keBuffer(isi: unknown): Buffer | null {
  * Membaca kunci dari tabel saja, tanpa cadangan bundel `src/data`.
  * Dipakai untuk memastikan CRUD benar-benar menulis ke database.
  */
+/**
+ * Membaca dokumen teks (JSON) lewat convert_from — tidak melewati bind BYTEA
+ * yang di Neon/Vercel sering gagal diurai dan membuat aplikasi kembali ke bundel.
+ */
+export async function bacaPostgresTeks(kunci: string): Promise<string | null> {
+  const bersih = bersihkanKunci(kunci);
+  try {
+    await siap();
+    const db = await kolam();
+    const hasil = await db.query<{ teks: string | null }>(
+      `SELECT convert_from(isi, 'UTF8') AS teks FROM ${NAMA_TABEL} WHERE kunci = $1`,
+      [bersih],
+    );
+    if (hasil.rows.length === 0) return null;
+    return hasil.rows[0].teks;
+  } catch (error) {
+    console.error(`Penyimpanan Postgres: gagal membaca teks "${bersih}"`, error);
+    return null;
+  }
+}
+
+/** Menulis JSON/teks sebagai UTF-8 di kolom BYTEA tanpa bind biner. */
+export async function tulisPostgresTeks(kunci: string, teks: string): Promise<void> {
+  const bersih = bersihkanKunci(kunci);
+  const ukuran = Buffer.byteLength(teks, "utf8");
+  if (ukuran > MAKS_BYTE) {
+    throw new GagalMenyimpan(
+      `Ukuran data untuk "${bersih}" melebihi batas ${Math.round(MAKS_BYTE / 1024 / 1024)} MB.`,
+    );
+  }
+
+  try {
+    await siap();
+    const db = await kolam();
+    await db.query(
+      `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
+       VALUES ($1, convert_to($2, 'UTF8'), now())
+       ON CONFLICT (kunci)
+       DO UPDATE SET isi = convert_to($2, 'UTF8'), diperbarui = now()`,
+      [bersih, teks],
+    );
+
+    const ulang = await bacaPostgresTeks(bersih);
+    if (ulang !== teks) {
+      throw new Error(
+        "Baris tertulis tetapi teksnya tidak sama saat dibaca ulang dari database.",
+      );
+    }
+  } catch (error) {
+    throw gagal(bersih, error);
+  }
+}
+
 export async function bacaPostgresTersimpan(
   kunci: string,
 ): Promise<Buffer | null> {
+  const teks = await bacaPostgresTeks(kunci);
+  if (teks != null) return Buffer.from(teks, "utf8");
+
   const bersih = bersihkanKunci(kunci);
   try {
     await siap();
@@ -205,14 +254,17 @@ export const penyimpananPostgres: Penyimpanan = {
     try {
       await siap();
       const db = await kolam();
-      // Satu query untuk seluruh kunci, bukan satu query per kunci.
-      const hasil = await db.query<{ kunci: string; isi: unknown }>(
-        `SELECT kunci, isi FROM ${NAMA_TABEL} WHERE kunci = ANY($1::text[])`,
+      // Satu query untuk seluruh kunci. convert_from menghindari parser BYTEA
+      // Neon yang membuat JSON paket gagal diurai lalu tertutup data bundel.
+      const hasil = await db.query<{ kunci: string; teks: string | null }>(
+        `SELECT kunci, convert_from(isi, 'UTF8') AS teks
+         FROM ${NAMA_TABEL} WHERE kunci = ANY($1::text[])`,
         [[...asal.keys()]],
       );
       for (const baris of hasil.rows) {
-        const isi = keBuffer(baris.isi);
-        if (isi) tersimpan.set(baris.kunci, isi);
+        if (baris.teks != null) {
+          tersimpan.set(baris.kunci, Buffer.from(baris.teks, "utf8"));
+        }
       }
     } catch (error) {
       console.error("Penyimpanan Postgres: gagal membaca banyak kunci", error);
@@ -235,38 +287,18 @@ export const penyimpananPostgres: Penyimpanan = {
       );
     }
 
-    // Hex + decode() menghindari kesalahan bind BYTEA pada Neon/Vercel
-    // (`incorrect binary data format`) yang membuat JSON paket tidak pernah
-    // masuk tabel — sementara tulis siswa kadang lolos karena isi yang berbeda.
     const hex = buf.toString("hex");
 
     try {
       await siap();
       const db = await kolam();
-      try {
-        await db.query(
-          `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
-           VALUES ($1, decode($2, 'hex'), now())
-           ON CONFLICT (kunci)
-           DO UPDATE SET isi = decode($2, 'hex'), diperbarui = now()`,
-          [bersih, hex],
-        );
-      } catch {
-        await db.query(
-          `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
-           VALUES ($1, $2::bytea, now())
-           ON CONFLICT (kunci)
-           DO UPDATE SET isi = EXCLUDED.isi, diperbarui = now()`,
-          [bersih, `\\x${hex}`],
-        );
-      }
-
-      const ulang = await bacaPostgresTersimpan(bersih);
-      if (!ulang || Buffer.compare(ulang, buf) !== 0) {
-        throw new Error(
-          "Baris tertulis tetapi isinya tidak terbaca ulang dari database.",
-        );
-      }
+      await db.query(
+        `INSERT INTO ${NAMA_TABEL} (kunci, isi, diperbarui)
+         VALUES ($1, decode($2, 'hex'), now())
+         ON CONFLICT (kunci)
+         DO UPDATE SET isi = decode($2, 'hex'), diperbarui = now()`,
+        [bersih, hex],
+      );
     } catch (error) {
       throw gagal(bersih, error);
     }

@@ -6,6 +6,7 @@ import {
 import {
   bacaBanyakJson,
   bacaJson,
+  bacaJsonTersimpan,
   cobaSimpan,
   hapusKunci,
   pastikanJson,
@@ -55,7 +56,7 @@ async function daftarId(): Promise<string[]> {
   const bawaan = PAKET_IQ_BAWAAN.map((paket) => paket.id);
   await pastikanJson(KUNCI_INDEKS, bawaan);
 
-  const tersimpan = await bacaJson<string[]>(KUNCI_INDEKS);
+  const tersimpan = await bacaJsonTersimpan<string[]>(KUNCI_INDEKS);
   if (Array.isArray(tersimpan) && tersimpan.every((id) => typeof id === "string")) {
     return tersimpan;
   }
