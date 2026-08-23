@@ -1,3 +1,8 @@
+import {
+  bacaOverlay,
+  setAktifPaketOverlay,
+  terapkanOverlayPaket,
+} from "@/lib/latihan/status-paket";
 import { bacaJson, cobaSimpan, tulisJson } from "@/lib/penyimpanan";
 import { SUBJECTS, type Subject } from "@/lib/bank-soal/skema";
 import { buatSandi, periksaSandi } from "@/lib/konfigurasi/sandi";
@@ -20,6 +25,7 @@ import {
  */
 
 const KUNCI = "konfigurasi/paket.json";
+const KUNCI_STATUS = "konfigurasi/_status.json";
 
 /* --------------------------------- Bawaan --------------------------------- */
 
@@ -139,13 +145,19 @@ async function simpan(data: KonfigurasiTryOut): Promise<HasilKonfig> {
 
 /** Seluruh paket, termasuk yang dinonaktifkan (untuk panel admin). */
 export async function semuaPaket(): Promise<PaketKonfig[]> {
-  const konfig = await bacaKonfigurasi();
-  return [...konfig.paket].sort((a, b) => a.nomor - b.nomor);
+  const [konfig, overlay] = await Promise.all([
+    bacaKonfigurasi(),
+    bacaOverlay(KUNCI_STATUS),
+  ]);
+  return terapkanOverlayPaket(
+    [...konfig.paket].sort((a, b) => a.nomor - b.nomor),
+    overlay,
+  );
 }
 
 /** Paket yang aktif saja (untuk peserta). */
 export async function paketAktif(): Promise<PaketKonfig[]> {
-  return (await semuaPaket()).filter((paket) => paket.aktif);
+  return (await semuaPaket()).filter((paket) => paket.aktif !== false);
 }
 
 export async function cariPaket(
@@ -233,6 +245,9 @@ export async function buatPaket(masukan: {
     sesi: sesiBawaan(nomor),
   };
 
+  const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paket.id, paket.aktif);
+  if (!overlay.ok) return overlay;
+
   const hasil = await simpan({ paket: [...data.paket, paket] });
   return hasil.ok ? { ok: true, paket } : hasil;
 }
@@ -253,6 +268,13 @@ export async function perbaruiPaket(
 
   const masalah = validasiPaket(perubahan);
   if (masalah.length) return { ok: false, masalah };
+
+  const overlay = await setAktifPaketOverlay(
+    KUNCI_STATUS,
+    paketId,
+    perubahan.aktif,
+  );
+  if (!overlay.ok) return overlay;
 
   const baru: PaketKonfig = {
     ...lama,
@@ -290,11 +312,19 @@ export async function setAktifPaket(paketId: string, aktif: boolean) {
   const lama = data.paket.find((paket) => paket.id === paketId);
   if (!lama) return { ok: false as const, masalah: [`Paket "${paketId}" tidak ditemukan.`] };
 
-  return simpan({
+  const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, aktif);
+  if (!overlay.ok) return overlay;
+
+  cache = null;
+
+  const hasil = await simpan({
     paket: data.paket.map((paket) =>
       paket.id === paketId ? { ...paket, aktif } : paket,
     ),
   });
+  // Overlay sudah tersimpan; sakelar tetap berlaku meski konfigurasi penuh belum
+  // pernah ditulis ke database (mis. paket bawaan pada Vercel).
+  return hasil.ok ? hasil : { ok: true as const };
 }
 
 export type MasukanSesi = {

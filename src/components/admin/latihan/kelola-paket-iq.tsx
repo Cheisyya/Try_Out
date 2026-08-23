@@ -10,6 +10,7 @@ import {
   LoaderCircle,
   Pencil,
   Plus,
+  Power,
   Save,
   Trash2,
 } from "lucide-react";
@@ -26,6 +27,7 @@ import {
   hapusPaketIqAksi,
   simpanPaketIqAksi,
   tambahPaketIqAksi,
+  ubahAktifPaketIqAksi,
   type HasilAksiIqAdmin,
 } from "@/lib/actions-tes-iq-admin";
 import { cn } from "@/lib/utils";
@@ -116,6 +118,18 @@ export function KelolaPaketIq({ daftar }: { daftar: BarisPaketIq[] }) {
 
   const [sunting, setSunting] = useState<BarisPaketIq | null>(null);
   const [tambah, setTambah] = useState(false);
+
+  const ubahAktif = (paket: BarisPaketIq) => {
+    mulaiTransisi(async () => {
+      const hasil = await ubahAktifPaketIqAksi(paket.id, !paket.aktif);
+      if (!hasil.ok) {
+        toast.galat(hasil.masalah[0] ?? "Perubahan status gagal disimpan.");
+        return;
+      }
+      toast.sukses(hasil.pesan);
+      router.refresh();
+    });
+  };
 
   const hapus = (paket: BarisPaketIq) => {
     const yakin = window.confirm(
@@ -215,6 +229,24 @@ export function KelolaPaketIq({ daftar }: { daftar: BarisPaketIq[] }) {
                             disabled={proses}
                           >
                             <Pencil className="size-4.5" />
+                          </IkonAksi>
+                          <IkonAksi
+                            label={
+                              paket.aktif ? "Nonaktifkan paket" : "Aktifkan paket"
+                            }
+                            onClick={() => ubahAktif(paket)}
+                            disabled={proses}
+                            className={
+                              paket.aktif
+                                ? "text-rose-600 hover:bg-rose-50 hover:text-rose-700"
+                                : "text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700"
+                            }
+                          >
+                            {proses ? (
+                              <LoaderCircle className="size-4.5 animate-spin" />
+                            ) : (
+                              <Power className="size-4.5" />
+                            )}
                           </IkonAksi>
                           <IkonAksi
                             label="Hapus paket"

@@ -80,7 +80,7 @@ export function jendelaPaket(
   const buka = keEpoch(paket.jadwal);
   const tutup = keEpoch(paket.ditutupPada);
 
-  if (!paket.aktif) {
+  if (paket.aktif === false) {
     return { status: "Nonaktif", buka, tutup, terbuka: false };
   }
   if (buka !== null && sekarang < buka) {

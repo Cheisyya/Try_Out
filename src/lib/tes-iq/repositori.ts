@@ -1,4 +1,9 @@
 import {
+  bacaOverlay,
+  setAktifPaketOverlay,
+  terapkanOverlayPaket,
+} from "@/lib/latihan/status-paket";
+import {
   bacaBanyakJson,
   bacaJson,
   cobaSimpan,
@@ -31,6 +36,7 @@ import {
 
 const AWALAN = "bank-tes-iq/";
 const KUNCI_INDEKS = `${AWALAN}_indeks.json`;
+const KUNCI_STATUS = `${AWALAN}_status.json`;
 
 function kunciPaket(paketId: string) {
   return `${AWALAN}${paketId.replace(/[^a-zA-Z0-9._-]/g, "_")}.json`;
@@ -58,14 +64,17 @@ function bawaan(paketId: string): PaketIq | null {
 
 export async function semuaPaketIq(): Promise<PaketIq[]> {
   const daftar = await daftarId();
-  const peta = await bacaBanyakJson<PaketIq>(daftar.map(kunciPaket));
+  const [peta, overlay] = await Promise.all([
+    bacaBanyakJson<PaketIq>(daftar.map(kunciPaket)),
+    bacaOverlay(KUNCI_STATUS),
+  ]);
 
   const hasil: PaketIq[] = [];
   for (const id of daftar) {
     const paket = sahkanPaket(peta.get(kunciPaket(id))) ?? bawaan(id);
     if (paket) hasil.push(paket);
   }
-  return hasil;
+  return terapkanOverlayPaket(hasil, overlay);
 }
 
 /** Paket yang tampil di portal peserta. */
@@ -74,9 +83,17 @@ export async function paketIqAktif(): Promise<PaketIq[]> {
 }
 
 export async function cariPaketIq(paketId: string): Promise<PaketIq | null> {
-  const paket = sahkanPaket(await bacaJson<PaketIq>(kunciPaket(paketId))) ?? bawaan(paketId);
+  const [paket, overlay] = await Promise.all([
+    (async () => {
+      const asli =
+        sahkanPaket(await bacaJson<PaketIq>(kunciPaket(paketId))) ?? bawaan(paketId);
+      if (!asli) return null;
+      return (await daftarId()).includes(paketId) ? asli : null;
+    })(),
+    bacaOverlay(KUNCI_STATUS),
+  ]);
   if (!paket) return null;
-  return (await daftarId()).includes(paketId) ? paket : null;
+  return terapkanOverlayPaket([paket], overlay)[0];
 }
 
 /* -------------------------------------------------------------------------- */
@@ -162,6 +179,9 @@ export async function perbaruiPaketIq(
   paketId: string,
   masukan: MasukanPaketIq,
 ): Promise<HasilBankIq<PaketIq>> {
+  const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, masukan.aktif);
+  if (!overlay.ok) return overlay;
+
   return ubahPaket(paketId, (paket) => {
     const nama = masukan.nama.trim();
     if (!nama) return ["Nama paket wajib diisi."];
@@ -174,6 +194,26 @@ export async function perbaruiPaketIq(
     paket.durasiMenit = masukan.durasiMenit;
     paket.aktif = masukan.aktif;
   });
+}
+
+export async function setAktifPaketIq(
+  paketId: string,
+  aktif: boolean,
+): Promise<HasilBankIq<null>> {
+  if (!(await daftarId()).includes(paketId)) {
+    return { ok: false, masalah: [`Paket "${paketId}" tidak dikenal.`] };
+  }
+
+  const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, aktif);
+  if (!overlay.ok) return overlay;
+
+  const tersimpan = sahkanPaket(await bacaJson<PaketIq>(kunciPaket(paketId)));
+  if (tersimpan) {
+    await ubahPaket(paketId, (paket) => {
+      paket.aktif = aktif;
+    });
+  }
+  return { ok: true, data: null };
 }
 
 export async function tambahPaketIq(nama: string): Promise<HasilBankIq<PaketIq>> {

@@ -18,6 +18,7 @@ import {
   hapusSoalIq,
   perbaruiPaketIq,
   perbaruiSoalIq,
+  setAktifPaketIq,
   setAktifSoalIq,
   tambahBanyakSoalIq,
   tambahPaketIq,
@@ -137,6 +138,22 @@ export async function hapusPaketIqAksi(
 
   segarkan(paketId);
   return { ok: true, pesan: "Paket dihapus." };
+}
+
+export async function ubahAktifPaketIqAksi(
+  paketId: string,
+  aktif: boolean,
+): Promise<HasilAksiIqAdmin> {
+  await wajibSesi("admin");
+
+  const hasil = await setAktifPaketIq(paketId, aktif);
+  if (!hasil.ok) return hasil;
+
+  segarkan(paketId);
+  return {
+    ok: true,
+    pesan: aktif ? "Paket diaktifkan." : "Paket dinonaktifkan.",
+  };
 }
 
 /* -------------------------------------------------------------------------- */

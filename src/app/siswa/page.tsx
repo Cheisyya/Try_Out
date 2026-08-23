@@ -91,175 +91,181 @@ export default async function DashboardSiswaPage() {
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="min-w-0 space-y-6 lg:col-span-2">
-          <Card>
-            <CardHeader
-              judul="Paket yang Sedang Dikerjakan"
-              deskripsi="Lanjutkan dari sesi yang belum diselesaikan."
-              aksi={
-                <Badge tone={ringkasanAktif.sedangBerlangsung ? "gold" : "navy"}>
-                  {ringkasanAktif.sesiSelesai} dari {paketAktif.sesi.length} sesi selesai
-                </Badge>
-              }
-            />
-            <CardBody className="space-y-5">
-              <div className="flex items-start gap-4">
-                <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-navy-900 text-lg font-bold text-gold-300">
-                  {paketAktif.nomor}
-                </span>
-                <div className="min-w-0">
-                  <h3 className="text-lg font-semibold text-navy-900">
-                    {paketAktif.nama}
-                  </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">
-                    {paketAktif.deskripsi}
-                  </p>
-                </div>
-              </div>
-
-              <Progress
-                nilai={ringkasanAktif.persen}
-                tone={ringkasanAktif.tuntas ? "navy" : "gold"}
-              />
-
-              <ul className="grid gap-3 sm:grid-cols-2">
-                {sesiTerurut(paketAktif).map((sesi) => {
-                  const status = ringkasanAktif.status[sesi.id];
-                  const terkunci = sesiTerkunci(paketAktif, sesi.id, ctx);
-                  return (
-                    <li
-                      key={sesi.id}
-                      className="rounded-xl border border-line px-4 py-3.5"
-                    >
-                      <div className="flex items-center justify-between gap-3">
-                        <p className="text-sm font-semibold text-navy-900">
-                          {sesi.nama}
-                        </p>
-                        {terkunci ? (
-                          <Badge tone="netral">
-                            <Lock className="size-3" />
-                            Terkunci
-                          </Badge>
-                        ) : (
-                          <Badge tone={NADA_STATUS[status]}>
-                            {status === "Sedang Berlangsung" ? (
-                              <CircleDot className="size-3" />
-                            ) : status === "Selesai" ? (
-                              <CheckCircle2 className="size-3.5" />
-                            ) : null}
-                            {status}
-                          </Badge>
-                        )}
-                      </div>
-                      <p className="mt-1.5 text-xs text-muted">{ringkasMataUji(sesi)}</p>
-                      <p className="mt-1 text-xs text-muted">
-                        {totalSoalSesi(sesi)} soal · {totalDurasiSesi(sesi)} menit
-                      </p>
-                    </li>
-                  );
-                })}
-              </ul>
-
-              <div className="flex flex-wrap items-center gap-3 border-t border-line pt-4">
-                <ButtonLink href={`/siswa/tryout/${paketAktif.id}`}>
-                  Buka Paket Ini
-                  <ArrowRight className="size-4" />
-                </ButtonLink>
-                <p className="text-xs text-muted">
-                  {totalSoalPaket(paketAktif)} soal pilihan ganda · {totalDurasiPaket(paketAktif)}{" "}
-                  menit per paket
-                </p>
-              </div>
-            </CardBody>
-          </Card>
-
-          {rekap.length > 0 ? (
-            <Card>
-              <CardHeader
-                judul="Perkembangan Nilai"
-                deskripsi="Rata-rata nilai Anda pada setiap paket try out."
-              />
-              <CardBody>
-                <GrafikGaris
-                  labelX={labelPaket}
-                  seri={seriRataRata}
-                  satuan="rata-rata nilai"
+          {pengaturan.tryoutAkademikAktif ? (
+            <>
+              <Card>
+                <CardHeader
+                  judul="Paket yang Sedang Dikerjakan"
+                  deskripsi="Lanjutkan dari sesi yang belum diselesaikan."
+                  aksi={
+                    <Badge tone={ringkasanAktif.sedangBerlangsung ? "gold" : "navy"}>
+                      {ringkasanAktif.sesiSelesai} dari {paketAktif.sesi.length} sesi selesai
+                    </Badge>
+                  }
                 />
-              </CardBody>
-            </Card>
-          ) : (
-            <Card>
-              <CardHeader
-                judul="Perkembangan Nilai"
-                deskripsi="Grafik muncul setelah Anda menyelesaikan paket try out pertama."
-              />
-              <CardBody>
-                <p className="py-6 text-center text-sm text-muted">
-                  Belum ada nilai untuk digambarkan.
-                </p>
-              </CardBody>
-            </Card>
-          )}
+                <CardBody className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-navy-900 text-lg font-bold text-gold-300">
+                      {paketAktif.nomor}
+                    </span>
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-semibold text-navy-900">
+                        {paketAktif.nama}
+                      </h3>
+                      <p className="mt-1 text-sm leading-relaxed text-muted">
+                        {paketAktif.deskripsi}
+                      </p>
+                    </div>
+                  </div>
+
+                  <Progress
+                    nilai={ringkasanAktif.persen}
+                    tone={ringkasanAktif.tuntas ? "navy" : "gold"}
+                  />
+
+                  <ul className="grid gap-3 sm:grid-cols-2">
+                    {sesiTerurut(paketAktif).map((sesi) => {
+                      const status = ringkasanAktif.status[sesi.id];
+                      const terkunci = sesiTerkunci(paketAktif, sesi.id, ctx);
+                      return (
+                        <li
+                          key={sesi.id}
+                          className="rounded-xl border border-line px-4 py-3.5"
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <p className="text-sm font-semibold text-navy-900">
+                              {sesi.nama}
+                            </p>
+                            {terkunci ? (
+                              <Badge tone="netral">
+                                <Lock className="size-3" />
+                                Terkunci
+                              </Badge>
+                            ) : (
+                              <Badge tone={NADA_STATUS[status]}>
+                                {status === "Sedang Berlangsung" ? (
+                                  <CircleDot className="size-3" />
+                                ) : status === "Selesai" ? (
+                                  <CheckCircle2 className="size-3.5" />
+                                ) : null}
+                                {status}
+                              </Badge>
+                            )}
+                          </div>
+                          <p className="mt-1.5 text-xs text-muted">{ringkasMataUji(sesi)}</p>
+                          <p className="mt-1 text-xs text-muted">
+                            {totalSoalSesi(sesi)} soal · {totalDurasiSesi(sesi)} menit
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+
+                  <div className="flex flex-wrap items-center gap-3 border-t border-line pt-4">
+                    <ButtonLink href={`/siswa/tryout/${paketAktif.id}`}>
+                      Buka Paket Ini
+                      <ArrowRight className="size-4" />
+                    </ButtonLink>
+                    <p className="text-xs text-muted">
+                      {totalSoalPaket(paketAktif)} soal pilihan ganda · {totalDurasiPaket(paketAktif)}{" "}
+                      menit per paket
+                    </p>
+                  </div>
+                </CardBody>
+              </Card>
+
+              {rekap.length > 0 ? (
+                <Card>
+                  <CardHeader
+                    judul="Perkembangan Nilai"
+                    deskripsi="Rata-rata nilai Anda pada setiap paket try out."
+                  />
+                  <CardBody>
+                    <GrafikGaris
+                      labelX={labelPaket}
+                      seri={seriRataRata}
+                      satuan="rata-rata nilai"
+                    />
+                  </CardBody>
+                </Card>
+              ) : (
+                <Card>
+                  <CardHeader
+                    judul="Perkembangan Nilai"
+                    deskripsi="Grafik muncul setelah Anda menyelesaikan paket try out pertama."
+                  />
+                  <CardBody>
+                    <p className="py-6 text-center text-sm text-muted">
+                      Belum ada nilai untuk digambarkan.
+                    </p>
+                  </CardBody>
+                </Card>
+              )}
+            </>
+          ) : null}
         </div>
 
         <div className="space-y-6">
-          <Card>
-            <CardHeader judul="Hasil Terakhir" />
-            <CardBody className="space-y-4">
-              {hasilTerakhir ? (
-                <>
-                  <div>
-                    <p className="text-sm font-medium text-navy-900">
-                      {hasilTerakhir.paketNama} · {hasilTerakhir.sesiNama}
-                    </p>
-                    <p className="text-xs text-muted">
-                      {hasilTerakhir.subject} ·{" "}
-                      {formatTanggalWaktu(
-                        new Date(hasilTerakhir.waktu).toISOString(),
-                      )}
-                    </p>
-                  </div>
-                  <div className="rounded-xl bg-navy-900 px-4 py-5 text-center text-white">
-                    <p className="text-xs text-navy-200">Nilai diperoleh</p>
-                    <p className="mt-1 text-4xl font-bold text-gold-300">
-                      {hasilTerakhir.nilai}
-                    </p>
-                    <p className="mt-1 text-xs text-navy-200">
-                      dari {hasilTerakhir.jumlahSoal} soal
-                    </p>
-                  </div>
-                  <dl className="grid grid-cols-3 gap-2 text-center">
-                    {[
-                      { label: "Benar", nilai: hasilTerakhir.benar },
-                      { label: "Salah", nilai: hasilTerakhir.salah },
-                      { label: "Jumlah Soal", nilai: hasilTerakhir.jumlahSoal },
-                    ].map((item) => (
-                      <div
-                        key={item.label}
-                        className="rounded-xl border border-line px-2 py-3"
-                      >
-                        <dt className="text-xs text-muted">{item.label}</dt>
-                        <dd className="mt-0.5 text-lg font-bold text-navy-900">
-                          {item.nilai}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </>
-              ) : (
-                <p className="py-4 text-center text-sm text-muted">
-                  Belum ada mata uji yang dikumpulkan.
-                </p>
-              )}
-              <ButtonLink
-                href="/siswa/hasil"
-                variant="secondary"
-                size="sm"
-                className="w-full"
-              >
-                Lihat semua hasil
-              </ButtonLink>
-            </CardBody>
-          </Card>
+          {pengaturan.tryoutAkademikAktif ? (
+            <Card>
+              <CardHeader judul="Hasil Terakhir" />
+              <CardBody className="space-y-4">
+                {hasilTerakhir ? (
+                  <>
+                    <div>
+                      <p className="text-sm font-medium text-navy-900">
+                        {hasilTerakhir.paketNama} · {hasilTerakhir.sesiNama}
+                      </p>
+                      <p className="text-xs text-muted">
+                        {hasilTerakhir.subject} ·{" "}
+                        {formatTanggalWaktu(
+                          new Date(hasilTerakhir.waktu).toISOString(),
+                        )}
+                      </p>
+                    </div>
+                    <div className="rounded-xl bg-navy-900 px-4 py-5 text-center text-white">
+                      <p className="text-xs text-navy-200">Nilai diperoleh</p>
+                      <p className="mt-1 text-4xl font-bold text-gold-300">
+                        {hasilTerakhir.nilai}
+                      </p>
+                      <p className="mt-1 text-xs text-navy-200">
+                        dari {hasilTerakhir.jumlahSoal} soal
+                      </p>
+                    </div>
+                    <dl className="grid grid-cols-3 gap-2 text-center">
+                      {[
+                        { label: "Benar", nilai: hasilTerakhir.benar },
+                        { label: "Salah", nilai: hasilTerakhir.salah },
+                        { label: "Jumlah Soal", nilai: hasilTerakhir.jumlahSoal },
+                      ].map((item) => (
+                        <div
+                          key={item.label}
+                          className="rounded-xl border border-line px-2 py-3"
+                        >
+                          <dt className="text-xs text-muted">{item.label}</dt>
+                          <dd className="mt-0.5 text-lg font-bold text-navy-900">
+                            {item.nilai}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </>
+                ) : (
+                  <p className="py-4 text-center text-sm text-muted">
+                    Belum ada mata uji yang dikumpulkan.
+                  </p>
+                )}
+                <ButtonLink
+                  href="/siswa/hasil"
+                  variant="secondary"
+                  size="sm"
+                  className="w-full"
+                >
+                  Lihat semua hasil
+                </ButtonLink>
+              </CardBody>
+            </Card>
+          ) : null}
 
           {pengaturan.dataDiriAktif ? (
             <Card>

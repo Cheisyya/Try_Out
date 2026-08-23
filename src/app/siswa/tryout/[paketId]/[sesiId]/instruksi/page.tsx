@@ -62,7 +62,7 @@ export default async function InstruksiSesiPage({ params }: Props) {
 
   const paket = await getPaket(paketId);
   const sesi = await getSesi(paketId, sesiId);
-  if (!paket || !paket.aktif || !sesi || !isSesiId(sesiId)) notFound();
+  if (!paket || paket.aktif === false || !sesi || !isSesiId(sesiId)) notFound();
 
   const ketersediaan = await ringkasanSesi(paket.id, sesiId);
   const soalTersedia = ketersediaan.reduce(

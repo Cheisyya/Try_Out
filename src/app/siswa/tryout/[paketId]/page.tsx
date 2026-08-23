@@ -55,7 +55,7 @@ export default async function DetailPaketPage({ params, searchParams }: Props) {
   const { sesi: sesiDisorot, galat } = await searchParams;
 
   const paket = await getPaket(paketId);
-  if (!paket || !paket.aktif) notFound();
+  if (!paket || paket.aktif === false) notFound();
 
   const session = await wajibFitur("tryoutAkademikAktif");
   const ctx = await bacaKonteksSiswa({

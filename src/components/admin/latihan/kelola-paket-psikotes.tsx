@@ -29,6 +29,7 @@ import {
   simpanPaketPsikotesAksi,
   simpanSesiPsikotesAksi,
   tambahPaketPsikotesAksi,
+  ubahAktifPaketPsikotesAksi,
   type HasilAksiAdmin,
 } from "@/lib/actions-psikotes-admin";
 import { cn } from "@/lib/utils";
@@ -138,6 +139,18 @@ export function KelolaPaketPsikotes({
   const [aturSesi, setAturSesi] = useState<BarisPaketPsikotes | null>(null);
   const [tambah, setTambah] = useState(false);
 
+  const ubahAktif = (paket: BarisPaketPsikotes) => {
+    mulaiTransisi(async () => {
+      const hasil = await ubahAktifPaketPsikotesAksi(paket.id, !paket.aktif);
+      if (!hasil.ok) {
+        toast.galat(hasil.masalah[0] ?? "Perubahan status gagal disimpan.");
+        return;
+      }
+      toast.sukses(hasil.pesan);
+      router.refresh();
+    });
+  };
+
   const hapus = (paket: BarisPaketPsikotes) => {
     const yakin = window.confirm(
       `Hapus paket "${paket.nama}" beserta seluruh soalnya? Catatan pengerjaan peserta tidak ikut terhapus.`,
@@ -236,6 +249,24 @@ export function KelolaPaketPsikotes({
                             disabled={proses}
                           >
                             <Pencil className="size-4.5" />
+                          </IkonAksi>
+                          <IkonAksi
+                            label={
+                              paket.aktif ? "Nonaktifkan paket" : "Aktifkan paket"
+                            }
+                            onClick={() => ubahAktif(paket)}
+                            disabled={proses}
+                            className={
+                              paket.aktif
+                                ? "text-rose-600 hover:bg-rose-50 hover:text-rose-700"
+                                : "text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700"
+                            }
+                          >
+                            {proses ? (
+                              <LoaderCircle className="size-4.5 animate-spin" />
+                            ) : (
+                              <Power className="size-4.5" />
+                            )}
                           </IkonAksi>
                           <IkonAksi
                             label="Hapus paket"

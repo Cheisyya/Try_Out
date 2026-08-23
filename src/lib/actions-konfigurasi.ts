@@ -74,10 +74,11 @@ export async function hapusPaketAksi(paketId: string) {
 export async function ubahAktifPaketAksi(paketId: string, aktif: boolean) {
   await wajibSesi("admin");
   const hasil = await setAktifPaket(paketId, aktif);
+  if (!hasil.ok) {
+    return { ok: false as const, masalah: hasil.masalah };
+  }
   segarkan();
-  return hasil.ok
-    ? { ok: true as const }
-    : { ok: false as const, masalah: hasil.masalah };
+  return { ok: true as const };
 }
 
 export async function simpanSesiAksi(

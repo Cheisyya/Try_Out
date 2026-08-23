@@ -21,6 +21,7 @@ import {
   perbaruiSesiPsikotes,
   perbaruiSoalPsikotes,
   setAktifButirPsikotes,
+  setAktifPaketPsikotes,
   tambahBanyakSoalPsikotes,
   tambahPaketPsikotes,
   tambahSoalPsikotes,
@@ -146,6 +147,22 @@ export async function hapusPaketPsikotesAksi(
 
   segarkan(paketId);
   return { ok: true, pesan: "Paket dihapus." };
+}
+
+export async function ubahAktifPaketPsikotesAksi(
+  paketId: string,
+  aktif: boolean,
+): Promise<HasilAksiAdmin> {
+  await wajibSesi("admin");
+
+  const hasil = await setAktifPaketPsikotes(paketId, aktif);
+  if (!hasil.ok) return hasil;
+
+  segarkan(paketId);
+  return {
+    ok: true,
+    pesan: aktif ? "Paket diaktifkan." : "Paket dinonaktifkan.",
+  };
 }
 
 /* -------------------------------------------------------------------------- */

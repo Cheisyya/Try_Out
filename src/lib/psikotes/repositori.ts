@@ -1,4 +1,11 @@
 import {
+  bacaOverlay,
+  setAktifPaketOverlay,
+  setAktifSesiOverlay,
+  terapkanOverlayPaket,
+  terapkanOverlaySesi,
+} from "@/lib/latihan/status-paket";
+import {
   bacaBanyakJson,
   bacaJson,
   cobaSimpan,
@@ -37,6 +44,7 @@ import {
 
 const AWALAN = "bank-psikotes/";
 const KUNCI_INDEKS = `${AWALAN}_indeks.json`;
+const KUNCI_STATUS = `${AWALAN}_status.json`;
 
 function kunciPaket(paketId: string) {
   return `${AWALAN}${paketId.replace(/[^a-zA-Z0-9._-]/g, "_")}.json`;
@@ -74,15 +82,18 @@ function bawaan(paketId: string): PaketPsikotes | null {
  */
 export async function semuaPaketPsikotes(): Promise<PaketPsikotes[]> {
   const daftar = await daftarId();
-  const peta = await bacaBanyakJson<PaketPsikotes>(daftar.map(kunciPaket));
+  const [peta, overlay] = await Promise.all([
+    bacaBanyakJson<PaketPsikotes>(daftar.map(kunciPaket)),
+    bacaOverlay(KUNCI_STATUS),
+  ]);
 
   const hasil: PaketPsikotes[] = [];
   for (const id of daftar) {
     const tersimpan = peta.get(kunciPaket(id));
     const paket = sahkanPaket(tersimpan) ?? bawaan(id);
-    if (paket) hasil.push(paket);
+    if (paket) hasil.push(terapkanOverlaySesi(paket, overlay));
   }
-  return hasil;
+  return terapkanOverlayPaket(hasil, overlay);
 }
 
 /** Paket yang tampil di portal peserta: yang aktif dan masih punya sesi. */
@@ -93,11 +104,20 @@ export async function paketPsikotesAktif(): Promise<PaketPsikotes[]> {
 export async function cariPaketPsikotes(
   paketId: string,
 ): Promise<PaketPsikotes | null> {
-  const tersimpan = await bacaJson<PaketPsikotes>(kunciPaket(paketId));
-  const paket = sahkanPaket(tersimpan) ?? bawaan(paketId);
-  if (!paket) return null;
-  // Paket yang sudah dihapus admin tidak boleh muncul kembali lewat bank bawaan.
-  return (await daftarId()).includes(paketId) ? paket : null;
+  const [asli, overlay] = await Promise.all([
+    (async () => {
+      const tersimpan = await bacaJson<PaketPsikotes>(kunciPaket(paketId));
+      const paket = sahkanPaket(tersimpan) ?? bawaan(paketId);
+      if (!paket) return null;
+      return (await daftarId()).includes(paketId) ? paket : null;
+    })(),
+    bacaOverlay(KUNCI_STATUS),
+  ]);
+  if (!asli) return null;
+  return terapkanOverlayPaket(
+    [terapkanOverlaySesi(asli, overlay)],
+    overlay,
+  )[0];
 }
 
 export function cariSesiPsikotes(
@@ -242,6 +262,9 @@ export async function perbaruiPaketPsikotes(
   paketId: string,
   masukan: MasukanPaketPsikotes,
 ): Promise<HasilBank<PaketPsikotes>> {
+  const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, masukan.aktif);
+  if (!overlay.ok) return overlay;
+
   return ubahPaket(paketId, (paket) => {
     const nama = masukan.nama.trim();
     if (!nama) return ["Nama paket wajib diisi."];
@@ -249,6 +272,26 @@ export async function perbaruiPaketPsikotes(
     paket.deskripsi = masukan.deskripsi.trim();
     paket.aktif = masukan.aktif;
   });
+}
+
+export async function setAktifPaketPsikotes(
+  paketId: string,
+  aktif: boolean,
+): Promise<HasilBank<null>> {
+  if (!(await daftarId()).includes(paketId)) {
+    return { ok: false, masalah: [`Paket "${paketId}" tidak dikenal.`] };
+  }
+
+  const overlay = await setAktifPaketOverlay(KUNCI_STATUS, paketId, aktif);
+  if (!overlay.ok) return overlay;
+
+  const tersimpan = sahkanPaket(await bacaJson<PaketPsikotes>(kunciPaket(paketId)));
+  if (tersimpan) {
+    await ubahPaket(paketId, (paket) => {
+      paket.aktif = aktif;
+    });
+  }
+  return { ok: true, data: null };
 }
 
 export type MasukanSesiPsikotes = {
@@ -264,6 +307,14 @@ export async function perbaruiSesiPsikotes(
   sesiId: string,
   masukan: MasukanSesiPsikotes,
 ): Promise<HasilBank<PaketPsikotes>> {
+  const overlay = await setAktifSesiOverlay(
+    KUNCI_STATUS,
+    paketId,
+    sesiId,
+    masukan.aktif,
+  );
+  if (!overlay.ok) return overlay;
+
   return ubahPaket(paketId, (paket) => {
     const sesi = paket.sesi.find((item) => item.id === sesiId);
     if (!sesi) return [`Sesi "${sesiId}" tidak ada pada paket ini.`];
@@ -280,6 +331,29 @@ export async function perbaruiSesiPsikotes(
     sesi.durasiMenit = masukan.durasiMenit;
     sesi.aktif = masukan.aktif;
   });
+}
+
+export async function setAktifSesiPsikotes(
+  paketId: string,
+  sesiId: string,
+  aktif: boolean,
+): Promise<HasilBank<null>> {
+  if (!(await daftarId()).includes(paketId)) {
+    return { ok: false, masalah: [`Paket "${paketId}" tidak dikenal.`] };
+  }
+
+  const overlay = await setAktifSesiOverlay(KUNCI_STATUS, paketId, sesiId, aktif);
+  if (!overlay.ok) return overlay;
+
+  const tersimpan = sahkanPaket(await bacaJson<PaketPsikotes>(kunciPaket(paketId)));
+  if (tersimpan) {
+    await ubahPaket(paketId, (paket) => {
+      const sesi = paket.sesi.find((item) => item.id === sesiId);
+      if (!sesi) return [`Sesi "${sesiId}" tidak ada pada paket ini.`];
+      sesi.aktif = aktif;
+    });
+  }
+  return { ok: true, data: null };
 }
 
 /**
