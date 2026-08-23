@@ -17,6 +17,8 @@ export type PengaturanAplikasi = {
   dataDiriAktif: boolean;
   /** Menu "Materi Belajar" di portal siswa. */
   materiAktif: boolean;
+  /** Menu "Try Out Akademik" dan "Riwayat Hasil" di portal siswa. */
+  tryoutAkademikAktif: boolean;
   /** Menu "Tes IQ (Latihan)" di portal siswa. */
   tesIqAktif: boolean;
   /** Menu "Try Out Psikotes" di portal siswa. */
@@ -26,6 +28,7 @@ export type PengaturanAplikasi = {
 export const PENGATURAN_BAWAAN: PengaturanAplikasi = {
   dataDiriAktif: true,
   materiAktif: true,
+  tryoutAkademikAktif: true,
   tesIqAktif: true,
   psikotesAktif: true,
 };
@@ -49,6 +52,12 @@ export const DAFTAR_FITUR: {
     judul: "Materi Belajar",
     keterangan:
       "Materi per mata pelajaran yang diunggah pengajar. Bila dimatikan, siswa tidak melihat menu Materi.",
+  },
+  {
+    kunci: "tryoutAkademikAktif",
+    judul: "Try Out Akademik",
+    keterangan:
+      "Paket try out akademik (simulasi ujian per mata pelajaran) beserta halaman Riwayat Hasil. Bila dimatikan, kedua menu ini hilang dari portal siswa dan halamannya tidak dapat dibuka — data pengerjaan yang sudah masuk tetap tersimpan dan tetap terbaca admin.",
   },
   {
     kunci: "tesIqAktif",
@@ -84,6 +93,10 @@ export async function pengaturanAplikasi(): Promise<PengaturanAplikasi> {
       typeof tersimpan?.materiAktif === "boolean"
         ? tersimpan.materiAktif
         : PENGATURAN_BAWAAN.materiAktif,
+    tryoutAkademikAktif:
+      typeof tersimpan?.tryoutAkademikAktif === "boolean"
+        ? tersimpan.tryoutAkademikAktif
+        : PENGATURAN_BAWAAN.tryoutAkademikAktif,
     tesIqAktif:
       typeof tersimpan?.tesIqAktif === "boolean"
         ? tersimpan.tesIqAktif

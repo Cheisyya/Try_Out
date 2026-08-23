@@ -119,20 +119,22 @@ export function navSiswa(pengaturan: PengaturanAplikasi): NavItem[] {
 
   if (pengaturan.materiAktif) menu.push(MATERI_SISWA);
 
-  menu.push(
-    {
-      label: "Try Out Akademik",
-      href: "/siswa/tryout",
-      icon: ClipboardList,
-      keterangan: "Paket simulasi yang tersedia",
-    },
-    {
-      label: "Riwayat Hasil",
-      href: "/siswa/hasil",
-      icon: Trophy,
-      keterangan: "Skor dan peringkat tiap try out",
-    },
-  );
+  if (pengaturan.tryoutAkademikAktif) {
+    menu.push(
+      {
+        label: "Try Out Akademik",
+        href: "/siswa/tryout",
+        icon: ClipboardList,
+        keterangan: "Paket simulasi yang tersedia",
+      },
+      {
+        label: "Riwayat Hasil",
+        href: "/siswa/hasil",
+        icon: Trophy,
+        keterangan: "Skor dan peringkat tiap try out",
+      },
+    );
+  }
 
   if (pengaturan.tesIqAktif) menu.push(TES_IQ_SISWA);
   if (pengaturan.psikotesAktif) menu.push(PSIKOTES_SISWA);

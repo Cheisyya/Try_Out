@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 
 import { RuangUjian } from "@/components/ujian/ruang-ujian";
-import { wajibSesi } from "@/lib/get-session";
+import { wajibFitur } from "@/lib/get-session";
 import { getPaket, isSesiId } from "@/lib/paket-tryout";
 import { ambilSoalUjian } from "@/lib/bank-soal/pengambilan";
 import { percobaanAktif } from "@/lib/pengerjaan/layanan";
@@ -22,7 +22,7 @@ export default async function RuangUjianPage({ params, searchParams }: Props) {
   const { paketId, sesiId } = await params;
   const { lanjut } = await searchParams;
 
-  const session = await wajibSesi("siswa");
+  const session = await wajibFitur("tryoutAkademikAktif");
   if (!await getPaket(paketId) || !isSesiId(sesiId)) notFound();
 
   // Membaca percobaan aktif sekaligus membukukan mata uji yang waktunya habis.

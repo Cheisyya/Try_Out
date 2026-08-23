@@ -17,7 +17,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { Card, CardBody, CardHeader } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
 import { Progress } from "@/components/ui/progress";
-import { wajibSesi } from "@/lib/get-session";
+import { wajibFitur } from "@/lib/get-session";
 import {
   getPaket,
   NADA_STATUS,
@@ -57,7 +57,7 @@ export default async function DetailPaketPage({ params, searchParams }: Props) {
   const paket = await getPaket(paketId);
   if (!paket || !paket.aktif) notFound();
 
-  const session = await wajibSesi("siswa");
+  const session = await wajibFitur("tryoutAkademikAktif");
   const ctx = await bacaKonteksSiswa({
     id: session.identitas,
     nama: session.nama,

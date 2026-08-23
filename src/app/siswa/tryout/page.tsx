@@ -16,7 +16,7 @@ import { Card, CardBody } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
 import { Progress } from "@/components/ui/progress";
 import { KeadaanKosong } from "@/components/ui/state";
-import { wajibSesi } from "@/lib/get-session";
+import { wajibFitur } from "@/lib/get-session";
 import {
   daftarPaketAktif,
   jendelaPaket,
@@ -35,7 +35,7 @@ import { formatTanggal } from "@/lib/utils";
 export const metadata: Metadata = { title: "Try Out Akademik" };
 
 export default async function DaftarPaketPage() {
-  const session = await wajibSesi("siswa");
+  const session = await wajibFitur("tryoutAkademikAktif");
   const ctx = await bacaKonteksSiswa({
     id: session.identitas,
     nama: session.nama,

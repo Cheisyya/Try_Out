@@ -8,7 +8,7 @@ import { Card, CardBody, CardHeader } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
 import { Table, Td, Th, TableWrapper } from "@/components/ui/table";
 import { SUBJECTS, isSubject, type Subject } from "@/lib/bank-soal/skema";
-import { wajibSesi } from "@/lib/get-session";
+import { wajibFitur } from "@/lib/get-session";
 import { rekapPerPaket, type RekapPaket } from "@/lib/pengerjaan/pembahasan";
 import { formatTanggalWaktu } from "@/lib/utils";
 
@@ -25,7 +25,7 @@ type Props = { searchParams: Promise<{ mapel?: string }> };
  * pada baris yang sama — bukan tabel terpisah di atasnya.
  */
 export default async function RiwayatHasilPage({ searchParams }: Props) {
-  const session = await wajibSesi("siswa");
+  const session = await wajibFitur("tryoutAkademikAktif");
 
   const params = await searchParams;
   const pilihan = params.mapel ?? "";

@@ -30,7 +30,7 @@ import {
   totalSoalSesi,
 } from "@/lib/paket-tryout";
 import { ringkasanSesi } from "@/lib/bank-soal/pengambilan";
-import { wajibSesi } from "@/lib/get-session";
+import { wajibFitur } from "@/lib/get-session";
 import { bacaKonteksSiswa } from "@/lib/pengerjaan/layanan";
 import { sesiBerjalan, sesiTerkunci, statusSesi } from "@/lib/pengerjaan/status";
 import { formatTanggalWaktu } from "@/lib/utils";
@@ -71,7 +71,7 @@ export default async function InstruksiSesiPage({ params }: Props) {
   );
   const bankLengkap = ketersediaan.every((item) => item.lengkap);
 
-  const session = await wajibSesi("siswa");
+  const session = await wajibFitur("tryoutAkademikAktif");
   const ctx = await bacaKonteksSiswa({
     id: session.identitas,
     nama: session.nama,

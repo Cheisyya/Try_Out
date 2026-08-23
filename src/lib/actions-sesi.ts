@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-import { wajibSesi } from "@/lib/get-session";
+import { wajibFitur } from "@/lib/get-session";
 import { getPaket, isSesiId, type SesiId } from "@/lib/paket-tryout";
 
 import {
@@ -23,7 +23,7 @@ import {
  */
 
 async function pesertaSaatIni(): Promise<Peserta> {
-  const sesi = await wajibSesi("siswa");
+  const sesi = await wajibFitur("tryoutAkademikAktif");
   return { id: sesi.identitas, nama: sesi.nama };
 }
 

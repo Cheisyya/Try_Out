@@ -8,7 +8,7 @@ import { buttonStyles } from "@/components/ui/button";
 import { Card, CardBody } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
 import { KeadaanKosong } from "@/components/ui/state";
-import { wajibSesi } from "@/lib/get-session";
+import { wajibFitur } from "@/lib/get-session";
 import { pembahasanPaket } from "@/lib/pengerjaan/pembahasan";
 
 export const metadata: Metadata = { title: "Pembahasan" };
@@ -23,7 +23,7 @@ type Props = { params: Promise<{ paketId: string }> };
  * hanya mata uji yang sudah ia kumpulkan sendiri.
  */
 export default async function PembahasanPaketPage({ params }: Props) {
-  const sesi = await wajibSesi("siswa");
+  const sesi = await wajibFitur("tryoutAkademikAktif");
   const { paketId } = await params;
 
   const data = await pembahasanPaket(sesi.identitas, paketId);
