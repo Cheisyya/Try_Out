@@ -607,7 +607,7 @@ export function SesiPsikotes(props: Props) {
               ) : (
                 <Send className="size-4" />
               )}
-              {props.jenis === "epps" ? "Selesai & lihat profil" : "Selesai & lihat pembahasan"}
+              {"Selesai & lihat pembahasan"}
             </Button>
           </div>
         </section>
